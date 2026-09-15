@@ -11,6 +11,10 @@ import com.saasai.entity.User;
 import com.saasai.service.UserService;
 import com.saasai.feature.payment.BillingService;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Map;
+
 import java.util.Map;
 import java.util.LinkedHashMap;
 
@@ -34,6 +38,9 @@ public class BillingController {
 
     @Autowired
     private BillingInvoiceRepository billingInvoiceRepository;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @PostMapping("/invoices")
     public ResponseEntity<ApiResponseDTO<BillingInvoiceDTO>> createInvoice(
@@ -94,31 +101,59 @@ public class BillingController {
                 .build());
     }
 
+    // Chuyển đổi đối tượng BillingInvoice sang BillingInvoiceDTO
     private BillingInvoiceDTO convertToDTO(BillingInvoice invoice) {
         if (invoice == null) {
-            return null;
+                return null;
+        }
+
+        PaymentInfoDTO paymentInfo = null;
+
+        if (invoice.getQrBankSnapshot() != null
+                && !invoice.getQrBankSnapshot().isBlank()) {
+                try {
+                Map<String, Object> snapshot =
+                        objectMapper.readValue(
+                                invoice.getQrBankSnapshot(),
+                                new com.fasterxml.jackson.core.type.TypeReference<Map<String, Object>>() {}
+                        );
+
+                paymentInfo = PaymentInfoDTO.builder()
+                        .bankCode((String) snapshot.get("bankCode"))
+                        .accountNumber((String) snapshot.get("accountNumber"))
+                        .accountName((String) snapshot.get("accountName"))
+                        .amount(invoice.getFinalAmount())
+                        .additionalInfo(invoice.getMemoId())
+                        .build();
+
+                } catch (Exception exception) {
+                paymentInfo = null;
+                }
         }
 
         return BillingInvoiceDTO.builder()
                 .invoiceId(invoice.getInvoiceId())
-
-                .userId(invoice.getUser() != null ? invoice.getUser().getUserId() : null)
-
-                // 🎯 CHÍ MẠNG: Lấy packageType dạng String từ thực thể AdminPackageConfig liên
-                // kết ngoại
-                .packageType(invoice.getAdminPackageConfig() != null ? invoice.getAdminPackageConfig().getPackageType() : "FREE")
-
+                .userId(invoice.getUser() != null
+                        ? invoice.getUser().getUserId()
+                        : null)
+                .packageType(invoice.getAdminPackageConfig() != null
+                        ? invoice.getAdminPackageConfig().getPackageType()
+                        : "FREE")
                 .durationMonths(invoice.getDurationMonths())
                 .originalAmount(invoice.getOriginalAmount())
                 .discountAmount(invoice.getDiscountAmount())
                 .finalAmount(invoice.getFinalAmount())
                 .memoId(invoice.getMemoId())
                 .qrCodeUrl(invoice.getQrCodeUrl())
-                .status(invoice.getStatus() != null ? invoice.getStatus().toString() : null)
+                .paymentInfo(paymentInfo)
+                .status(invoice.getStatus() != null
+                        ? invoice.getStatus().toString()
+                        : null)
                 .createdAt(invoice.getCreatedAt())
                 .paymentDate(invoice.getPaymentDate())
                 .build();
-    }
+        }
+        
     @GetMapping("/invoices/{invoiceId}/status")
     public ResponseEntity<ApiResponseDTO<Map<String,Object>>> getInvoiceStatus(@PathVariable String invoiceId) {
         BillingInvoice invoice = billingInvoiceRepository.findById(invoiceId)

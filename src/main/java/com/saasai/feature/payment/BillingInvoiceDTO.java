@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class BillingInvoiceDTO {
+    
     private Integer durationMonths;
     private String packageType;
     private String invoiceId;
@@ -18,6 +19,7 @@ public class BillingInvoiceDTO {
     private Long discountAmount;
     private Long finalAmount;
     private String qrCodeUrl;
+    private PaymentInfoDTO paymentInfo;
     private String status;
     private LocalDateTime createdAt;
     private LocalDateTime paymentDate;
