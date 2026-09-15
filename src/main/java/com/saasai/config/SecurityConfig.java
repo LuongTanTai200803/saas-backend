@@ -49,7 +49,7 @@ public class SecurityConfig {
     }
 
     // 🎯 BỔ SUNG: Cấu hình CORS chi tiết cho môi trường Production (Vercel) và Local
-    @Value("${FRONTEND_ALLOWED_ORIGINS:http://localhost:5173}")
+    @Value("${frontend.allowed-origins:http://localhost:5173}")
     private String frontendAllowedOrigins;
 
     @Bean
