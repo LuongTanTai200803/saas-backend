@@ -1,0 +1,42 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- ten_loai_van_ban: "NGHỊ QUYẾT"
+- cau_dan_chuyen_tiep: ""
+- cau_ket_hanh_chinh: "Nghị quyết này được phổ biến đến chi bộ, cán bộ, đảng viên và Nhân dân để tổ chức thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doan_can_cu):
+- Trình bày câu mở đầu căn cứ thẩm quyền và thực tiễn:
+  "Thực hiện [căn cứ chính trị, pháp lý, nghị quyết, chương trình, tờ trình, kết luận liên quan]; căn cứ tình hình thực tiễn tại đơn vị; [Tên cơ quan ban hành] ban hành Nghị quyết về [Nội dung nghị quyết] như sau:"
+
+CƠ CẤU NỘI DUNG "cac_muc" (Bắt buộc chuẩn hóa theo 5 mục số La Mã):
+
+- Mục 1:
+  + tieu_de_muc: "I. TÌNH HÌNH, SỰ CẦN THIẾT VÀ CĂN CỨ BAN HÀNH"
+  + noi_dung_chi_tiet: Triển khai theo 4 nội dung:
+    1. Kết quả đạt được (nêu rõ các thành tựu, số liệu nổi bật).
+    2. Hạn chế, tồn tại.
+    3. Nguyên nhân của hạn chế.
+    4. Yêu cầu, nhiệm vụ đặt ra trong thời gian tới.
+
+- Mục 2:
+  + tieu_de_muc: "II. QUAN ĐIỂM CHỈ ĐẠO"
+  + noi_dung_chi_tiet: Trình bày từ 3 đến 5 quan điểm chỉ đạo cốt lõi theo thứ tự 1., 2., 3...
+
+- Mục 3:
+  + tieu_de_muc: "III. MỤC TIÊU"
+  + noi_dung_chi_tiet: Chia rõ 2 phần:
+    1. Mục tiêu tổng quát.
+    2. Mục tiêu cụ thể / Chỉ tiêu chủ yếu (các mốc thời gian, tỷ lệ % hoặc chỉ tiêu định lượng).
+
+- Mục 4:
+  + tieu_de_muc: "IV. NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU"
+  + noi_dung_chi_tiet: Nêu các nhóm nhiệm vụ, giải pháp trọng tâm bám sát nội dung văn bản theo thứ tự 1., 2., 3., 4...
+
+- Mục 5:
+  + tieu_de_muc: "V. TỔ CHỨC THỰC HIỆN"
+  + noi_dung_chi_tiet: Phân công trách nhiệm rõ ràng cho các bên liên quan:
+    1. Cấp ủy / Tổ chức đảng trực thuộc quán triệt, triển khai thực hiện.
+    2. Đảng ủy HĐND lãnh đạo ban hành chính sách, cơ chế (nếu có).
+    3. Đảng ủy UBND lãnh đạo xây dựng kế hoạch, đề án và bố trí nguồn lực.
+    4. MTTQ và các tổ chức chính trị - xã hội giám sát, tuyên truyền, vận động Nhân dân.
+    5. Các cơ quan tham mưu, giúp việc (Ban Tuyên giáo, Dân vận, UBKT, Văn phòng) kiểm tra, giám sát, đôn đốc và tổng hợp báo cáo định kỳ.

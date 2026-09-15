@@ -1,0 +1,153 @@
+[
+  {
+    "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_TINH",
+    "priority": 120,
+    "titleKeywords": [
+      "dai hoi dai bieu dang bo tinh",
+      "dai hoi dang bo tinh",
+      "nghi quyet dai hoi",
+      "nhiem ky",
+      "doan chu tich dai hoi"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_XA_PHUONG",
+    "priority": 115,
+    "titleKeywords": [
+      "dai hoi dai bieu dang bo xa",
+      "dai hoi dai bieu dang bo phuong",
+      "dai hoi dang bo xa",
+      "dai hoi dang bo phuong",
+      "nghi quyet dai hoi",
+      "nhiem ky"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_TINH",
+    "priority": 110,
+    "titleKeywords": [
+      "hoi nghi lan thu",
+      "ban chap hanh dang bo tinh",
+      "nghi quyet hoi nghi thuong ky",
+      "nghi quyet danh gia nam",
+      "nghi quyet danh gia quy",
+      "muc tieu nhiem vu giai phap ky toi"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_XA_PHUONG",
+    "priority": 105,
+    "titleKeywords": [
+      "hoi nghi ban chap hanh dang bo xa",
+      "hoi nghi ban chap hanh dang bo phuong",
+      "nghi quyet nam",
+      "nghi quyet 6 thang cuoi nam",
+      "muc tieu nhiem vu giai phap chu yeu nam",
+      "lan thu 1",
+      "lan thu 3",
+      "lan thu 6"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_BAN_THUONG_VU",
+    "priority": 100,
+    "titleKeywords": [
+      "ban thuong vu dang uy",
+      "nghi quyet chuyen de",
+      "nhiem vu cap bach",
+      "diem nghen",
+      "cap giay chung nhan quyen su dung dat",
+      "xu ly ton dong ho so",
+      "quan ly trat tu xay dung",
+      "giai phong mat bang",
+      "cai cach hanh chinh",
+      "dieu hanh truc tiep"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_XA_PHUONG",
+    "priority": 98,
+    "titleKeywords": [
+      "ban chap hanh dang bo xa",
+      "ban chap hanh dang bo phuong",
+      "nghi quyet chuyen de",
+      "du lich",
+      "giao duc",
+      "nguon nhan luc",
+      "kiem tra giam sat",
+      "dat dai",
+      "ha tang giao thong",
+      "nong nghiep",
+      "thuong mai dich vu",
+      "chuyen doi so",
+      "giam ngheo",
+      "nong thon moi"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_TINH",
+    "priority": 96,
+    "titleKeywords": [
+      "ban chap hanh",
+      "ban thuong vu",
+      "nghi quyet chuyen de",
+      "phat trien nganh",
+      "phat trien linh vuc",
+      "dau tu",
+      "cong nghiep",
+      "du lich",
+      "lam nghiep",
+      "van hoa",
+      "con nguoi",
+      "doi ngoai",
+      "phong chong te nan",
+      "cai cach hanh chinh",
+      "chuyen doi so"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_TINH",
+    "priority": 95,
+    "titleKeywords": [
+      "nghi quyet chuyen de cap tinh",
+      "nghi quyet chuyen de tinh uy",
+      "phat trien nganh",
+      "phat trien linh vuc",
+      "dau tu",
+      "cong nghiep",
+      "du lich",
+      "lam nghiep",
+      "van hoa",
+      "doi ngoai",
+      "cai cach hanh chinh",
+      "chuyen doi so"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CONG_TAC_CAN_BO_TINH",
+    "priority": 90,
+    "titleKeywords": [
+      "cong tac can bo",
+      "to chuc bo may",
+      "bien che",
+      "quy hoach can bo",
+      "danh gia xep loai can bo",
+      "dieu chuyen can bo",
+      "che do chinh sach",
+      "phe duyet danh sach tap the ca nhan"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CONG_TAC_TO_CHUC",
+    "priority": 89,
+    "titleKeywords": [
+      "cong tac to chuc",
+      "to chuc can bo",
+      "to chuc bo may",
+      "nhan su",
+      "ra soat bo sung quy hoach",
+      "danh gia can bo",
+      "che do chinh sach"
+    ]
+  }
+]

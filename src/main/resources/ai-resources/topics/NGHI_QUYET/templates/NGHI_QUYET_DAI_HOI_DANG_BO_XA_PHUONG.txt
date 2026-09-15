@@ -1,0 +1,29 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: "QUYẾT NGHỊ:"
+- cauKetHanhChinh: "Đại hội kêu gọi toàn thể cán bộ, đảng viên, lực lượng vũ trang và Nhân dân phát huy truyền thống đoàn kết, nêu cao tinh thần trách nhiệm, quyết tâm thực hiện thắng lợi các mục tiêu, nhiệm vụ Nghị quyết Đại hội đã đề ra."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ bối cảnh khai mạc, phương châm, chủ đề và số lượng đại biểu:
+  "Với phương châm \"[...]\" và chủ đề Đại hội \"[...]\", Đại hội đại biểu Đảng bộ [tên đơn vị] lần thứ [số], nhiệm kỳ [năm - năm] được tổ chức vào ngày [ngày/tháng/năm] tại [địa điểm], với sự tham dự của [số lượng] đại biểu đại diện cho toàn thể đảng viên trong Đảng bộ. Sau khi thảo luận các văn kiện do Ban Chấp hành Đảng bộ trình, Đại hội thống nhất:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 3 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I- TÁN THÀNH THÔNG QUA BÁO CÁO CHÍNH TRỊ CỦA BAN CHẤP HÀNH ĐẢNG BỘ TRÌNH ĐẠI HỘI"
+  + noiDungChiTiet: Bám sát tài liệu đính kèm triển khai theo 3 nội dung:
+    1. Đánh giá kết quả thực hiện Nghị quyết Đại hội nhiệm kỳ trước (kết quả nổi bật trên các mặt: xây dựng Đảng, kinh tế, văn hóa - xã hội, quốc phòng - an ninh; chỉ rõ tồn tại, hạn chế và nguyên nhân).
+    2. Phương hướng, quan điểm và mục tiêu phát triển nhiệm kỳ tới:
+       2.1. Quan điểm phát triển.
+       2.2. Mục tiêu tổng quát.
+       2.3. Các chỉ tiêu chủ yếu (kinh tế, xã hội, môi trường, quốc phòng - an ninh, xây dựng Đảng).
+    3. Nhiệm vụ và giải pháp trọng tâm (theo từng lĩnh vực công tác).
+
+- Mục 2:
+  + tieuDeMuc: "II- THÔNG QUA BÁO CÁO TỔNG HỢP Ý KIẾN ĐÓNG GÓP VÀO DỰ THẢO VĂN KIỆN CỦA ĐẠI HỘI CẤP TRÊN"
+  + noiDungChiTiet: Đại hội nhất trí thông qua báo cáo tổng hợp ý kiến của cán bộ, đảng viên trong toàn Đảng bộ đóng góp vào dự thảo các văn kiện trình Đại hội đại biểu Đảng bộ cấp trên và Đại hội toàn quốc của Đảng.
+
+- Mục 3:
+  + tieuDeMuc: "III- GIAO BAN CHẤP HÀNH ĐẢNG BỘ KHÓA MỚI TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Giao Ban Chấp hành Đảng bộ khóa mới căn cứ Nghị quyết Đại hội, tiếp thu đầy đủ ý kiến chỉ đạo của cấp trên và ý kiến thảo luận của đại biểu; khẩn trương xây dựng Quy chế làm việc, Chương trình hành động toàn khóa, các nghị quyết chuyên đề, đề án và kế hoạch cụ thể để nhanh chóng đưa Nghị quyết vào cuộc sống.

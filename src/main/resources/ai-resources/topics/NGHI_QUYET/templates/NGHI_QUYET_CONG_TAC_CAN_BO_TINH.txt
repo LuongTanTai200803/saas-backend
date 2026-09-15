@@ -1,0 +1,25 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: ""
+- cauKetHanhChinh: "Ban Thường vụ [Tên cơ quan] nghị quyết để thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ bối cảnh họp và xem xét tờ trình:
+  "Ngày [ngày/tháng/năm], Ban Thường vụ [Tên cơ quan] đã họp. Sau khi xem xét Tờ trình số [số] ngày [ngày] của [cơ quan tham mưu] về [nội dung trình], Ban Thường vụ [Tên cơ quan] thống nhất nghị quyết như sau:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Đặc thù theo từng nội dung phê duyệt và giao việc):
+
+- Mục 1:
+  + tieuDeMuc: "1. Về [nội dung nhân sự/tổ chức thứ nhất]"
+  + noiDungChiTiet: Nêu rõ kết luận: Nhất trí / Phê duyệt / Điều động / Đánh giá đối với nhân sự, danh sách, chỉ tiêu cụ thể. Ghi rõ (Có danh sách/biểu phụ lục kèm theo) nếu có.
+
+- Mục 2:
+  + tieuDeMuc: "2. Về [nội dung nhân sự/tổ chức thứ hai]"
+  + noiDungChiTiet: Nhất trí / Phê duyệt nội dung bổ sung, quy hoạch hoặc chính sách kèm theo (nếu có; nếu chỉ có 1 nội dung thì bỏ qua mục 2 này).
+
+- Mục 3:
+  + tieuDeMuc: "3. Giao nhiệm vụ tổ chức thực hiện"
+  + noiDungChiTiet: Phân công cụ thể:
+    1. Giao [cơ quan chủ trì, ví dụ: Ban Tổ chức Tỉnh ủy] chủ trì, phối hợp với các cơ quan liên quan tham mưu hoàn thiện thủ tục, ban hành quyết định, thông báo đến các đơn vị, cá nhân.
+    2. Giao [cơ quan/đơn vị thực hiện] triển khai thực hiện và báo cáo kết quả về Ban Thường vụ theo quy định.

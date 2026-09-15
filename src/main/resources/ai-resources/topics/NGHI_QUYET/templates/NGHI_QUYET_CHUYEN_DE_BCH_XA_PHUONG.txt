@@ -1,0 +1,44 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: ""
+- cauKetHanhChinh: "Nghị quyết này được phổ biến đến các chi bộ, đảng viên và tuyên truyền rộng rãi trong Nhân dân để thống nhất thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ: "Thực hiện Nghị quyết Đại hội đại biểu Đảng bộ [tên đơn vị] lần thứ [số], nhiệm kỳ [năm - năm], Ban Chấp hành Đảng bộ [tên đơn vị] ban hành Nghị quyết về [nội dung], cụ thể như sau:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 4 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I- THỰC TRẠNG / TÌNH HÌNH"
+  + noiDungChiTiet: Triển khai theo 3 ý:
+    1. Kết quả đạt được (số liệu, mô hình, thành tựu cụ thể).
+    2. Tồn tại, hạn chế liên quan trực tiếp đến chuyên đề.
+    3. Nguyên nhân (phân định rõ 3.1. Nguyên nhân khách quan, 3.2. Nguyên nhân chủ quan).
+
+- Mục 2:
+  + tieuDeMuc: "II- QUAN ĐIỂM CHỈ ĐẠO, MỤC TIÊU"
+  + noiDungChiTiet: Chia rõ 3 phần:
+    1. Quan điểm chỉ đạo (nêu 3-5 quan điểm).
+    2. Mục tiêu tổng quát.
+    3. Mục tiêu cụ thể / chỉ tiêu chủ yếu (chỉ tiêu theo từng năm hoặc đến cuối giai đoạn).
+
+- Mục 3:
+  + tieuDeMuc: "III- NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU"
+  + noiDungChiTiet: Bám sát nội dung chuyên đề triển khai theo các trục:
+    1. Tăng cường công tác lãnh đạo, chỉ đạo, tuyên truyền nâng cao nhận thức.
+    2. Hoàn thiện cơ chế, kế hoạch, quy hoạch, chương trình triển khai.
+    3. Huy động nguồn lực, đầu tư trọng tâm, trọng điểm.
+    4. Nâng cao chất lượng đội ngũ, năng lực quản lý, điều hành.
+    5. Đẩy mạnh kiểm tra, giám sát, xử lý vi phạm.
+    6. Phát huy vai trò của MTTQ, các tổ chức chính trị - xã hội và Nhân dân.
+
+- Mục 4:
+  + tieuDeMuc: "IV- TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Phân công trách nhiệm rõ ràng:
+    1. UBND [xã/phường] cụ thể hóa bằng kế hoạch, chương trình, đề án.
+    2. Ban Xây dựng Đảng/Ban Tuyên giáo và Dân vận tham mưu quán triệt, tuyên truyền.
+    3. UBKT Đảng ủy kiểm tra, giám sát việc thực hiện.
+    4. MTTQ và các tổ chức chính trị - xã hội tuyên truyền, vận động, giám sát, phản biện xã hội.
+    5. Các chi bộ, đảng bộ trực thuộc quán triệt, đưa vào chương trình công tác.
+    6. Các đồng chí Đảng ủy viên phụ trách địa bàn/lĩnh vực thường xuyên theo dõi, đôn đốc.

@@ -1,0 +1,46 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: ""
+- cauKetHanhChinh: "Nghị quyết này được phổ biến đến chi bộ, cán bộ, đảng viên và Nhân dân để thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ: "Thực hiện [Nghị quyết Đại hội/Chương trình hành động/Chỉ thị/Kết luận liên quan], [Tên cơ quan ban hành] ban hành Nghị quyết về [nội dung chuyên đề], giai đoạn [năm - năm], tầm nhìn đến [năm] như sau:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 5 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I. KHÁI QUÁT TÌNH HÌNH VÀ SỰ CẦN THIẾT"
+  + noiDungChiTiet: Triển khai 4 ý:
+    1. Kết quả đạt được (số liệu, công trình, chỉ số phát triển nổi bật).
+    2. Hạn chế, tồn tại.
+    3. Nguyên nhân (khách quan, chủ quan).
+    4. Yêu cầu đặt ra trong giai đoạn mới.
+
+- Mục 2:
+  + tieuDeMuc: "II. QUAN ĐIỂM CHỈ ĐẠO"
+  + noiDungChiTiet: Nêu từ 3 đến 5 quan điểm chỉ đạo cốt lõi theo thứ tự 1., 2., 3...
+
+- Mục 3:
+  + tieuDeMuc: "III. MỤC TIÊU"
+  + noiDungChiTiet: Chia rõ 2 phần:
+    1. Mục tiêu tổng quát.
+    2. Mục tiêu cụ thể / Chỉ tiêu chủ yếu (theo từng mốc năm, tỷ lệ % hoặc giá trị cụ thể).
+
+- Mục 4:
+  + tieuDeMuc: "IV. NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU"
+  + noiDungChiTiet: Triển khai theo các nhóm giải pháp trọng tâm:
+    1. Tăng cường sự lãnh đạo, chỉ đạo của Đảng; nâng cao nhận thức xã hội.
+    2. Hoàn thiện cơ chế, chính sách, quy hoạch và huy động các nguồn lực.
+    3. Đẩy mạnh cải cách hành chính, chuyển đổi số, ứng dụng KHCN.
+    4. Phát triển, nâng cao chất lượng nguồn nhân lực.
+    5. Tăng cường công tác kiểm tra, giám sát, sơ kết, tổng kết.
+
+- Mục 5:
+  + tieuDeMuc: "V. TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Phân công trách nhiệm các cơ quan cấp tỉnh:
+    1. Các cấp ủy, tổ chức đảng trực thuộc quán triệt, triển khai thực hiện.
+    2. Đảng ủy HĐND tỉnh thể chế hóa về mặt chính sách, giám sát thực hiện.
+    3. Đảng ủy UBND tỉnh chỉ đạo xây dựng đề án, kế hoạch và bố trí ngân sách.
+    4. MTTQ và các tổ chức chính trị - xã hội giám sát, phản biện, vận động Nhân dân.
+    5. Ban Tuyên giáo và Dân vận, Ủy ban Kiểm tra, Văn phòng Tỉnh ủy theo dõi, đôn đốc, kiểm tra định kỳ.

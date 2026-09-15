@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: web_assist_ai
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backups:/backups
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    
+    command: ["redis-server", "--save", "60", "1"]
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web-assist-ai-backend:latest
+    restart: on-failure
+    environment:
+      - DATABASE_URL=jdbc:mysql://db:3306/web_assist_ai?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      - DATABASE_USERNAME=appuser
+      - DATABASE_PASSWORD=1234
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=${JWT_SECRET}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - FRONTEND_ALLOWED_ORIGINS=${FRONTEND_ALLOWED_ORIGINS}
+      - STORAGE_TYPE=local
+      - STORAGE_LOCAL_BASE_PATH=/app/uploads/
+      - STORAGE_BASE_URL=${STORAGE_BASE_URL:-http://localhost:8080/uploads/}
+      - SERVER_PORT=8080
+      - SPRING_PROFILES_ACTIVE=prod
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - SEPAY_WEBHOOK_SECRET=${SEPAY_WEBHOOK_SECRET}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - OPENROUTER_BASE_URL=${OPENROUTER_BASE_URL}
+      - OPENROUTER_TIMEOUT=${OPENROUTER_TIMEOUT}
+    ports:
+      - "8080:8080"
+    command: ["sh","-c","until nc -z db 3306; do echo 'waiting for db'; sleep 2; done; java -jar app.jar"]
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+volumes:
+  db_data:
+  redis_data:
+  

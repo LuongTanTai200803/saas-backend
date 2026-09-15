@@ -1,0 +1,61 @@
+{
+  "font": {
+    "family": "Times New Roman"
+  },
+
+  "page": {
+    "margin": {
+      "leftMm": 30,
+      "rightMm": 20,
+      "topMm": 20,
+      "bottomMm": 20
+    }
+  },
+
+  "body": {
+    "fontSize": 13,
+    "lineHeight": 1.15,
+    "paragraphSpacingPt": 6,
+    "alignment": "JUSTIFY"
+  },
+
+  "heading": {
+    "fontSize": 14,
+    "bold": true,
+    "alignment": "LEFT"
+  },
+  
+  "sectionHeading": {
+    "fontSize": 13,
+    "bold": true,
+    "alignment": "LEFT"
+  },
+
+  "title": {
+    "fontSize": 14,
+    "bold": true,
+    "alignment": "CENTER"
+  },
+
+
+  "header": {
+    "enabled": true,
+    "layout": "TWO_COLUMNS"
+  },
+
+  "footer": {
+    "enabled": true,
+    "pageNumber": true
+  },
+
+  "signature": {
+    "enabled": true,
+    "layout": "RIGHT"
+  },
+
+  "recipient": {
+    "enabled": true,
+    "layout": "LEFT"
+  }
+
+}

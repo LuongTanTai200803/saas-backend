@@ -1,0 +1,34 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: "QUYẾT NGHỊ:"
+- cauKetHanhChinh: "Đại hội kêu gọi toàn thể cán bộ, đảng viên, chiến sĩ lực lượng vũ trang và Nhân dân phát huy truyền thống đoàn kết, dân chủ, kỷ luật, kỷ cương, quyết tâm thực hiện thắng lợi các mục tiêu, nhiệm vụ Nghị quyết Đại hội đề ra."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ bối cảnh chỉ thị, thời gian, chủ đề và phương châm:
+  "Thực hiện [chỉ thị/kế hoạch của cấp trên về đại hội đảng bộ các cấp], từ ngày [ngày] đến ngày [ngày/tháng/năm], Đảng bộ [tên đơn vị] đã tổ chức Đại hội đại biểu lần thứ [số], nhiệm kỳ [năm - năm]. Với chủ đề: \"[...]\", phương châm: \"[...]\". Sau khi thảo luận các văn kiện của Ban Chấp hành trình Đại hội, Đại hội thống nhất:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 4 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I. TÁN THÀNH NHỮNG NỘI DUNG CƠ BẢN VỀ ĐÁNH GIÁ KẾT QUẢ THỰC HIỆN NHIỆM VỤ NHIỆM KỲ QUA"
+  + noiDungChiTiet: Bám sát tài liệu đính kèm triển khai theo 3 ý:
+    1. Kết quả đạt được (nêu bật các chỉ tiêu, thành tựu về xây dựng Đảng, phát triển kinh tế, văn hóa - xã hội, quốc phòng - an ninh).
+    2. Hạn chế, khuyết điểm và nguyên nhân.
+    3. Bài học kinh nghiệm rút ra.
+
+- Mục 2:
+  + tieuDeMuc: "II. PHƯƠNG HƯỚNG, MỤC TIÊU, NHIỆM VỤ VÀ GIẢI PHÁP NHIỆM KỲ TỚI"
+  + noiDungChiTiet: Chia rõ 4 phần:
+    1. Phương hướng chung.
+    2. Mục tiêu tổng quát.
+    3. Các chỉ tiêu chủ yếu (kinh tế, xã hội, môi trường, quốc phòng - an ninh, công tác xây dựng Đảng).
+    4. Nhiệm vụ và giải pháp trọng tâm (theo từng lĩnh vực then chốt).
+
+- Mục 3:
+  + tieuDeMuc: "III. THÔNG QUA CÁC NỘI DUNG KHÁC CỦA ĐẠI HỘI"
+  + noiDungChiTiet: Thông qua Báo cáo kiểm điểm sự lãnh đạo, chỉ đạo của Ban Chấp hành khóa cũ; Thông qua Báo cáo tổng hợp ý kiến đóng góp vào dự thảo các văn kiện trình Đại hội cấp trên và kết quả bầu cử Ban Chấp hành khóa mới.
+
+- Mục 4:
+  + tieuDeMuc: "IV. TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Đại hội giao Ban Chấp hành Đảng bộ khóa mới khẩn trương tiếp thu ý kiến của Đại hội, ban hành Quy chế làm việc, xây dựng Chương trình hành động toàn khóa và các kế hoạch cụ thể để tổ chức triển khai thực hiện thắng lợi Nghị quyết.

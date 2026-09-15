@@ -1,0 +1,39 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: ""
+- cauKetHanhChinh: "Nghị quyết này được phổ biến đến các cấp ủy, tổ chức đảng, cán bộ, đảng viên và Nhân dân để thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Nêu rõ: "Hội nghị lần thứ [số], Ban Chấp hành Đảng bộ [tên tỉnh/thành phố] khóa [số] họp ngày [ngày/tháng/năm] đã đánh giá tình hình thực hiện nhiệm vụ [thời gian qua/kỳ trước], quyết nghị mục tiêu, nhiệm vụ và giải pháp [thời gian tới/năm...] như sau:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 4 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I. TÌNH HÌNH THỰC HIỆN NHIỆM VỤ"
+  + noiDungChiTiet: Triển khai 3 ý:
+    1. Kết quả đạt được (nêu rõ các thành tựu, số liệu, chỉ số kinh tế - xã hội, xây dựng Đảng).
+    2. Hạn chế, khó khăn tồn tại.
+    3. Nguyên nhân (khách quan và chủ quan).
+
+- Mục 2:
+  + tieuDeMuc: "II. MỤC TIÊU, NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU"
+  + noiDungChiTiet: Chia rõ 3 phần:
+    1. Mục tiêu tổng quát.
+    2. Các chỉ tiêu chủ yếu (tăng trưởng, thu ngân sách, xã hội, môi trường, xây dựng Đảng).
+    3. Nhiệm vụ và giải pháp chủ yếu:
+       3.1. Về công tác xây dựng Đảng và hệ thống chính trị.
+       3.2. Về phát triển kinh tế, thu hút đầu tư, giải ngân vốn.
+       3.3. Về văn hóa, xã hội, giáo dục, y tế và an sinh xã hội.
+       3.4. Về quốc phòng, an ninh, nội chính và đối ngoại.
+
+- Mục 3:
+  + tieuDeMuc: "III. CÁC NỘI DUNG HỘI NGHỊ CHO Ý KIẾN VÀ THÔNG QUA"
+  + noiDungChiTiet: Nêu các báo cáo, tờ trình, đề án chuyên đề đã được Ban Chấp hành thảo luận, thống nhất thông qua tại Hội nghị theo các ý 1., 2.
+
+- Mục 4:
+  + tieuDeMuc: "IV. TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Phân công trách nhiệm:
+    1. Ban Thường vụ Tỉnh ủy lãnh đạo, chỉ đạo, cụ thể hóa các nội dung Nghị quyết.
+    2. Các cấp ủy, tổ chức đảng, ban cán sự đảng, đảng đoàn trực thuộc xây dựng kế hoạch thực hiện.
+    3. Văn phòng Tỉnh ủy, các Ban Xây dựng Đảng Tỉnh ủy theo dõi, đôn đốc, tổng hợp và báo cáo định kỳ.

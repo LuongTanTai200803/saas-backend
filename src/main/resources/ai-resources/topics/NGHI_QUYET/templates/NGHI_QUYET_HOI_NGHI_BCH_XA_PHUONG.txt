@@ -1,0 +1,19 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: "Hội nghị Ban Chấp hành Đảng bộ họp ngày [ngày] đã thảo luận và quyết nghị như sau:"
+- cauKetHanhChinh: "Nghị quyết này được phổ biến đến chi bộ, cán bộ, đảng viên và Nhân dân để thực hiện."
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I- TÌNH HÌNH THỰC HIỆN NHIỆM VỤ"
+  + noiDungChiTiet: Đánh giá kết quả đạt được, chỉ ra tồn tại, hạn chế và nguyên nhân.
+
+- Mục 2:
+  + tieuDeMuc: "II- MỤC TIÊU, CHỈ TIÊU, NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU"
+  + noiDungChiTiet: Gồm 1. Mục tiêu tổng quát, 2. Các chỉ tiêu chủ yếu, 3. Nhiệm vụ giải pháp trọng tâm.
+
+- Mục 3:
+  + tieuDeMuc: "III- TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Phân công trách nhiệm cho UBND, các Ban Đảng, UBKT, MTTQ và người đứng đầu.

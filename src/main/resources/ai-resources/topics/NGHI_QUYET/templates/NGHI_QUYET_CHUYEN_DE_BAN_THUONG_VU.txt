@@ -1,0 +1,37 @@
+LOẠI VĂN BẢN VÀ THỂ THỨC RIÊNG CỦA MẪU NÀY:
+
+- tenLoaiVanBan: "NGHỊ QUYẾT"
+- cauDanChuyenTiep: ""
+- cauKetHanhChinh: "Nghị quyết này được phổ biến đến chi bộ và các cơ quan, đơn vị liên quan để thực hiện."
+
+QUY CÁCH ĐOẠN CĂN CỨ (doanCanCu):
+- Trình bày dạng đoạn văn đánh giá bối cảnh cấp bách/điểm nghẽn:
+  "Trong thời gian qua, dưới sự lãnh đạo của cấp ủy, sự quản lý, điều hành của chính quyền [tên đơn vị], công tác [nội dung] đã đạt được một số kết quả tích cực... Tuy nhiên, bên cạnh kết quả đạt được còn một số tồn tại, hạn chế... Nguyên nhân chủ yếu là... Để tiếp tục nâng cao hiệu lực, hiệu quả công tác [nội dung], Ban Thường vụ Đảng ủy xác định các nhiệm vụ, giải pháp trọng tâm như sau:"
+
+CƠ CẤU NỘI DUNG "cacMuc" (Bắt buộc theo 3 mục số La Mã):
+
+- Mục 1:
+  + tieuDeMuc: "I- QUAN ĐIỂM CHỈ ĐẠO VÀ MỤC TIÊU"
+  + noiDungChiTiet: Gồm 2 phần rõ ràng:
+    1. Quan điểm chỉ đạo: Nêu rõ quan điểm lãnh đạo trực tiếp đối với nhiệm vụ.
+    2. Mục tiêu: Gồm 2.1. Mục tiêu chung và 2.2. Mục tiêu cụ thể (chỉ tiêu theo năm, mốc tiến độ, tỷ lệ giải quyết tồn đọng/nhiệm vụ).
+
+- Mục 2:
+  + tieuDeMuc: "II- NHIỆM VỤ VÀ GIẢI PHÁP TRỌNG TÂM"
+  + noiDungChiTiet: Bám sát nhiệm vụ cụ thể và triển khai theo các nhánh:
+    1. Tăng cường lãnh đạo, chỉ đạo; xác định rõ trách nhiệm người đứng đầu.
+    2. Rà soát, phân loại, xử lý hồ sơ/vụ việc/nội dung tồn đọng.
+    3. Công khai, minh bạch quy trình, điều kiện, thời hạn giải quyết.
+    4. Tăng cường phối hợp với cơ quan chuyên môn cấp trên.
+    5. Ứng dụng CNTT, chuyển đổi số, xây dựng cơ sở dữ liệu.
+    6. Kiểm tra, giám sát, xử lý nghiêm vi phạm.
+    7. Tuyên truyền, vận động Nhân dân, tổ chức thực hiện đúng quy định.
+
+- Mục 3:
+  + tieuDeMuc: "III- TỔ CHỨC THỰC HIỆN"
+  + noiDungChiTiet: Phân công trách nhiệm cấp xã/phường:
+    1. UBND [xã/phường] xây dựng kế hoạch cụ thể hóa và bố trí nguồn lực.
+    2. Các cơ quan chuyên môn chịu trách nhiệm theo lĩnh vực.
+    3. UBKT Đảng ủy kiểm tra, giám sát.
+    4. MTTQ và các tổ chức chính trị - xã hội tuyên truyền, vận động, giám sát.
+    5. Các chi bộ, tổ dân phố/thôn xóm triển khai đến đảng viên và Nhân dân.
