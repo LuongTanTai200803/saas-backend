@@ -2,6 +2,9 @@ package com.saasai.feature.payment;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.saasai.config.SePayDateTimeDeserializer;
+
 import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,7 +15,7 @@ public class SepayWebhookRequestDTO {
 
     private Long id;                    // ID giao dịch SePay
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonDeserialize(using = SePayDateTimeDeserializer.class)
     private LocalDateTime transactionDate;   // ngày giờ giao dịch SePay
 
     private String accountNumber;       // số tài khoản SePay

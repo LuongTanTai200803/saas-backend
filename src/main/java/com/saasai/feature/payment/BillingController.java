@@ -12,6 +12,7 @@ import com.saasai.service.UserService;
 import com.saasai.feature.payment.BillingService;
 
 import java.util.Map;
+import java.util.LinkedHashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -122,12 +123,16 @@ public class BillingController {
     public ResponseEntity<ApiResponseDTO<Map<String,Object>>> getInvoiceStatus(@PathVariable String invoiceId) {
         BillingInvoice invoice = billingInvoiceRepository.findById(invoiceId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Invoice not found"));
-        Map<String,Object> payload = Map.of(
-                "invoiceId", invoice.getInvoiceId(),
-                "status", invoice.getStatus() != null ? invoice.getStatus().name() : null,
-                "finalAmount", invoice.getFinalAmount(),
-                "paymentDate", invoice.getPaymentDate()
+        Map<String, Object> payload = new LinkedHashMap<>();
+        payload.put("invoiceId", invoice.getInvoiceId());
+        payload.put(
+                "status",
+                invoice.getStatus() != null
+                        ? invoice.getStatus().name()
+                        : null
         );
+        payload.put("finalAmount", invoice.getFinalAmount());
+        payload.put("paymentDate", invoice.getPaymentDate());
         return ResponseEntity.ok(ApiResponseDTO.success("OK", payload));
         }
 
