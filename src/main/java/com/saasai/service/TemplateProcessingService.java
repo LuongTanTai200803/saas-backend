@@ -10,9 +10,11 @@ import com.saasai.repository.ChatSessionRepository;
 import com.saasai.repository.FileMetadataRepository;
 import com.saasai.repository.UserRepository;
 import com.saasai.entity.FileMetadata;
-import com.saasai.entity.ChatSession;
+
 import com.saasai.entity.User;
 import com.saasai.feature.ai.AiCompletionService;
+
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -50,11 +52,6 @@ public class TemplateProcessingService {
                                         .orElseThrow(() -> new IllegalStateException(
                                                         "Không tìm thấy user: " + userId));
 
-                        ChatSession session = chatSessionRepository
-                                        .findById(sessionId)
-                                        .orElseThrow(() -> new IllegalStateException(
-                                                        "Không tìm thấy session: " + sessionId));
-
                         String templateJson = aiCompletionService.extractTemplateFromRawText(
                                         user,
                                         normalizedText);
@@ -64,8 +61,14 @@ public class TemplateProcessingService {
                                                 "Không tạo được template definition");
                         }
 
-                        session.setTemplateDefinitionJson(templateJson);
-                        chatSessionRepository.save(session);
+                        int updatedRows = chatSessionRepository.updateTemplateDefinition(
+                                        sessionId,
+                                        templateJson);
+
+                        if (updatedRows == 0) {
+                                throw new IllegalStateException(
+                                                "Không cập nhật được template cho session: " + sessionId);
+                        }
 
                         log.info(
                                         "Template xử lý thành công: fileId={}, sessionId={}",

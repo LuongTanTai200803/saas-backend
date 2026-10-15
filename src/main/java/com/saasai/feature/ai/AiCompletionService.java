@@ -844,8 +844,15 @@ public class AiCompletionService {
 
                 String templateDefinition = extractTemplateDefinition(aiResult.content());
 
-                session.setTemplateDefinitionJson(templateDefinition);
-                chatSessionRepository.save(session);
+                int updatedRows = chatSessionRepository.updateTemplateDefinition(
+                                session.getSessionId(),
+                                templateDefinition);
+
+                if (updatedRows == 0) {
+                        throw new IllegalStateException(
+                                        "Không cập nhật được template cho session: "
+                                                        + session.getSessionId());
+                }
 
                 return ScanTemplateResponseDTO.builder()
                                 .sessionUuid(sessionUuid)
