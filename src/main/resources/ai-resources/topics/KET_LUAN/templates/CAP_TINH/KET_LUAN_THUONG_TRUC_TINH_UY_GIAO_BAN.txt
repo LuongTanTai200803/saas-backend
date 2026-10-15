@@ -1,0 +1,22 @@
+{
+  "source": "SERVER",
+  "templateCode": "KET_LUAN_THUONG_TRUC_TINH_UY_GIAO_BAN",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "trichYeu": "tại cuộc họp Thường trực Tỉnh ủy tuần [số tuần] năm [năm]",
+  "cauDanChuyenTiep": "Sau khi xem xét, thảo luận các tờ trình, báo cáo của các cơ quan, đơn vị, Thường trực Tỉnh ủy thống nhất kết luận như sau:",
+  "cauKetHanhChinh": "Thường trực Tỉnh ủy kết luận để các cấp ủy, cơ quan, đơn vị liên quan triển khai thực hiện.",
+  "doanCanCu": "[Buổi/sáng/chiều] ngày [ngày]/[tháng]/[năm], Thường trực Tỉnh ủy xã/phường [hoặc tỉnh] [tên địa phương] tổ chức họp giao ban thường kỳ tuần [số tuần] năm [năm] do đồng chí [Họ và tên], [chức vụ], chủ trì. Cùng dự có [thành phần dự].",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÁC NỘI DUNG THƯỜNG TRỰC TỈNH ỦY THẢO LUẬN, QUYẾT ĐỊNH THEO THẨM QUYỀN",
+      "noiDungChiTiet": "1. [Cơ quan trình]: [Báo cáo/Tờ trình] số [số], ngày [ngày] về [nội dung]\nThường trực Tỉnh ủy [cơ bản nhất trí/đồng ý chủ trương].\nĐể tiếp tục thực hiện tốt nhiệm vụ, Thường trực Tỉnh ủy yêu cầu:\n1.1. [Cơ quan A]:\n- [Nhiệm vụ cụ thể 1]\n1.2. [Cơ quan B]:\n- [Nhiệm vụ cụ thể 2]"
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "THƯỜNG TRỰC TỈNH ỦY THỐNG NHẤT TRÌNH BAN THƯỜNG VỤ TỈNH ỦY XEM XÉT, QUYẾT ĐỊNH THEO THẨM QUYỀN",
+      "noiDungChiTiet": "1. [Nội dung]\nĐồng ý chủ trương trình Ban Thường vụ Tỉnh ủy xem xét, cho ý kiến/quyết định.\nGiao [cơ quan] hoàn thiện hồ sơ, tài liệu theo quy định."
+    }
+  ]
+}

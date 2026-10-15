@@ -1,0 +1,32 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "QUYET_DINH_KHUNG_MAU_CHUNG_CAP_XA",
+  "topicCode": "QUYET_DINH",
+  "tenLoaiVanBan": "QUYẾT ĐỊNH",
+  "trichYeu": "về việc/tên nội dung quyết định",
+  "cauDanChuyenTiep": "[CHỦ THỂ BAN HÀNH] QUYẾT ĐỊNH",
+  "cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký. [Trường hợp cần thiết: Quyết định này thay thế Quyết định số ... ngày ... của ...]",
+  "doanCanCu": "Căn cứ Điều lệ Đảng Cộng sản Việt Nam;\nCăn cứ [văn bản cấp trên trực tiếp liên quan đến lĩnh vực];\nCăn cứ [quy chế làm việc của Ban Chấp hành/Ban Thường vụ Đảng ủy];\nCăn cứ/Thực hiện [nghị quyết, kế hoạch, kết luận, công văn nếu có];\nXét đề nghị của [cơ quan tham mưu/cơ quan đề xuất],",
+  "cacMuc": [
+    {
+      "code": "Điều 1",
+      "tieuDeMuc": "Nội dung quyết định chính",
+      "noiDungChiTiet": "[Nội dung quyết định chính]\n- Nếu thành lập/kiện toàn: ghi tên tổ chức, thành phần.\n- Nếu phân công: ghi đối tượng, phạm vi phụ trách, danh sách kèm theo.\n- Nếu ban hành/phê chuẩn: ghi tên Quy chế/Quy định kèm theo.\n- Nếu giao chỉ tiêu: ghi đối tượng được giao, danh mục kèm theo.\n- Nếu mở lớp/công nhận: ghi tên lớp/chương trình, số lượng học viên, danh sách kèm theo."
+    },
+    {
+      "code": "Điều 2",
+      "tieuDeMuc": "Nhiệm vụ, trách nhiệm, quyền hạn",
+      "noiDungChiTiet": "[Nhiệm vụ, trách nhiệm, quyền hạn, chế độ hoạt động]\nGhi rõ cơ quan chủ trì, cơ quan phối hợp, nhiệm vụ theo dõi, đôn đốc, kiểm tra, báo cáo, kinh phí nếu có."
+    },
+    {
+      "code": "Điều 3",
+      "tieuDeMuc": "Tổ chức thực hiện",
+      "noiDungChiTiet": "[Cơ quan, đơn vị, cá nhân liên quan] căn cứ Quyết định thi hành."
+    },
+    {
+      "code": "Điều 4",
+      "tieuDeMuc": "Hiệu lực thi hành",
+      "noiDungChiTiet": "Quyết định này có hiệu lực kể từ ngày ký.\n[Trường hợp cần thiết: Quyết định này thay thế Quyết định số ... ngày ... của ...]"
+    }
+  ]
+}

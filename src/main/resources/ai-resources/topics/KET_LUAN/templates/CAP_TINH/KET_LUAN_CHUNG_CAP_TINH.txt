@@ -1,0 +1,22 @@
+{
+  "source": "SERVER",
+  "templateCode": "KET_LUAN_CHUNG",
+  "topicCode": null,
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "trichYeu": "về/tại [Nội dung hoặc sự kiện kết luận]",
+  "cauDanChuyenTiep": "[Ban Chấp hành Đảng bộ tỉnh/Ban Thường vụ Tỉnh ủy/Thường trực Tỉnh ủy] thống nhất kết luận như sau:",
+  "cauKetHanhChinh": "[Ban Chấp hành Đảng bộ tỉnh/Ban Thường vụ Tỉnh ủy/Thường trực Tỉnh ủy] kết luận để thực hiện.",
+  "doanCanCu": "[Căn cứ Quy chế làm việc của ... khóa ...;]\n[Ngày .../.../..., ... đã họp ...;] Sau khi xem xét/nghe [Tờ trình/Báo cáo/Công văn] số ..., ngày ... của [cơ quan trình] về ...; [ý kiến tham gia/thảo luận của ...],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "[NỘI DUNG 1]",
+      "noiDungChiTiet": "1. [Cơ quan/nội dung trình]\n[Đồng ý/Thống nhất/Cơ bản nhất trí/Chưa cho chủ trương/Thông qua] ...\nGiao [cơ quan chủ trì] [nhiệm vụ cụ thể]; phối hợp với [cơ quan liên quan] rà soát, kiểm tra kỹ lưỡng, hoàn thiện [văn bản/hồ sơ/chương trình/đề án], bảo đảm đầy đủ, chặt chẽ, đúng thẩm quyền, đúng quy định của pháp luật và các quy định có liên quan, phù hợp tình hình thực tiễn.\n2. [Nội dung tiếp theo nếu có]\n..."
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "[NỘI DUNG TRÌNH CẤP CÓ THẨM QUYỀN, NẾU CÓ]",
+      "noiDungChiTiet": "Thống nhất trình [cơ quan có thẩm quyền] xem xét, quyết định.\nGiao [cơ quan] hoàn thiện hồ sơ, tài liệu theo quy định."
+    }
+  ]
+} 

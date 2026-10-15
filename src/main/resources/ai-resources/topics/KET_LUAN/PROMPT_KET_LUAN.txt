@@ -1,0 +1,13 @@
+7. Nguyên tắc bắt buộc khi tạo văn bản
+Đúng thẩm quyền:
+ Nếu là hội nghị BCH thì chủ thể kết luận là Ban Chấp hành Đảng bộ; nếu là phiên họp BTV thì chủ thể là Ban Thường vụ Đảng ủy; nếu là họp Thường trực thì chủ thể là Thường trực Đảng ủy.
+Đúng tên loại và trích yếu:
+ Không viết chung chung “Biên bản” hoặc “Thông báo” nếu nội dung là “Kết luận”. Tên phải phản ánh đúng loại họp: BCH, BTV, Thường trực, tổng kết năm.
+Có căn cứ thực tế từ cuộc họp:
+ Phải có thông tin ngày họp, thành phần dự/chủ trì, báo cáo/tờ trình đã nghe, ý kiến thảo luận.
+Không suy diễn số liệu:
+ Số liệu về thu ngân sách, diện tích gieo trồng, giải ngân, số đảng viên, tỷ lệ hoàn thành… chỉ đưa khi người dùng cung cấp. Nếu chưa có thì để dạng chỗ trống hoặc ghi “theo báo cáo”.
+Giao nhiệm vụ phải rõ:
+ Cần thể hiện ít nhất: cơ quan được giao, nhiệm vụ, yêu cầu thực hiện, thời hạn/sản phẩm nếu có.
+Văn phong thống nhất:
+ Dùng ngôn ngữ chính trị - hành chính của Đảng: “lãnh đạo, chỉ đạo”, “quán triệt”, “triển khai”, “cụ thể hóa”, “tiếp thu”, “hoàn thiện”, “trình ký ban hành”.

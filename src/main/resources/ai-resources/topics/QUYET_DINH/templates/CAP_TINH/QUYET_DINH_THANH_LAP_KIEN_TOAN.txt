@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_THANH_LAP_KIEN_TOAN",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "thành lập/kiện toàn [tên ban/tổ/đoàn/đội ngũ]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký.",
+
+"doanCanCu": "Căn cứ [căn cứ 1];\nCăn cứ [căn cứ 2];\nCăn cứ Kế hoạch/Chương trình/Kết luận số [số văn bản];\nXét đề nghị của [cơ quan đề nghị],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Thành lập/Kiện toàn tổ chức",
+
+"noiDungChiTiet": "Thành lập/Kiện toàn [tên ban/tổ/đoàn/đội ngũ] gồm các đồng chí có tên sau:\n1. Đồng chí [Họ tên], chức vụ [Chức vụ] - Trưởng ban/Tổ trưởng/Trưởng đoàn.\n2. Đồng chí [Họ tên], chức vụ [Chức vụ] - Phó Trưởng ban/Tổ phó/Phó Trưởng đoàn.\n3. Đồng chí [Họ tên], chức vụ [Chức vụ] - Thành viên/Thư ký."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Nhiệm vụ của tổ chức",
+
+"noiDungChiTiet": "[Tên ban/tổ/đoàn] có nhiệm vụ:\n- [Nhiệm vụ 1]\n- [Nhiệm vụ 2]\nNhiệm vụ cụ thể của từng thành viên do Trưởng ban/Tổ trưởng/Trưởng đoàn phân công.\n[Cơ quan ... là cơ quan thường trực, nếu có].\n[Ban/Tổ/Đoàn tự giải thể sau khi hoàn thành nhiệm vụ, nếu có]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "Các cơ quan, đơn vị liên quan và các đồng chí có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này.\nQuyết định này có hiệu lực kể từ ngày ký."
+
+}
+
+]
+
+}

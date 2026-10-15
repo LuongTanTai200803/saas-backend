@@ -1,0 +1,63 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_THANH_LAP_KIEN_TOAN_CAP_XA",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc thành lập/kiện toàn [tên Ban Chỉ đạo/Ban Tổ chức/Tổ công tác]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ ĐẢNG ỦY [tên đảng ủy] QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có].",
+
+"doanCanCu": "Căn cứ [căn cứ pháp lý chung];\nCăn cứ [văn bản chuyên ngành liên quan];\nCăn cứ [quy chế làm việc của cấp ủy];\nCăn cứ/Xét [kế hoạch, kết luận, đề nghị của cơ quan tham mưu],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Thành lập/kiện toàn tổ chức",
+
+"noiDungChiTiet": "Thành lập/kiện toàn [tên tổ chức], gồm các đồng chí:\n1. Trưởng ban: Đồng chí [Họ tên]\n2. Phó Trưởng ban:\n- Đồng chí [Họ tên]\n- Đồng chí [Họ tên]\n3. Ủy viên Thường trực: Đồng chí [Họ tên]\n4. Các thành viên:\n- Đồng chí [Họ tên]\n- Đồng chí [Họ tên]"
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Nhiệm vụ của tổ chức",
+
+"noiDungChiTiet": "[Tên tổ chức] có nhiệm vụ:\n- Tham mưu [cấp ủy/BTV] lãnh đạo, chỉ đạo triển khai [nhiệm vụ].\n- Xây dựng kế hoạch, hướng dẫn, đôn đốc, kiểm tra, giám sát.\n- Tổ chức sơ kết, tổng kết, báo cáo theo quy định.\n- Nhiệm vụ cụ thể của các thành viên do Trưởng ban phân công.\n[Khi cần] Kinh phí hoạt động của [tên tổ chức] thực hiện theo quy định hiện hành.\n[Khi cần] [Tên tổ chức] tự giải thể sau khi hoàn thành nhiệm vụ."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "[Văn phòng Đảng ủy/Ban Xây dựng Đảng/các cơ quan liên quan/các đồng chí có tên tại Điều 1] chịu trách nhiệm thi hành Quyết định này."
+
+},
+
+{
+
+"code": "Điều 4",
+
+"tieuDeMuc": "Hiệu lực thi hành",
+
+"noiDungChiTiet": "Quyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có]."
+
+}
+
+]
+
+}

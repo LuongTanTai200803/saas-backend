@@ -1,0 +1,121 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_SO_KET_TONG_KET_DANH_GIA_VAN_BAN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Sơ kết/Tổng kết/Đánh giá] [số năm hoặc giai đoạn] thực hiện [tên văn bản, số ký hiệu, ngày ban hành, cơ quan ban hành, trích yếu nội dung]",
+  "cauDanChuyenTiep": "Ban Thường vụ [tên cấp ủy] ban hành Kế hoạch [sơ kết/tổng kết/đánh giá] [tên văn bản được đánh giá], cụ thể như sau:",
+  "cauKetHanhChinh": "Căn cứ Kế hoạch này, yêu cầu các cấp ủy, tổ chức đảng, cơ quan, đơn vị nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "Thực hiện [tên văn bản chỉ đạo/hướng dẫn của cấp trên]; căn cứ [chương trình công tác/văn bản liên quan],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Đánh giá toàn diện, khách quan kết quả lãnh đạo, chỉ đạo, quán triệt, triển khai và tổ chức thực hiện [tên văn bản]; làm rõ những kết quả đạt được, ưu điểm, hạn chế, khó khăn, vướng mắc, nguyên nhân; rút ra bài học kinh nghiệm; xác định phương hướng, nhiệm vụ, giải pháp tiếp tục thực hiện trong thời gian tới.\nThông qua việc [sơ kết/tổng kết/đánh giá], nâng cao nhận thức, trách nhiệm của các cấp ủy, tổ chức đảng, chính quyền, cơ quan, đơn vị, cán bộ, đảng viên và các tầng lớp Nhân dân trong việc thực hiện [nội dung/chủ trương/chính sách liên quan]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Việc [sơ kết/tổng kết/đánh giá] phải được tiến hành nghiêm túc, khách quan, thực chất, đúng tiến độ, bảo đảm chất lượng, sát tình hình thực tiễn của địa phương, cơ quan, đơn vị; bám sát nội dung [tên văn bản]; có số liệu minh chứng cụ thể; tránh hình thức."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG [SƠ KẾT/TỔNG KẾT/ĐÁNH GIÁ]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đặc điểm tình hình",
+          "noiDungChiTiet": "Khái quát tình hình địa phương, cơ quan, đơn vị; những thuận lợi, khó khăn và yếu tố tác động đến việc triển khai thực hiện [tên văn bản]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác lãnh đạo, chỉ đạo, quán triệt và triển khai thực hiện",
+          "noiDungChiTiet": "- Việc tổ chức học tập, quán triệt, tuyên truyền, phổ biến [tên văn bản].\n- Việc ban hành văn bản lãnh đạo, chỉ đạo, chương trình, kế hoạch, hướng dẫn cụ thể hóa thực hiện.\n- Việc phân công trách nhiệm, theo dõi, đôn đốc, kiểm tra việc thực hiện."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Công tác kiểm tra, giám sát",
+          "noiDungChiTiet": "Đánh giá số lượng, nội dung, hình thức kiểm tra, giám sát; kết quả kiểm tra, giám sát; việc phát hiện, chấn chỉnh, khắc phục hạn chế; nhân rộng mô hình hay, cách làm hiệu quả."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Kết quả thực hiện các mục tiêu, chỉ tiêu, nhiệm vụ, giải pháp",
+          "noiDungChiTiet": "Đánh giá theo từng mục tiêu, chỉ tiêu, nhiệm vụ, giải pháp đã được xác định trong [tên văn bản]; nêu rõ kết quả đạt được, số liệu minh chứng, mô hình tiêu biểu, cách làm hiệu quả."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Đánh giá chung",
+          "noiDungChiTiet": "- Kết quả nổi bật.\n- Tồn tại, hạn chế.\n- Nguyên nhân chủ quan, nguyên nhân khách quan.\n- Khó khăn, vướng mắc.\n- Bài học kinh nghiệm."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Phương hướng, nhiệm vụ, giải pháp trong thời gian tới",
+          "noiDungChiTiet": "Nêu nhiệm vụ trọng tâm, giải pháp chủ yếu, trách nhiệm của cơ quan, đơn vị trong tiếp tục thực hiện [tên văn bản] hoặc nội dung liên quan."
+        },
+        {
+          "code": "7",
+          "tieuDeMuc": "Kiến nghị, đề xuất",
+          "noiDungChiTiet": "Nêu kiến nghị, đề xuất đối với [Trung ương/Bộ Chính trị/Ban Bí thư/Quốc hội/Chính phủ/các ban, bộ, ngành Trung ương/Tỉnh ủy/Ban Thường vụ Tỉnh ủy/cơ quan liên quan], nếu có."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "THỜI GIAN, HÌNH THỨC, MỐC SỐ LIỆU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mốc thời gian lấy số liệu",
+          "noiDungChiTiet": "Từ [thời điểm bắt đầu] đến [thời điểm kết thúc]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hình thức thực hiện",
+          "noiDungChiTiet": "[Sơ kết/Tổng kết/Đánh giá] bằng văn bản hoặc hình thức phù hợp với điều kiện thực tế của cơ quan, đơn vị."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Thời hạn hoàn thành",
+          "noiDungChiTiet": "- Các cơ quan, đơn vị gửi báo cáo trước ngày [ngày/tháng/năm].\n- Cơ quan chủ trì tổng hợp, xây dựng báo cáo trình [cấp có thẩm quyền] trước ngày [ngày/tháng/năm]."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Nhóm cơ quan, đơn vị thực hiện thứ nhất]",
+          "noiDungChiTiet": "Căn cứ chức năng, nhiệm vụ, tổ chức [sơ kết/tổng kết/đánh giá] và xây dựng báo cáo kết quả thực hiện [tên văn bản]; gửi về [cơ quan tiếp nhận] trước ngày [thời hạn]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Nhóm cơ quan, đơn vị thực hiện thứ hai]",
+          "noiDungChiTiet": "Báo cáo, đánh giá các nội dung thuộc chức năng, nhiệm vụ được giao; phối hợp cung cấp số liệu, tài liệu phục vụ tổng hợp báo cáo chung."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Cơ quan chủ trì tổng hợp]",
+          "noiDungChiTiet": "Chủ trì, phối hợp với các cơ quan liên quan theo dõi, đôn đốc, hướng dẫn việc thực hiện Kế hoạch này; tổng hợp, xây dựng dự thảo Báo cáo của Ban Thường vụ [tên cấp ủy], trình [Thường trực/Ban Thường vụ] trước ngày [thời hạn]."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[Cơ quan phối hợp/Văn phòng]",
+          "noiDungChiTiet": "Theo dõi, đôn đốc, tham mưu, giúp [cấp có thẩm quyền] lãnh đạo, chỉ đạo các nội dung liên quan."
+        }
+      ]
+    }
+  ]
+}

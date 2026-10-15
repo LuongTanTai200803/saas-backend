@@ -1,0 +1,144 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_CONG_TAC_TUYEN_GIAO_VA_DAN_VAN",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả công tác tuyên giáo và dân vận [tháng/quý/năm …]; phương hướng, nhiệm vụ trọng tâm [kỳ tiếp theo]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … báo cáo kết quả thực hiện như sau:",
+  "cauKetHanhChinh": "Trên đây là Báo cáo … Ban Thường vụ Đảng ủy … trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện Công văn số … ngày … của … về việc …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "TÌNH HÌNH CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tình hình tư tưởng cán bộ, đảng viên và Nhân dân",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Bối cảnh, thuận lợi, khó khăn",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác ban hành văn bản",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác quán triệt, tuyên truyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Hoạt động Ban Công tác 35",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Thực hiện Chỉ thị 05-CT/TW",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Công tác dân vận, dân vận chính quyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Nắm bắt, định hướng dư luận xã hội",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Lĩnh vực tuyên giáo",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Lĩnh vực dân vận",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Kết quả phối hợp với MTTQ, các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Mô hình, điển hình, phong trào nổi bật",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "[Không có/hoặc nêu cụ thể]",
+      "tieuMuc": []
+    }
+  ]
+}

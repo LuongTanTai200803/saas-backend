@@ -1,0 +1,116 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_TIEP_XUC_DOI_THOAI",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tổ chức tiếp xúc, đối thoại trực tiếp giữa [chủ trì] với [đối tượng] năm/quý …",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … xây dựng Kế hoạch như sau:",
+  "cauKetHanhChinh": "Kết thúc phải có thông báo kết luận, phân công rõ trách nhiệm và thời hạn xử lý kiến nghị.",
+  "doanCanCu": "Căn cứ Quy định/Quy chế/Kế hoạch …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "lắng nghe, tiếp nhận, xử lý phản ánh, kiến nghị; tăng cường quan hệ Đảng với Nhân dân."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "dân chủ, công khai, đúng thẩm quyền, thiết thực, an toàn; nội dung trả lời rõ trọng tâm."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "ĐỐI TƯỢNG, NỘI DUNG ĐỐI THOẠI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đối tượng",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nội dung",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Trình tự đối thoại nếu tổ chức hội nghị cụ thể",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "HÌNH THỨC, THỜI GIAN, ĐỊA ĐIỂM, THÀNH PHẦN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Hình thức",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Thành phần",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Ma-két/chương trình nếu cần",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Thường trực Đảng ủy/UBND chuẩn bị nội dung.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "MTTQ, đoàn thể nắm tình hình, tổng hợp ý kiến.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Văn phòng Đảng ủy chuẩn bị giấy mời, chương trình, tổng hợp, thông báo kết luận.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Công an/Quân sự bảo đảm an ninh trật tự.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Chi bộ/thôn/tổ dân phố mời thành phần tham dự.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

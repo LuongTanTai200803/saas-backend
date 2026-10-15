@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_PHE_DUYET_KET_QUA",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc phê duyệt kết quả [nội dung phê duyệt]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký.",
+
+"doanCanCu": "Căn cứ [căn cứ 1];\nCăn cứ [căn cứ 2];\nCăn cứ [căn cứ 3];\nXét đề nghị của [cơ quan đề nghị],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Phê duyệt kết quả [nội dung phê duyệt]",
+
+"noiDungChiTiet": "Phê duyệt kết quả [nội dung] gồm [số lượng] trường hợp đạt/trúng tuyển và [số lượng] trường hợp không đạt/không trúng tuyển. (Có danh sách/phụ lục kèm theo)."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Tổ chức thực hiện",
+
+"noiDungChiTiet": "Giao [cơ quan chủ trì] chủ trì, phối hợp với [cơ quan phối hợp] thực hiện các nội dung:\n1. [Nội dung 1]\n2. [Nội dung 2]"
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+
+"noiDungChiTiet": "Văn phòng Tỉnh ủy, [các cơ quan khác], các cơ quan, đơn vị liên quan và các cá nhân có tên tại Điều 1 căn cứ Quyết định thi hành. Quyết định này có hiệu lực kể từ ngày ký."
+
+}
+
+]
+
+}

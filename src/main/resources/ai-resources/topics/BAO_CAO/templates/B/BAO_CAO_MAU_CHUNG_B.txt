@@ -1,0 +1,123 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_KHUNG_MAU_CHUNG_TINH_UY",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Trích yếu nội dung báo cáo]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo [nội dung báo cáo], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là báo cáo [trích yếu nội dung báo cáo], Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [tên, số, ngày, tháng, năm của văn bản yêu cầu/chỉ đạo];\nCăn cứ [quy định/nghị quyết/hướng dẫn liên quan, nếu có];\nTrên cơ sở [kết quả thực hiện/tình hình thực tiễn tại địa phương],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO / TÌNH HÌNH TRIỂN KHAI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác quán triệt, tuyên truyền, triển khai",
+          "noiDungChiTiet": "[Trình bày việc phổ biến, học tập, quán triệt, chỉ đạo.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác ban hành văn bản cụ thể hóa",
+          "noiDungChiTiet": "[Liệt kê văn bản địa phương đã ban hành, phân công nhiệm vụ.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Công tác kiểm tra, đôn đốc, hướng dẫn",
+          "noiDungChiTiet": "[Trình bày hoạt động kiểm tra, giám sát, hướng dẫn cơ sở.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả theo lĩnh vực/nhiệm vụ thứ nhất",
+          "noiDungChiTiet": "[Nội dung, số liệu, dẫn chứng.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Kết quả theo lĩnh vực/nhiệm vụ thứ hai",
+          "noiDungChiTiet": "[Nội dung, số liệu, dẫn chứng.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Kết quả theo lĩnh vực/nhiệm vụ thứ ba",
+          "noiDungChiTiet": "[Nội dung, số liệu, dẫn chứng.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả nổi bật",
+          "noiDungChiTiet": "[Khái quát các kết quả chính.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, khó khăn",
+          "noiDungChiTiet": "[Nêu đúng thực trạng, không suy diễn.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "[Nêu nguyên nhân khách quan, chủ quan nếu có căn cứ.]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tiếp tục [nhiệm vụ lãnh đạo, chỉ đạo].",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tập trung [nhiệm vụ trọng tâm].",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tăng cường [kiểm tra, giám sát, đôn đốc].",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Chủ động [tháo gỡ khó khăn, phối hợp, tham mưu].",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đề nghị [cơ quan có thẩm quyền] [nội dung kiến nghị].",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đề nghị [cơ quan có thẩm quyền] [nội dung kiến nghị].",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_DANH_GIA_XEP_LOAI_CHAT_LUONG",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả đánh giá, xếp loại chất lượng [năm/quý] đối với [đối tượng đánh giá]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo kết quả đánh giá, xếp loại chất lượng đối với [đối tượng], cụ thể như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [Quy định/Hướng dẫn/Công văn của Trung ương],",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Công tác chỉ đạo",
+      "noiDungChiTiet": "Căn cứ [quy định của Trung ương và địa phương], Ban Thường vụ Tỉnh ủy đã ban hành [văn bản chỉ đạo], chỉ đạo các cấp ủy, tổ chức đảng, cơ quan, đơn vị thực hiện kiểm điểm, đánh giá, xếp loại bảo đảm chặt chẽ, dân chủ, khách quan, thực chất, đúng quy định.",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Kết quả đánh giá, xếp loại",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "2.1",
+          "tieuDeMuc": "Đối với tập thể",
+          "noiDungChiTiet": "- Tổng số tập thể được đánh giá: [số lượng].\n- Hoàn thành xuất sắc nhiệm vụ: [số lượng, tỷ lệ].\n- Hoàn thành tốt nhiệm vụ: [số lượng, tỷ lệ].\n- Hoàn thành nhiệm vụ: [số lượng, tỷ lệ].\n- Không hoàn thành nhiệm vụ: [số lượng, tỷ lệ]."
+        },
+        {
+          "code": "2.2",
+          "tieuDeMuc": "Đối với cá nhân",
+          "noiDungChiTiet": "- Tổng số cá nhân được đánh giá: [số lượng].\n- Hoàn thành xuất sắc nhiệm vụ: [số lượng, tỷ lệ].\n- Hoàn thành tốt nhiệm vụ: [số lượng, tỷ lệ].\n- Hoàn thành nhiệm vụ: [số lượng, tỷ lệ].\n- Không hoàn thành nhiệm vụ: [số lượng, tỷ lệ]."
+        },
+        {
+          "code": "2.3",
+          "tieuDeMuc": "Đối với cán bộ diện [cơ quan quản lý]",
+          "noiDungChiTiet": "(1) Đồng chí [họ tên], [chức vụ]: [mức xếp loại].\n(2) Đồng chí [họ tên], [chức vụ]: [mức xếp loại]."
+        }
+      ]
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Hồ sơ kèm theo",
+      "noiDungChiTiet": "Kèm theo báo cáo này có:\n- Bản tự kiểm điểm, tự đánh giá của [đối tượng].\n- Bản tổng hợp kết quả đánh giá, xếp loại.\n- Các phụ lục, biểu mẫu liên quan.",
+      "tieuMuc": []
+    }
+  ]
+}

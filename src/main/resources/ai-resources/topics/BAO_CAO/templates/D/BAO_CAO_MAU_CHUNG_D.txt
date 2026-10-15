@@ -1,0 +1,57 @@
+BAO_CAO_NAM_CONG_TAC_DAN_TOC_TON_GIAO{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_NAM_CONG_TAC_DAN_TOC_TON_GIAO",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả thực hiện công tác dân tộc, tôn giáo năm … và nhiệm vụ trọng tâm năm …",
+  "cauDanChuyenTiep": "",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "",
+  "cacMuc": [
+    {
+      "code": "Phần thứ nhất",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN CÔNG TÁC DÂN TỘC, TÔN GIÁO NĂM …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "TÌNH HÌNH DÂN TỘC, TÔN GIÁO",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "KẾT QUẢ CÔNG TÁC DÂN TỘC, TÔN GIÁO",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "III",
+          "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "Phần thứ hai",
+      "tieuDeMuc": "NHIỆM VỤ TRỌNG TÂM NĂM …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "MỘT SỐ VẤN ĐỀ CẦN QUAN TÂM",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "NHIỆM VỤ TRỌNG TÂM",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "III",
+          "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

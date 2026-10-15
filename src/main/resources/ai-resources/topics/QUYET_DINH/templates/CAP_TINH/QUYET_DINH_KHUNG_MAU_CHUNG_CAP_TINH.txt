@@ -1,0 +1,27 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "QUYET_DINH_KHUNG_MAU_CHUNG_CAP_TINH",
+  "topicCode": "QUYET_DINH",
+  "tenLoaiVanBan": "QUYẾT ĐỊNH",
+  "trichYeu": "[về việc/phê duyệt/thành lập/kiện toàn/ban hành/chuẩn y/khen thưởng/tặng ...] [trích yếu nội dung]",
+  "cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+  "cauKetHanhChinh": "Văn phòng Tỉnh ủy, ..., các cơ quan, đơn vị liên quan và các tổ chức, cá nhân có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này. Quyết định này có hiệu lực kể từ ngày ký.",
+  "doanCanCu": "Căn cứ ...;\nCăn cứ ...;\nCăn cứ ...;\n[Xét đề nghị của ...],",
+  "cacMuc": [
+    {
+      "code": "Điều 1",
+      "tieuDeMuc": "Nội dung quyết định chính",
+      "noiDungChiTiet": "[Nội dung quyết định chính]\n[Trường hợp có danh sách/phụ lục: ghi “Có danh sách/phụ lục/biểu/kế hoạch kèm theo”]"
+    },
+    {
+      "code": "Điều 2",
+      "tieuDeMuc": "Nhiệm vụ và tổ chức thực hiện",
+      "noiDungChiTiet": "[Nhiệm vụ, chức năng, tổ chức thực hiện, mức thưởng, tặng phẩm hoặc phân công trách nhiệm]\n1. ...\n2. ..."
+    },
+    {
+      "code": "Điều 3",
+      "tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+      "noiDungChiTiet": "Văn phòng Tỉnh ủy, ..., các cơ quan, đơn vị liên quan và các tổ chức, cá nhân có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này.\nQuyết định này có hiệu lực kể từ ngày ký."
+    }
+  ]
+}

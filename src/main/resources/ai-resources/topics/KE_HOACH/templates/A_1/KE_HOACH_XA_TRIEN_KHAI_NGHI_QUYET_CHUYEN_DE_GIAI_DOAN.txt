@@ -1,0 +1,107 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TRIEN_KHAI_NGHI_QUYET_CHUYEN_DE_GIAI_DOAN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Triển khai/thực hiện … giai đoạn …]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … ban hành Kế hoạch … như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ …;\nThực hiện …;\nCăn cứ tình hình thực tế …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Nêu yêu cầu cụ thể hóa văn bản cấp trên, nâng cao nhận thức, tạo chuyển biến, hoàn thành nhiệm vụ chính trị."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Bám sát chỉ đạo cấp trên; phù hợp thực tiễn; phân công rõ trách nhiệm; triển khai đồng bộ, thiết thực, hiệu quả."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "MỤC TIÊU/CHỈ TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu chung",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu cụ thể đến năm …",
+          "noiDungChiTiet": "- Chỉ tiêu 1: …\n- Chỉ tiêu 2: …"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tăng cường lãnh đạo, chỉ đạo, quán triệt, tuyên truyền.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Cụ thể hóa nội dung trọng tâm theo từng lĩnh vực.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Xây dựng mô hình, phong trào, cách làm phù hợp.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Kiểm tra, giám sát, sơ kết, tổng kết.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "UBND …",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "MTTQ và các tổ chức chính trị - xã hội …",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Ban Xây dựng Đảng/Văn phòng Đảng ủy …",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Các chi bộ, cơ quan, đơn vị …",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "CHẾ ĐỘ THÔNG TIN, BÁO CÁO",
+      "noiDungChiTiet": "Nêu mốc báo cáo 6 tháng, năm, sơ kết, tổng kết nếu có.",
+      "tieuMuc": []
+    }
+  ]
+}

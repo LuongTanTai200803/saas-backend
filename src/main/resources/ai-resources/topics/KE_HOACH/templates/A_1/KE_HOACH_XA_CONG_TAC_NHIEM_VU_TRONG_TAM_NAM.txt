@@ -1,0 +1,65 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_CONG_TAC_NHIEM_VU_TRONG_TAM_NAM",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Thực hiện công tác/nhiệm vụ … năm …]",
+  "cauDanChuyenTiep": "[Chủ thể ban hành] xây dựng Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ …;\nThực hiện chương trình công tác năm …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU hoặc I- NHIỆM VỤ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích/Nhiệm vụ chung",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CHỈ TIÊU CHỦ YẾU hoặc II- NHIỆM VỤ CỤ THỂ",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Chỉ tiêu/nhiệm vụ 1 …",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Chỉ tiêu/nhiệm vụ 2 …",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "Có thể trình bày bằng đoạn văn hoặc phụ lục bảng:\nSTT | Nội dung công việc | Cơ quan chủ trì | Cơ quan phối hợp | Thời gian | Ghi chú",
+      "tieuMuc": []
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "Giao trách nhiệm cho từng cơ quan, đơn vị.",
+      "tieuMuc": []
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "CHẾ ĐỘ BÁO CÁO",
+      "noiDungChiTiet": "Nêu thời hạn báo cáo định kỳ, đột xuất, cơ quan nhận báo cáo.",
+      "tieuMuc": []
+    }
+  ]
+}

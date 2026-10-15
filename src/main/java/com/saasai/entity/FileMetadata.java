@@ -47,15 +47,23 @@ public class FileMetadata {
     @Column(name = "normalized_text", columnDefinition = "LONGTEXT")
     private String normalizedText;
 
+    @Builder.Default
     @Column(name = "word_count", nullable = false)
     private Integer wordCount = 0;
 
+    @Builder.Default
     @Column(name = "character_count", nullable = false)
     private Integer characterCount = 0;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "extraction_status", nullable = false)
     private ExtractionStatus extractionStatus = ExtractionStatus.UPLOADED;
+
+    @Column(name = "extraction_error", columnDefinition = "LONGTEXT")
+    private String extractionError;
+
+    @Column(name = "content_hash", length = 64)
+    private String contentHash;
 
     public enum ExtractionStatus {
         UPLOADED,

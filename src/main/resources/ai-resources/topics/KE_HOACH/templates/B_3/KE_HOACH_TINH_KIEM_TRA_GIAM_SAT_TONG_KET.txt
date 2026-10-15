@@ -1,0 +1,101 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_KIEM_TRA_GIAM_SAT_TONG_KET",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[kiểm tra, giám sát/tổng kết] [nội dung] năm …",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch [nội dung] như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ [điều lệ/chương trình/kế hoạch/văn bản cấp trên];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Đánh giá đúng kết quả lãnh đạo, chỉ đạo, tổ chức thực hiện.\n- Làm rõ ưu điểm, hạn chế, khuyết điểm, nguyên nhân.\n- Đề xuất nhiệm vụ, giải pháp trong thời gian tới."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Khách quan, công tâm, đúng quy trình, đúng quy định.\n- Bảo đảm tiến độ, chất lượng, hiệu quả.\n- Đối tượng kiểm tra, giám sát/tổng kết nghiêm túc phối hợp, báo cáo."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "ĐỐI TƯỢNG, NỘI DUNG, THỜI GIAN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đối tượng",
+          "noiDungChiTiet": "[Liệt kê tổ chức đảng, cơ quan, đơn vị, cá nhân.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nội dung",
+          "noiDungChiTiet": "- [Nội dung 1]\n- [Nội dung 2]\n- [Nội dung 3]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "[Từ ngày… đến ngày…; thời hạn gửi báo cáo.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "PHƯƠNG PHÁP, TÀI LIỆU, ĐỀ CƯƠNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Phương pháp thực hiện",
+          "noiDungChiTiet": "[Kiểm tra hồ sơ, làm việc trực tiếp, khảo sát, tổng hợp báo cáo.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đề cương báo cáo",
+          "noiDungChiTiet": "[Kèm đề cương nếu có.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Phụ lục, biểu mẫu",
+          "noiDungChiTiet": "[Kèm phụ lục thống kê nếu có.]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "UBKT/Ban chuyên môn",
+          "noiDungChiTiet": "[Chủ trì tham mưu, thành lập đoàn, tổng hợp báo cáo.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đoàn kiểm tra/giám sát",
+          "noiDungChiTiet": "[Tiến hành theo quy trình, gửi báo cáo kết quả.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Đối tượng được kiểm tra/tổng kết",
+          "noiDungChiTiet": "[Chuẩn bị báo cáo, hồ sơ, tài liệu, phối hợp làm việc.]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Văn phòng Tỉnh ủy",
+          "noiDungChiTiet": "[Phục vụ điều kiện làm việc, tài liệu, hậu cần.]"
+        }
+      ]
+    }
+  ]
+}

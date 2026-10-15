@@ -9,6 +9,7 @@ import com.saasai.feature.ai.openrouter.OpenRouterErrorResponseDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterRequestDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterResponseDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterUsageDTO;
+import com.saasai.feature.ai.openrouter.OpenRouterVisionRequestDTO;
 import com.saasai.exception.OpenRouterEmptyResponseException;
 import com.saasai.exception.OpenRouterException;
 import com.saasai.exception.OpenRouterTimeoutException;
@@ -225,6 +226,56 @@ public class OpenRouterClient {
         }
 
         return false;
+    }
+
+    // Thực hiện yêu cầu hoàn thành hình ảnh (vision) tới OpenRouter.
+    public AiProviderResultDTO completeVision(
+        OpenRouterVisionRequestDTO request
+    ) {
+        try {
+            OpenRouterResponseDTO response =
+                    webClient.post()
+                            .uri(CHAT_COMPLETIONS_PATH)
+                            .bodyValue(request)
+                            .retrieve()
+                            .onStatus(
+                                    HttpStatusCode::isError,
+                                    clientResponse -> clientResponse
+                                            .bodyToMono(String.class)
+                                            .defaultIfEmpty("")
+                                            .map(body -> createHttpException(
+                                                    clientResponse.statusCode()
+                                                            .value(),
+                                                    body
+                                            ))
+                            )
+                            .bodyToMono(OpenRouterResponseDTO.class)
+                            .block();
+
+            return validateAndMap(response);
+
+        } catch (OpenRouterException exception) {
+            throw exception;
+
+        } catch (Exception exception) {
+            Throwable rootCause =
+                    Exceptions.unwrap(exception);
+
+            if (isTimeout(rootCause)) {
+                throw new OpenRouterTimeoutException(
+                        "OpenRouter không phản hồi trong thời gian cho phép",
+                        rootCause
+                );
+            }
+
+            throw new OpenRouterException(
+                    502,
+                    "OPENROUTER_CLIENT_ERROR",
+                    "Không thể kết nối OpenRouter: "
+                            + rootCause.getMessage(),
+                    true
+            );
+        }
     }
 
 }

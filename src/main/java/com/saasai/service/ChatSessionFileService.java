@@ -1,5 +1,6 @@
 package com.saasai.service;
 
+import com.saasai.dto.SessionFileOptionDTO;
 import com.saasai.entity.ChatSession;
 import com.saasai.entity.ChatSessionFile;
 import com.saasai.entity.FileMetadata;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +23,40 @@ public class ChatSessionFileService {
     private final ChatSessionRepository chatSessionRepository;
     private final ChatSessionFileRepository chatSessionFileRepository;
     private final FileMetadataRepository fileMetadataRepository;
+
+    // Lấy danh sách các file tùy chọn của một session dựa trên sessionUuid và userId
+    public List<SessionFileOptionDTO> getFileOptionsBySession(
+        String sessionUuid,
+        String userId
+        ) {
+        ChatSession session =
+                chatSessionRepository
+                        .findBySessionUuidAndUser_UserId(
+                                sessionUuid,
+                                userId
+                        )
+                        .orElseThrow(() ->
+                                new NoSuchElementException(
+                                        "Session không tồn tại hoặc không thuộc user"
+                                )
+                        );
+
+        return chatSessionFileRepository
+                .findByChatSession(session)
+                .stream()
+                .map(ChatSessionFile::getFile)
+                .filter(file -> file != null)
+                .map(file -> new SessionFileOptionDTO(
+                        file.getFileId(),
+                        file.getFileName(),
+                        file.getExtractionError() != null 
+                                ? file.getExtractionError() 
+                                : null,
+                        null
+                ))
+                .distinct()
+                .toList();
+        }
 
     @Transactional
     public void attachFileToSession(
@@ -41,9 +77,11 @@ public class ChatSessionFileService {
                 ));
 
         ChatSessionFile.PromptFieldCode resolvedField =
-                fieldCode != null
-                        ? ChatSessionFile.PromptFieldCode.valueOf(fieldCode)
-                        : ChatSessionFile.PromptFieldCode.REFERENCE;
+        fieldCode == null || fieldCode.isBlank()
+                ? ChatSessionFile.PromptFieldCode.REFERENCE
+                : ChatSessionFile.PromptFieldCode.valueOf(
+                        fieldCode.trim().toUpperCase()
+                );
 
         String normalizedFileId = normalizeFileId(fileId);
 
@@ -53,6 +91,17 @@ public class ChatSessionFileService {
                         "Không tìm thấy file hoặc bạn không có quyền truy cập: "
                                 + fileId
                 ));
+        boolean alreadyAttached =
+                chatSessionFileRepository
+                        .existsByChatSessionAndFileAndFieldCode(
+                                session,
+                                fileMetadata,
+                                resolvedField
+                        );
+
+        if (alreadyAttached) {
+        return;
+        }
 
         int nextSortOrder = chatSessionFileRepository
                 .findMaxSortOrderBySessionAndField(

@@ -1,0 +1,77 @@
+{
+    "source": "USER_UPLOAD",
+    "templateCode": "CHI_THI_DOI_MOI_HOAT_DONG_MTTQ",
+    "topicCode": "CHI_THI",
+    "tenLoaiVanBan": "CHỈ THỊ",
+    "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",
+    "trichYeu": "về tiếp tục lãnh đạo đổi mới [nội dung, phương thức hoạt động] của [đối tượng], giai đoạn [●]",
+    "cauDanChuyenTiep": "Để tiếp tục [mục tiêu], Ban Thường vụ Tỉnh ủy yêu cầu:",
+    "cauKetHanhChinh": "Chỉ thị này được phổ biến đến [chi bộ/nơi phù hợp].",
+    "doanCanCu": "Trong thời gian qua, [các cấp ủy/cơ quan/đơn vị] đã quan tâm lãnh đạo, chỉ đạo [lĩnh vực] và đạt được những kết quả quan trọng: [kết quả 1], [kết quả 2], [kết quả 3].\nTuy nhiên, [lĩnh vực] vẫn còn một số hạn chế: [hạn chế phối hợp], [hạn chế chuyển đổi số], [hạn chế giám sát/phản biện], [hạn chế cán bộ].\nNguyên nhân là do [nguyên nhân về nhận thức, lãnh đạo, chỉ đạo, tham mưu, năng lực cán bộ].",
+    "cacMuc": [
+      {
+        "code": "1",
+        "tieuDeMuc": "Các cấp ủy, tổ chức đảng lãnh đạo, chỉ đạo quán triệt, tuyên truyền, nâng cao nhận thức",
+        "noiDungChiTiet": "Quán triệt, tuyên truyền, nâng cao nhận thức về [vị trí, vai trò của đối tượng].",
+        "tieuMuc": []
+      },
+      {
+        "code": "2",
+        "tieuDeMuc": "Lãnh đạo thực hiện tốt quy chế phối hợp",
+        "noiDungChiTiet": "Thực hiện tốt quy chế phối hợp giữa chính quyền với [MTTQ/tổ chức chính trị - xã hội].",
+        "tieuMuc": []
+      },
+      {
+        "code": "3",
+        "tieuDeMuc": "Đổi mới, nâng cao chất lượng các cuộc vận động, phong trào thi đua yêu nước",
+        "noiDungChiTiet": "Nâng cao chất lượng các cuộc vận động, phong trào thi đua yêu nước.",
+        "tieuMuc": []
+      },
+      {
+        "code": "4",
+        "tieuDeMuc": "Tiếp tục sắp xếp tổ chức bộ máy, biên chế, vị trí việc làm",
+        "noiDungChiTiet": "Sắp xếp tổ chức bộ máy, biên chế, vị trí việc làm; xây dựng đội ngũ cán bộ.",
+        "tieuMuc": []
+      },
+      {
+        "code": "5",
+        "tieuDeMuc": "Nâng cao chất lượng giám sát, phản biện xã hội",
+        "noiDungChiTiet": "Nâng cao chất lượng giám sát, phản biện xã hội, góp ý xây dựng Đảng, chính quyền.",
+        "tieuMuc": []
+      },
+      {
+        "code": "6",
+        "tieuDeMuc": "Đa dạng hóa hình thức tập hợp đoàn viên, hội viên, Nhân dân",
+        "noiDungChiTiet": "Đa dạng hóa hình thức tập hợp đoàn viên, hội viên, Nhân dân.",
+        "tieuMuc": []
+      },
+      {
+        "code": "7",
+        "tieuDeMuc": "Thường xuyên kiểm tra, giám sát, biểu dương, khen thưởng",
+        "noiDungChiTiet": "Kiểm tra, giám sát, biểu dương, khen thưởng.",
+        "tieuMuc": []
+      },
+      {
+        "code": "8",
+        "tieuDeMuc": "Tổ chức thực hiện",
+        "noiDungChiTiet": "",
+        "tieuMuc": [
+          {
+            "code": "(1)",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Các cấp ủy, tổ chức đảng, chính quyền, MTTQ…] phổ biến, quán triệt, ban hành văn bản cụ thể hóa."
+          },
+          {
+            "code": "(2)",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Đảng ủy HĐND/UBND/MTTQ] chỉ đạo theo chức năng."
+          },
+          {
+            "code": "(3)",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Ban Tuyên giáo và Dân vận/Ban Tổ chức/Ủy ban Kiểm tra/Trường Chính trị] thực hiện nhiệm vụ được giao."
+          }
+        ]
+      }
+    ]
+  }

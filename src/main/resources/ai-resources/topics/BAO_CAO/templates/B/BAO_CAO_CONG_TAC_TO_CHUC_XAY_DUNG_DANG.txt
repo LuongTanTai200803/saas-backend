@@ -1,0 +1,107 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_CONG_TAC_TO_CHUC_XAY_DUNG_DANG",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tình hình công tác tổ chức, xây dựng Đảng [kỳ báo cáo]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo tình hình, kết quả công tác tổ chức, xây dựng Đảng [kỳ báo cáo], như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [văn bản yêu cầu] của Ban Tổ chức Trung ương,",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO CỦA CẤP ỦY",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Việc quán triệt, triển khai các văn bản chỉ đạo của Trung ương",
+          "noiDungChiTiet": "[Trình bày hình thức quán triệt, hội nghị, văn bản, tuyên truyền.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Ban hành văn bản cụ thể hóa để tổ chức thực hiện tại địa phương",
+          "noiDungChiTiet": "[Nêu các quy định, kế hoạch, công văn, hướng dẫn đã ban hành.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ ĐẠT ĐƯỢC",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Sắp xếp tổ chức bộ máy, biên chế, vị trí việc làm",
+          "noiDungChiTiet": "[Trình bày kết quả sắp xếp, số lượng đơn vị, biên chế, vị trí việc làm.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác cán bộ",
+          "noiDungChiTiet": "[Đánh giá, quy hoạch, bổ nhiệm, đào tạo, bố trí, sắp xếp cán bộ.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Xây dựng, củng cố tổ chức cơ sở đảng và đội ngũ đảng viên",
+          "noiDungChiTiet": "[Đảng bộ, chi bộ, phát triển đảng viên, chất lượng sinh hoạt chi bộ.]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Công tác bảo vệ chính trị nội bộ, chính sách cán bộ",
+          "noiDungChiTiet": "[Nếu có.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ưu điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, khó khăn",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "NHIỆM VỤ TRỌNG TÂM [KỲ TIẾP THEO]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Nhiệm vụ về tổ chức bộ máy]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Nhiệm vụ về công tác cán bộ]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Nhiệm vụ về tổ chức cơ sở đảng, đảng viên]",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "[Kiến nghị Trung ương, Bộ Nội vụ, Ban Tổ chức Trung ương hoặc cơ quan có thẩm quyền.]",
+      "tieuMuc": []
+    }
+  ]
+}

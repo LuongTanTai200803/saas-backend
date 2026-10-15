@@ -1,0 +1,143 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_THUC_HIEN_DAN_CHU_CO_SO",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả việc thực hiện dân chủ ở cơ sở năm …; phương hướng, nhiệm vụ trọng tâm năm …",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … báo cáo như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện Công văn số … ngày … của … về báo cáo kết quả thực hiện dân chủ ở cơ sở năm …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "KHÁI QUÁT TÌNH HÌNH CHUNG",
+      "noiDungChiTiet": "- Đặc điểm đơn vị, địa bàn\n- Tình hình cán bộ, đảng viên, Nhân dân\n- Thuận lợi, khó khăn",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO TRIỂN KHAI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác lãnh đạo, chỉ đạo của cấp ủy",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác triển khai của HĐND, UBND",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Hoạt động của MTTQ và các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Hoạt động của Ban Chỉ đạo thực hiện Quy chế dân chủ ở cơ sở",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN DÂN CHỦ Ở CƠ SỞ",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công khai để Nhân dân biết",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nội dung Nhân dân bàn và quyết định",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nội dung Nhân dân tham gia ý kiến",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Nội dung Nhân dân kiểm tra, giám sát",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Công tác tiếp công dân, giải quyết kiến nghị, phản ánh",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Công tác kiểm tra, giám sát việc thực hiện",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ưu điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM NĂM …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tiếp tục thực hiện Luật Thực hiện dân chủ ở cơ sở và các văn bản liên quan",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nâng cao trách nhiệm người đứng đầu",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tăng cường công khai, minh bạch",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Phát huy vai trò giám sát, phản biện xã hội",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Kiểm tra, đôn đốc, xử lý tồn tại",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "[Không có/hoặc nêu cụ thể]",
+      "tieuMuc": []
+    }
+  ]
+}

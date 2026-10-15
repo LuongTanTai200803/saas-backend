@@ -1,0 +1,124 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_TRIEN_KHAI_CHI_THI_NGHI_QUYET_NHIEM_VU_CHUYEN_DE",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "triển khai thực hiện [tên chỉ thị/nghị quyết/kết luận/đề án]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch triển khai thực hiện [nội dung], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch triển khai thực hiện [tên văn bản/nhiệm vụ]. Yêu cầu các cơ quan, đơn vị nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "Căn cứ [văn bản 1];\nCăn cứ [văn bản 2];\nThực hiện [văn bản chỉ đạo trực tiếp];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Cụ thể hóa quan điểm, mục tiêu, nhiệm vụ của [văn bản cấp trên].\n- Nâng cao nhận thức, trách nhiệm của cấp ủy, tổ chức đảng, cơ quan, đơn vị.\n- Tạo chuyển biến rõ nét trong [lĩnh vực triển khai]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Triển khai nghiêm túc, đồng bộ, kịp thời, đúng đối tượng, đúng thẩm quyền.\n- Phân công rõ trách nhiệm, rõ tiến độ, rõ sản phẩm.\n- Bảo đảm phù hợp với điều kiện thực tiễn của địa phương, đơn vị."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu chung",
+          "noiDungChiTiet": "[Nêu mục tiêu bao quát.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu cụ thể",
+          "noiDungChiTiet": "- [Chỉ tiêu 1]\n- [Chỉ tiêu 2]\n- [Chỉ tiêu 3]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác tuyên truyền, quán triệt",
+          "noiDungChiTiet": "[Nội dung thực hiện.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Rà soát, hoàn thiện cơ chế, quy trình, điều kiện thực hiện",
+          "noiDungChiTiet": "[Nội dung thực hiện.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tổ chức triển khai nhiệm vụ chuyên môn",
+          "noiDungChiTiet": "[Nội dung thực hiện.]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": "[Nội dung thực hiện.]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "LỘ TRÌNH THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Giai đoạn/thời hạn 1",
+          "noiDungChiTiet": "[nhiệm vụ, sản phẩm, cơ quan chủ trì]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Giai đoạn/thời hạn 2",
+          "noiDungChiTiet": "[nhiệm vụ, sản phẩm, cơ quan chủ trì]"
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KINH PHÍ",
+      "noiDungChiTiet": "[Nguồn kinh phí, nguyên tắc quản lý, đơn vị lập dự toán.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cơ quan chủ trì]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Cơ quan phối hợp]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Các đảng ủy trực thuộc]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[Cơ quan tuyên truyền, kiểm tra, giám sát]",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

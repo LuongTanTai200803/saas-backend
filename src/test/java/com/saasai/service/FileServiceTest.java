@@ -105,7 +105,7 @@ class FileServiceTest {
         MockMultipartFile file = new MockMultipartFile("file", "empty.pdf", "application/pdf", new byte[0]);
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> fileService.uploadFile(file, "LEGAL"));
+                () -> fileService.uploadFile(file, "LEGAL", "SESSION", ""), ""); 
 
         assertTrue(exception.getMessage().contains("trống"));
     }
@@ -115,7 +115,7 @@ class FileServiceTest {
         MockMultipartFile file = new MockMultipartFile("file", "malware.exe", "application/octet-stream", "abc".getBytes());
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> fileService.uploadFile(file, "LEGAL"));
+                () -> fileService.uploadFile(file, "LEGAL", "SESSION", ""), "");
 
         assertTrue(exception.getMessage().contains("pdf, docx hoặc txt"));
     }
@@ -139,7 +139,7 @@ class FileServiceTest {
             return upload;
         });
 
-        FileMetadataResponseDTO response = fileService.uploadFile(file, "LEGAL");
+        FileMetadataResponseDTO response = fileService.uploadFile(file, "LEGAL", "SESSION", "");
 
         ArgumentCaptor<FileMetadata> captor = ArgumentCaptor.forClass(FileMetadata.class);
         verify(fileMetadataRepository).save(captor.capture());

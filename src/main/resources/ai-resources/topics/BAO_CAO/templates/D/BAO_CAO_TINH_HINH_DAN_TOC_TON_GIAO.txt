@@ -1,0 +1,49 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_TINH_HINH_DAN_TOC_TON_GIAO",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tình hình dân tộc, tôn giáo [tuần/tháng … năm …]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … báo cáo như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Đảng ủy … trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện Công văn số … của … về thông tin, báo cáo tình hình dân tộc, tôn giáo;",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Đặc điểm, tình hình chung",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Tình hình dân tộc; các hoạt động công tác dân tộc",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Tình hình tín ngưỡng, tôn giáo",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    },
+    {
+      "code": "4",
+      "tieuDeMuc": "Công tác quản lý nhà nước về tín ngưỡng, tôn giáo",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    },
+    {
+      "code": "5",
+      "tieuDeMuc": "Vụ việc phát sinh, điểm nóng nếu có",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    },
+    {
+      "code": "6",
+      "tieuDeMuc": "Kiến nghị, đề xuất",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    }
+  ]
+}

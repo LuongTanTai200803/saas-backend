@@ -1,0 +1,53 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KET_LUAN_HOI_NGHI_BCH_DANG_BO_XA_PHUONG",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "coQuanBanHanh": "",
+  "trichYeu": "HỘI NGHỊ BAN CHẤP HÀNH ĐẢNG BỘ XÃ/PHƯỜNG … LẦN THỨ … (KHÓA …, NHIỆM KỲ …)",
+  "cauDanChuyenTiep": "Sau khi nghe các báo cáo, tờ trình, dự thảo văn bản và các ý kiến thảo luận, Ban Chấp hành Đảng bộ xã/phường thống nhất kết luận:",
+  "cauKetHanhChinh": "Trên đây là Kết luận Hội nghị Ban Chấp hành Đảng bộ xã/phường … lần thứ … . Giao Văn phòng Đảng ủy theo dõi, đôn đốc việc triển khai thực hiện; tổng hợp, báo cáo Thường trực Đảng ủy, Ban Thường vụ Đảng ủy theo quy định.",
+  "doanCanCu": "",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "Về kết quả lãnh đạo, chỉ đạo thực hiện nhiệm vụ …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[Đánh giá khái quát bối cảnh]\n[Đánh giá công tác xây dựng Đảng, chính quyền, MTTQ, đoàn thể]\n[Đánh giá kinh tế - xã hội]\n[Đánh giá quốc phòng, an ninh]\n[Đánh giá các nhiệm vụ trọng tâm khác]\n\nBên cạnh kết quả đạt được, vẫn còn một số tồn tại, hạn chế:\n[Nêu hạn chế cụ thể theo lĩnh vực]\n\nNguyên nhân:\n[Nêu nguyên nhân khách quan, chủ quan nếu có dữ liệu]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Phương hướng, nhiệm vụ thời gian tới",
+          "noiDungChiTiet": "[Nhóm nhiệm vụ xây dựng Đảng]\n[Nhóm nhiệm vụ kinh tế - xã hội]\n[Nhóm nhiệm vụ văn hóa - xã hội]\n[Nhóm nhiệm vụ quốc phòng - an ninh]\n[Nhóm nhiệm vụ cải cách hành chính, chuyển đổi số]\n[Nhóm nhiệm vụ kiểm tra, giám sát]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "Về các văn bản phổ biến, quán triệt tại Hội nghị",
+      "noiDungChiTiet": "[Liệt kê văn bản cấp trên, nghị quyết, chỉ thị, kết luận]\nYêu cầu các cấp ủy, tổ chức đảng, cơ quan, đơn vị tổ chức nghiên cứu, quán triệt, cụ thể hóa và triển khai thực hiện nghiêm túc, hiệu quả.",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "Về các dự thảo văn bản trình Hội nghị",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Tên báo cáo/kế hoạch/chương trình]",
+          "noiDungChiTiet": "Ban Chấp hành Đảng bộ cơ bản nhất trí/thống nhất thông qua. Giao [cơ quan] tiếp thu ý kiến tham gia, chỉnh sửa, hoàn thiện, trình Thường trực Đảng ủy ký ban hành."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Tên văn bản tiếp theo]",
+          "noiDungChiTiet": "[NỘI_DUNG_KẾT_LUẬN_VỀ_VĂN_BẢN_TIẾP_THEO]"
+        }
+      ]
+    }
+  ]
+}

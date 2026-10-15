@@ -1,0 +1,101 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_KIEM_TRA_GIAM_SAT",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kiểm tra/giám sát [nội dung] năm …",
+  "cauDanChuyenTiep": "[Chủ thể] xây dựng Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "đánh giá khách quan, phát hiện ưu điểm, hạn chế, nguyên nhân, kiến nghị khắc phục."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "đúng quy định, khách quan, công khai, không làm ảnh hưởng hoạt động bình thường của đơn vị."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG KIỂM TRA/GIÁM SÁT",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đối với [đơn vị/nhóm đối tượng 1]",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đối với [đơn vị/nhóm đối tượng 2]",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐỐI TƯỢNG, THỜI GIAN, ĐỊA ĐIỂM, THÀNH PHẦN, PHƯƠNG PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đối tượng",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thời gian/thời điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Thành phần đoàn kiểm tra và đơn vị được kiểm tra",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Phương pháp",
+          "noiDungChiTiet": "nghe báo cáo, kiểm tra hồ sơ, trao đổi, lập biên bản, dự thảo kết luận."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "PHỤ LỤC/ĐỀ CƯƠNG BÁO CÁO nếu có.",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Cơ quan tham mưu/đoàn kiểm tra",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đơn vị được kiểm tra",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Các đơn vị tự kiểm tra",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

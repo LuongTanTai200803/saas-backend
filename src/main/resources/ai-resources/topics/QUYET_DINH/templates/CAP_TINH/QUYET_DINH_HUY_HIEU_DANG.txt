@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_HUY_HIEU_DANG",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "Tặng Huy hiệu Đảng đợt [tên đợt]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Ban Tổ chức Tỉnh ủy, Văn phòng Tỉnh ủy; các cấp ủy có đảng viên được tặng, truy tặng Huy hiệu Đảng và đảng viên có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này.",
+
+"doanCanCu": "Căn cứ Điều lệ Đảng Cộng sản Việt Nam;\nCăn cứ Quy định số [số quy định] về thi hành Điều lệ Đảng;\nXét đề nghị của ban thường vụ các đảng ủy trực thuộc Tỉnh ủy và Ban Tổ chức Tỉnh ủy,",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Tặng và truy tặng Huy hiệu Đảng",
+
+"noiDungChiTiet": "Tặng Huy hiệu Đảng và truy tặng Huy hiệu Đảng đợt [tên đợt] cho [số lượng] đảng viên, trong đó:\n1. Tặng Huy hiệu Đảng cho [số lượng] đảng viên:\n- Huy hiệu [số] năm tuổi Đảng: [số lượng] đồng chí.\n2. Truy tặng Huy hiệu Đảng cho [số lượng] đảng viên:\n- Huy hiệu [số] năm tuổi Đảng: [số lượng] đồng chí.\n(Có danh sách kèm theo)."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Tặng phẩm và kinh phí",
+
+"noiDungChiTiet": "Tặng phẩm kèm theo Huy hiệu Đảng:\n- Huy hiệu [số] năm là [số] lần mức lương cơ sở, bằng [số tiền] đồng.\nNguồn kinh phí được trích từ [nguồn kinh phí]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "Ban Tổ chức Tỉnh ủy, Văn phòng Tỉnh ủy; các cấp ủy có đảng viên được tặng, truy tặng Huy hiệu Đảng và đảng viên có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này."
+
+}
+
+]
+
+}

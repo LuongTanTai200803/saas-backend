@@ -86,4 +86,20 @@ public class AdminPackageConfig {
         SUBSCRIPTION,
         CREDIT_PACK
     }
+
+    // File and text limits per API call
+    @Column(name = "max_files_per_call")
+    private Integer maxFilesPerCall;
+
+    @Column(name = "max_file_size_mb")
+    private Long maxFileSizeMb;
+
+    @Column(name = "max_total_file_size_mb_per_call")
+    private Long maxTotalFileSizeMbPerCall;
+
+    @Column(name = "max_text_per_call")
+    private Long maxTextPerCall;
+
+    @Column(name = "allowed_file_types", columnDefinition = "JSON")
+    private String allowedFileTypes;
 }

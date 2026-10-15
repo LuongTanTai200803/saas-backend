@@ -73,6 +73,12 @@ public class ChatSession {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(
+        name = "template_definition_json",
+        columnDefinition = "JSON"
+    )
+    private String templateDefinitionJson;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();

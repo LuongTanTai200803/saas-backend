@@ -1,0 +1,83 @@
+{
+
+"source": "USER_UPLOAD",
+
+"templateCode": "KET_LUAN_HOI_NGHI_TONG_KET_NAM_THI_DUA_XA_PHUONG",
+
+"topicCode": "KET_LUAN",
+
+"tenLoaiVanBan": "KẾT LUẬN",
+
+"coQuanBanHanh": "Hội nghị tổng kết công tác xây dựng Đảng, chính quyền năm …; giao chỉ tiêu kế hoạch kinh tế - xã hội và phát động phong trào thi đua yêu nước năm …",
+
+"trichYeu": "",
+
+"cauDanChuyenTiep": "Ngày …/…/…, Ban Thường vụ Đảng ủy xã/phường … tổ chức Hội nghị tổng kết công tác xây dựng Đảng, chính quyền năm …; giao chỉ tiêu kế hoạch kinh tế - xã hội và phát động phong trào thi đua yêu nước năm … . Dự hội nghị có … .\nSau khi nghe nội dung triển khai và các ý kiến thảo luận, Ban Chấp hành Đảng bộ xã/phường thống nhất kết luận:",
+
+"cauKetHanhChinh": "Ban Chấp hành Đảng bộ xã/phường kết luận để thực hiện.",
+
+"doanCanCu": "",
+
+"cacMuc": [
+
+{
+
+"code": "I",
+
+"tieuDeMuc": "Về kết quả lãnh đạo thực hiện nhiệm vụ phát triển kinh tế - xã hội; quốc phòng, an ninh và công tác xây dựng Đảng, hệ thống chính trị năm …; phương hướng, nhiệm vụ năm …",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "Về kết quả thực hiện năm …",
+
+"noiDungChiTiet": "[Đánh giá chung]\n[Đánh giá công tác xây dựng Đảng]\n[Đánh giá hoạt động HĐND]\n[Đánh giá hoạt động UBND]\n[Đánh giá MTTQ và đoàn thể]\n[Đánh giá kinh tế - xã hội]\n[Đánh giá quốc phòng, an ninh]\n[Đánh giá kiểm tra, giám sát]"
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "Về phương hướng, nhiệm vụ năm …",
+
+"noiDungChiTiet": "2.1. Công tác xây dựng Đảng, hệ thống chính trị\n…\n2.2. Phát triển kinh tế - xã hội\n…\n2.3. Cải cách hành chính, chuyển đổi số\n…\n2.4. Văn hóa, xã hội, an sinh xã hội\n…\n2.5. Phong trào thi đua yêu nước\n…\n2.6. Quốc phòng, an ninh\n…\n2.7. Trách nhiệm của cấp ủy viên phụ trách địa bàn, chi bộ\n…"
+
+}
+
+]
+
+},
+
+{
+
+"code": "II",
+
+"tieuDeMuc": "Về dự thảo Báo cáo tổng kết công tác kiểm tra, giám sát và thi hành kỷ luật của Đảng năm …; phương hướng, nhiệm vụ trọng tâm năm …",
+
+"noiDungChiTiet": "Cơ bản nhất trí dự thảo Báo cáo. Giao Ủy ban Kiểm tra Đảng ủy tiếp thu ý kiến, bổ sung, hoàn chỉnh báo cáo, trình ký ban hành.",
+
+"tieuMuc": []
+
+},
+
+{
+
+"code": "III",
+
+"tieuDeMuc": "Về các văn bản phổ biến, quán triệt tại Hội nghị",
+
+"noiDungChiTiet": "[Liệt kê văn bản]\nYêu cầu các cơ quan, đơn vị, các chi, đảng bộ cơ sở, chi bộ trực thuộc Đảng ủy, nhất là người đứng đầu, tổ chức nghiên cứu, quán triệt, cụ thể hóa đầy đủ, kịp thời các nội dung phù hợp với tình hình thực tiễn và triển khai thực hiện nghiêm túc, hiệu quả.",
+
+"tieuMuc": []
+
+}
+
+]
+
+}

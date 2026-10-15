@@ -1,0 +1,101 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_DAO_TAO_BOI_DUONG_TAP_HUAN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Đào tạo, bồi dưỡng/tập huấn] [đối tượng] năm [năm thực hiện]",
+  "cauDanChuyenTiep": "[Cơ quan ban hành] ban hành Kế hoạch, cụ thể như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ [văn bản pháp lý, quy định, kế hoạch cấp trên];\nThực hiện [chương trình công tác];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "1. Mục đích\n- Trang bị, cập nhật kiến thức, kỹ năng, nghiệp vụ.\n- Nâng cao năng lực thực hiện nhiệm vụ của đội ngũ [đối tượng].\n- Tạo sự thống nhất trong nhận thức và hành động.\n\n2. Yêu cầu\n- Đúng đối tượng, đúng thành phần, đúng chỉ tiêu.\n- Nội dung thiết thực, trọng tâm, gắn lý luận với thực tiễn.\n- Bảo đảm điều kiện tổ chức, tài liệu, giảng viên, kinh phí.",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Nêu mục tiêu trang bị, cập nhật kiến thức, kỹ năng, nghiệp vụ; nâng cao năng lực thực hiện nhiệm vụ của đối tượng được đào tạo, bồi dưỡng hoặc tập huấn; tạo sự thống nhất trong nhận thức và hành động."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Xác định yêu cầu về đối tượng, thành phần, chỉ tiêu; tính thiết thực của nội dung; sự gắn kết giữa lý luận và thực tiễn; điều kiện tổ chức, tài liệu, giảng viên và kinh phí."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NGUYÊN TẮC, TIÊU CHÍ",
+      "noiDungChiTiet": "[Áp dụng nếu là kế hoạch đào tạo diện rộng.]\n- Căn cứ vị trí việc làm, tiêu chuẩn chức danh, quy hoạch cán bộ.\n- Ưu tiên đối tượng, lĩnh vực, địa bàn theo yêu cầu nhiệm vụ.\n- Không cử sai đối tượng, không hình thức.",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NỘI DUNG, ĐỐI TƯỢNG, HÌNH THỨC",
+      "noiDungChiTiet": "1. Nội dung\n- [Chuyên đề 1]\n- [Chuyên đề 2]\n- [Chuyên đề 3]\n\n2. Đối tượng\n[Nhóm đối tượng.]\n\n3. Chỉ tiêu\n[Số lượng/lượt người.]\n\n4. Hình thức\n[Trực tiếp/trực tuyến/kết hợp.]\n\n5. Thời gian, địa điểm\n[Thời gian, địa điểm.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung",
+          "noiDungChiTiet": "Liệt kê các chuyên đề hoặc nội dung đào tạo, bồi dưỡng, tập huấn theo yêu cầu nhiệm vụ. Số lượng và tên chuyên đề được xác định theo kế hoạch thực tế."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đối tượng",
+          "noiDungChiTiet": "Xác định nhóm cán bộ, công chức, viên chức hoặc đối tượng cụ thể tham gia chương trình."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Chỉ tiêu",
+          "noiDungChiTiet": "Nêu số lượng người hoặc lượt người dự kiến tham gia."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Hình thức",
+          "noiDungChiTiet": "Xác định hình thức tổ chức trực tiếp, trực tuyến hoặc kết hợp."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Thời gian, địa điểm",
+          "noiDungChiTiet": "Nêu thời gian tổ chức và địa điểm triển khai chương trình."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "PHÂN CÔNG THỰC HIỆN",
+      "noiDungChiTiet": "1. Cơ quan chủ trì\n2. Cơ quan phối hợp\n3. Đơn vị giảng dạy/báo cáo viên\n4. Bộ phận hậu cần, tài liệu, kinh phí",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Cơ quan chủ trì",
+          "noiDungChiTiet": "Xác định cơ quan chịu trách nhiệm chính trong việc tổ chức, điều phối và triển khai kế hoạch."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Cơ quan phối hợp",
+          "noiDungChiTiet": "Xác định các cơ quan, đơn vị phối hợp thực hiện nhiệm vụ theo phân công."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Đơn vị giảng dạy/báo cáo viên",
+          "noiDungChiTiet": "Xác định đơn vị giảng dạy, giảng viên hoặc báo cáo viên tham gia chương trình."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Bộ phận hậu cần, tài liệu, kinh phí",
+          "noiDungChiTiet": "Phân công trách nhiệm chuẩn bị hậu cần, tài liệu và các điều kiện phục vụ tổ chức chương trình."
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KINH PHÍ",
+      "noiDungChiTiet": "[Nguồn kinh phí, thanh quyết toán.]",
+      "tieuMuc": []
+    }
+  ]
+}

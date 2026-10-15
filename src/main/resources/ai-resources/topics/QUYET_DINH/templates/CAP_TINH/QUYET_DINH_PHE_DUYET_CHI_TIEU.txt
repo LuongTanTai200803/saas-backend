@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_PHE_DUYET_CHI_TIEU",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "phê duyệt chỉ tiêu [nội dung chỉ tiêu]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực thi hành kể từ ngày ký.",
+
+"doanCanCu": "Căn cứ [căn cứ 1];\nCăn cứ [căn cứ 2];\nCăn cứ Kế hoạch số [số kế hoạch];\nXét đề nghị của [cơ quan đề nghị],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Phê duyệt chỉ tiêu",
+
+"noiDungChiTiet": "Phê duyệt [số lượng] chỉ tiêu [nội dung chỉ tiêu] thực hiện năm [năm]. (Chi tiết tại Biểu kèm theo)."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Tổ chức thực hiện",
+
+"noiDungChiTiet": "1. Giao [cơ quan chủ trì] chủ trì, phối hợp với [cơ quan phối hợp] tham mưu tổ chức [nội dung tổ chức].\n2. [Cơ quan/đơn vị] có trách nhiệm phối hợp với [đơn vị liên quan] tổ chức thực hiện bảo đảm theo đúng quy định hiện hành."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+
+"noiDungChiTiet": "1. Quyết định này có hiệu lực thi hành kể từ ngày ký.\n2. Văn phòng Tỉnh ủy, [các cơ quan khác], các cơ quan, đơn vị liên quan căn cứ Quyết định thi hành."
+
+}
+
+]
+
+}

@@ -1,153 +1,166 @@
 [
   {
     "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_TINH",
-    "priority": 120,
-    "titleKeywords": [
-      "dai hoi dai bieu dang bo tinh",
-      "dai hoi dang bo tinh",
-      "nghi quyet dai hoi",
-      "nhiem ky",
-      "doan chu tich dai hoi"
-    ]
-  },
-  {
-    "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_XA_PHUONG",
-    "priority": 115,
-    "titleKeywords": [
-      "dai hoi dai bieu dang bo xa",
-      "dai hoi dai bieu dang bo phuong",
-      "dai hoi dang bo xa",
-      "dai hoi dang bo phuong",
-      "nghi quyet dai hoi",
-      "nhiem ky"
-    ]
-  },
-  {
-    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_TINH",
-    "priority": 110,
-    "titleKeywords": [
-      "hoi nghi lan thu",
-      "ban chap hanh dang bo tinh",
-      "nghi quyet hoi nghi thuong ky",
-      "nghi quyet danh gia nam",
-      "nghi quyet danh gia quy",
-      "muc tieu nhiem vu giai phap ky toi"
-    ]
-  },
-  {
-    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_XA_PHUONG",
-    "priority": 105,
-    "titleKeywords": [
-      "hoi nghi ban chap hanh dang bo xa",
-      "hoi nghi ban chap hanh dang bo phuong",
-      "nghi quyet nam",
-      "nghi quyet 6 thang cuoi nam",
-      "muc tieu nhiem vu giai phap chu yeu nam",
-      "lan thu 1",
-      "lan thu 3",
-      "lan thu 6"
-    ]
-  },
-  {
-    "templateCode": "NGHI_QUYET_CHUYEN_DE_BAN_THUONG_VU",
     "priority": 100,
     "titleKeywords": [
-      "ban thuong vu dang uy",
-      "nghi quyet chuyen de",
-      "nhiem vu cap bach",
-      "diem nghen",
-      "cap giay chung nhan quyen su dung dat",
-      "xu ly ton dong ho so",
-      "quan ly trat tu xay dung",
-      "giai phong mat bang",
-      "cai cach hanh chinh",
-      "dieu hanh truc tiep"
+      "Nghị quyết Đại hội",
+      "Đại hội đại biểu",
+      "Đại hội Đảng bộ",
+      "Nhiệm kỳ Đại hội",
+      "Báo cáo chính trị Đại hội"
+    ],
+    "doiTuongApDung": "Đại hội đại biểu Đảng bộ cấp tỉnh, đảng bộ cơ quan, đảng bộ trực thuộc.",
+    "loaiVanBanApDung": [
+      "Nghị quyết Đại hội nhiệm kỳ",
+      "Nghị quyết thông qua báo cáo chính trị, phương hướng, mục tiêu, nhiệm vụ nhiệm kỳ mới"
     ]
   },
   {
-    "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_XA_PHUONG",
-    "priority": 98,
+    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_DANG_BO_TINH",
+    "priority": 100,
     "titleKeywords": [
-      "ban chap hanh dang bo xa",
-      "ban chap hanh dang bo phuong",
-      "nghi quyet chuyen de",
-      "du lich",
-      "giao duc",
-      "nguon nhan luc",
-      "kiem tra giam sat",
-      "dat dai",
-      "ha tang giao thong",
-      "nong nghiep",
-      "thuong mai dich vu",
-      "chuyen doi so",
-      "giam ngheo",
-      "nong thon moi"
-    ]
-  },
-  {
-    "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_TINH",
-    "priority": 96,
-    "titleKeywords": [
-      "ban chap hanh",
-      "ban thuong vu",
-      "nghi quyet chuyen de",
-      "phat trien nganh",
-      "phat trien linh vuc",
-      "dau tu",
-      "cong nghiep",
-      "du lich",
-      "lam nghiep",
-      "van hoa",
-      "con nguoi",
-      "doi ngoai",
-      "phong chong te nan",
-      "cai cach hanh chinh",
-      "chuyen doi so"
+      "Hội nghị Ban Chấp hành",
+      "Nghị quyết Hội nghị lần thứ",
+      "Ban Chấp hành Đảng bộ tỉnh",
+      "Nghị quyết Tỉnh ủy",
+      "Nghị quyết định kỳ Tỉnh ủy"
+    ],
+    "doiTuongApDung": "Ban Chấp hành Đảng bộ tỉnh, đảng bộ cấp trên cơ sở, hội nghị BCH định kỳ.",
+    "loaiVanBanApDung": [
+      "Nghị quyết hội nghị thường kỳ",
+      "Nghị quyết đánh giá năm/quý",
+      "Nghị quyết xác định mục tiêu, nhiệm vụ, giải pháp kỳ tới"
     ]
   },
   {
     "templateCode": "NGHI_QUYET_CHUYEN_DE_TINH",
-    "priority": 95,
+    "priority": 100,
     "titleKeywords": [
-      "nghi quyet chuyen de cap tinh",
-      "nghi quyet chuyen de tinh uy",
-      "phat trien nganh",
-      "phat trien linh vuc",
-      "dau tu",
-      "cong nghiep",
-      "du lich",
-      "lam nghiep",
-      "van hoa",
-      "doi ngoai",
-      "cai cach hanh chinh",
-      "chuyen doi so"
+      "Nghị quyết chuyên đề",
+      "phát triển kinh tế xã hội",
+      "chuyển đổi số cấp tỉnh",
+      "cải cách hành chính",
+      "phát triển ngành lĩnh vực",
+      "giai đoạn tầm nhìn"
+    ],
+    "doiTuongApDung": "Ban Chấp hành hoặc Ban Thường vụ Tỉnh ủy ban hành nghị quyết về một lĩnh vực trọng tâm.",
+    "loaiVanBanApDung": [
+      "Nghị quyết về phát triển ngành/lĩnh vực: đầu tư, công nghiệp, du lịch, lâm nghiệp, văn hóa, con người, đối ngoại, phòng chống tệ nạn, cải cách hành chính, chuyển đổi số"
     ]
   },
   {
-    "templateCode": "NGHI_QUYET_CONG_TAC_CAN_BO_TINH",
-    "priority": 90,
+    "templateCode": "NGHI_QUYET_CONG_TAC_TO_CHUC_CAN_BO_SU_TINH",
+    "priority": 100,
     "titleKeywords": [
-      "cong tac can bo",
-      "to chuc bo may",
-      "bien che",
-      "quy hoach can bo",
-      "danh gia xep loai can bo",
-      "dieu chuyen can bo",
-      "che do chinh sach",
-      "phe duyet danh sach tap the ca nhan"
+      "công tác tổ chức",
+      "công tác cán bộ",
+      "nhân sự cấp ủy",
+      "xếp loại cán bộ",
+      "bổ sung quy hoạch",
+      "biên chế bộ máy"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, cơ quan có thẩm quyền quyết định về cán bộ, tổ chức bộ máy, biên chế, quy hoạch, đánh giá, chế độ chính sách.",
+    "loaiVanBanApDung": [
+      "Nghị quyết đánh giá, xếp loại cán bộ",
+      "Nghị quyết điều chuyển cán bộ",
+      "Nghị quyết thực hiện chế độ chính sách",
+      "Nghị quyết rà soát, bổ sung quy hoạch",
+      "Nghị quyết phê duyệt danh sách tập thể/cá nhân"
     ]
   },
   {
-    "templateCode": "NGHI_QUYET_CONG_TAC_TO_CHUC",
-    "priority": 89,
+    "templateCode": "NGHI_QUYET_MAU_CHUNG",
+    "priority": 50,
     "titleKeywords": [
-      "cong tac to chuc",
-      "to chuc can bo",
-      "to chuc bo may",
-      "nhan su",
-      "ra soat bo sung quy hoach",
-      "danh gia can bo",
-      "che do chinh sach"
+      "Nghị quyết",
+      "nghị quyết chung",
+      "nghị quyết chỉ đạo",
+      "nghị quyết ban hành"
+    ],
+    "doiTuongApDung": "Mọi cấp ủy, tổ chức đảng khi ban hành Nghị quyết chung hoặc chưa xác định rõ thể loại chuyên biệt.",
+    "loaiVanBanApDung": [
+      "Mẫu khung Nghị quyết dùng chung"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Nghị quyết Đại hội Đảng bộ xã",
+      "Nghị quyết Đại hội Đảng bộ phường",
+      "Đại hội đại biểu Đảng bộ xã",
+      "Đại hội đại biểu Đảng bộ phường",
+      "Nhiệm kỳ Đảng bộ cơ sở"
+    ],
+    "doiTuongApDung": "Đại hội đại biểu Đảng bộ xã, phường, cơ quan, đơn vị cấp cơ sở.",
+    "loaiVanBanApDung": [
+      "Nghị quyết Đại hội đại biểu Đảng bộ xã/phường lần thứ I hoặc các nhiệm kỳ tiếp theo"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_DANG_BO_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Nghị quyết năm Đảng ủy xã",
+      "Nghị quyết năm Đảng ủy phường",
+      "Hội nghị BCH Đảng bộ xã",
+      "Hội nghị BCH Đảng bộ phường",
+      "nhiệm vụ giải pháp năm xã phường"
+    ],
+    "doiTuongApDung": "Ban Chấp hành Đảng bộ xã, phường, Đảng bộ cơ quan, Đảng bộ UBND.",
+    "loaiVanBanApDung": [
+      "Nghị quyết về mục tiêu, nhiệm vụ, giải pháp chủ yếu năm",
+      "Nghị quyết 6 tháng cuối năm",
+      "Nghị quyết hội nghị lần thứ I, lần thứ 3, lần thứ 6 của Ban Chấp hành xã/phường"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_DANG_BO_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Nghị quyết chuyên đề Đảng ủy xã",
+      "Nghị quyết chuyên đề Đảng ủy phường",
+      "chuyên đề xây dựng nông thôn mới",
+      "chuyên đề quản lý đất đai xã",
+      "chuyên đề du lịch giáo dục xã"
+    ],
+    "doiTuongApDung": "Ban Chấp hành Đảng bộ xã/phường ban hành để lãnh đạo một lĩnh vực trọng tâm.",
+    "loaiVanBanApDung": [
+      "Nghị quyết chuyên đề về du lịch, giáo dục, nguồn nhân lực, kiểm tra giám sát, đất đai, hạ tầng giao thông, nông nghiệp, thương mại - dịch vụ, chuyển đổi số, giảm nghèo, xây dựng nông thôn mới"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUYEN_DE_BTV_DANG_UY_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Ban Thường vụ Đảng ủy xã",
+      "Ban Thường vụ Đảng ủy phường",
+      "cấp giấy chứng nhận quyền sử dụng đất",
+      "giải phóng mặt bằng xã phường",
+      "xử lý tồn đọng hồ sơ",
+      "quản lý trật tự xây dựng"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Đảng ủy xã/phường khi cần lãnh đạo một nhiệm vụ cụ thể, cấp bách, có điểm nghẽn rõ.",
+    "loaiVanBanApDung": [
+      "Nghị quyết về cấp giấy chứng nhận quyền sử dụng đất",
+      "Nghị quyết xử lý tồn đọng hồ sơ",
+      "Nghị quyết quản lý trật tự xây dựng",
+      "Nghị quyết giải phóng mặt bằng",
+      "Nghị quyết cải cách hành chính, nhiệm vụ có tính điều hành trực tiếp"
+    ]
+  },
+  {
+    "templateCode": "NGHI_QUYET_CHUNG_CAP_XA",
+    "priority": 50,
+    "titleKeywords": [
+      "Nghị quyết Đảng ủy xã",
+      "Nghị quyết Đảng ủy phường",
+      "Nghị quyết cấp xã",
+      "Nghị quyết chung xã phường"
+    ],
+    "doiTuongApDung": "Đảng ủy, Ban Thường vụ, Đoàn Chủ tịch Đại hội cấp xã/phường khi chưa xác định cụ thể mẫu chuyên biệt.",
+    "loaiVanBanApDung": [
+      "Khung mẫu Nghị quyết chung cấp xã, phường"
     ]
   }
 ]

@@ -1,0 +1,97 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_NGHIEN_CUU_HOC_TAP_QUAN_TRIET_NGHI_QUYET",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "nghiên cứu, học tập, quán triệt, tuyên truyền và triển khai thực hiện [tên nghị quyết]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [chỉ thị/hướng dẫn của Trung ương],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "làm rõ nội dung cốt lõi, điểm mới, tạo thống nhất nhận thức và hành động, xây dựng chương trình hành động."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "nghiêm túc, bài bản, khoa học, thực chất, hiệu quả; kết hợp trực tiếp/trực tuyến; bảo đảm tài liệu, đường truyền, cơ sở vật chất."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG, ĐỐI TƯỢNG, TÀI LIỆU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung học tập",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đối tượng học tập",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tài liệu học tập",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "CÁC HỘI NGHỊ TRIỂN KHAI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Hội nghị cấp tỉnh/toàn quốc kết nối trực tuyến",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hội nghị do đảng ủy trực thuộc tổ chức",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Hội nghị do chi, đảng bộ cơ sở tổ chức",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Mỗi hội nghị cần có: hình thức, thời gian, báo cáo viên, thành phần.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TUYÊN TRUYỀN SÂU RỘNG",
+      "noiDungChiTiet": "Nêu kênh tuyên truyền: báo chí, cổng thông tin, mạng xã hội, sinh hoạt chi bộ, hội nghị báo cáo viên, tài liệu hỏi đáp, video, tờ gấp, tuyên truyền bằng tiếng dân tộc nếu cần.",
+      "tieuMuc": []
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "XÂY DỰNG CHƯƠNG TRÌNH HÀNH ĐỘNG",
+      "noiDungChiTiet": "Giao các cấp ủy xây dựng chương trình hành động, kế hoạch thực hiện, xác định chỉ tiêu, nhiệm vụ, lộ trình.",
+      "tieuMuc": []
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "Giao nhiệm vụ cho đảng ủy trực thuộc, Ban Tuyên giáo và Dân vận, Văn phòng Tỉnh ủy, cơ quan báo chí, Trường Chính trị, trung tâm chính trị.\n\nKèm biểu tiến độ: nhiệm vụ, cơ quan chủ trì, phối hợp, thời gian.",
+      "tieuMuc": []
+    }
+  ]
+}

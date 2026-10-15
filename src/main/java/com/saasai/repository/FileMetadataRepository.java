@@ -28,4 +28,8 @@ public interface FileMetadataRepository extends JpaRepository<FileMetadata, Stri
     @Query("SELECT COALESCE(SUM(f.fileSize), 0) FROM FileMetadata f JOIN f.user u WHERE u.userId = :userId")
     Long sumFileSizeByUserId(@Param("userId") String userId);
 
+    Optional<FileMetadata> findByUser_UserIdAndContentHash(
+            String userId,
+            String contentHash
+    );
 }

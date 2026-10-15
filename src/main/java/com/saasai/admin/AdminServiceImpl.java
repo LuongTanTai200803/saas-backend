@@ -428,7 +428,15 @@ public AdminPackageDTO upsertPackageConfig(
                         config.getCreditLimit(),
                         config.getDuration(),
                         config.getDescription(),
-                        config.getStorageQuotaMb()
+                        config.getStorageQuotaMb(),
+
+                        config.getMaxFilesPerCall(),
+                        config.getMaxFileSizeMb(),
+                        config.getMaxTotalFileSizeMbPerCall(),
+                        config.getMaxTextPerCall(),
+                        config.getAllowedFileTypes() != null
+                                ? config.getAllowedFileTypes()
+                                : null
                         
                   
                 );

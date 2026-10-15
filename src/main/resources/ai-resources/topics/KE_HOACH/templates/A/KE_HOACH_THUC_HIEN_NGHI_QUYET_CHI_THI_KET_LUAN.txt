@@ -1,0 +1,96 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_THUC_HIEN_NGHI_QUYET_CHI_THI_KET_LUAN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "thực hiện [tên, số, ngày ban hành, cơ quan ban hành văn bản cấp trên] về [nội dung/chủ đề]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [xã/phường...] ban hành/xây dựng Kế hoạch thực hiện, cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch thực hiện [tên văn bản]. Đề nghị/Yêu cầu các cơ quan, đơn vị, tổ chức đảng trực thuộc nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "Thực hiện [tên văn bản cấp trên số..., ngày..., của... về...]",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Quán triệt, tuyên truyền sâu rộng nội dung [văn bản] đến cán bộ, đảng viên và Nhân dân.\n- Cụ thể hóa quan điểm, mục tiêu, nhiệm vụ, giải pháp phù hợp với điều kiện thực tế của địa phương.\n- Nâng cao nhận thức, trách nhiệm của cấp ủy, chính quyền, MTTQ, các tổ chức chính trị - xã hội và người đứng đầu."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Việc triển khai thực hiện phải nghiêm túc, thiết thực, hiệu quả, đồng bộ.\n- Bám sát chỉ đạo của cấp trên, phù hợp chức năng, nhiệm vụ và tình hình thực tiễn địa phương.\n- Xác định rõ trách nhiệm, nhiệm vụ, thời gian, cơ quan chủ trì, cơ quan phối hợp.\n- Tăng cường kiểm tra, giám sát, sơ kết, tổng kết, báo cáo kết quả theo quy định."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[Nêu mục tiêu bao quát phù hợp với nội dung văn bản cấp trên và thực tiễn địa phương.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu cụ thể đến năm...",
+          "noiDungChiTiet": "- [Chỉ tiêu/nhiệm vụ 1].\n- [Chỉ tiêu/nhiệm vụ 2].\n- [Chỉ tiêu/nhiệm vụ 3]."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP TRỌNG TÂM",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Tên nhiệm vụ/giải pháp 1]",
+          "noiDungChiTiet": "[Nội dung triển khai cụ thể.]\n\nCơ quan chủ trì/thực hiện: [Tên cơ quan].\nCơ quan phối hợp: [Tên cơ quan, đơn vị].\nThời gian thực hiện: [Thường xuyên/Năm.../Giai đoạn...]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Tên nhiệm vụ/giải pháp 2]",
+          "noiDungChiTiet": "[Nội dung triển khai cụ thể.]\n\nCơ quan chủ trì/thực hiện: ...\nCơ quan phối hợp: ...\nThời gian thực hiện: ..."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[UBND xã/phường]",
+          "noiDungChiTiet": "Cụ thể hóa các nhiệm vụ được giao; xây dựng kế hoạch/chương trình triển khai phù hợp; định kỳ báo cáo kết quả về Ban Thường vụ Đảng ủy."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Ban Xây dựng Đảng]",
+          "noiDungChiTiet": "Tham mưu công tác quán triệt, tuyên truyền, hướng dẫn, đôn đốc, tổng hợp báo cáo."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Ủy ban Kiểm tra Đảng ủy]",
+          "noiDungChiTiet": "Tham mưu kiểm tra, giám sát việc tổ chức thực hiện Kế hoạch."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[MTTQ và các tổ chức chính trị - xã hội]",
+          "noiDungChiTiet": "Tuyên truyền, vận động đoàn viên, hội viên và Nhân dân tham gia thực hiện; phát huy vai trò giám sát, phản biện xã hội."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "[Các chi bộ, đảng bộ trực thuộc]",
+          "noiDungChiTiet": "Tổ chức quán triệt, triển khai thực hiện phù hợp với điều kiện của cơ quan, đơn vị; báo cáo kết quả theo quy định."
+        }
+      ]
+    }
+  ]
+}

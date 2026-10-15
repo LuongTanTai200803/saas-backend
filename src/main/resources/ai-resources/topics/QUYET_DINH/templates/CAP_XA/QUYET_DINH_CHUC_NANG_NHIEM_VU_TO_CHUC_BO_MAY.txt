@@ -1,0 +1,67 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "QUYET_DINH_CHUC_NANG_NHIEM_VU_TO_CHUC_BO_MAY",
+  "topicCode": "QUYET_DINH",
+  "tenLoaiVanBan": "QUYẾT ĐỊNH",
+  "coQuanBanHanh": "",
+  "trichYeu": "về chức năng, nhiệm vụ, tổ chức bộ máy của [tên cơ quan]",
+  "cauDanChuyenTiep": "BAN THƯỜNG VỤ ĐẢNG ỦY ...\nQUYẾT ĐỊNH",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "- Căn cứ Điều lệ Đảng Cộng sản Việt Nam;\n- Căn cứ [quy định của Trung ương về chức năng, nhiệm vụ, tổ chức bộ máy];\n- Căn cứ [quy chế làm việc của cấp ủy];\n- Xét đề nghị của [cơ quan tham mưu];",
+  "cacMuc": [
+    {
+      "code": "Điều 1",
+      "tieuDeMuc": "Chức năng",
+      "noiDungChiTiet": "[Tên cơ quan] là cơ quan tham mưu, giúp việc [Đảng ủy/BTV/Thường trực] về [các lĩnh vực].",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 2",
+      "tieuDeMuc": "Nhiệm vụ",
+      "noiDungChiTiet": "1. Nghiên cứu, đề xuất và thực hiện: [NỘI_DUNG]\n2. Hướng dẫn, kiểm tra, giám sát: [NỘI_DUNG]\n3. Thẩm định, thẩm tra: [NỘI_DUNG]\n4. Phối hợp: [NỘI_DUNG]\n5. Thực hiện các nhiệm vụ khác do [cấp có thẩm quyền] giao.",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 3",
+      "tieuDeMuc": "Tổ chức bộ máy",
+      "noiDungChiTiet": "[Quy định lãnh đạo, chuyên viên, bộ phận chuyên môn nếu có].",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 4",
+      "tieuDeMuc": "Quan hệ công tác với [Đảng ủy/BTV/Thường trực]",
+      "noiDungChiTiet": "[NỘI_DUNG_QUAN_HỆ_CÔNG_TÁC]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 5",
+      "tieuDeMuc": "Quan hệ công tác với cơ quan tham mưu, MTTQ, đoàn thể",
+      "noiDungChiTiet": "[NỘI_DUNG_QUAN_HỆ_CÔNG_TÁC]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 6",
+      "tieuDeMuc": "Quan hệ công tác với HĐND, UBND",
+      "noiDungChiTiet": "[NỘI_DUNG_QUAN_HỆ_CÔNG_TÁC]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 7",
+      "tieuDeMuc": "Quan hệ công tác với cấp ủy cơ sở",
+      "noiDungChiTiet": "[NỘI_DUNG_QUAN_HỆ_CÔNG_TÁC]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 8",
+      "tieuDeMuc": "Trách nhiệm, quyền hạn",
+      "noiDungChiTiet": "[TRACH_NHIEM_QUYEN_HAN]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 9",
+      "tieuDeMuc": "Điều khoản thi hành",
+      "noiDungChiTiet": "[DIEU_KHOAN_THI_HANH]",
+      "tieuMuc": []
+    }
+  ]
+}

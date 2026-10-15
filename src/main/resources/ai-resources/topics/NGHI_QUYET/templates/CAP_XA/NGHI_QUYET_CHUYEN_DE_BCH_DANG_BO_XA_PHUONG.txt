@@ -1,0 +1,131 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_DANG_BO_XA_PHUONG",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "CỦA BAN CHẤP HÀNH ĐẢNG BỘ [ĐƠN VỊ]",
+  "trichYeu": "về [nội dung chuyên đề], giai đoạn [năm - năm]",
+  "cauDanChuyenTiep": "Ban Chấp hành Đảng bộ [đơn vị] ban hành Nghị quyết về [nội dung], cụ thể như sau:",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến đến các chi bộ, đảng viên và tuyên truyền rộng rãi trong Nhân dân để thống nhất thực hiện.",
+  "doanCanCu": "Thực hiện Nghị quyết Đại hội đại biểu Đảng bộ [đơn vị] lần thứ [số], nhiệm kỳ [năm - năm],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "THỰC TRẠNG / TÌNH HÌNH",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[Nêu kết quả bằng số liệu, mô hình, thành tựu, lĩnh vực liên quan.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tồn tại, hạn chế",
+          "noiDungChiTiet": "[Nêu hạn chế trực tiếp liên quan đến chuyên đề.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "3.1. Nguyên nhân khách quan: [NGUYÊN_NHÂN_KHÁCH_QUAN]\n3.2. Nguyên nhân chủ quan: [NGUYÊN_NHÂN_CHỦ_QUAN]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "QUAN ĐIỂM CHỈ ĐẠO, MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Quan điểm chỉ đạo",
+          "noiDungChiTiet": "[3-5 quan điểm.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Mục tiêu cụ thể / chỉ tiêu chủ yếu",
+          "noiDungChiTiet": "[Chỉ tiêu theo năm hoặc đến cuối giai đoạn.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tăng cường công tác lãnh đạo, chỉ đạo, tuyên truyền, nâng cao nhận thức.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hoàn thiện cơ chế, kế hoạch, quy hoạch, chương trình triển khai.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Huy động nguồn lực, đầu tư trọng tâm, trọng điểm.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Nâng cao chất lượng đội ngũ, năng lực quản lý, điều hành.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Đẩy mạnh kiểm tra, giám sát, xử lý vi phạm.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Phát huy vai trò của MTTQ, các tổ chức chính trị - xã hội và Nhân dân.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ủy ban nhân dân [xã/phường]",
+          "noiDungChiTiet": "Cụ thể hóa Nghị quyết bằng kế hoạch, chương trình, đề án."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Ban Xây dựng Đảng/Ban Tuyên giáo và Dân vận",
+          "noiDungChiTiet": "Tham mưu quán triệt, tuyên truyền."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Ủy ban Kiểm tra Đảng ủy",
+          "noiDungChiTiet": "Kiểm tra, giám sát việc thực hiện."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "MTTQ và các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": "Tuyên truyền, vận động, giám sát, phản biện xã hội."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Các chi bộ, đảng bộ trực thuộc",
+          "noiDungChiTiet": "Tổ chức quán triệt, đưa nội dung vào chương trình công tác."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Các đồng chí Ủy viên Ban Chấp hành",
+          "noiDungChiTiet": "Được phân công phụ trách địa bàn, lĩnh vực thường xuyên theo dõi, đôn đốc."
+        }
+      ]
+    }
+  ]
+}

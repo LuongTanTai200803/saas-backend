@@ -1,0 +1,113 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_CHUYEN_DE_CHINH_SACH_XA_HOI_MOI_TRUONG_DOI_NGOAI",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Trích yếu chuyên đề]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo [nội dung chuyên đề], như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [văn bản yêu cầu/chủ trương/nghị quyết/kết luận],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "BỐI CẢNH / NỘI DUNG CHUYÊN ĐỀ / TÌNH HÌNH TRIỂN KHAI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Bối cảnh chung",
+          "noiDungChiTiet": "[Trình bày bối cảnh quốc tế, trong nước, địa phương nếu phù hợp.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác tuyên truyền, quán triệt, tổ chức thực hiện",
+          "noiDungChiTiet": "[Nêu các văn bản đã ban hành, cách thức triển khai.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả theo từng nhóm nhiệm vụ/lĩnh vực",
+          "noiDungChiTiet": "[Nhóm 1]\n[Nhóm 2]\n[Nhóm 3]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Số liệu, kết quả nổi bật",
+          "noiDungChiTiet": "[Chỉ nêu số liệu có căn cứ.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "HẠN CHẾ, KHÓ KHĂN, NGUYÊN NHÂN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Hạn chế, khó khăn",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nguyên nhân khách quan",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân chủ quan",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, MỤC TIÊU, NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Quan điểm, mục tiêu",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nhiệm vụ trọng tâm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Giải pháp chủ yếu",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tổ chức thực hiện",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đề nghị [cơ quan Trung ương] [nội dung].",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đề nghị [cơ quan Trung ương] [nội dung].",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

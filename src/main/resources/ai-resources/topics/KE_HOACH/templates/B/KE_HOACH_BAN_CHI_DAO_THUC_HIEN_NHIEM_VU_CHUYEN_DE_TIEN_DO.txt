@@ -1,0 +1,63 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_BAN_CHI_DAO_THUC_HIEN_NHIEM_VU_CHUYEN_DE_TIEN_DO",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "BAN CHỈ ĐẠO ...",
+  "trichYeu": "thực hiện [văn bản cấp trên] về [nhiệm vụ]",
+  "cauDanChuyenTiep": "Ban Chỉ đạo ban hành Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ [kế hoạch/văn bản chỉ đạo];\nCăn cứ [quyết định thành lập/kiện toàn Ban Chỉ đạo];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "Nêu mục tiêu triển khai kịp thời, hiệu quả; bảo đảm sự lãnh đạo thống nhất; phát huy hệ thống chính trị; bảo đảm dân chủ, đúng pháp luật, an toàn, tiết kiệm; xác định rõ nhiệm vụ trọng tâm, tiến độ.",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NHIỆM VỤ TRỌNG TÂM VÀ TIẾN ĐỘ TRIỂN KHAI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nhiệm vụ 1",
+          "noiDungChiTiet": "Thời gian thực hiện: ..."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nhiệm vụ 2",
+          "noiDungChiTiet": "Thời gian thực hiện: ..."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nhiệm vụ 3",
+          "noiDungChiTiet": "Thời gian thực hiện: ..."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ban Chỉ đạo thống nhất chỉ đạo toàn bộ nhiệm vụ.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thành viên Ban Chỉ đạo căn cứ chức năng, nhiệm vụ được phân công, chủ động xây dựng kế hoạch cụ thể.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Chế độ báo cáo định kỳ/đột xuất.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_DANG_BO_XA_PHUONG",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "",
+  "trichYeu": "Hội nghị lần thứ [số] Ban Chấp hành Đảng bộ [đơn vị] khóa [số] về mục tiêu, nhiệm vụ, giải pháp chủ yếu [năm/giai đoạn]",
+  "cauDanChuyenTiep": "Hội nghị Ban Chấp hành Đảng bộ [đơn vị] họp ngày [...] đã đánh giá kết quả thực hiện nhiệm vụ [năm trước/kỳ trước], quyết nghị mục tiêu, nhiệm vụ, giải pháp chủ yếu [năm/kỳ] như sau:",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến đến chi bộ/cán bộ, đảng viên và Nhân dân để thực hiện.",
+  "doanCanCu": "[Căn cứ/Thực hiện Nghị quyết Đại hội...]",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "TÌNH HÌNH THỰC HIỆN NGHỊ QUYẾT, KẾ HOẠCH [NĂM/KỲ]",
+      "noiDungChiTiet": "[Khái quát bối cảnh.]\n[Đánh giá kết quả đạt được theo lĩnh vực.]\n[Nêu hạn chế, khó khăn, nguyên nhân.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "MỤC TIÊU, CHỈ TIÊU, NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Các chỉ tiêu chủ yếu",
+          "noiDungChiTiet": "[Liệt kê chỉ tiêu kinh tế, xã hội, môi trường, xây dựng Đảng, quốc phòng - an ninh...]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nhiệm vụ và giải pháp chủ yếu",
+          "noiDungChiTiet": "3.1. Công tác xây dựng Đảng và hệ thống chính trị: [NỘI_DUNG]\n3.2. Phát triển kinh tế: [NỘI_DUNG]\n3.3. Văn hóa - xã hội, giáo dục, y tế, an sinh xã hội: [NỘI_DUNG]\n3.4. Quản lý đất đai, tài nguyên, môi trường, đô thị: [NỘI_DUNG]\n3.5. Quốc phòng, an ninh, nội chính, phòng chống tham nhũng, lãng phí: [NỘI_DUNG]\n3.6. Cải cách hành chính, chuyển đổi số: [NỘI_DUNG]\n[Điều chỉnh theo lĩnh vực thực tế.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[UBND/Đảng ủy UBND]",
+          "noiDungChiTiet": "Cụ thể hóa Nghị quyết bằng chương trình, kế hoạch, giải pháp tổ chức thực hiện."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Các cơ quan tham mưu, giúp việc Đảng ủy; các chi bộ, đảng bộ trực thuộc",
+          "noiDungChiTiet": "Xây dựng kế hoạch triển khai."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Ban Xây dựng Đảng/Ban Tuyên giáo và Dân vận",
+          "noiDungChiTiet": "Tổ chức quán triệt, tuyên truyền."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Ủy ban Kiểm tra Đảng ủy, Văn phòng Đảng ủy",
+          "noiDungChiTiet": "Kiểm tra, giám sát, theo dõi, đôn đốc, tổng hợp báo cáo."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "MTTQ và các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": "Tuyên truyền, vận động, giám sát."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Người đứng đầu",
+          "noiDungChiTiet": "Chịu trách nhiệm về tiến độ và kết quả thực hiện."
+        }
+      ]
+    }
+  ]
+}

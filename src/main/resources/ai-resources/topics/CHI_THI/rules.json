@@ -1,0 +1,84 @@
+[
+  {
+    "templateCode": "CHI_THI_CHUYEN_DE_NGHIEP_VU",
+    "priority": 100,
+    "titleKeywords": [
+      "lưu trữ",
+      "số hóa",
+      "quản lý tài liệu",
+      "quản lý văn thư",
+      "bảo mật tài liệu",
+      "khắc phục tồn đọng",
+      "chuẩn hóa quy trình"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, Thường trực Tỉnh ủy hoặc cấp ủy cấp tỉnh khi cần chỉ đạo một lĩnh vực nghiệp vụ cụ thể trong hệ thống Đảng, MTTQ, tổ chức chính trị - xã hội.",
+    "loaiVanBanApDung": [
+      "Chỉ thị về lưu trữ, số hóa hồ sơ",
+      "Chỉ thị về quản lý tài liệu, quản lý văn thư",
+      "Chỉ thị về bảo mật tài liệu",
+      "Chỉ thị về khắc phục tồn đọng sau sáp nhập",
+      "Chỉ thị về chuẩn hóa quy trình nội bộ"
+    ]
+  },
+  {
+    "templateCode": "CHI_THI_DOI_MOI_HOAT_DONG_MTTQ",
+    "priority": 100,
+    "titleKeywords": [
+      "dân vận",
+      "đại đoàn kết",
+      "đổi mới hoạt động",
+      "MTTQ",
+      "đoàn thể",
+      "giám sát phản biện",
+      "xây dựng tổ chức"
+    ],
+    "doiTuongApDung": "Cấp ủy, chính quyền, MTTQ, tổ chức chính trị - xã hội, hội quần chúng và cơ quan liên quan.",
+    "loaiVanBanApDung": [
+      "Chỉ thị về dân vận, đại đoàn kết",
+      "Chỉ thị về đổi mới hoạt động MTTQ và đoàn thể",
+      "Chỉ thị về giám sát phản biện xã hội",
+      "Chỉ thị về xây dựng tổ chức chính trị - xã hội"
+    ]
+  },
+  {
+    "templateCode": "CHI_THI_PHAT_TRIEN_KINH_TE_XA_HOI",
+    "priority": 100,
+    "titleKeywords": [
+      "tăng trưởng kinh tế",
+      "thu ngân sách",
+      "giải ngân đầu tư công",
+      "cải cách hành chính",
+      "tháo gỡ khó khăn",
+      "chỉ tiêu năm"
+    ],
+    "doiTuongApDung": "Cấp ủy, chính quyền, sở ngành, địa phương, MTTQ, tổ chức chính trị - xã hội, cơ quan tham mưu giúp việc cấp ủy.",
+    "loaiVanBanApDung": [
+      "Chỉ thị về tăng trưởng kinh tế",
+      "Chỉ thị về thu ngân sách",
+      "Chỉ thị về giải ngân vốn đầu tư công",
+      "Chỉ thị về cải cách hành chính",
+      "Chỉ thị về tháo gỡ khó khăn, thực hiện chỉ tiêu năm"
+    ]
+  },
+  {
+    "templateCode": "CHI_THI_PHAT_TRIEN_HE_SINH_THAI_KHOI_NGHIEP",
+    "priority": 100,
+    "titleKeywords": [
+      "khoa học công nghệ",
+      "đổi mới sáng tạo",
+      "chuyển đổi số",
+      "khởi nghiệp",
+      "phát triển doanh nghiệp",
+      "hệ sinh thái"
+    ],
+    "doiTuongApDung": "Cấp ủy, tổ chức đảng, chính quyền, cơ quan chuyên môn, cơ sở giáo dục, doanh nghiệp, MTTQ, tổ chức chính trị - xã hội.",
+    "loaiVanBanApDung": [
+      "Chỉ thị về khoa học công nghệ",
+      "Chỉ thị về đổi mới sáng tạo",
+      "Chỉ thị về chuyển đổi số",
+      "Chỉ thị về khởi nghiệp",
+      "Chỉ thị về phát triển doanh nghiệp",
+      "Chỉ thị về hệ sinh thái đổi mới"
+    ]
+  }
+]

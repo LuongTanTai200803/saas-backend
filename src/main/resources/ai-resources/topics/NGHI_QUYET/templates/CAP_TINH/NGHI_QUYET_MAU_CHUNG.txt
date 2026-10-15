@@ -1,0 +1,111 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_MAU_CHUNG",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "CỦA [CƠ QUAN BAN HÀNH]",
+  "trichYeu": "về [NỘI DUNG NGHỊ QUYẾT] [giai đoạn …/nhiệm kỳ …/thời điểm … nếu có]",
+  "cauDanChuyenTiep": "[cơ quan ban hành] ban hành Nghị quyết về [nội dung].",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến đến [chi bộ/cán bộ, đảng viên/Nhân dân] để thực hiện.",
+  "doanCanCu": "Thực hiện [căn cứ chính trị, pháp lý, nghị quyết, chương trình, tờ trình, kết luận liên quan]; căn cứ tình hình thực tiễn [địa phương/lĩnh vực/cơ quan];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "TÌNH HÌNH/SỰ CẦN THIẾT/CĂN CỨ BAN HÀNH",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[KẾT_QUẢ_ĐẠT_ĐƯỢC]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, tồn tại",
+          "noiDungChiTiet": "[HẠN_CHẾ_TỒN_TẠI]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "[NGUYÊN_NHÂN]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Yêu cầu đặt ra",
+          "noiDungChiTiet": "[YÊU_CẦU_ĐẶT_RA]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "QUAN ĐIỂM CHỈ ĐẠO",
+      "noiDungChiTiet": "[QUAN_ĐIỂM_CHỈ_ĐẠO]",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[MỤC_TIÊU_TỔNG_QUÁT]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu cụ thể/chỉ tiêu",
+          "noiDungChiTiet": "[MỤC_TIÊU_CỤ_THỂ_CHỈ_TIÊU]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU",
+      "noiDungChiTiet": "[NHIỆM_VỤ_VÀ_GIẢI_PHÁP_CHỦ_YẾU]",
+      "tieuMuc": []
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cấp ủy/tổ chức đảng]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_CẤP_ỦY_TỔ_CHỨC_ĐẢNG]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Đảng ủy HĐND]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ĐẢNG_ỦY_HĐND]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Đảng ủy UBND]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ĐẢNG_ỦY_UBND]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[MTTQ và tổ chức chính trị - xã hội]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_MTTQ_VÀ_TỔ_CHỨC_CHÍNH_TRỊ_XÃ_HỘI]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "[Ban Tuyên giáo và Dân vận]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_BAN_TUYÊN_GIÁO_VÀ_DÂN_VẬN]"
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "[Ủy ban Kiểm tra]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ỦY_BAN_KIỂM_TRA]"
+        },
+        {
+          "code": "7",
+          "tieuDeMuc": "[Văn phòng Tỉnh ủy]",
+          "noiDungChiTiet": "[NHIỆM_VỤ_VĂN_PHÒNG_TỈNH_ỦY]"
+        }
+      ]
+    }
+  ]
+}

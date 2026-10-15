@@ -1,0 +1,83 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_BAN_THUONG_VU_DANG_UY_XA_THUC_HIEN_KE_HOACH_CAP_TREN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ ĐẢNG ỦY",
+  "trichYeu": "thực hiện [kế hoạch cấp trên] về [nội dung]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy xây dựng Kế hoạch thực hiện như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [kế hoạch cấp trên],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "Nêu nâng cao nhận thức, trách nhiệm; tăng cường lãnh đạo, chỉ đạo; phù hợp điều kiện thực tế địa phương; phân công rõ người, rõ việc, rõ tiến độ, rõ kết quả, rõ trách nhiệm.",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tăng cường sự lãnh đạo của Đảng",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nâng cao chất lượng tuyên truyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nâng cao hiệu quả quản lý nhà nước",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Thực hiện cơ chế, chính sách và bố trí nguồn lực",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Xây dựng mô hình/chuỗi/hoạt động trọng tâm phù hợp lĩnh vực",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Tăng cường kiểm tra, giám sát",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "Kèm biểu nhiệm vụ cấp xã: STT, nội dung, cơ quan chủ trì, cơ quan phối hợp, thời gian.",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Các tổ chức đảng trực thuộc triển khai thực hiện.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "UBND xã xây dựng chương trình/kế hoạch cụ thể.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Ban Xây dựng Đảng xã định hướng tuyên truyền, theo dõi, đôn đốc, tổng hợp báo cáo.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "MTTQ và các tổ chức chính trị xã hội tuyên truyền, vận động, giám sát.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

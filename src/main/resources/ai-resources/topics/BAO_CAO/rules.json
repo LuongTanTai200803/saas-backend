@@ -1,0 +1,308 @@
+[
+  
+  {
+    "templateCode": "BAO_CAO_TONG_KET_THUC_HIEN_VAN_BAN_DANG",
+    "directory": "BAO_CAO/A",
+    "priority": 98,
+    "titleKeywords": [
+      "tổng kết thực hiện văn bản",
+      "tổng kết chỉ thị",
+      "tổng kết nghị quyết",
+      "tổng kết kết luận",
+      "tổng kết nhiều năm",
+      "tổng kết 5 năm",
+      "tổng kết 10 năm",
+      "tổng kết chuyên đề",
+      "bài học kinh nghiệm"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, cấp ủy cấp huyện, cấp ủy cấp xã hoặc cơ quan Đảng khi tổng kết việc thực hiện chỉ thị, nghị quyết, kết luận, quyết định trong thời gian dài.",
+    "loaiVanBanApDung": [
+      "Báo cáo tổng kết 05 năm, 10 năm, 15 năm",
+      "Báo cáo tổng kết việc thực hiện chỉ thị",
+      "Báo cáo tổng kết việc thực hiện nghị quyết",
+      "Báo cáo tổng kết việc thực hiện kết luận",
+      "Báo cáo tổng kết chuyên đề"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_SO_KET_THUC_HIEN_VAN_BAN",
+    "directory": "BAO_CAO/A",
+    "priority": 100,
+    "titleKeywords": [
+      "báo cáo sơ kết",
+      "sơ kết thực hiện",
+      "sơ kết giữa kỳ",
+      "sơ kết chuyên đề"
+    ],
+    "doiTuongApDung": "Cơ quan cấp ủy hoặc cơ quan chuyên môn được yêu cầu sơ kết.",
+    "loaiVanBanApDung": [
+      "Báo cáo sơ kết giữa kỳ",
+      "Báo cáo sơ kết theo chuyên đề",
+      "Báo cáo sơ kết thực hiện nghị quyết"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_KET_QUA_THUC_HIEN_VAN_BAN",
+    "directory": "BAO_CAO/A",
+    "priority": 95,
+    "titleKeywords": [
+      "kết quả thực hiện",
+      "tình hình triển khai thực hiện",
+      "thực hiện quy định",
+      "thực hiện quyết định",
+      "thực hiện kết luận",
+      "thực hiện hướng dẫn"
+    ],
+    "doiTuongApDung": "Cấp ủy, ban, ngành, cơ quan được giao triển khai văn bản mới, quy định mới hoặc kết luận của Trung ương.",
+    "loaiVanBanApDung": [
+      "Báo cáo kết quả thực hiện quy định, quyết định, kết luận, hướng dẫn"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_DANH_GIA_DINH_KY",
+    "directory": "BAO_CAO/A",
+    "priority": 95,
+    "titleKeywords": [
+      "báo cáo đánh giá",
+      "đánh giá 01 năm",
+      "đánh giá 6 tháng",
+      "đánh giá định kỳ",
+      "đánh giá theo mốc thời gian"
+    ],
+    "doiTuongApDung": "Cơ quan được yêu cầu đánh giá sau một năm hoặc theo kỳ cụ thể.",
+    "loaiVanBanApDung": [
+      "Báo cáo đánh giá 01 năm",
+      "Báo cáo đánh giá 06 tháng",
+      "Báo cáo đánh giá theo mốc thời gian"
+    ]
+  },
+
+  {
+    "templateCode": "BAO_CAO_DINH_KY_KINH_TE_XA_HOI",
+    "directory": "BAO_CAO/B",
+    "priority": 100,
+    "titleKeywords": [
+      "tình hình phát triển kinh tế xã hội",
+      "kinh tế - xã hội",
+      "báo cáo quý kinh tế",
+      "báo cáo 6 tháng",
+      "báo cáo 9 tháng",
+      "lũy kế đầu năm"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, Ủy ban nhân dân tỉnh hoặc cơ quan tham mưu báo cáo Trung ương.",
+    "loaiVanBanApDung": [
+      "Báo cáo quý, 6 tháng, 9 tháng, năm",
+      "Báo cáo lũy kế đầu năm",
+      "Báo cáo chuyên đề kinh tế - xã hội"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_CONG_TAC_TO_CHUC_XAY_DUNG_DANG",
+    "directory": "BAO_CAO/B",
+    "priority": 100,
+    "titleKeywords": [
+      "công tác tổ chức",
+      "xây dựng Đảng",
+      "tổ chức bộ máy",
+      "biên chế",
+      "vị trí việc làm",
+      "tổ chức cơ sở đảng",
+      "đội ngũ đảng viên"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, Ban Tổ chức Tỉnh ủy, các cấp ủy trực thuộc.",
+    "loaiVanBanApDung": [
+      "Báo cáo quý, năm, chuyên đề về tổ chức bộ máy, biên chế, vị trí việc làm, công tác cán bộ, tổ chức cơ sở đảng, đảng viên"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_DANH_GIA_XEP_LOAI_CHAT_LUONG",
+    "directory": "BAO_CAO/B",
+    "priority": 110,
+    "titleKeywords": [
+      "đánh giá, xếp loại chất lượng",
+      "xếp loại chất lượng",
+      "mức xếp loại cán bộ",
+      "hoàn thành xuất sắc nhiệm vụ",
+      "kiểm điểm đánh giá"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, Ban Tổ chức Tỉnh ủy, cơ quan tham mưu công tác cán bộ.",
+    "loaiVanBanApDung": [
+      "Báo cáo đánh giá, xếp loại năm/quý",
+      "Báo cáo đề xuất mức xếp loại cán bộ"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_CONG_TAC_LANH_DAO_CHI_DAO_KET_QUA_NHIEM_VU",
+    "directory": "BAO_CAO/B",
+    "priority": 105,
+    "titleKeywords": [
+      "công tác lãnh đạo, chỉ đạo",
+      "kết quả thực hiện nhiệm vụ",
+      "phương hướng nhiệm vụ trọng tâm",
+      "chế độ báo cáo Bộ Chính trị",
+      "Ban Bí thư",
+      "nhiệm vụ chính trị"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, Thường trực Tỉnh ủy, Văn phòng Tỉnh ủy.",
+    "loaiVanBanApDung": [
+      "Báo cáo tháng, quý, năm theo chế độ báo cáo Bộ Chính trị, Ban Bí thư",
+      "Báo cáo tổng hợp nhiệm vụ chính trị"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_KIEM_TRA_GIAM_SAT_KY_LUAT_DANG",
+    "directory": "BAO_CAO/B",
+    "priority": 110,
+    "titleKeywords": [
+      "kiểm tra, giám sát",
+      "thi hành kỷ luật Đảng",
+      "khiếu nại kỷ luật Đảng",
+      "tố cáo",
+      "ủy ban kiểm tra"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, Ủy ban Kiểm tra Tỉnh ủy, cấp ủy các cấp.",
+    "loaiVanBanApDung": [
+      "Báo cáo năm, 6 tháng, quý, chuyên đề về kiểm tra, giám sát, thi hành kỷ luật Đảng"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_THUC_HIEN_QUY_DINH_QUY_TRINH_CAN_BO",
+    "directory": "BAO_CAO/B",
+    "priority": 105,
+    "titleKeywords": [
+      "quy trình công tác cán bộ",
+      "quy hoạch",
+      "bổ sung quy hoạch",
+      "chức năng nhiệm vụ",
+      "quy chế làm việc",
+      "tổ chức bộ máy"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, Ban Tổ chức Tỉnh ủy, Đảng ủy trực thuộc, cơ quan tham mưu về tổ chức cán bộ.",
+    "loaiVanBanApDung": [
+      "Báo cáo thực hiện quy định của Ban Bí thư",
+      "Báo cáo thực hiện quy trình rà soát, bổ sung quy hoạch",
+      "Báo cáo tổ chức bộ máy, chức năng nhiệm vụ, quy chế làm việc"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_CHUYEN_DE_CHINH_SACH_XA_HOI_MOI_TRUONG_DOI_NGOAI",
+    "directory": "BAO_CAO/B",
+    "priority": 90,
+    "titleKeywords": [
+      "báo cáo chuyên đề",
+      "đề xuất chính sách",
+      "môi trường",
+      "khí hậu",
+      "đối ngoại",
+      "văn hóa",
+      "an ninh"
+    ],
+    "doiTuongApDung": "Tỉnh ủy, Ban Thường vụ Tỉnh ủy, cơ quan tham mưu chuyên ngành.",
+    "loaiVanBanApDung": [
+      "Báo cáo chuyên đề đối ngoại",
+      "Báo cáo chuyên đề xã hội, môi trường, khí hậu, an ninh, văn hóa",
+      "Báo cáo đề xuất chính sách mới"
+    ]
+  },
+
+  {
+    "templateCode": "BAO_CAO_TONG_KET_THUC_HIEN_CHUYEN_DE_TW",
+    "directory": "BAO_CAO/C",
+    "priority": 100,
+    "titleKeywords": [
+      "đảng ủy xã",
+      "đảng ủy phường",
+      "tổng kết thực hiện",
+      "kết luận chuyên đề",
+      "chỉ thị chuyên đề",
+      "bài học kinh nghiệm"
+    ],
+    "doiTuongApDung": "Đảng ủy xã, phường; Ban Thường vụ Đảng ủy cấp cơ sở.",
+    "loaiVanBanApDung": [
+      "Báo cáo tổng kết 5 năm, 10 năm, 15 năm hoặc theo giai đoạn thực hiện văn bản chỉ đạo"
+    ]
+  },
+ 
+  {
+    "templateCode": "BAO_CAO_CONG_TAC_TUYEN_GIAO_VA_DAN_VAN",
+    "directory": "BAO_CAO/D",
+    "priority": 105,
+    "titleKeywords": [
+      "tuyên giáo",
+      "dân vận",
+      "ban công tác 35",
+      "chỉ thị 05",
+      "dư luận xã hội",
+      "dân vận chính quyền"
+    ],
+    "doiTuongApDung": "Đảng ủy xã, phường; Ban Thường vụ Đảng ủy; Ban Xây dựng Đảng tham mưu.",
+    "loaiVanBanApDung": [
+      "Báo cáo tháng, quý, năm về công tác tuyên giáo và dân vận",
+      "Báo cáo phục vụ đoàn kiểm tra, đoàn công tác"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_THUC_HIEN_DAN_CHU_CO_SO",
+    "directory": "BAO_CAO/D",
+    "priority": 105,
+    "titleKeywords": [
+      "dân chủ ở cơ sở",
+      "quy chế dân chủ",
+      "công khai minh bạch",
+      "nhân dân kiểm tra giám sát"
+    ],
+    "doiTuongApDung": "Đảng ủy cấp xã, phường, Đảng ủy cơ quan, đơn vị có trách nhiệm báo cáo thực hiện dân chủ ở cơ sở.",
+    "loaiVanBanApDung": [
+      "Báo cáo năm về thực hiện Quy chế dân chủ ở cơ sở",
+      "Báo cáo phục vụ Ban Chỉ đạo thực hiện Quy chế dân chủ"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_LANH_DAO_CHI_DAO_NHIEM_VU_CHINH_TRI_CO_SO",
+    "directory": "BAO_CAO/D",
+    "priority": 100,
+    "titleKeywords": [
+      "lãnh đạo, chỉ đạo thực hiện nhiệm vụ chính trị",
+      "hoạt động của thường trực",
+      "hoạt động của ban thường vụ",
+      "phát triển kinh tế - xã hội",
+      "quốc phòng, an ninh"
+    ],
+    "doiTuongApDung": "Thường trực Đảng ủy, Ban Thường vụ Đảng ủy xã, phường hoặc cơ quan.",
+    "loaiVanBanApDung": [
+      "Báo cáo tháng, quý, năm về công tác lãnh đạo, chỉ đạo và kết quả thực hiện nhiệm vụ"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_TINH_HINH_DAN_TOC_TON_GIAO",
+    "directory": "BAO_CAO/D",
+    "priority": 110,
+    "titleKeywords": [
+      "dân tộc, tôn giáo",
+      "tín ngưỡng, tôn giáo",
+      "điểm nóng",
+      "quản lý nhà nước về tín ngưỡng"
+    ],
+    "doiTuongApDung": "Đảng ủy xã, phường, nhất là địa bàn có đồng bào dân tộc thiểu số, cơ sở tín ngưỡng, điểm nhóm tôn giáo.",
+    "loaiVanBanApDung": [
+      "Báo cáo tuần, tháng, năm về dân tộc, tôn giáo"
+    ]
+  },
+  {
+    "templateCode": "BAO_CAO_TINH_HINH_DU_LUAN_XA_HOI",
+    "directory": "BAO_CAO/D",
+    "priority": 110,
+    "titleKeywords": [
+      "dư luận xã hội",
+      "vấn đề nhân dân quan tâm",
+      "nắm bắt dư luận",
+      "định hướng dư luận"
+    ],
+    "doiTuongApDung": "Đảng ủy xã, phường, bộ phận tuyên giáo, dân vận, Ban Xây dựng Đảng.",
+    "loaiVanBanApDung": [
+      "Báo cáo dư luận xã hội định kỳ",
+      "Báo cáo nửa tháng/tháng",
+      "Báo cáo khi có vấn đề nổi lên"
+    ]
+  }
+]

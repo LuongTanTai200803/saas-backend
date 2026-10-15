@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.saasai.entity.AdminPackageConfig;
 import com.saasai.entity.BillingInvoice;
+import com.saasai.entity.User;
 
 import java.util.Optional;
 
@@ -24,6 +25,7 @@ public interface BillingInvoiceRepository extends JpaRepository<BillingInvoice, 
 
     Optional<BillingInvoice> findByMemoId(String memo);
 
+    List<BillingInvoice> findByUser(User user);
 
     Optional<BillingInvoice> findById(String testInvoiceId);
 

@@ -1,0 +1,191 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_KHUNG_MAU_CHUNG_DANG_UY_CAP_XA",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Tên báo cáo]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [đơn vị] báo cáo kết quả thực hiện như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Đảng ủy [đơn vị] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [văn bản/kế hoạch chỉ đạo của cấp trên] về [nội dung];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "KHÁI QUÁT TÌNH HÌNH",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đặc điểm địa phương, đơn vị",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thuận lợi",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Khó khăn, thách thức",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tác động của tình hình đến nội dung cần tổng kết",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO, TRIỂN KHAI THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác quán triệt, tuyên truyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công tác cụ thể hóa bằng văn bản",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Phân công trách nhiệm, cơ chế phối hợp",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Công tác kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Chế độ thông tin, báo cáo nếu có",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ nhất",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ hai",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ ba",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Các mô hình, cách làm hiệu quả nếu có",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Số liệu minh chứng",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả nổi bật",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, tồn tại",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "a) Nguyên nhân khách quan\nb) Nguyên nhân chủ quan"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Bài học kinh nghiệm",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "DỰ BÁO TÌNH HÌNH",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Những yếu tố tác động",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu đặt ra trong thời gian tới",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nhóm giải pháp về lãnh đạo, chỉ đạo",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nhóm giải pháp về tuyên truyền, vận động",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nhóm giải pháp về tổ chức thực hiện",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Nhóm giải pháp về phối hợp, kiểm tra, giám sát",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Nhóm giải pháp về nguồn lực, cán bộ, chuyển đổi số",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Nhóm giải pháp đặc thù theo chuyên đề",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "VII",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "[Không có / hoặc nêu rõ kiến nghị với cấp nào, nội dung gì]",
+      "tieuMuc": []
+    }
+  ]
+}

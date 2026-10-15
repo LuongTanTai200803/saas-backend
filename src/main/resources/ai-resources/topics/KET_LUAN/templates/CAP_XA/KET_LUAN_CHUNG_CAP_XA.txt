@@ -1,0 +1,125 @@
+{
+
+"source": "USER_UPLOAD",
+
+"templateCode": "COMMON",
+
+"topicCode": "",
+
+"tenLoaiVanBan": "KẾT LUẬN",
+
+"coQuanBanHanh": "[CHỦ THỂ/HỘI NGHỊ/PHIÊN HỌP]\n[Về nội dung/tháng/quý/năm/nhiệm kỳ nếu có]",
+
+"trichYeu": "",
+
+"cauDanChuyenTiep": "Ngày …/…/…, [cơ quan/chủ thể họp] tổ chức [hội nghị/phiên họp/kỳ họp] … . Dự họp có … . Chủ trì: đồng chí … . Mời dự: … .\nSau khi nghe [các báo cáo/tờ trình/dự thảo văn bản/nội dung đề xuất] và các ý kiến thảo luận, [Ban Chấp hành/Ban Thường vụ/Thường trực Đảng ủy] đã xem xét, thảo luận và thống nhất kết luận như sau:",
+
+"cauKetHanhChinh": "Trên đây là Kết luận của [Ban Chấp hành/Ban Thường vụ/Thường trực Đảng ủy] tại [hội nghị/phiên họp] … . Yêu cầu các cấp ủy, tổ chức đảng, cơ quan, đơn vị liên quan nghiêm túc triển khai thực hiện.",
+
+"doanCanCu": "",
+
+"cacMuc": [
+
+{
+
+"code": "I",
+
+"tieuDeMuc": "[Nội dung lớn thứ nhất]",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "Kết quả đạt được/Ý kiến kết luận",
+
+"noiDungChiTiet": "…"
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "Tồn tại, hạn chế",
+
+"noiDungChiTiet": "…"
+
+},
+
+{
+
+"code": "3",
+
+"tieuDeMuc": "Nguyên nhân",
+
+"noiDungChiTiet": "…"
+
+},
+
+{
+
+"code": "4",
+
+"tieuDeMuc": "Nhiệm vụ, giải pháp thời gian tới",
+
+"noiDungChiTiet": "…"
+
+}
+
+]
+
+},
+
+{
+
+"code": "II",
+
+"tieuDeMuc": "[Nội dung lớn thứ hai: Quán triệt văn bản/Văn bản trình/Tờ trình]",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "[Tên văn bản/tờ trình]",
+
+"noiDungChiTiet": "[Chủ thể kết luận] cơ bản nhất trí/thống nhất thông qua/nhất trí chủ trương đối với nội dung [văn bản]. Giao [cơ quan] tiếp thu ý kiến tham gia, chỉnh sửa, hoàn thiện, trình [cấp có thẩm quyền] ký ban hành/tổ chức thực hiện theo quy định."
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "[Tên văn bản/tờ trình tiếp theo]",
+
+"noiDungChiTiet": "…"
+
+}
+
+]
+
+},
+
+{
+
+"code": "III",
+
+"tieuDeMuc": "Tổ chức thực hiện",
+
+"noiDungChiTiet": "Giao [cơ quan chủ trì] chủ trì, phối hợp với [cơ quan liên quan] triển khai thực hiện.\nGiao Văn phòng Đảng ủy theo dõi, đôn đốc việc thực hiện, tổng hợp báo cáo Thường trực Đảng ủy/Ban Thường vụ Đảng ủy theo quy định.\nGiao Ủy ban Kiểm tra Đảng ủy theo dõi, kiểm tra, giám sát việc tổ chức thực hiện nếu cần.",
+
+"tieuMuc": []
+
+}
+
+]
+
+}

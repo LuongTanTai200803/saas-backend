@@ -1,0 +1,94 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_KHUNG_MAU_CHUNG_HOAN_CHINH_PROVINCIAL",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[thực hiện/triển khai thực hiện/tổ chức nghiên cứu, học tập, quán triệt...] [tên văn bản hoặc nhiệm vụ] về [nội dung trọng tâm]",
+  "cauDanChuyenTiep": "Để [mục tiêu ban hành kế hoạch: bảo đảm thống nhất, đồng bộ, kịp thời, hiệu quả...], [cơ quan ban hành] ban hành Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "[Thực hiện/Căn cứ] [văn bản cấp trên, ngày tháng, cơ quan ban hành, nội dung];\n[Trường hợp cần thiết: Căn cứ thêm các luật, nghị định, hướng dẫn, quyết định liên quan];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Nêu mục tiêu chính trị, quản lý, chuyên môn; yêu cầu tạo chuyển biến nhận thức, hành động; cụ thể hóa văn bản cấp trên; nâng cao hiệu quả thực hiện nhiệm vụ."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Việc triển khai thực hiện phải nghiêm túc, đồng bộ, kịp thời, thiết thực, hiệu quả; có trọng tâm, trọng điểm; phù hợp chức năng, nhiệm vụ và điều kiện thực tế; phân công rõ trách nhiệm; tăng cường phối hợp, kiểm tra, giám sát, sơ kết, tổng kết, báo cáo."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG/NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tổ chức quán triệt, tuyên truyền, nâng cao nhận thức",
+          "noiDungChiTiet": "Nêu đối tượng tuyên truyền, hình thức tuyên truyền, cơ quan thực hiện."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Cụ thể hóa văn bản cấp trên thành chương trình/kế hoạch/nhiệm vụ của cấp mình",
+          "noiDungChiTiet": "Nêu yêu cầu xây dựng kế hoạch, chương trình hành động, chỉ tiêu, lộ trình."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Triển khai các nhiệm vụ chuyên môn trọng tâm",
+          "noiDungChiTiet": "Nêu nhiệm vụ theo lĩnh vực cụ thể."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Rà soát, hoàn thiện cơ chế, chính sách, điều kiện bảo đảm",
+          "noiDungChiTiet": "Nêu nội dung rà soát, đề xuất sửa đổi, bổ sung, bố trí nguồn lực."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Tăng cường phối hợp, kiểm tra, giám sát",
+          "noiDungChiTiet": "Nêu cơ chế phối hợp, kiểm tra, giám sát, xử lý vướng mắc."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Sơ kết, tổng kết, báo cáo",
+          "noiDungChiTiet": "Nêu thời hạn, đầu mối nhận báo cáo."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cơ quan/đơn vị 1]",
+          "noiDungChiTiet": "Chủ trì thực hiện [nhiệm vụ]; phối hợp với [cơ quan liên quan]; báo cáo [cơ quan nhận báo cáo] trước ngày.../định kỳ..."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Cơ quan/đơn vị 2]",
+          "noiDungChiTiet": "Thực hiện [nhiệm vụ cụ thể]."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Cơ quan tham mưu tổng hợp]",
+          "noiDungChiTiet": "Theo dõi, đôn đốc, kiểm tra, tổng hợp kết quả, tham mưu sơ kết, tổng kết, báo cáo cấp có thẩm quyền."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Chế độ báo cáo",
+          "noiDungChiTiet": "Các cơ quan, đơn vị báo cáo định kỳ hoặc đột xuất theo yêu cầu; trong quá trình thực hiện nếu có khó khăn, vướng mắc vượt thẩm quyền thì kịp thời báo cáo [cơ quan có thẩm quyền] xem xét, chỉ đạo."
+        }
+      ]
+    }
+  ]
+}

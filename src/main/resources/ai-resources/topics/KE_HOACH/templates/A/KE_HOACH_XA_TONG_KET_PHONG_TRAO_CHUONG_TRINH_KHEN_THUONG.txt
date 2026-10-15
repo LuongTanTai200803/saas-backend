@@ -1,0 +1,69 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_TONG_KET_PHONG_TRAO_CHUONG_TRINH_KHEN_THUONG",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tổng kết [thời gian] thực hiện [tên phong trào/chương trình/cuộc vận động] giai đoạn ... trên địa bàn [xã/phường]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [xã/phường] xây dựng kế hoạch tổng kết [nội dung], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch tổng kết [nội dung] của Đảng ủy [xã/phường].",
+  "doanCanCu": "Thực hiện [Kế hoạch/Công văn số..., ngày..., của... về...],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Tổng kết, đánh giá công tác lãnh đạo, chỉ đạo, triển khai, tổ chức thực hiện [tên phong trào/chương trình] trên địa bàn; chỉ rõ kết quả đạt được, ưu điểm, tồn tại, hạn chế, khó khăn, vướng mắc, nguyên nhân và kinh nghiệm."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Tổng hợp kiến nghị, đề xuất để cụ thể hóa thành nhiệm vụ, giải pháp tiếp tục lãnh đạo, chỉ đạo trong giai đoạn tiếp theo."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tiêu chuẩn khen thưởng",
+          "noiDungChiTiet": "Việc tổng kết gắn với biểu dương, khen thưởng phải bảo đảm đúng thực chất, khách quan, trung thực; mô hình/tập thể/cá nhân được đề nghị khen thưởng phải thật sự tiêu biểu."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tổng kết [thời gian] thực hiện [tên phong trào]",
+          "noiDungChiTiet": "1.1. Nội dung tổng kết\n- Đánh giá công tác lãnh đạo, chỉ đạo.\n- Đánh giá chuyển biến về nhận thức, trách nhiệm của cấp ủy, chính quyền, MTTQ, tổ chức chính trị - xã hội và Nhân dân.\n- Đánh giá kết quả trên các lĩnh vực: kinh tế; văn hóa - xã hội; quốc phòng - an ninh; xây dựng Đảng và hệ thống chính trị; xây dựng nông thôn mới/đô thị văn minh.\n- Đánh giá sức lan tỏa, hiệu quả của phong trào; việc đăng ký, xây dựng, nhân rộng mô hình.\n- Đánh giá hạn chế, nguyên nhân; rút ra bài học kinh nghiệm.\n- Đề ra phương hướng, nhiệm vụ, giải pháp thời gian tới.\n- Kiến nghị, đề xuất nếu có.\n\n1.2. Hình thức, thời gian\n- Hình thức: Tổng kết bằng văn bản/hội nghị/tùy yêu cầu cấp trên.\n- Thời gian: Các đơn vị hoàn thành trước ngày...; cấp xã/phường hoàn thành trước ngày..."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Khen thưởng",
+          "noiDungChiTiet": "2.1. Số lượng\n[Ví dụ: xét đề nghị cấp trên khen ... mô hình/tập thể/cá nhân.]\n\n2.2. Đối tượng\nTập thể, cá nhân tiêu biểu trong thực hiện [phong trào/chương trình].\n\n2.3. Tiêu chuẩn khen thưởng\n[Tiêu chuẩn cụ thể theo yêu cầu của kế hoạch cấp trên.]\n\n2.4. Hồ sơ khen thưởng\n- Tờ trình đề nghị khen thưởng.\n- Trích biên bản họp xét đề nghị khen thưởng.\n- Báo cáo thành tích.\n- Biểu tổng hợp tóm tắt thành tích.\n- Ảnh/tài liệu minh chứng nếu có yêu cầu."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ban Xây dựng Đảng",
+          "noiDungChiTiet": "- Hướng dẫn, đôn đốc các chi/đảng bộ, MTTQ, cơ quan, đơn vị xây dựng báo cáo tổng kết.\n- Tham mưu Ban Thường vụ Đảng ủy xây dựng báo cáo tổng kết gửi cấp trên.\n- Tổng hợp mô hình, tập thể, cá nhân tiêu biểu để báo cáo Ban Thường vụ Đảng ủy xét đề nghị khen thưởng."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Các chi bộ, đảng bộ trực thuộc, cơ quan, đơn vị",
+          "noiDungChiTiet": "- Xây dựng báo cáo tổng kết gửi về [đầu mối] trước ngày...\n- Lựa chọn mô hình/tập thể/cá nhân tiêu biểu đề nghị khen thưởng, bảo đảm đúng đối tượng, tiêu chuẩn."
+        }
+      ]
+    }
+  ]
+}

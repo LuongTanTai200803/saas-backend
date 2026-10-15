@@ -3,8 +3,10 @@ package com.saasai.feature.ai;
 public record AiTemplateContent(
         String topicCode,
         String templateCode,
-        String globalSystemInstruction,
+        String templateFileName,
+        String commonPrompt,
+        String assistPrompt,
         String topicPrompt,
-        String templateContent
-) {
+        String templateContent,
+        String groupPrompt) {
 }

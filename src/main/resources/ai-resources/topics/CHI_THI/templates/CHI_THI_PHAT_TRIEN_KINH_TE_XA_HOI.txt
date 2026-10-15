@@ -1,0 +1,131 @@
+{
+    "source": "USER_UPLOAD",
+    "templateCode": "CHI_THI_PHAT_TRIEN_KINH_TE_XA_HOI",
+    "topicCode": "CHI_THI",
+    "tenLoaiVanBan": "CHỈ THỊ",
+    "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",
+    "trichYeu": "về các nhiệm vụ, giải pháp trọng tâm [thúc đẩy tăng trưởng/thu ngân sách/giải ngân đầu tư công] năm [●]",
+    "cauDanChuyenTiep": "Năm [●] là năm có ý nghĩa quan trọng vì [bối cảnh]. Để thực hiện thắng lợi các mục tiêu: [chỉ tiêu 1], [chỉ tiêu 2], [chỉ tiêu 3], Ban Thường vụ Tỉnh ủy yêu cầu:",
+    "cauKetHanhChinh": "",
+    "doanCanCu": "Năm [●], [địa phương] đối mặt với [khó khăn, thách thức], song với sự lãnh đạo, chỉ đạo của [cấp trên] và sự nỗ lực của hệ thống chính trị, đã đạt được [kết quả chính].\nTuy nhiên, [lĩnh vực] còn hạn chế: [hạn chế 1], [hạn chế 2], [hạn chế 3]. Nguyên nhân chủ yếu là [nguyên nhân].",
+    "cacMuc": [
+      {
+        "code": "1",
+        "tieuDeMuc": "Đẩy mạnh thông tin, tuyên truyền, quán triệt, cụ thể hóa các chủ trương, nghị quyết",
+        "noiDungChiTiet": "Tuyên truyền, quán triệt, cụ thể hóa các chủ trương, nghị quyết, chỉ thị, kết luận của Trung ương và của tỉnh.",
+        "tieuMuc": []
+      },
+      {
+        "code": "2",
+        "tieuDeMuc": "Khai thác, phát huy tiềm năng, lợi thế để thúc đẩy tăng trưởng bền vững",
+        "noiDungChiTiet": "",
+        "tieuMuc": [
+          {
+            "code": "-",
+            "tieuDeMuc": "Công nghiệp, nông nghiệp, dịch vụ, du lịch, thương mại",
+            "noiDungChiTiet": "Phát triển công nghiệp, nông nghiệp, dịch vụ, du lịch, thương mại."
+          },
+          {
+            "code": "-",
+            "tieuDeMuc": "Thu hút đầu tư, cải cách thủ tục",
+            "noiDungChiTiet": "Thu hút đầu tư, cải cách thủ tục hành chính."
+          },
+          {
+            "code": "-",
+            "tieuDeMuc": "Kinh tế tư nhân, kinh tế nhà nước, hợp tác xã",
+            "noiDungChiTiet": "Phát triển kinh tế tư nhân, kinh tế nhà nước, hợp tác xã."
+          },
+          {
+            "code": "-",
+            "tieuDeMuc": "Khoa học công nghệ, đổi mới sáng tạo, chuyển đổi số",
+            "noiDungChiTiet": "Thúc đẩy khoa học công nghệ, đổi mới sáng tạo, chuyển đổi số."
+          },
+          {
+            "code": "-",
+            "tieuDeMuc": "Nguồn nhân lực, văn hóa, chính quyền 2 cấp",
+            "noiDungChiTiet": "Phát triển nguồn nhân lực, văn hóa và vận hành chính quyền 2 cấp."
+          }
+        ]
+      },
+      {
+        "code": "3",
+        "tieuDeMuc": "Nâng cao hiệu quả quản lý thu ngân sách, chống thất thu ngân sách",
+        "noiDungChiTiet": "[Chỉ tiêu thu, giải pháp quản lý nguồn thu, thanh tra kiểm tra, chuyển đổi số thuế.]",
+        "tieuMuc": []
+      },
+      {
+        "code": "4",
+        "tieuDeMuc": "Đẩy mạnh giải ngân vốn đầu tư công",
+        "noiDungChiTiet": "",
+        "tieuMuc": [
+          {
+            "code": "4.1",
+            "tieuDeMuc": "Phân bổ vốn, dự án trọng điểm",
+            "noiDungChiTiet": "Thực hiện phân bổ vốn và triển khai các dự án trọng điểm."
+          },
+          {
+            "code": "4.2",
+            "tieuDeMuc": "Lựa chọn nhà thầu, trách nhiệm người đứng đầu",
+            "noiDungChiTiet": "Đảm bảo công tác lựa chọn nhà thầu và nâng cao trách nhiệm người đứng đầu."
+          },
+          {
+            "code": "4.3",
+            "tieuDeMuc": "Giải phóng mặt bằng, công khai minh bạch",
+            "noiDungChiTiet": "Đẩy nhanh giải phóng mặt bằng, đảm bảo công khai minh bạch."
+          },
+          {
+            "code": "4.4",
+            "tieuDeMuc": "Thẩm định, thủ tục, phối hợp",
+            "noiDungChiTiet": "Thực hiện tốt công tác thẩm định, thủ tục và phối hợp giữa các cơ quan."
+          },
+          {
+            "code": "4.5",
+            "tieuDeMuc": "Chương trình mục tiêu quốc gia",
+            "noiDungChiTiet": "Triển khai các Chương trình mục tiêu quốc gia nếu có."
+          }
+        ]
+      },
+      {
+        "code": "5",
+        "tieuDeMuc": "Tổ chức thực hiện",
+        "noiDungChiTiet": "",
+        "tieuMuc": [
+          {
+            "code": "5.1",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Các cấp ủy, tổ chức đảng] cụ thể hóa thực hiện."
+          },
+          {
+            "code": "5.2",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Ban Tuyên giáo và Dân vận] tuyên truyền."
+          },
+          {
+            "code": "5.3",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Đảng ủy UBND tỉnh] xây dựng chương trình, kế hoạch."
+          },
+          {
+            "code": "5.4",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Ủy ban Kiểm tra] kiểm tra, giám sát."
+          },
+          {
+            "code": "5.5",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[MTTQ] giám sát, phản biện xã hội."
+          },
+          {
+            "code": "5.6",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Ủy viên BTV/BCH, người đứng đầu] trực tiếp kiểm tra, chỉ đạo."
+          },
+          {
+            "code": "5.7",
+            "tieuDeMuc": "",
+            "noiDungChiTiet": "[Văn phòng Tỉnh ủy] theo dõi, tổng hợp, báo cáo."
+          }
+        ]
+      }
+    ]
+  }

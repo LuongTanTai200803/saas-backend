@@ -1,0 +1,31 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "QUYET_DINH_MAU_CHUNG_CAP_TINH",
+  "topicCode": "QUYET_DINH",
+  "tenLoaiVanBan": "QUYẾT ĐỊNH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[về việc/phê duyệt/thành lập/kiện toàn/ban hành/chuẩn y/khen thưởng/tặng ...] [trích yếu nội dung]",
+  "cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY\nQUYẾT ĐỊNH",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ ...;\nCăn cứ ...;\nCăn cứ ...;\n[Xét đề nghị của ...],",
+  "cacMuc": [
+    {
+      "code": "Điều 1",
+      "tieuDeMuc": "Nội dung quyết định chính",
+      "noiDungChiTiet": "[Trường hợp có danh sách/phụ lục: ghi “Có danh sách/phụ lục/biểu/kế hoạch kèm theo”.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 2",
+      "tieuDeMuc": "Nhiệm vụ, chức năng, tổ chức thực hiện, mức thưởng, tặng phẩm hoặc phân công trách nhiệm",
+      "noiDungChiTiet": "1. ...\n2. ...",
+      "tieuMuc": []
+    },
+    {
+      "code": "Điều 3",
+      "tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+      "noiDungChiTiet": "Văn phòng Tỉnh ủy, ..., các cơ quan, đơn vị liên quan và các tổ chức, cá nhân có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này.\nQuyết định này có hiệu lực kể từ ngày ký.",
+      "tieuMuc": []
+    }
+  ]
+}

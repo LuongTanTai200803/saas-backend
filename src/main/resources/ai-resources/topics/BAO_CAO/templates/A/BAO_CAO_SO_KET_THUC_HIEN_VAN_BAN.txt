@@ -1,0 +1,74 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_SO_KET_THUC_HIEN_VAN_BAN",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Sơ kết thực hiện [tên nghị quyết/văn bản]",
+  "cauDanChuyenTiep": "Thực hiện [văn bản yêu cầu], Ban Thường vụ [cơ quan] báo cáo sơ kết thực hiện [tên văn bản] như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ [cơ quan] trân trọng báo cáo và đề xuất.",
+  "doanCanCu": "Kính gửi: [cơ quan nhận báo cáo]",
+  "cacMuc": [
+    {
+      "code": "PHẦN I",
+      "tieuDeMuc": "KẾT QUẢ TRIỂN KHAI THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "CÔNG TÁC PHỔ BIẾN, QUÁN TRIỆT, TUYÊN TRUYỀN",
+          "noiDungChiTiet": "[Nội dung triển khai]"
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "CÔNG TÁC THỂ CHẾ HÓA/CỤ THỂ HÓA",
+          "noiDungChiTiet": "[Các văn bản, chương trình, kế hoạch đã ban hành]"
+        }
+      ]
+    },
+    {
+      "code": "PHẦN II",
+      "tieuDeMuc": "ĐÁNH GIÁ KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "KẾT QUẢ ĐẠT ĐƯỢC",
+          "noiDungChiTiet": "- Kết quả thực hiện mục tiêu\n- Kết quả thực hiện nhiệm vụ, giải pháp\n- Tác động đối với phát triển kinh tế - xã hội/quốc phòng, an ninh/lĩnh vực liên quan"
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "TỒN TẠI, HẠN CHẾ VÀ NGUYÊN NHÂN",
+          "noiDungChiTiet": "- Tồn tại, hạn chế\n- Nguyên nhân"
+        }
+      ]
+    },
+    {
+      "code": "PHẦN III",
+      "tieuDeMuc": "ĐỊNH HƯỚNG, NHIỆM VỤ, KIẾN NGHỊ",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "DỰ BÁO BỐI CẢNH",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "III",
+          "tieuDeMuc": "QUAN ĐIỂM, ĐỊNH HƯỚNG",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "IV",
+          "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

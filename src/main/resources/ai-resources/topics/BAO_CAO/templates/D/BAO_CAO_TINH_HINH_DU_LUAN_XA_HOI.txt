@@ -1,0 +1,48 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_TINH_HINH_DU_LUAN_XA_HOI",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tình hình dư luận xã hội trên địa bàn … (Kỳ …)",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy … báo cáo như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện Công văn số … của … về báo cáo cung cấp thông tin dư luận xã hội;",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Tình hình chung",
+      "noiDungChiTiet": "- Đặc điểm địa bàn\n- Tình hình tư tưởng cán bộ, đảng viên và Nhân dân\n- Công tác nắm bắt dư luận",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Những vấn đề Nhân dân quan tâm",
+      "noiDungChiTiet": "- Kinh tế - đời sống\n- Y tế\n- An ninh, trật tự\n- Môi trường\n- Các vấn đề khác nếu có",
+      "tieuMuc": []
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Tình hình dư luận xã hội trên địa bàn",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "3.1",
+          "tieuDeMuc": "Thông tin tích cực",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3.2",
+          "tieuDeMuc": "Vấn đề cần quan tâm, định hướng",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "4",
+      "tieuDeMuc": "Đề xuất, kiến nghị",
+      "noiDungChiTiet": "[Không có/hoặc nêu cụ thể]",
+      "tieuMuc": []
+    }
+  ]
+}

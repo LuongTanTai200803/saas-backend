@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.saasai.feature.ai.AiCompletionRequestDTO;
 import com.saasai.feature.ai.AiProviderResultDTO;
@@ -15,6 +16,9 @@ import com.saasai.feature.ai.ApiResponseDTO;
 import com.saasai.dto.ExportRequestDTO;
 import com.saasai.entity.User;
 import com.saasai.service.UserService;
+
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
@@ -71,4 +75,41 @@ public class AiController {
         return ResponseEntity.ok(ApiResponseDTO.success(result));
         }
 
+        
+        @PostMapping(
+                value = "/scanned-pdf/template",
+                consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+        )
+        public ResponseEntity<ApiResponseDTO<ScanTemplateResponseDTO>>
+        processScannedPdf(
+                @RequestParam("sessionUuid")
+                String sessionUuid,
+
+                @RequestParam("images")
+                List<MultipartFile> images,
+
+                @RequestParam("isLastBatch")
+                boolean isLastBatch
+        ) throws IOException {
+
+        String userId =
+                (String) SecurityContextHolder
+                        .getContext()
+                        .getAuthentication()
+                        .getPrincipal();
+
+        User user = userService.getUserById(userId);
+
+        ScanTemplateResponseDTO result =
+                aiCompletionService.processScannedPdf(
+                        user,
+                        sessionUuid,
+                        images,
+                        isLastBatch
+                );
+
+        return ResponseEntity.ok(
+                ApiResponseDTO.success(result)
+        );
+        }
 }
