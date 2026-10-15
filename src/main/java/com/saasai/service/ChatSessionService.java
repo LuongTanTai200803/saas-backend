@@ -36,6 +36,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 @Service
 @RequiredArgsConstructor
@@ -340,4 +341,128 @@ public class ChatSessionService {
         ChatSession saved = chatSessionRepository.save(session);
         return convertToDTO(saved);
     }
+
+    // Append a new chat message to the session's chat history
+    public void appendChatHistory(
+        String sessionUuid,
+        String userId,
+        String userText,
+        String assistantText
+    ) {
+        ChatSession session =
+                chatSessionRepository
+                        .findBySessionUuidAndUser_UserId(sessionUuid, userId)
+                        .orElseThrow(() ->
+                                new NoSuchElementException(
+                                        "Session không tồn tại"
+                                )
+                        );
+
+        List<ChatMessageDTO> history = new ArrayList<>();
+
+        String existingHistory = session.getChatHistoryJson();
+
+        if (existingHistory != null && !existingHistory.isBlank()) {
+            try {
+                history.addAll(
+                        objectMapper.readValue(
+                                existingHistory,
+                                new TypeReference<List<ChatMessageDTO>>() {}
+                        )
+                );
+            } catch (JsonProcessingException e) {
+                throw new IllegalStateException(
+                        "chat_history_json không hợp lệ",
+                        e
+                );
+            }
+        }
+
+        history.add(
+                ChatMessageDTO.builder()
+                        .role("user")
+                        .content(userText)
+                        .build()
+        );
+
+        history.add(
+                ChatMessageDTO.builder()
+                        .role("assistant")
+                        .content(assistantText)
+                        .build()
+        );
+
+        try {
+            session.setChatHistoryJson(
+                    objectMapper.writeValueAsString(history)
+            );
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException(
+                    "Không thể serialize chat history",
+                    e
+            );
+        }
+
+        chatSessionRepository.save(session);
+    }
+
+    // Lưu tin nhắn của người dùng vào lịch sử chat
+        public void appendUserMessage(
+        String sessionUuid,
+        String userId,
+        String userText
+        ) {
+        ChatSession session =
+                chatSessionRepository
+                        .findBySessionUuidAndUser_UserId(
+                                sessionUuid,
+                                userId
+                        )
+                        .orElseThrow(() ->
+                                new NoSuchElementException(
+                                        "Session không tồn tại"
+                                )
+                        );
+
+        List<ChatMessageDTO> history = new ArrayList<>();
+
+        String existingHistory = session.getChatHistoryJson();
+
+        if (existingHistory != null && !existingHistory.isBlank()) {
+                try {
+                history.addAll(
+                        objectMapper.readValue(
+                                existingHistory,
+                                new TypeReference<List<ChatMessageDTO>>() {}
+                        )
+                );
+                } catch (JsonProcessingException e) {
+                throw new IllegalStateException(
+                        "chat_history_json không hợp lệ",
+                        e
+                );
+                }
+        }
+
+        history.add(
+                ChatMessageDTO.builder()
+                        .role("user")
+                        .content(userText)
+                        .build()
+        );
+
+        try {
+                session.setChatHistoryJson(
+                        objectMapper.writeValueAsString(history)
+                );
+        } catch (JsonProcessingException e) {
+                throw new IllegalStateException(
+                        "Không thể lưu chat history",
+                        e
+                );
+        }
+
+        chatSessionRepository.save(session);
+        }
+
 }

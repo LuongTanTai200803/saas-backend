@@ -2,19 +2,30 @@ package com.saasai.service;
 
 import com.saasai.admin.AdminService;
 import com.saasai.dto.FileMetadataResponseDTO;
+import com.saasai.dto.PageOcrResultDTO;
+import com.saasai.dto.ScanOcrResponseDTO;
+import com.saasai.dto.UploadConfigResponseDTO;
+import com.saasai.dto.ScanAiTextResponseDTO;
+
 import com.saasai.entity.AdminPackageConfig;
 import com.saasai.entity.ChatSession;
 import com.saasai.entity.ChatSessionFile;
 import com.saasai.entity.FileMetadata;
 import com.saasai.entity.FileMetadata.ExtractionStatus;
+import com.saasai.entity.FileOcrPage;
 import com.saasai.entity.User;
+
 import com.saasai.extractor.ExtractResult;
+import com.saasai.feature.ai.AiCompletionService;
 import com.saasai.normalizer.TextNormalizer;
+import com.saasai.repository.ChatSessionFileRepository;
 import com.saasai.repository.ChatSessionRepository;
 import com.saasai.repository.FileMetadataRepository;
+import com.saasai.repository.FileOcrPageRepository;
 import com.saasai.repository.UserRepository;
 import com.saasai.repository.redis.FileNormalizedTextRedisRepository;
 import com.saasai.storage.StorageService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,306 +34,1184 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Locale;
+
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
+
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.nio.file.Path;
 
 @Service
 public class FileService {
 
-    private static final Logger log = LoggerFactory.getLogger(FileService.class);
-    private static final Set<String> ALLOWED_EXTENSIONS =
-            Set.of("docx", "xlsx", "txt");
+        private static final Logger log = LoggerFactory.getLogger(FileService.class);
 
-    private final FileMetadataRepository fileUploadRepository;
-    private final UserRepository userRepository;
-    private final AdminService adminService;
-    private final StorageService storageService;
-    private final FileExtractionService fileExtractionService;
-    private final TextNormalizer textNormalizer;
-    private final FileNormalizedTextRedisRepository fileTextRedisRepository;
-    private final ChatSessionFileService chatSessionFileService;
-    private final ChatSessionRepository chatSessionRepository;
+        private final FileMetadataRepository fileUploadRepository;
+        private final UserRepository userRepository;
+        private final AdminService adminService;
+        private final StorageService storageService;
+        private final FileExtractionService fileExtractionService;
+        private final TextNormalizer textNormalizer;
+        private final FileNormalizedTextRedisRepository fileTextRedisRepository;
+        private final ChatSessionFileService chatSessionFileService;
+        private final ChatSessionRepository chatSessionRepository;
+        private final ObjectMapper objectMapper;
+        private final ChatSessionFileRepository chatSessionFileRepository;
+        private final VisionOcrService visionOcrService;
+        private final FileOcrPageRepository fileOcrPageRepository;
 
-    @Value("${storage.base-url:http://localhost:8080/uploads/}")
-    private String storageBaseUrl;
+        private final ScanAiTempStorage scanAiTempStorage;
+        private final AiVisionService aiVisionService;
+        private final AiCompletionService aiCompletionService;
 
-    public FileService(
-            FileMetadataRepository fileUploadRepository,
-            UserRepository userRepository,
-            AdminService adminService,
-            StorageService storageService,
-            FileExtractionService fileExtractionService,
-            TextNormalizer textNormalizer,
-            FileNormalizedTextRedisRepository fileTextRedisRepository,
-            ChatSessionFileService chatSessionFileService,
-            ChatSessionRepository chatSessionRepository
-    ) {
-        this.fileUploadRepository = fileUploadRepository;
-        this.userRepository = userRepository;
-        this.adminService = adminService;
-        this.storageService = storageService;
-        this.fileExtractionService = fileExtractionService;
-        this.textNormalizer = textNormalizer;
-        this.fileTextRedisRepository = fileTextRedisRepository;
-        this.chatSessionFileService = chatSessionFileService;
-        this.chatSessionRepository = chatSessionRepository;
-    }
-    
-    // Uploads a file and associates it with the current user. 
-    // Optionally, it can also attach the file to a chat session if sessionId is provided.
-    public FileMetadataResponseDTO uploadFile(
-        MultipartFile file,
-        String category
-    ) throws IOException {
-        return uploadFile(file, category, null, null);
-    }
+        @Value("${storage.base-url:http://localhost:8080/uploads/}")
+        private String storageBaseUrl;
 
-    // Overloaded method to upload a file with sessionId but without fieldCode.
-    public FileMetadataResponseDTO uploadFile(
-        MultipartFile file,
-        String category,
-        String sessionUuid,
-        String fieldCode
-    ) throws IOException {
-        
-        User currentUser = userRepository.findByEmail(resolveCurrentEmail())
-                .orElseThrow(() ->
-                        new RuntimeException("Tài khoản không tồn tại!"));
-
-        ChatSession session = chatSessionRepository
-                .findBySessionUuidAndUser_UserId(sessionUuid, currentUser.getUserId())
-                .orElseThrow(() ->
-                        new NoSuchElementException(
-                                "Session không tồn tại hoặc không thuộc user"
-                        )
-                );
-
-        Integer sessionId = session.getSessionId();
-
-        validateFile(file);
-        enforceStorageQuota(currentUser, file.getSize());
-
-        String originalFileName = file.getOriginalFilename();
-        String storedFileName = buildStoredFileName(originalFileName);
-        FileMetadata.FileCategory fileCategory = normalizeCategory(category);
-
-        storageService.storeFile(file, storedFileName);
-
-        ExtractResult extractResult =
-                extractContent(storedFileName, originalFileName);
-
-        // Normalize the extracted raw text
-        String rawText = extractResult.getRawText();
-        
-        String normalizedText = textNormalizer.normalize(rawText);
-
-        FileMetadata fileUpload = FileMetadata.builder()
-                .user(currentUser)
-                .fileName(originalFileName)
-                .fileUrl(storageBaseUrl + storedFileName)
-                .fileSize(file.getSize())
-                .category(fileCategory)
-                .mimeType(file.getContentType())
-                .rawText(rawText)
-                .normalizedText(normalizedText)
-                .characterCount(normalizedText.length())
-                .wordCount(countWords(normalizedText))
-                .extractionStatus(ExtractionStatus.EXTRACTED)
-                .build();
-
-        FileMetadata saved = fileUploadRepository.save(fileUpload);
-        
-        try {
-            fileTextRedisRepository.save(
-                    saved.getFileId(),
-                    normalizedText
-            );
-        } catch (RuntimeException exception) {
-            log.warn(
-                    "Không thể cache normalized text vào Redis cho fileId={}. "
-                    + "Dữ liệu vẫn đã được lưu trong DB.",
-                    saved.getFileId(),
-                    exception
-            );
+        public FileService(
+                        FileMetadataRepository fileUploadRepository,
+                        UserRepository userRepository,
+                        AdminService adminService,
+                        StorageService storageService,
+                        FileExtractionService fileExtractionService,
+                        TextNormalizer textNormalizer,
+                        FileNormalizedTextRedisRepository fileTextRedisRepository,
+                        ChatSessionFileService chatSessionFileService,
+                        ChatSessionRepository chatSessionRepository,
+                        ObjectMapper objectMapper,
+                        ChatSessionFileRepository chatSessionFileRepository,
+                        VisionOcrService visionOcrService,
+                        FileOcrPageRepository fileOcrPageRepository,
+                        ScanAiTempStorage scanAiTempStorage,
+                        AiVisionService aiVisionService,
+                        AiCompletionService aiCompletionService) {
+                this.fileUploadRepository = fileUploadRepository;
+                this.userRepository = userRepository;
+                this.adminService = adminService;
+                this.storageService = storageService;
+                this.fileExtractionService = fileExtractionService;
+                this.textNormalizer = textNormalizer;
+                this.fileTextRedisRepository = fileTextRedisRepository;
+                this.chatSessionFileService = chatSessionFileService;
+                this.chatSessionRepository = chatSessionRepository;
+                this.objectMapper = objectMapper;
+                this.chatSessionFileRepository = chatSessionFileRepository;
+                this.visionOcrService = visionOcrService;
+                this.fileOcrPageRepository = fileOcrPageRepository;
+                this.scanAiTempStorage = scanAiTempStorage;
+                this.aiVisionService = aiVisionService;
+                this.aiCompletionService = aiCompletionService;
         }
 
+        // Hash the content of a file using SHA-256
+        private String calculateContentHash(
+                        MultipartFile file) throws IOException {
+                try {
+                        byte[] fileBytes = file.getBytes();
 
-        if (sessionId != null) {
-            chatSessionFileService.attachFileToSession(
-                    sessionId,
-                    currentUser.getUserId(),
-                    saved.getFileId(),
-                    fieldCode
-            );
-        }
-        
-        return FileMetadataResponseDTO.builder()
-                .fileId(saved.getFileId())
-                .fileName(saved.getFileName())
-                .fileUrl(saved.getFileUrl())
-                .fileSize(saved.getFileSize())
-                .category(saved.getCategory() != null
-                        ? saved.getCategory().name()
-                        : null)
-                .uploadedAt(saved.getUploadedAt())
-                .uploadedBy(currentUser.getFullName())
-                .build();
-    }
+                        MessageDigest digest = MessageDigest.getInstance("SHA-256");
 
-    // Normalize the fileId by removing "file_" prefix if present and validating it as a UUID.
-    private String normalizeFileId(String rawFileId) {
+                        byte[] hashBytes = digest.digest(fileBytes);
 
-        if (rawFileId == null || rawFileId.isBlank()) {
-            throw new IllegalArgumentException("fileId không được để trống");
+                        StringBuilder hash = new StringBuilder();
+
+                        for (byte hashByte : hashBytes) {
+                                hash.append(String.format(
+                                                "%02x",
+                                                hashByte));
+                        }
+
+                        return hash.toString();
+
+                } catch (NoSuchAlgorithmException exception) {
+                        throw new IllegalStateException(
+                                        "Không hỗ trợ thuật toán SHA-256",
+                                        exception);
+                }
         }
 
-        String fileId = rawFileId.startsWith("file_")
-                ? rawFileId.substring(5)
-                : rawFileId;
+        // Overloaded method to upload a file with sessionId but without fieldCode.
+        public FileMetadataResponseDTO uploadFile(
+                        MultipartFile file,
+                        String category,
+                        String sessionUuid,
+                        String fieldCode) throws IOException {
 
-            try {
-                UUID.fromString(fileId);
-            } catch (IllegalArgumentException exception) {
-                throw new IllegalArgumentException("fileId không hợp lệ: " + rawFileId);
-            }
+                User currentUser = userRepository
+                                .findByEmail(resolveCurrentEmail())
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Tài khoản không tồn tại!"));
 
-        return fileId;
-    }
-    
+                if (sessionUuid == null || sessionUuid.isBlank()) {
+                        throw new IllegalArgumentException(
+                                        "sessionUuid không được để trống");
+                }
 
-    // Helper method to count words in a given text. Returns 0 for null or blank text.
-    private int countWords(String text) {
+                // Check if the session exists and belongs to the current user.
+                ChatSession session = chatSessionRepository
+                                .findBySessionUuidAndUser_UserId(
+                                                sessionUuid,
+                                                currentUser.getUserId())
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "Session không tồn tại hoặc không thuộc user"));
 
-        if (text == null || text.isBlank()) {
-            return 0;
+                Integer sessionId = session.getSessionId();
+
+                AdminPackageConfig packageConfig = currentUser.getAdminPackageConfig() != null
+                                ? currentUser.getAdminPackageConfig()
+                                : adminService.getPackageConfig("FREE");
+
+                validateFile(file, packageConfig);
+                validateFileByPackage(file, packageConfig);
+
+                // Calculate the content hash of the file to check for duplicates.
+                String contentHash = calculateContentHash(file);
+
+                FileMetadata.FileCategory fileCategory = normalizeCategory(category);
+
+                // Check if a file with the same content hash already exists for this session
+                // and user.
+                Optional<FileMetadata> existingFile = chatSessionFileRepository
+                                .findBySessionAndUserAndContentHash(
+                                                sessionId,
+                                                currentUser.getUserId(),
+                                                contentHash);
+
+                if (existingFile.isPresent()) {
+                        FileMetadata existing = existingFile.get();
+
+                        boolean categoryChanged = existing.getCategory() != fileCategory;
+
+                        if (categoryChanged) {
+                                existing.setCategory(fileCategory);
+                                existing = fileUploadRepository.save(existing);
+                        }
+
+                        chatSessionFileService.attachFileToSession(
+                                        sessionId,
+                                        currentUser.getUserId(),
+                                        existing.getFileId(),
+                                        fieldCode);
+
+                        processTemplateIfRequired(
+                                        currentUser,
+                                        session,
+                                        existing);
+
+                        return toResponse(
+                                        existing,
+                                        currentUser,
+                                        fieldCode);
+                }
+
+                // Enforce the storage quota before proceeding with the file upload.
+                enforceStorageQuota(
+                                currentUser,
+                                packageConfig,
+                                file.getSize());
+
+                String originalFileName = file.getOriginalFilename();
+                String storedFileName = buildStoredFileName(originalFileName);
+
+                /*
+                 * Bước 1: lưu file vật lý.
+                 */
+                storageService.storeFile(file, storedFileName);
+
+                boolean isPdf = "pdf".equals(
+                                getExtension(originalFileName));
+
+                /*
+                 * Bước 2: tạo metadata với trạng thái UPLOADED.
+                 */
+                FileMetadata saved = fileUploadRepository.save(
+                                FileMetadata.builder()
+                                                .user(currentUser)
+                                                .fileName(originalFileName)
+                                                .fileUrl(storageBaseUrl + storedFileName)
+                                                .fileSize(file.getSize())
+                                                .category(fileCategory)
+                                                .mimeType(file.getContentType())
+                                                .contentHash(contentHash)
+                                                .rawText(null)
+                                                .normalizedText(null)
+                                                .wordCount(0)
+                                                .characterCount(0)
+                                                .extractionStatus(
+                                                                ExtractionStatus.UPLOADED)
+                                                .extractionError(null)
+                                                .rawText(null)
+                                                .build());
+
+                // Attach ngay sau khi metadata được tạo.
+                chatSessionFileService.attachFileToSession(
+                                sessionId,
+                                currentUser.getUserId(),
+                                saved.getFileId(),
+                                fieldCode);
+
+                // PDF scan sẽ được xử lý ở endpoint OCR riêng.
+                if (isPdf) {
+                        saved.setExtractionStatus(
+                                        ExtractionStatus.PROCESSING);
+                        saved = fileUploadRepository.save(saved);
+
+                        ExtractResult result = extractContent(
+                                        storedFileName,
+                                        originalFileName);
+
+                        String rawText = result.getRawText();
+
+                        if (rawText != null && rawText.trim().length() >= 50) {
+                                String normalizedText = textNormalizer.normalize(rawText);
+
+                                saved.setRawText(rawText);
+                                saved.setNormalizedText(normalizedText);
+                                saved.setWordCount(countWords(normalizedText));
+                                saved.setCharacterCount(normalizedText.length());
+                                saved.setExtractionStatus(
+                                                ExtractionStatus.EXTRACTED);
+
+                                saved = fileUploadRepository.save(saved);
+
+                                fileTextRedisRepository.save(
+                                                saved.getFileId(),
+                                                rawText);
+
+                                processTemplateIfRequired(
+                                                currentUser,
+                                                session,
+                                                saved);
+
+                                return toResponse(saved, currentUser, fieldCode);
+                        }
+
+                        // PDF scan: frontend tiếp tục gửi ảnh theo patch
+                        saved.setExtractionStatus(
+                                        ExtractionStatus.PROCESSING);
+                        fileUploadRepository.save(saved);
+
+                        return toResponse(saved, currentUser, fieldCode);
+                }
+
+                /*
+                 * Bước 3: chuyển sang PROCESSING.
+                 */
+                saved.setExtractionStatus(
+                                ExtractionStatus.PROCESSING);
+
+                saved = fileUploadRepository.save(saved);
+
+                try {
+                        /*
+                         * Bước 4: extract và normalize.
+                         */
+                        ExtractResult extractResult = extractContent(
+                                        storedFileName,
+                                        originalFileName);
+
+                        String rawText = extractResult.getRawText();
+
+                        if (rawText == null || rawText.isBlank()) {
+                                throw new IllegalArgumentException(
+                                                "Không thể trích xuất nội dung file");
+                        }
+
+                        String normalizedText = textNormalizer.normalize(rawText);
+
+                        /*
+                         * Bước 5: lưu nội dung và chuyển sang EXTRACTED.
+                         */
+                        saved.setRawText(rawText);
+                        saved.setNormalizedText(normalizedText);
+                        saved.setCharacterCount(
+                                        normalizedText != null
+                                                        ? normalizedText.length()
+                                                        : 0);
+                        saved.setWordCount(
+                                        countWords(normalizedText));
+                        saved.setExtractionStatus(
+                                        ExtractionStatus.EXTRACTED);
+
+                        saved = fileUploadRepository.save(saved);
+
+                        processTemplateIfRequired(
+                                        currentUser,
+                                        session,
+                                        saved);
+
+                        /*
+                         * Redis chỉ là cache.
+                         * Redis lỗi không làm upload thất bại
+                         * vì dữ liệu chính đã nằm trong database.
+                         */
+                        try {
+                                fileTextRedisRepository.save(
+                                                saved.getFileId(),
+                                                rawText);
+                        } catch (RuntimeException exception) {
+                                log.warn(
+                                                "Không thể cache normalized text "
+                                                                + "cho fileId={}. Dữ liệu DB vẫn hợp lệ.",
+                                                saved.getFileId(),
+                                                exception);
+                        }
+
+                        /*
+                         * HTTP 200 => frontend xử lý success.
+                         */
+                        return FileMetadataResponseDTO.builder()
+                                        .fileId(saved.getFileId())
+                                        .fileName(saved.getFileName())
+                                        .fileUrl(saved.getFileUrl())
+                                        .fileSize(saved.getFileSize())
+                                        .category(
+                                                        saved.getCategory() != null
+                                                                        ? saved.getCategory().name()
+                                                                        : null)
+                                        .uploadedAt(saved.getUploadedAt())
+                                        .uploadedBy(currentUser.getFullName())
+                                        .extractionStatus(saved.getExtractionStatus().name())
+                                        .extractionError(saved.getExtractionError())
+                                        .rawText(
+                                                        shouldExposeRawText(
+                                                                        saved.getCategory(),
+                                                                        fieldCode)
+                                                                                        ? saved.getRawText()
+                                                                                        : null)
+                                        .build();
+
+                } catch (Exception exception) {
+                        /*
+                         * Extract hoặc attach session lỗi:
+                         * lưu trạng thái FAILED rồi trả lỗi cho frontend.
+                         */
+                        saved.setExtractionStatus(
+                                        ExtractionStatus.FAILED);
+
+                        fileUploadRepository.save(saved);
+
+                        throw new IOException(
+                                        "Không thể xử lý file: "
+                                                        + originalFileName,
+                                        exception);
+                }
         }
 
-        return text.trim()
-                .split("\\s+")
-                .length;
-    }
+        // Normalize the fileId by removing "file_" prefix if present and validating it
+        // as a UUID.
+        private String normalizeFileId(String rawFileId) {
 
-    private void enforceStorageQuota(User currentUser, Long incomingSize) {
-        // 1. 🎯 ĐÃ SỬA: Lấy trực tiếp chuỗi String packageType từ Object liên kết, check null an toàn
-        String packageType = (currentUser.getAdminPackageConfig() != null)
-                ? currentUser.getAdminPackageConfig().getPackageType()
-                : "FREE";
-                
-        // 2. Tìm cấu hình cấu trúc gói từ adminService
-        AdminPackageConfig config = adminService.getPackageConfig(packageType);
-        Long storageQuotaMb = config.getStorageQuotaMb();
-        if (storageQuotaMb == null) {
-            storageQuotaMb = getDefaultStorageQuotaMb(packageType); // Hàm bổ trợ của ông
+                if (rawFileId == null || rawFileId.isBlank()) {
+                        throw new IllegalArgumentException("fileId không được để trống");
+                }
+
+                String fileId = rawFileId.startsWith("file_")
+                                ? rawFileId.substring(5)
+                                : rawFileId;
+
+                try {
+                        UUID.fromString(fileId);
+                } catch (IllegalArgumentException exception) {
+                        throw new IllegalArgumentException("fileId không hợp lệ: " + rawFileId);
+                }
+
+                return fileId;
         }
 
-        long usedBytes = fileUploadRepository.sumFileSizeByUserId(currentUser.getUserId());
-        long allowedBytes = storageQuotaMb * 1024L * 1024L;
-        long totalBytes = usedBytes + (incomingSize != null ? incomingSize : 0L);
-        if (totalBytes > allowedBytes) {
-            throw new IllegalArgumentException(
-                    "Vượt quá hạn mức lưu trữ của gói " + packageType + ". Hạn mức: " + storageQuotaMb + "MB.");
-        }
-    }
+        // Helper method to count words in a given text. Returns 0 for null or blank
+        // text.
+        private int countWords(String text) {
 
-    private Long getDefaultStorageQuotaMb(String packageType) {
-        return switch (packageType) {
-            case "FREE", "BASIC" -> 100L;
-            case "PROFESSIONAL" -> 1024L;
-            case "ENTERPRISE" -> 5120L;
-            default -> 100L;
-        };
-    }
+                if (text == null || text.isBlank()) {
+                        return 0;
+                }
 
-    private void validateFile(MultipartFile file) {
-        if (file == null || file.isEmpty()) {
-            throw new IllegalArgumentException("File upload không được để trống");
+                return text.trim()
+                                .split("\\s+").length;
         }
 
-        String originalFileName = file.getOriginalFilename();
-        if (originalFileName == null || !originalFileName.contains(".")) {
-            throw new IllegalArgumentException("Định dạng file không hợp lệ");
+        // Enforces the storage quota for the current user based on their package
+        // configuration and the size of the incoming file. Throws an exception if the
+        // quota is exceeded.
+        private void enforceStorageQuota(
+                        User currentUser,
+                        AdminPackageConfig packageConfig,
+                        Long incomingSize) {
+                Long storageQuotaMb = packageConfig.getStorageQuotaMb();
+
+                if (storageQuotaMb == null) {
+                        storageQuotaMb = getDefaultStorageQuotaMb(
+                                        packageConfig.getPackageType());
+                }
+
+                long usedBytes = fileUploadRepository.sumFileSizeByUserId(
+                                currentUser.getUserId());
+
+                long allowedBytes = storageQuotaMb * 1024L * 1024L;
+
+                long totalBytes = usedBytes + (incomingSize != null ? incomingSize : 0L);
+
+                if (totalBytes > allowedBytes) {
+                        throw new IllegalArgumentException(
+                                        "Vượt quá hạn mức lưu trữ của gói "
+                                                        + packageConfig.getPackageType()
+                                                        + ". Hạn mức: "
+                                                        + storageQuotaMb
+                                                        + "MB.");
+                }
         }
 
-        String extension = originalFileName.substring(originalFileName.lastIndexOf('.') + 1).toLowerCase();
-        if (!ALLOWED_EXTENSIONS.contains(extension)) {
-            throw new IllegalArgumentException("Chỉ hỗ trợ file docx, xlsx hoặc txt");
-        }
-    }
-
-    private String buildStoredFileName(String originalFileName) {
-        String safeFileName = originalFileName.replaceAll("[^a-zA-Z0-9._-]", "_");
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS"));
-        return timestamp + "_" + safeFileName;
-    }
-
-    private String resolveCurrentEmail() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null) {
-            throw new RuntimeException("Không tìm thấy thông tin đăng nhập");
-        }
-        if (authentication.getDetails() instanceof String details && !details.isBlank()) {
-            return details;
-        }
-        String name = authentication.getName();
-        if (name != null && !name.isBlank() && !"anonymousUser".equalsIgnoreCase(name)) {
-            return name;
-        }
-        throw new RuntimeException("Không tìm thấy email người dùng hiện tại");
-    }
-
-    private FileMetadata.FileCategory normalizeCategory(String category) {
-        if (category == null || category.isBlank()) {
-            return FileMetadata.FileCategory.INPUT_DIRECTIVE;
+        private Long getDefaultStorageQuotaMb(String packageType) {
+                return switch (packageType) {
+                        case "FREE", "BASIC" -> 100L;
+                        case "PROFESSIONAL" -> 1024L;
+                        case "ENTERPRISE" -> 5120L;
+                        default -> 100L;
+                };
         }
 
-        String normalized = category.trim().toUpperCase();
-        return switch (normalized) {
-            case "INPUT_DIRECTIVE", "DIRECTIVE" -> FileMetadata.FileCategory.INPUT_DIRECTIVE;
-            case "EVIDENCE" -> FileMetadata.FileCategory.EVIDENCE;
-            case "LEGAL" -> FileMetadata.FileCategory.LEGAL;
-            case "CONTENT" -> FileMetadata.FileCategory.CONTENT;
-            case "TEMPLATE" -> FileMetadata.FileCategory.TEMPLATE;
-            case "RELATED" -> FileMetadata.FileCategory.RELATED;
-            case "OUTPUT_DOCUMENT", "OUTPUT" -> FileMetadata.FileCategory.OUTPUT_DOCUMENT;
-            default -> FileMetadata.FileCategory.valueOf(normalized);
-        };
-    }
+        // Validates the uploaded file for null, emptiness, and proper file name format.
+        // Throws an exception if the file is invalid.
+        private void validateFile(
+                        MultipartFile file,
+                        AdminPackageConfig packageConfig) {
+                if (file == null || file.isEmpty()) {
+                        throw new IllegalArgumentException(
+                                        "File upload không được để trống");
+                }
 
-    // Extracts the content of a stored file using the FileExtractionService.
-    // Throws an IOException if the file cannot be read or extracted.
-    private ExtractResult extractContent(
-        String storedFileName,
-        String originalFileName
-    ) throws IOException {
+                long maxFileSizeMb = packageConfig.getMaxFileSizeMb() != null
+                                ? packageConfig.getMaxFileSizeMb()
+                                : 10L;
 
-        java.nio.file.Path filePath = storageService.getFilePath(storedFileName);
+                long maxFileSizeBytes = maxFileSizeMb * 1024L * 1024L;
 
-        return fileExtractionService.extract(
-                filePath,
-                originalFileName
-        );
-    }
+                if (file.getSize() > maxFileSizeBytes) {
+                        throw new IllegalArgumentException(
+                                        "Dung lượng file vượt quá giới hạn "
+                                                        + maxFileSizeMb
+                                                        + "MB");
+                }
 
-    // Resolves the PromptFieldCode enum from a string. Defaults to REFERENCE if the input is null, blank, or unrecognized.
-    private ChatSessionFile.PromptFieldCode resolveFieldCode(String fieldCode) {
-        if (fieldCode == null || fieldCode.isBlank()) {
-            return ChatSessionFile.PromptFieldCode.REFERENCE;
+                String originalFileName = file.getOriginalFilename();
+
+                if (originalFileName == null
+                                || originalFileName.isBlank()
+                                || !originalFileName.contains(".")) {
+                        throw new IllegalArgumentException(
+                                        "Định dạng file không hợp lệ");
+                }
         }
 
-        return switch (fieldCode.trim().toUpperCase()) {
-            case "MAIN_CONTENT" -> ChatSessionFile.PromptFieldCode.MAIN_CONTENT;
-            case "LEGAL_BASIS" -> ChatSessionFile.PromptFieldCode.LEGAL_BASIS;
-            case "DIRECTIVE" -> ChatSessionFile.PromptFieldCode.DIRECTIVE;
-            case "STATISTICS" -> ChatSessionFile.PromptFieldCode.STATISTICS;
-            case "REFERENCE" -> ChatSessionFile.PromptFieldCode.REFERENCE;
-            case "OUTLINE" -> ChatSessionFile.PromptFieldCode.OUTLINE;
-            case "TEMPLATE" -> ChatSessionFile.PromptFieldCode.TEMPLATE;
-            default -> ChatSessionFile.PromptFieldCode.REFERENCE;
-        };
-    }
+        private String buildStoredFileName(String originalFileName) {
+                String safeFileName = originalFileName.replaceAll("[^a-zA-Z0-9._-]", "_");
+                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS"));
+                return timestamp + "_" + safeFileName;
+        }
+
+        private String resolveCurrentEmail() {
+                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                if (authentication == null) {
+                        throw new RuntimeException("Không tìm thấy thông tin đăng nhập");
+                }
+                if (authentication.getDetails() instanceof String details && !details.isBlank()) {
+                        return details;
+                }
+                String name = authentication.getName();
+                if (name != null && !name.isBlank() && !"anonymousUser".equalsIgnoreCase(name)) {
+                        return name;
+                }
+                throw new RuntimeException("Không tìm thấy email người dùng hiện tại");
+        }
+
+        private FileMetadata.FileCategory normalizeCategory(String category) {
+                if (category == null || category.isBlank()) {
+                        return FileMetadata.FileCategory.INPUT_DIRECTIVE;
+                }
+
+                String normalized = category.trim().toUpperCase();
+                return switch (normalized) {
+                        case "INPUT_DIRECTIVE", "DIRECTIVE" -> FileMetadata.FileCategory.INPUT_DIRECTIVE;
+                        case "EVIDENCE" -> FileMetadata.FileCategory.EVIDENCE;
+                        case "LEGAL" -> FileMetadata.FileCategory.LEGAL;
+                        case "CONTENT" -> FileMetadata.FileCategory.CONTENT;
+                        case "TEMPLATE" -> FileMetadata.FileCategory.TEMPLATE;
+                        case "RELATED" -> FileMetadata.FileCategory.RELATED;
+                        case "OUTPUT_DOCUMENT", "OUTPUT" -> FileMetadata.FileCategory.OUTPUT_DOCUMENT;
+                        default -> FileMetadata.FileCategory.valueOf(normalized);
+                };
+        }
+
+        // Extracts the content of a stored file using the FileExtractionService.
+        // Throws an IOException if the file cannot be read or extracted.
+        private ExtractResult extractContent(
+                        String storedFileName,
+                        String originalFileName) throws IOException {
+
+                java.nio.file.Path filePath = storageService.getFilePath(storedFileName);
+
+                return fileExtractionService.extract(
+                                filePath,
+                                originalFileName);
+        }
+
+        // Resolves the PromptFieldCode enum from a string. Defaults to REFERENCE if the
+        // input is null, blank, or unrecognized.
+        private ChatSessionFile.PromptFieldCode resolveFieldCode(String fieldCode) {
+                if (fieldCode == null || fieldCode.isBlank()) {
+                        return ChatSessionFile.PromptFieldCode.REFERENCE;
+                }
+
+                return switch (fieldCode.trim().toUpperCase()) {
+                        case "MAIN_CONTENT" -> ChatSessionFile.PromptFieldCode.MAIN_CONTENT;
+                        case "LEGAL_BASIS" -> ChatSessionFile.PromptFieldCode.LEGAL_BASIS;
+                        case "DIRECTIVE" -> ChatSessionFile.PromptFieldCode.DIRECTIVE;
+                        case "STATISTICS" -> ChatSessionFile.PromptFieldCode.STATISTICS;
+                        case "REFERENCE" -> ChatSessionFile.PromptFieldCode.REFERENCE;
+                        case "OUTLINE" -> ChatSessionFile.PromptFieldCode.OUTLINE;
+                        case "TEMPLATE" -> ChatSessionFile.PromptFieldCode.TEMPLATE;
+                        default -> ChatSessionFile.PromptFieldCode.REFERENCE;
+                };
+        }
+
+        // Validates a file against the constraints defined in the given
+        // AdminPackageConfig.
+        private void validateFileByPackage(
+                        MultipartFile file,
+                        AdminPackageConfig packageConfig) {
+                String extension = getExtension(file.getOriginalFilename());
+
+                Set<String> allowedExtensions = parseAllowedFileTypes(
+                                packageConfig.getAllowedFileTypes());
+
+                if (!allowedExtensions.contains(extension)) {
+                        throw new IllegalArgumentException(
+                                        "Gói "
+                                                        + packageConfig.getPackageType()
+                                                        + " không hỗ trợ file ."
+                                                        + extension
+                                                        + ". Loại file được phép: "
+                                                        + String.join(
+                                                                        ", ",
+                                                                        allowedExtensions));
+                }
+        }
+
+        // Extracts the file extension from the given file name. Throws an exception if
+        // the file name is null, blank, or does not have a valid extension.
+        private String getExtension(String fileName) {
+                if (fileName == null || fileName.isBlank()) {
+                        throw new IllegalArgumentException(
+                                        "Tên file không được để trống");
+                }
+
+                int dotIndex = fileName.lastIndexOf('.');
+
+                if (dotIndex < 0 || dotIndex == fileName.length() - 1) {
+                        throw new IllegalArgumentException(
+                                        "File không có phần mở rộng hợp lệ");
+                }
+
+                return fileName
+                                .substring(dotIndex + 1)
+                                .trim()
+                                .toLowerCase(Locale.ROOT);
+        }
+
+        // Parses the allowed file types from the given JSON string and returns them as
+        // a set of normalized file extensions. Throws an exception if the input is
+        // null, blank, or not a valid JSON array of strings.
+        private Set<String> parseAllowedFileTypes(
+                        String allowedFileTypes) {
+                if (allowedFileTypes == null
+                                || allowedFileTypes.isBlank()) {
+                        throw new IllegalStateException(
+                                        "Package chưa cấu hình loại file được phép");
+                }
+
+                try {
+                        List<String> fileTypes = objectMapper.readValue(
+                                        allowedFileTypes,
+                                        objectMapper.getTypeFactory()
+                                                        .constructCollectionType(
+                                                                        List.class,
+                                                                        String.class));
+
+                        return fileTypes.stream()
+                                        .filter(type -> type != null && !type.isBlank())
+                                        .map(type -> type.trim()
+                                                        .toLowerCase(Locale.ROOT)
+                                                        .replaceFirst("^\\.", ""))
+                                        .collect(Collectors.toCollection(
+                                                        LinkedHashSet::new));
+
+                } catch (JsonProcessingException exception) {
+                        throw new IllegalStateException(
+                                        "allowedFileTypes của package không hợp lệ",
+                                        exception);
+                }
+        }
+
+        // Processes OCR for scanned document images associated with a specific file and
+        // session. Returns the OCR results for each page and a list of failed pages.
+        public ScanOcrResponseDTO processScanOcr(
+                        String rawFileId,
+                        String sessionUuid,
+                        List<MultipartFile> images,
+                        List<Integer> pageIndexes,
+                        boolean isLastBatch) throws IOException {
+
+                // Validate input parameters for the OCR processing request.
+                if (images == null
+                                || pageIndexes == null
+                                || images.isEmpty()
+                                || images.size() > 5
+                                || images.size() != pageIndexes.size()) {
+                        throw new IllegalArgumentException(
+                                        "Mỗi request phải gửi từ 1 đến 5 ảnh "
+                                                        + "và pageIndexes tương ứng");
+                }
+
+                User currentUser = userRepository
+                                .findByEmail(resolveCurrentEmail())
+                                .orElseThrow(() -> new RuntimeException("Tài khoản không tồn tại!"));
+
+                ChatSession session = chatSessionRepository
+                                .findBySessionUuidAndUser_UserId(
+                                                sessionUuid,
+                                                currentUser.getUserId())
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "Session không tồn tại hoặc không thuộc user"));
+
+                String fileId = normalizeFileId(rawFileId);
+
+                FileMetadata file = fileUploadRepository
+                                .findByFileIdAndUser_UserId(
+                                                fileId,
+                                                currentUser.getUserId())
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "File không tồn tại hoặc không thuộc user"));
+
+                boolean attached = chatSessionFileRepository
+                                .existsByChatSessionAndFile(
+                                                session,
+                                                file);
+
+                if (!attached) {
+                        throw new IllegalArgumentException(
+                                        "File không thuộc session hiện tại");
+                }
+
+                for (int index = 0; index < images.size(); index++) {
+                        MultipartFile image = images.get(index);
+                        Integer pageIndex = pageIndexes.get(index);
+
+                        validateOcrImage(image);
+                        validatePageIndex(pageIndex);
+
+                        try {
+                                String text = visionOcrService.extractText(image);
+
+                                FileOcrPage page = fileOcrPageRepository
+                                                .findByFileAndPageIndex(file, pageIndex)
+                                                .orElse(
+                                                                FileOcrPage.builder()
+                                                                                .file(file)
+                                                                                .pageIndex(pageIndex)
+                                                                                .build());
+
+                                page.setOcrText(text == null ? "" : text);
+                                page.setOcrStatus(
+                                                FileOcrPage.OcrStatus.EXTRACTED);
+
+                                fileOcrPageRepository.save(page);
+
+                        } catch (Exception exception) {
+                                log.error(
+                                                "OCR thất bại fileId={}, pageIndex={}",
+                                                file.getFileId(),
+                                                pageIndex,
+                                                exception);
+
+                                FileOcrPage page = fileOcrPageRepository
+                                                .findByFileAndPageIndex(file, pageIndex)
+                                                .orElse(
+                                                                FileOcrPage.builder()
+                                                                                .file(file)
+                                                                                .pageIndex(pageIndex)
+                                                                                .build());
+
+                                page.setOcrText("");
+                                page.setOcrStatus(FileOcrPage.OcrStatus.FAILED);
+                                fileOcrPageRepository.save(page);
+                        }
+                }
+
+                List<FileOcrPage> storedPages = fileOcrPageRepository
+                                .findByFileOrderByPageIndexAsc(file);
+
+                List<PageOcrResultDTO> pages = storedPages.stream()
+                                .map(page -> PageOcrResultDTO.builder()
+                                                .pageIndex(page.getPageIndex())
+                                                .text(page.getOcrText())
+                                                .build())
+                                .toList();
+
+                List<Integer> failedPageIndexes = storedPages.stream()
+                                .filter(page -> page.getOcrStatus() == FileOcrPage.OcrStatus.FAILED)
+                                .map(FileOcrPage::getPageIndex)
+                                .toList();
+
+                String fullText = pages.stream()
+                                .map(PageOcrResultDTO::getText)
+                                .filter(text -> text != null && !text.isBlank())
+                                .collect(Collectors.joining("\n\n"));
+
+                if (fullText.isBlank()) {
+                        file.setExtractionStatus(ExtractionStatus.FAILED);
+                        file.setExtractionError(
+                                        "Không nhận diện được nội dung OCR");
+                } else {
+                        String normalizedText = textNormalizer.normalize(fullText);
+
+                        file.setRawText(fullText);
+                        file.setNormalizedText(normalizedText);
+                        file.setCharacterCount(normalizedText.length());
+                        file.setWordCount(countWords(normalizedText));
+
+                        if (isLastBatch && failedPageIndexes.isEmpty()) {
+                                file.setExtractionStatus(
+                                                ExtractionStatus.EXTRACTED);
+                                file.setExtractionError(null);
+                        } else {
+                                file.setExtractionStatus(
+                                                ExtractionStatus.PROCESSING);
+
+                                if (!failedPageIndexes.isEmpty()) {
+                                        file.setExtractionError(
+                                                        "Một số trang OCR thất bại: "
+                                                                        + failedPageIndexes);
+                                }
+                        }
+                }
+
+                fileUploadRepository.save(file);
+
+                if (isLastBatch
+                                && failedPageIndexes.isEmpty()
+                                && !fullText.isBlank()) {
+
+                        try {
+                                processTemplateIfRequired(
+                                                currentUser,
+                                                session,
+                                                file);
+                        } catch (Exception exception) {
+                                log.error(
+                                                "Phân tích template thất bại, "
+                                                                + "nhưng raw_text đã được lưu. fileId={}",
+                                                fileId,
+                                                exception);
+                        }
+                }
+
+                if (file.getRawText() != null) {
+                        fileTextRedisRepository.save(
+                                        file.getFileId(),
+                                        file.getRawText());
+                }
+
+                return ScanOcrResponseDTO.builder()
+                                .fileId(file.getFileId())
+                                .pages(pages)
+                                .failedPageIndexes(failedPageIndexes)
+                                .fullText(fullText)
+                                .build();
+        }
+
+        // Validate OCR image and page index before processing
+        private void validateOcrImage(MultipartFile image) {
+                String contentType = image.getContentType();
+
+                if (!"image/png".equalsIgnoreCase(contentType)
+                                && !"image/jpeg".equalsIgnoreCase(contentType)
+                                && !"image/jpg".equalsIgnoreCase(contentType)) {
+                        throw new IllegalArgumentException(
+                                        "OCR chỉ hỗ trợ ảnh PNG hoặc JPEG");
+                }
+        }
+
+        // Validate page index before processing
+        private void validatePageIndex(Integer pageIndex) {
+                if (pageIndex == null || pageIndex < 1) {
+                        throw new IllegalArgumentException(
+                                        "pageIndex phải bắt đầu từ 1");
+                }
+        }
+
+        // Xử lý OCR và AI cho các ảnh đã quét từ file PDF.
+        public ScanAiTextResponseDTO processScanAiText(
+                        String rawFileId,
+                        String sessionUuid,
+                        List<MultipartFile> images,
+                        List<Integer> pageIndexes,
+                        boolean isLastBatch) throws IOException {
+
+                log.debug(
+                                "AI scan bắt đầu: fileId={}, sessionUuid={}, imageCount={}, "
+                                                + "pageIndexCount={}, isLastBatch={}",
+                                rawFileId,
+                                sessionUuid,
+                                images != null ? images.size() : null,
+                                pageIndexes != null ? pageIndexes.size() : null,
+                                isLastBatch);
+
+                if (images == null
+                                || pageIndexes == null
+                                || images.isEmpty()
+                                || images.size() > 5
+                                || images.size() != pageIndexes.size()) {
+                        throw new IllegalArgumentException(
+                                        "Mỗi request phải gửi từ 1 đến 5 ảnh "
+                                                        + "và pageIndexes tương ứng");
+                }
+
+                if (pageIndexes.stream().distinct().count() != pageIndexes.size()) {
+                        throw new IllegalArgumentException(
+                                        "pageIndexes không được trùng nhau");
+                }
+
+                log.debug(
+                                "AI scan input hợp lệ: fileId={}, pages={}",
+                                rawFileId,
+                                pageIndexes);
+
+                User currentUser = userRepository
+                                .findByEmail(resolveCurrentEmail())
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Tài khoản không tồn tại!"));
+
+                ChatSession session = chatSessionRepository
+                                .findBySessionUuidAndUser_UserId(
+                                                sessionUuid,
+                                                currentUser.getUserId())
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "Session không tồn tại "
+                                                                + "hoặc không thuộc user"));
+
+                String fileId = normalizeFileId(rawFileId);
+
+                FileMetadata file = fileUploadRepository
+                                .findByFileIdAndUser_UserId(
+                                                fileId,
+                                                currentUser.getUserId())
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "File không tồn tại "
+                                                                + "hoặc không thuộc user"));
+
+                boolean attached = chatSessionFileRepository
+                                .existsByChatSessionAndFile(
+                                                session,
+                                                file);
+
+                if (!attached) {
+                        throw new IllegalArgumentException(
+                                        "File không thuộc session hiện tại");
+                }
+
+                // Lưu các ảnh OCR tạm thời vào bộ nhớ tạm thời để xử lý sau
+                for (int index = 0; index < images.size(); index++) {
+                        MultipartFile image = images.get(index);
+                        Integer pageIndex = pageIndexes.get(index);
+
+                        validateOcrImage(image);
+                        validatePageIndex(pageIndex);
+
+                        scanAiTempStorage.save(
+                                        fileId,
+                                        pageIndex,
+                                        image);
+                }
+
+                if (!isLastBatch) {
+                        file.setExtractionStatus(
+                                        ExtractionStatus.PROCESSING);
+
+                        fileUploadRepository.save(file);
+
+                        return ScanAiTextResponseDTO.builder()
+                                        .fileId(fileId)
+                                        .completed(false)
+                                        .extractionStatus(
+                                                        ExtractionStatus.PROCESSING.name())
+                                        .build();
+                }
+
+                try {
+                        List<Path> allImagePaths = scanAiTempStorage.listImagesOrderByPageIndex(
+                                        fileId);
+
+                        log.info(
+                                        "AI bắt đầu sau khi nhận đủ batch: fileId={}, totalImages={}",
+                                        fileId,
+                                        allImagePaths.size());
+
+                        String accumulatedText = "";
+
+                        for (int start = 0; start < allImagePaths.size(); start += 2) {
+
+                                int end = Math.min(
+                                                start + 2,
+                                                allImagePaths.size());
+
+                                List<Path> aiImagePaths = allImagePaths.subList(start, end);
+
+                                log.info(
+                                                "AI xử lý nhóm ảnh: fileId={}, imageCount={}, paths={}",
+                                                fileId,
+                                                aiImagePaths.size(),
+                                                aiImagePaths);
+
+                                String chunkText = aiVisionService.extractText(aiImagePaths);
+
+                                if (chunkText == null || chunkText.isBlank()) {
+                                        throw new IllegalStateException(
+                                                        "AI không trả về nội dung cho nhóm ảnh");
+                                }
+
+                                accumulatedText = accumulatedText.isBlank()
+                                                ? chunkText
+                                                : accumulatedText
+                                                                + "\n\n"
+                                                                + chunkText;
+
+                                String normalizedText = textNormalizer.normalize(accumulatedText);
+
+                                file.setRawText(accumulatedText);
+                                file.setNormalizedText(normalizedText);
+                                file.setCharacterCount(normalizedText.length());
+                                file.setWordCount(countWords(normalizedText));
+                                file.setExtractionStatus(
+                                                ExtractionStatus.PROCESSING);
+                                file.setExtractionError(null);
+
+                                fileUploadRepository.save(file);
+
+                                try {
+                                        fileTextRedisRepository.save(
+                                                        file.getFileId(),
+                                                        accumulatedText);
+                                } catch (RuntimeException redisException) {
+                                        log.warn(
+                                                        "Redis lỗi nhưng DB đã lưu. fileId={}",
+                                                        fileId,
+                                                        redisException);
+                                }
+                        }
+
+                        // Nếu đây là batch cuối cùng, tiến hành xử lý template nếu cần thiết
+                        if (isLastBatch) {
+                                file.setExtractionStatus(
+                                                ExtractionStatus.EXTRACTED);
+                                fileUploadRepository.save(file);
+
+                                try {
+                                        processTemplateIfRequired(
+                                                        currentUser,
+                                                        session,
+                                                        file);
+                                } catch (Exception exception) {
+                                        log.error(
+                                                        "Phân tích template thất bại, "
+                                                                        + "nhưng raw_text đã được lưu. fileId={}",
+                                                        fileId,
+                                                        exception);
+                                }
+                        }
+
+                        return ScanAiTextResponseDTO.builder()
+                                        .fileId(fileId)
+                                        .completed(isLastBatch)
+                                        .fullText(file.getRawText())
+                                        .extractionStatus(
+                                                        file.getExtractionStatus().name())
+                                        .build();
+
+                } catch (Exception exception) {
+                        file.setExtractionStatus(
+                                        ExtractionStatus.FAILED);
+                        file.setExtractionError(
+                                        "AI xử lý batch thất bại: "
+                                                        + exception.getMessage());
+
+                        fileUploadRepository.save(file);
+
+                        throw new IOException(
+                                        "AI xử lý ảnh thất bại",
+                                        exception);
+                } finally {
+                        scanAiTempStorage.delete(fileId);
+                }
+
+        }
+
+        private FileMetadataResponseDTO toResponse(
+                        FileMetadata file,
+                        User user,
+                        String fieldCode) {
+                return FileMetadataResponseDTO.builder()
+                                .fileId(file.getFileId())
+                                .fileName(file.getFileName())
+                                .fileUrl(file.getFileUrl())
+                                .fileSize(file.getFileSize())
+                                .category(
+                                                file.getCategory() != null
+                                                                ? file.getCategory().name()
+                                                                : null)
+                                .uploadedAt(file.getUploadedAt())
+                                .uploadedBy(user.getFullName())
+                                .extractionStatus(
+                                                file.getExtractionStatus() != null
+                                                                ? file.getExtractionStatus().name()
+                                                                : null)
+                                .extractionError(file.getExtractionError())
+                                .rawText(
+                                                shouldExposeRawText(
+                                                                file.getCategory(),
+                                                                fieldCode)
+                                                                                ? file.getRawText()
+                                                                                : null)
+                                .build();
+        }
+
+        // Xử lý template nếu file là file template
+        private void processTemplateIfRequired(
+                        User user,
+                        ChatSession session,
+                        FileMetadata file) {
+                if (file.getCategory() != FileMetadata.FileCategory.TEMPLATE) {
+                        return;
+                }
+
+                String normalizedText = file.getNormalizedText();
+
+                if (normalizedText == null
+                                || normalizedText.isBlank()) {
+                        return;
+                }
+
+                String templateJson = aiCompletionService.extractTemplateFromRawText(
+                                user,
+                                normalizedText);
+
+                if (templateJson == null
+                                || templateJson.isBlank()) {
+                        throw new IllegalStateException(
+                                        "Không tạo được template definition từ file upload");
+                }
+
+                log.info(
+                                "Saving template definition: sessionId={}, sessionUuid={}, fileId={}, templateLength={}",
+                                session.getSessionId(),
+                                session.getSessionUuid(),
+                                file.getFileId(),
+                                templateJson.length());
+
+                // Luôn ghi đè template hiện tại.
+                session.setTemplateDefinitionJson(templateJson);
+                chatSessionRepository.save(session);
+        }
+
+        // Nếu file là file template thì hiển thị nội dung thô
+        private boolean shouldExposeRawText(
+                        FileMetadata.FileCategory category,
+                        String fieldCode) {
+                return category == FileMetadata.FileCategory.TEMPLATE;
+        }
+
+        // Lấy cấu hình upload dựa trên gói của người dùng hiện tại
+        public UploadConfigResponseDTO getUploadConfig() {
+                Authentication authentication = SecurityContextHolder
+                                .getContext()
+                                .getAuthentication();
+
+                if (authentication == null
+                                || authentication.getPrincipal() == null
+                                || "anonymousUser".equals(authentication.getPrincipal())) {
+                        throw new RuntimeException(
+                                        "Không tìm thấy thông tin đăng nhập");
+                }
+
+                String userId = authentication
+                                .getPrincipal()
+                                .toString();
+
+                User currentUser = userRepository
+                                .findById(userId)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Tài khoản không tồn tại!"));
+
+                AdminPackageConfig packageConfig = currentUser.getAdminPackageConfig() != null
+                                ? currentUser.getAdminPackageConfig()
+                                : adminService.getPackageConfig("FREE");
+
+                if (packageConfig == null) {
+                        throw new IllegalStateException(
+                                        "Không tìm thấy cấu hình package");
+                }
+
+                long maxFileSizeMb = packageConfig.getMaxFileSizeMb() != null
+                                ? packageConfig.getMaxFileSizeMb()
+                                : 10L;
+
+                int maxFiles = packageConfig.getMaxFilesPerCall() != null
+                                ? packageConfig.getMaxFilesPerCall()
+                                : 5;
+
+                long storageQuotaMb = packageConfig.getStorageQuotaMb() != null
+                                ? packageConfig.getStorageQuotaMb()
+                                : getDefaultStorageQuotaMb(
+                                                packageConfig.getPackageType());
+
+                long storageQuota = storageQuotaMb * 1024L * 1024L;
+
+                long usedStorage = Optional.ofNullable(
+                                fileUploadRepository.sumFileSizeByUserId(
+                                                currentUser.getUserId()))
+                                .orElse(0L);
+
+                long remainingStorage = Math.max(0L, storageQuota - usedStorage);
+
+                long maxText = packageConfig.getMaxTextPerCall() != null
+                                ? packageConfig.getMaxTextPerCall()
+                                : 100000L;
+
+                return UploadConfigResponseDTO.builder()
+                                .packageType(packageConfig.getPackageType())
+                                .maxFileSize(maxFileSizeMb * 1024L * 1024L)
+                                .maxFiles(maxFiles)
+                                .maxText(maxText)
+                                .allowedExtensions(
+                                                new ArrayList<>(
+                                                                parseAllowedFileTypes(
+                                                                                packageConfig.getAllowedFileTypes())))
+                                .storageQuota(storageQuota)
+                                .usedStorage(usedStorage)
+                                .remainingStorage(remainingStorage)
+                                .build();
+        }
 }

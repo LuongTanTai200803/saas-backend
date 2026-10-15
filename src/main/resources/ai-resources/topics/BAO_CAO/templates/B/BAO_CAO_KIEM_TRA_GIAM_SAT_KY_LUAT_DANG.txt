@@ -1,0 +1,67 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_KIEM_TRA_GIAM_SAT_KY_LUAT_DANG",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả công tác kiểm tra, giám sát, kỷ luật của Đảng [kỳ báo cáo]; phương hướng, nhiệm vụ [kỳ tiếp theo]",
+  "cauDanChuyenTiep": "",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "",
+  "cacMuc": [
+    {
+      "code": "A",
+      "tieuDeMuc": "TÌNH HÌNH, KẾT QUẢ CÔNG TÁC KIỂM TRA, GIÁM SÁT VÀ THI HÀNH KỶ LUẬT ĐẢNG [KỲ BÁO CÁO]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "KHÁI QUÁT CHUNG",
+          "noiDungChiTiet": "[Khái quát số tổ chức đảng, đảng viên, ủy ban kiểm tra các cấp, tình hình kiện toàn tổ chức kiểm tra.]"
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "KẾT QUẢ THỰC HIỆN NHIỆM VỤ KIỂM TRA, GIÁM SÁT VÀ THI HÀNH KỶ LUẬT ĐẢNG",
+          "noiDungChiTiet": "1. Việc lãnh đạo, chỉ đạo, hướng dẫn về công tác kiểm tra, giám sát\n1.1. Việc lãnh đạo, chỉ đạo của cấp ủy các cấp\n1.2. Việc tham mưu giúp cấp ủy và thực hiện nhiệm vụ cấp ủy giao\n1.3. Việc thực hiện nhiệm vụ cấp trên giao\n1.4. Việc thực hiện thông báo, kết luận kiểm tra, giám sát\n2. Kết quả kiểm tra: [Kiểm tra tổ chức đảng, đảng viên, kiểm tra khi có dấu hiệu vi phạm.]\n3. Kết quả giám sát: [Giám sát chuyên đề, giám sát thường xuyên.]\n4. Thi hành kỷ luật Đảng: [Nêu số lượng, hình thức kỷ luật, đối tượng.]\n5. Giải quyết đơn thư, tố cáo, khiếu nại kỷ luật Đảng: [Nêu kết quả tiếp nhận, phân loại, xử lý.]"
+        },
+        {
+          "code": "III",
+          "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+          "noiDungChiTiet": "1. Ưu điểm\n2. Hạn chế\n3. Nguyên nhân"
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ [KỲ TIẾP THEO]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tiếp tục quán triệt, triển khai các quy định của Trung ương.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tăng cường kiểm tra, giám sát lĩnh vực dễ phát sinh vi phạm.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nâng cao chất lượng tham mưu của ủy ban kiểm tra các cấp.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Rà soát, sửa đổi, bổ sung quy định, quy chế, chương trình kiểm tra, giám sát.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Sơ kết, tổng kết các quy định, kết luận, chương trình, kế hoạch liên quan.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

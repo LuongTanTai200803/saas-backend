@@ -1,0 +1,74 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_HOI_NGHI_BCH_DANG_BO_TINH",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "",
+  "trichYeu": "ĐẠI HỘI ĐẠI BIỂU ĐẢNG BỘ … LẦN THỨ …, NHIỆM KỲ …",
+  "cauDanChuyenTiep": "Sau khi thảo luận các văn kiện, Đại hội thống nhất:\n\nQUYẾT NGHỊ",
+  "cauKetHanhChinh": "Đại hội kêu gọi toàn Đảng bộ … phát huy đoàn kết, dân chủ, kỷ luật, kỷ cương, quyết tâm thực hiện thắng lợi Nghị quyết Đại hội.",
+  "doanCanCu": "Thực hiện [căn cứ/chỉ thị/nghị quyết cấp trên], từ ngày … đến ngày …, Đảng bộ … tổ chức Đại hội đại biểu lần thứ …, nhiệm kỳ … Với chủ đề: “…”, phương châm: “…”.",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "Tán thành những nội dung cơ bản về đánh giá kết quả thực hiện nhiệm vụ nhiệm kỳ …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[KẾT_QUẢ_ĐẠT_ĐƯỢC]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, nguyên nhân",
+          "noiDungChiTiet": "[HẠN_CHẾ_NGUYÊN_NHÂN]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Bài học kinh nghiệm",
+          "noiDungChiTiet": "[BÀI_HỌC_KINH_NGHIỆM]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "Phương hướng, mục tiêu, nhiệm vụ và giải pháp nhiệm kỳ …",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Phương hướng",
+          "noiDungChiTiet": "[PHƯƠNG_HƯỚNG]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[MỤC_TIÊU_TỔNG_QUÁT]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Chỉ tiêu cụ thể",
+          "noiDungChiTiet": "[CHỈ_TIÊU_CỤ_THỂ]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Nhiệm vụ, giải pháp chủ yếu",
+          "noiDungChiTiet": "[NHIỆM_VỤ_GIẢI_PHÁP_CHỦ_YẾU]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "Thông qua các nội dung khác của Đại hội",
+      "noiDungChiTiet": "[NỘI_DUNG_KHÁC]",
+      "tieuMuc": []
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "Tổ chức thực hiện",
+      "noiDungChiTiet": "Đại hội giao [Đảng ủy/Ban Chấp hành Đảng bộ] xây dựng chương trình hành động, kế hoạch triển khai thực hiện Nghị quyết.",
+      "tieuMuc": []
+    }
+  ]
+}

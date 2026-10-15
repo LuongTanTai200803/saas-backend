@@ -1,0 +1,69 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": null,
+  "topicCode": "CHI_THI_CHUNG",
+  "tenLoaiVanBan": "CHỈ THỊ",
+  "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",
+  "trichYeu": "về [trích yếu nội dung chỉ đạo]",
+  "cauDanChuyenTiep": "Để [mục tiêu cần đạt], Ban Thường vụ Tỉnh ủy yêu cầu [đối tượng thực hiện] tập trung lãnh đạo, chỉ đạo, tổ chức thực hiện tốt một số nhiệm vụ trọng tâm sau:",
+  "cauKetHanhChinh": "Chỉ thị này được phổ biến đến chi bộ.",
+  "doanCanCu": "Thời gian qua, [các cấp ủy, tổ chức đảng, chính quyền, cơ quan, đơn vị] đã quan tâm lãnh đạo, chỉ đạo [lĩnh vực] và đạt được một số kết quả quan trọng. [Nêu 3-5 kết quả cụ thể, đúng dữ liệu.]\nTuy nhiên, [lĩnh vực] vẫn còn một số tồn tại, hạn chế như: [hạn chế 1]; [hạn chế 2]; [hạn chế 3]. Những hạn chế này ảnh hưởng đến [hậu quả/tác động].\nNguyên nhân chủ yếu là do [nguyên nhân về nhận thức]; [nguyên nhân về cơ chế, chính sách]; [nguyên nhân về nguồn lực, phối hợp, kiểm tra, giám sát].",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Quán triệt, tuyên truyền, nâng cao nhận thức",
+      "noiDungChiTiet": "Tổ chức quán triệt, tuyên truyền và nâng cao nhận thức cho cán bộ, đảng viên và Nhân dân về [nội dung trọng tâm].",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Thực hiện các nhiệm vụ chuyên môn trọng tâm",
+      "noiDungChiTiet": "Triển khai thực hiện đồng bộ các nhiệm vụ chuyên môn trọng tâm trong lĩnh vực chỉ đạo.",
+      "tieuMuc": []
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Hoàn thiện cơ chế, chính sách và nguồn lực bảo đảm",
+      "noiDungChiTiet": "Rà soát, đề xuất hoàn thiện cơ chế, chính sách và bố trí nguồn lực điều kiện bảo đảm thực hiện.",
+      "tieuMuc": []
+    },
+    {
+      "code": "4",
+      "tieuDeMuc": "Tăng cường kiểm tra, giám sát, chuyển đổi số và báo cáo",
+      "noiDungChiTiet": "Đẩy mạnh ứng dụng công nghệ, chuyển đổi số, thực hiện nghiêm túc công tác kiểm tra, giám sát và chế độ báo cáo.",
+      "tieuMuc": []
+    },
+    {
+      "code": "5",
+      "tieuDeMuc": "Tổ chức thực hiện",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "5.1",
+          "tieuDeMuc": "",
+          "noiDungChiTiet": "[Các cấp ủy, tổ chức đảng, chính quyền, cơ quan, đơn vị] căn cứ Chỉ thị này tổ chức phổ biến, quán triệt, cụ thể hóa và triển khai thực hiện."
+        },
+        {
+          "code": "5.2",
+          "tieuDeMuc": "",
+          "noiDungChiTiet": "[Cơ quan chủ trì] chủ trì, phối hợp với [cơ quan liên quan] theo dõi, hướng dẫn, đôn đốc, kiểm tra việc thực hiện."
+        },
+        {
+          "code": "5.3",
+          "tieuDeMuc": "",
+          "noiDungChiTiet": "[Cơ quan/đơn vị chuyên trách] thực hiện nhiệm vụ theo chức năng, nhiệm vụ được giao."
+        },
+        {
+          "code": "5.4",
+          "tieuDeMuc": "",
+          "noiDungChiTiet": "Định kỳ [hằng tháng/6 tháng/hằng năm], báo cáo kết quả thực hiện với Ban Thường vụ Tỉnh ủy qua [cơ quan đầu mối]."
+        },
+        {
+          "code": "5.5",
+          "tieuDeMuc": "",
+          "noiDungChiTiet": "Giao [Văn phòng Tỉnh ủy/Ban chuyên môn] tổng hợp, tham mưu Thường trực Tỉnh ủy, Ban Thường vụ Tỉnh ủy lãnh đạo, chỉ đạo các nội dung liên quan."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "source": "SERVER",
+  "templateCode": "KET_LUAN_BTV_TINH_UY_TO_CHUC_CAN_BO",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "trichYeu": "về [Nội dung về công tác tổ chức, cán bộ, tiêu chuẩn chính trị]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy thống nhất kết luận:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy kết luận để thực hiện.",
+  "doanCanCu": "Sau khi xem xét Báo cáo/Tờ trình số [số], ngày [ngày] tháng [tháng] năm [năm] của Ban Tổ chức Tỉnh ủy về [nội dung trình],",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "",
+      "noiDungChiTiet": "[Kết luận đối với nhóm đối tượng/nội dung thứ nhất]"
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "",
+      "noiDungChiTiet": "[Kết luận đối với nhóm đối tượng/nội dung thứ hai]"
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "",
+      "noiDungChiTiet": "(Có danh sách kèm theo)\nGiao Ban Tổ chức Tỉnh ủy tham mưu/tổng hợp/hoàn thiện/báo cáo [Thường trực Tỉnh ủy/Bộ Chính trị/Ban Bí thư/cơ quan có thẩm quyền] theo quy định."
+    }
+  ]
+}

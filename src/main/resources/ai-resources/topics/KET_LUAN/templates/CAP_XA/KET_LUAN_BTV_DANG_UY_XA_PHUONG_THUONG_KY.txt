@@ -1,0 +1,123 @@
+{
+
+"source": "USER_UPLOAD",
+
+"templateCode": "KET_LUAN_BTV_DANG_UY_XA_PHUONG_THUONG_KY",
+
+"topicCode": "KET_LUAN",
+
+"tenLoaiVanBan": "KẾT LUẬN",
+
+"coQuanBanHanh": "CỦA BAN THƯỜNG VỤ ĐẢNG ỦY\nPhiên họp thường kỳ tháng … năm …",
+
+"trichYeu": "",
+
+"cauDanChuyenTiep": "Ngày …/…/…, Ban Thường vụ Đảng ủy xã/phường … tổ chức phiên họp thường kỳ tháng … năm … . Dự họp có …/… đồng chí Ủy viên Ban Thường vụ Đảng ủy; vắng … đồng chí, lý do … . Đồng chí …, Bí thư Đảng ủy - Chủ trì.\nMời dự: [thành phần mời dự].\nSau khi nghe các báo cáo, tờ trình của các cơ quan, đơn vị và các ý kiến thảo luận, Ban Thường vụ Đảng ủy đã xem xét, thảo luận và thống nhất kết luận từng nội dung như sau:",
+
+"cauKetHanhChinh": "Trên đây là Kết luận của Ban Thường vụ Đảng ủy. Giao Văn phòng Đảng ủy, các cấp ủy, tổ chức đảng, cơ quan, đơn vị liên quan triển khai thực hiện; Văn phòng Đảng ủy theo dõi, đôn đốc việc thực hiện và tổng hợp báo cáo Thường trực, Ban Thường vụ Đảng ủy.",
+
+"doanCanCu": "",
+
+"cacMuc": [
+
+{
+
+"code": "I",
+
+"tieuDeMuc": "Quán triệt các văn bản cấp trên",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "[Tên văn bản 1]",
+
+"noiDungChiTiet": "Ban Thường vụ Đảng ủy giao [cơ quan] nghiên cứu, tham mưu triển khai thực hiện theo quy định."
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "[Tên văn bản 2]",
+
+"noiDungChiTiet": "…"
+
+}
+
+]
+
+},
+
+{
+
+"code": "II",
+
+"tieuDeMuc": "Các nội dung trình",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "Thường trực Đảng ủy trình",
+
+"noiDungChiTiet": "1.1. [Tên báo cáo/tờ trình]\nBan Thường vụ Đảng ủy nhất trí/cơ bản nhất trí với nội dung. Giao [cơ quan] tiếp thu ý kiến tham gia, hoàn thiện, trình ký ban hành/tổ chức thực hiện.\n1.2. [Tên nội dung tiếp theo]\n…"
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "Ủy ban nhân dân xã/phường trình",
+
+"noiDungChiTiet": "2.1. [Tên tờ trình/báo cáo]\nBan Thường vụ Đảng ủy thống nhất chủ trương. Giao UBND xã/phường căn cứ quy định pháp luật, chức năng, nhiệm vụ để tổ chức thực hiện.\n2.2. [Tên nội dung tiếp theo]\n…"
+
+},
+
+{
+
+"code": "3",
+
+"tieuDeMuc": "Ủy ban Kiểm tra Đảng ủy trình",
+
+"noiDungChiTiet": "[Ý kiến kết luận và nhiệm vụ giao]"
+
+},
+
+{
+
+"code": "4",
+
+"tieuDeMuc": "Ban Xây dựng Đảng trình",
+
+"noiDungChiTiet": "[Ý kiến kết luận; nếu công tác tổ chức cán bộ thì ghi: Có kết luận riêng]"
+
+},
+
+{
+
+"code": "5",
+
+"tieuDeMuc": "Ủy ban MTTQ Việt Nam xã/phường trình",
+
+"noiDungChiTiet": "[Ý kiến kết luận và nhiệm vụ giao]"
+
+}
+
+]
+
+}
+
+]
+
+}

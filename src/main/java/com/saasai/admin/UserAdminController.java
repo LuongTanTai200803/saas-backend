@@ -9,6 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+import com.saasai.dto.UserCreditSummaryDTO;
+import com.saasai.service.UserService;
+
 @RestController
 @RequestMapping("/api/v1/admin/users")
 @CrossOrigin
@@ -16,6 +19,19 @@ public class UserAdminController {
     @Autowired
     private AdminService adminService;
 
+    @Autowired
+    private UserService userService;
+    
+    @GetMapping("/{userId}/credit-summary")
+    public ResponseEntity<ApiResponseDTO<UserCreditSummaryDTO>>
+    getUserCreditSummary(@PathVariable String userId) {
+        UserCreditSummaryDTO summary =
+                userService.getUserCreditSummaryByUserId(userId);
+
+        return ResponseEntity.ok(
+                ApiResponseDTO.success("OK", summary)
+        );
+    }
     @GetMapping
     public ResponseEntity<ApiResponseDTO<List<UserAdminDTO>>> listUsers(
             @RequestParam(required = false) Integer page,

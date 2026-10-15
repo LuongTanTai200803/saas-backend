@@ -1,0 +1,137 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_CHUYEN_DE_TINH",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "CỦA [BAN CHẤP HÀNH/BAN THƯỜNG VỤ] …",
+  "trichYeu": "về … giai đoạn …, tầm nhìn đến …",
+  "cauDanChuyenTiep": "[cơ quan ban hành] ban hành Nghị quyết về …",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến đến chi bộ/[đảng viên/Nhân dân] để thực hiện.",
+  "doanCanCu": "Thực hiện [Nghị quyết Đại hội/Chương trình hành động/Chỉ thị/Kết luận liên quan],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "KHÁI QUÁT TÌNH HÌNH/SỰ CẦN THIẾT",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[KẾT_QUẢ_ĐẠT_ĐƯỢC]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, tồn tại",
+          "noiDungChiTiet": "[HẠN_CHẾ_TỒN_TẠI]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "[NGUYÊN_NHÂN]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Yêu cầu đặt ra trong giai đoạn mới",
+          "noiDungChiTiet": "[YÊU_CẦU_ĐẶT_RA]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "QUAN ĐIỂM CHỈ ĐẠO",
+      "noiDungChiTiet": "[QUAN_ĐIỂM_CHỈ_ĐẠO]",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[MỤC_TIÊU_TỔNG_QUÁT]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu cụ thể/chỉ tiêu chủ yếu",
+          "noiDungChiTiet": "[MỤC_TIÊU_CỤ_THỂ_CHỈ_TIÊU]"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tăng cường sự lãnh đạo, chỉ đạo của Đảng đối với …",
+          "noiDungChiTiet": "[SỰ_LÃNH_ĐẠO_CỦA_ĐẢNG]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hoàn thiện cơ chế, chính sách, huy động nguồn lực",
+          "noiDungChiTiet": "[CƠ_CHẾ_CHÍNH_SÁCH_NGUỒN_LỰC]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Đẩy mạnh cải cách hành chính/chuyển đổi số/khoa học công nghệ",
+          "noiDungChiTiet": "[CẢI_CÁCH_HÀNH_CHÍNH_CHUYỂN_ĐỔI_SỐ]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Phát triển nguồn nhân lực",
+          "noiDungChiTiet": "[PHÁT_TRIỂN_NGUỒN_NHÂN_LỰC]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Tăng cường kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": "[KIỂM_TRA_GIÁM_SÁT]"
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Các cấp ủy, tổ chức đảng … quán triệt, triển khai thực hiện.",
+          "noiDungChiTiet": "[NHIỆM_VỤ_CÁC_CẤP_ỦY]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đảng ủy Hội đồng nhân dân tỉnh lãnh đạo …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ĐẢNG_ỦY_HĐND]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Đảng ủy Ủy ban nhân dân tỉnh lãnh đạo …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ĐẢNG_ỦY_UBND]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Mặt trận Tổ quốc và các tổ chức chính trị - xã hội …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_MTTQ_TỔ_CHỨC_CHÍNH_TRỊ_XÃ_HỘI]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Ban Tuyên giáo và Dân vận Tỉnh ủy …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_BAN_TUYÊN_GIÁO_DÂN_VẬN]"
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Ủy ban Kiểm tra Tỉnh ủy …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_ỦY_BAN_KIỂM_TRA]"
+        },
+        {
+          "code": "7",
+          "tieuDeMuc": "Văn phòng Tỉnh ủy …",
+          "noiDungChiTiet": "[NHIỆM_VỤ_VĂN_PHÒNG]"
+        }
+      ]
+    }
+  ]
+}

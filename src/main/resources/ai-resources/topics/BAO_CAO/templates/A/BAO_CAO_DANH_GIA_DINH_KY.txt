@@ -1,0 +1,63 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_DANH_GIA_DINH_KY",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "đánh giá [thời gian] thực hiện [tên văn bản]",
+  "cauDanChuyenTiep": "Ban Thường vụ [cơ quan] báo cáo kết quả thực hiện [tên văn bản] (số liệu từ ngày... đến ngày...), cụ thể như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ [cơ quan] trân trọng báo cáo.",
+  "doanCanCu": "Căn cứ [Công văn/Kế hoạch số..., ngày... của...],",
+  "cacMuc": [
+    {
+      "code": "Phần thứ nhất",
+      "tieuDeMuc": "ĐẶC ĐIỂM TÌNH HÌNH, CÔNG TÁC TRIỂN KHAI, KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "ĐẶC ĐIỂM TÌNH HÌNH",
+          "noiDungChiTiet": "1. Tình hình chung\n2. Tình hình chuyên đề/lĩnh vực"
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "CÔNG TÁC QUÁN TRIỆT, LÃNH ĐẠO, CHỈ ĐẠO THỰC HIỆN",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "III",
+          "tieuDeMuc": "KẾT QUẢ THỰC HIỆN CÁC NHIỆM VỤ, GIẢI PHÁP",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "IV",
+          "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+          "noiDungChiTiet": "1. Kết quả đạt được\n2. Hạn chế, khó khăn\n3. Nguyên nhân"
+        }
+      ]
+    },
+    {
+      "code": "Phần thứ hai",
+      "tieuDeMuc": "MỘT SỐ NHIỆM VỤ TRỌNG TÂM THỜI GIAN TỚI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "I",
+          "tieuDeMuc": "DỰ BÁO TÌNH HÌNH",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "II",
+          "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "Phần thứ ba",
+      "tieuDeMuc": "ĐỀ XUẤT, KIẾN NGHỊ",
+      "noiDungChiTiet": "",
+      "tieuMuc": []
+    }
+  ]
+}

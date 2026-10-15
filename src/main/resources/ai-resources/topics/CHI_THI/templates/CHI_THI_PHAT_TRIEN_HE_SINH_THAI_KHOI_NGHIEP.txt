@@ -1,0 +1,67 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "CHI_THI_PHAT_TRIEN_HE_SINH_THAI_KHOI_NGHIEP",
+  "topicCode": "CHI_THI",
+  "tenLoaiVanBan": "CHỈ THỊ",
+  "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",
+  "trichYeu": "về đẩy mạnh xây dựng [hệ sinh thái khởi nghiệp đổi mới sáng tạo/chuyển đổi số/khoa học công nghệ] trên địa bàn [●]",
+  "cauDanChuyenTiep": "Nhằm khắc phục hạn chế, cụ thể hóa chủ trương [●], tạo động lực mới cho tăng trưởng, Ban Thường vụ Tỉnh ủy yêu cầu:",
+  "cauKetHanhChinh": "Chỉ thị này được phổ biến đến [chi bộ].",
+  "doanCanCu": "Thực hiện [nghị quyết/chủ trương cấp trên], thời gian qua [các cấp ủy, chính quyền, cơ quan, đơn vị] đã quan tâm lãnh đạo, chỉ đạo và đạt được một số kết quả bước đầu: [kết quả].\nTuy nhiên, [hệ sinh thái/lĩnh vực] còn hạn chế: [cơ chế chính sách], [vốn], [nhân lực], [liên kết], [văn hóa đổi mới sáng tạo]. Nguyên nhân chủ yếu là [nhận thức, nguồn lực, phối hợp, tổ chức trung gian].",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Xác định mục tiêu phát triển [hệ sinh thái/lĩnh vực]",
+      "noiDungChiTiet": "Xác định các chỉ tiêu định lượng cụ thể đến năm 2030 hoặc mốc phù hợp để phát triển hệ sinh thái.",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Nâng cao nhận thức, vai trò, trách nhiệm của cấp ủy, chính quyền, người đứng đầu",
+      "noiDungChiTiet": "Tăng cường tuyên truyền, quán triệt và nâng cao nhận thức, vai trò, trách nhiệm của các cấp ủy, chính quyền và người đứng đầu.",
+      "tieuMuc": []
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Rà soát, sửa đổi, bổ sung, hoàn thiện cơ chế, chính sách hỗ trợ",
+      "noiDungChiTiet": "Thực hiện rà soát, sửa đổi, bổ sung và hoàn thiện các cơ chế, chính sách hỗ trợ phát triển.",
+      "tieuMuc": []
+    },
+    {
+      "code": "4",
+      "tieuDeMuc": "Hỗ trợ tiếp cận vốn, quỹ, tín dụng ưu đãi, đầu tư mạo hiểm",
+      "noiDungChiTiet": "Triển khai các giải pháp hỗ trợ tiếp cận nguồn vốn, quỹ tài chính, tín dụng ưu đãi và đầu tư mạo hiểm.",
+      "tieuMuc": []
+    },
+    {
+      "code": "5",
+      "tieuDeMuc": "Phát triển nguồn nhân lực, đào tạo kỹ năng, mạng lưới chuyên gia, cố vấn",
+      "noiDungChiTiet": "Tập trung phát triển nguồn nhân lực, đào tạo kỹ năng và xây dựng mạng lưới chuyên gia, cố vấn.",
+      "tieuMuc": []
+    },
+    {
+      "code": "6",
+      "tieuDeMuc": "Xây dựng hạ tầng hỗ trợ: vườn ươm, trung tâm đổi mới sáng tạo, cơ sở dữ liệu, kết nối cung cầu",
+      "noiDungChiTiet": "Đầu tư xây dựng hạ tầng hỗ trợ gồm vườn ươm, trung tâm đổi mới sáng tạo, cơ sở dữ liệu và kết nối cung cầu.",
+      "tieuMuc": []
+    },
+    {
+      "code": "7",
+      "tieuDeMuc": "Tuyên truyền, biểu dương, tổ chức cuộc thi, ngày hội, chuyên trang, chuyên mục",
+      "noiDungChiTiet": "Tổ chức công tác tuyên truyền, biểu dương, xây dựng chuyên trang, chuyên mục và tổ chức các cuộc thi, ngày hội.",
+      "tieuMuc": []
+    },
+    {
+      "code": "8",
+      "tieuDeMuc": "Đẩy mạnh ứng dụng nền tảng số, AI, dữ liệu lớn, thương mại điện tử, thanh toán số",
+      "noiDungChiTiet": "Thúc đẩy ứng dụng nền tảng số, trí tuệ nhân tạo (AI), dữ liệu lớn, thương mại điện tử và thanh toán số.",
+      "tieuMuc": []
+    },
+    {
+  "code": "9",
+  "tieuDeMuc": "Tổ chức thực hiện",
+  "noiDungChiTiet": "- [Các cấp ủy, chính quyền] phổ biến, quán triệt, cụ thể hóa.\n- [Đảng ủy UBND/HĐND] rà soát văn bản, xây dựng kế hoạch.\n- [MTTQ, tổ chức chính trị - xã hội] tuyên truyền, vận động.\n- [Ban Tuyên giáo và Dân vận] hướng dẫn tuyên truyền, theo dõi.\n- [Ủy ban Kiểm tra] đưa vào chương trình kiểm tra, giám sát.",
+  "tieuMuc": []
+    }
+  ]
+}

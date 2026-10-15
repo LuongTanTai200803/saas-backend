@@ -1,0 +1,47 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_DAI_HOI_DANG_BO_XA_PHUONG",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "",
+  "trichYeu": "Đại hội đại biểu Đảng bộ [xã/phường/đơn vị] lần thứ [số], nhiệm kỳ [năm - năm]",
+  "cauDanChuyenTiep": "Sau khi thảo luận các văn kiện do Ban Chấp hành Đảng bộ [đơn vị] trình, Đại hội thống nhất:\n\nQUYẾT NGHỊ",
+  "cauKetHanhChinh": "Đại hội kêu gọi toàn thể cán bộ, đảng viên, lực lượng vũ trang và Nhân dân [đơn vị] phát huy truyền thống đoàn kết, nêu cao tinh thần trách nhiệm, quyết tâm thực hiện thắng lợi Nghị quyết Đại hội.",
+  "doanCanCu": "Với phương châm “[...]” và chủ đề Đại hội “[...]”, Đại hội đại biểu Đảng bộ [đơn vị] lần thứ [số], nhiệm kỳ [năm - năm] được tổ chức vào ngày [...] tại [...], với sự tham dự của [...] đại biểu đại diện cho [...] đảng viên thuộc [...] tổ chức đảng trực thuộc.",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "Tán thành thông qua Báo cáo chính trị của Ban Chấp hành Đảng bộ [đơn vị] trình Đại hội",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đánh giá kết quả thực hiện nghị quyết Đại hội nhiệm kỳ [năm - năm]",
+          "noiDungChiTiet": "[Khái quát kết quả đạt được theo lĩnh vực: xây dựng Đảng, kinh tế, văn hóa - xã hội, quốc phòng - an ninh, chính quyền, MTTQ...]\n\n[Tuy nhiên, nêu hạn chế, yếu kém và nguyên nhân.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Quan điểm, mục tiêu phát triển nhiệm kỳ [năm - năm]",
+          "noiDungChiTiet": "2.1. Quan điểm phát triển: [Liệt kê quan điểm chỉ đạo.]\n2.2. Mục tiêu: [Mục tiêu tổng quát.]\n2.3. Các chỉ tiêu chủ yếu: [Nhóm chỉ tiêu kinh tế, xã hội, môi trường, cải cách hành chính, xây dựng Đảng...]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nhiệm vụ, giải pháp chủ yếu",
+          "noiDungChiTiet": "[Nhóm giải pháp theo lĩnh vực.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "Thông qua Báo cáo tổng hợp ý kiến tham gia vào dự thảo văn kiện cấp trên",
+      "noiDungChiTiet": "[Nếu có.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "Giao Ban Chấp hành Đảng bộ [đơn vị] khóa [số], nhiệm kỳ [năm - năm]",
+      "noiDungChiTiet": "[Tiếp thu ý kiến Đại hội; xây dựng chương trình hành động; ban hành nghị quyết chuyên đề, kế hoạch tổ chức thực hiện.]",
+      "tieuMuc": []
+    }
+  ]
+}

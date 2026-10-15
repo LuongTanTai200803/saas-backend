@@ -1,0 +1,80 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_TUYEN_TRUYEN_QUAN_TRIET_HOC_TAP_MOT_VAN_BAN",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tổ chức tuyên truyền, quán triệt và học tập [tên văn bản cấp trên] về [chủ đề]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [xã/phường] ban hành Kế hoạch tuyên truyền, quán triệt và học tập, cụ thể như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [tên văn bản cấp trên] (sau đây viết tắt là ...),",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Tổ chức phổ biến, quán triệt sâu rộng nội dung [văn bản] đến toàn thể cán bộ, đảng viên, đoàn viên, hội viên và các tầng lớp Nhân dân trên địa bàn. Qua đó tạo sự thống nhất về nhận thức và hành động; nâng cao trách nhiệm của cấp ủy, chính quyền, MTTQ, các tổ chức chính trị - xã hội và người đứng đầu."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Việc tổ chức nghiên cứu, học tập phải nghiêm túc, thiết thực, phù hợp với đặc thù từng loại hình chi bộ; không hình thức; coi trọng chất lượng thảo luận và khả năng vận dụng vào thực tiễn. Kết hợp học tập trực tiếp với tuyên truyền trên nền tảng số, mạng xã hội, hệ thống truyền thanh."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG TUYÊN TRUYỀN, QUÁN TRIỆT, HỌC TẬP",
+      "noiDungChiTiet": "Các nội dung cốt lõi của [tên văn bản].\n(có [tên tài liệu] gửi kèm theo)",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "HÌNH THỨC TỔ CHỨC HỘI NGHỊ",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Cấp xã/phường",
+          "noiDungChiTiet": "- Thời gian: [Dự kiến trong tháng.../Hoàn thành trước...].\n- Địa điểm: [Hội trường...].\n- Thành phần: [BCH Đảng bộ, lãnh đạo UBND, MTTQ, đoàn thể, bí thư chi bộ...].\n- Báo cáo viên: [Thường trực Đảng ủy/Bí thư Đảng ủy...]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Cấp cơ sở",
+          "noiDungChiTiet": "- Hình thức: Lồng ghép tại sinh hoạt chi bộ, họp cơ quan, đơn vị, tổ dân phố hoặc hội nghị riêng.\n- Đối tượng: Cán bộ, đảng viên, đoàn viên, hội viên và Nhân dân.\n- Báo cáo viên: Bí thư chi bộ/đảng bộ cơ sở.\n- Thời gian: Hoàn thành trước/trong [thời hạn]."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ban Xây dựng Đảng",
+          "noiDungChiTiet": "Chủ trì, phối hợp tuyên truyền; phát hành tài liệu; hướng dẫn, đôn đốc, kiểm tra; tham mưu báo cáo kết quả học tập, quán triệt."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Ủy ban nhân dân xã/phường",
+          "noiDungChiTiet": "Tham mưu xây dựng kế hoạch thực hiện [văn bản] bảo đảm phù hợp thực tiễn; chỉ đạo cơ quan, đơn vị, thôn/tổ dân phố tuyên truyền nội dung cốt lõi."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Văn phòng Đảng ủy",
+          "noiDungChiTiet": "Chuẩn bị điều kiện phục vụ hội nghị; triệu tập đại biểu; phối hợp bảo đảm hội nghị thiết thực, hiệu quả."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Các chi bộ, đảng bộ cơ sở, chi bộ trực thuộc",
+          "noiDungChiTiet": "Tổ chức học tập, quán triệt nghiêm túc; đánh giá chất lượng học tập nếu có yêu cầu; tổng hợp, báo cáo kết quả về Ban Thường vụ Đảng ủy qua Ban Xây dựng Đảng trước [ngày...]."
+        }
+      ]
+    }
+  ]
+}

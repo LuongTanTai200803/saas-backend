@@ -1,0 +1,25 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KET_LUAN_BCH_TINH_UY_CHUONG_TRINH_NGAN_SACH",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "coQuanBanHanh": "CỦA BAN CHẤP HÀNH ĐẢNG BỘ TỈNH",
+  "trichYeu": "về chương trình, đại hội, ngân sách",
+  "cauDanChuyenTiep": "Ban Chấp hành Đảng bộ tỉnh thống nhất kết luận như sau:",
+  "cauKetHanhChinh": "Ban Chấp hành Đảng bộ tỉnh kết luận để thực hiện.",
+  "doanCanCu": "Căn cứ Quy chế làm việc của Ban Chấp hành Đảng bộ tỉnh khóa …;\nSau khi xem xét [Tờ trình/Công văn/Báo cáo] số …, ngày … của [cơ quan trình]\nvề … và ý kiến tham gia của các đồng chí Ủy viên Ban Chấp hành Đảng bộ tỉnh,",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "[Nội dung thống nhất/thông qua/đồng ý điều chỉnh]",
+      "noiDungChiTiet": "………………………………………………………………………………",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "[Nội dung bổ sung hoặc yêu cầu khác, nếu có]",
+      "noiDungChiTiet": "Giao Ban Thường vụ Tỉnh ủy chỉ đạo [cơ quan liên quan] tiếp thu ý kiến,\nrà soát, hoàn thiện [văn bản/nội dung/chương trình], bảo đảm chặt chẽ,\nđúng quy định, phù hợp tình hình thực tiễn, trình/ký/ban hành/tổ chức thực hiện.",
+      "tieuMuc": []
+    }
+  ]
+}

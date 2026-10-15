@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_KHEN_THUONG",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc khen thưởng [tên đối tượng/thành tích]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Ban Tổ chức Tỉnh ủy, Văn phòng Tỉnh ủy, các cấp ủy, tổ chức đảng, cá nhân có tên tại Điều 1 thi hành Quyết định này.",
+
+"doanCanCu": "Căn cứ Điều lệ Đảng Cộng sản Việt Nam;\nCăn cứ các quy định, hướng dẫn về khen thưởng;\nCăn cứ Nghị quyết/Kết luận số [số văn bản];\n[Xét đề nghị của cơ quan đề nghị, nếu có],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Khen thưởng tập thể/cá nhân",
+
+"noiDungChiTiet": "Khen thưởng các tổ chức/cá nhân có thành tích xuất sắc, tiêu biểu sau:\n1. Tặng [hình thức khen thưởng] cho [đối tượng] đạt tiêu chuẩn [tiêu chuẩn].\n2. Tặng [hình thức khen thưởng] cho [đối tượng].\n(Có danh sách kèm theo)."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Mức tiền thưởng",
+
+"noiDungChiTiet": "Mức tiền thưởng kèm theo hình thức khen thưởng:\n1. [Mức thưởng cho đối tượng 1].\n2. [Mức thưởng cho đối tượng 2].\nTổng số tiền thưởng là [số tiền] đồng, được trích từ [nguồn kinh phí]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "Ban Tổ chức Tỉnh ủy, Văn phòng Tỉnh ủy, các cấp ủy, tổ chức đảng, cá nhân có tên tại Điều 1 thi hành Quyết định này."
+
+}
+
+]
+
+}

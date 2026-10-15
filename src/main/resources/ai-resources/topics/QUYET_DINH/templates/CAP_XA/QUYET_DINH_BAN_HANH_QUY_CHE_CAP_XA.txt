@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_BAN_HANH_QUY_CHE_CAP_XA",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc ban hành/phê chuẩn [Quy chế/Quy định] [tên văn bản]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ ĐẢNG ỦY [tên đảng ủy] QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có]. [Cơ quan, tổ chức, cá nhân liên quan] chịu trách nhiệm thi hành Quyết định này.",
+
+"doanCanCu": "Căn cứ [căn cứ pháp lý];\nCăn cứ [văn bản chuyên ngành];\nCăn cứ [quy chế làm việc/nghị quyết đại hội/kết luận];\nXét đề nghị của [cơ quan tham mưu],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Ban hành/Phê chuẩn quy chế, quy định",
+
+"noiDungChiTiet": "Ban hành/Phê chuẩn kèm theo Quyết định này [Quy chế/Quy định] [tên đầy đủ]."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Tổ chức thực hiện",
+
+"noiDungChiTiet": "[Cơ quan chủ trì] chủ trì, phối hợp với [cơ quan phối hợp] tổ chức thực hiện; theo dõi, kiểm tra, đôn đốc và định kỳ báo cáo [cấp có thẩm quyền]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+
+"noiDungChiTiet": "Quyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có]. [Cơ quan, tổ chức, cá nhân liên quan] chịu trách nhiệm thi hành Quyết định này."
+
+}
+
+]
+
+}

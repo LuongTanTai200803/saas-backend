@@ -1,55 +1,86 @@
 package com.saasai.feature.ai;
 
-import com.saasai.feature.ai.AiTemplateContent;
-import com.saasai.feature.ai.TemplateRouteResult;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import com.saasai.repository.ChatSessionRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.saasai.entity.ChatSession;
 
 @Service
 @RequiredArgsConstructor
 public class AiTemplateService {
 
-    private final TemplateRoutingService templateRoutingService;
-    private final AiResourceService aiResourceService;
+        private final TemplateRoutingService templateRoutingService;
+        private final AiResourceService aiResourceService;
+        private final ChatSessionRepository chatSessionRepository;
+        private final ObjectMapper objectMapper;
 
-    /**
-     * Resolve the template content for a given topic code and document title.
-     *
-     * @param topicCode     the code representing the topic of the document.
-     * @param documentTitle the title of the document for which the template is to be resolved.
-     * @return An AiTemplateContent object containing the resolved template content and related information.
-     */
-    public AiTemplateContent resolve(
-            String topicCode,
-            String documentTitle
-    ) {
-        // Load file mẫu txt theo topicCode và templateCode
-        TemplateRouteResult route =
-                templateRoutingService.resolve(
-                        topicCode,
-                        documentTitle
-                );
+        public AiTemplateContent resolve(
+                        ChatSession session,
+                        String topicCode,
+                        String documentTitle) {
+                if (session == null) {
+                        throw new IllegalArgumentException(
+                                        "Chat session must not be null");
+                }
 
-        String globalInstruction =
-                aiResourceService
-                        .loadGlobalSystemInstruction();
-        // Load topic prompt and template content based on the resolved route
-        String topicPrompt =
-                aiResourceService
-                        .loadTopicPrompt(route.topicCode());
+                String templateDefinition = session.getTemplateDefinitionJson();
 
-        String templateContent =
-                aiResourceService.loadTemplate(
-                        route.topicCode(),
-                        route.templateCode()
-                );
+                if (templateDefinition == null
+                                || templateDefinition.isBlank()) {
 
-        return new AiTemplateContent(
-                route.topicCode(),
-                route.templateCode(),
-                globalInstruction,
-                topicPrompt,
-                templateContent
-        );
-    }
+                        TemplateRouteResult route = templateRoutingService.resolve(
+                                        topicCode,
+                                        documentTitle);
+
+                        ResolvedTemplate resolvedTemplate = aiResourceService.resolveTemplate(
+                                        route.topicCode(),
+                                        route.templateCode());
+
+                        templateDefinition = resolvedTemplate.templateContent();
+
+                        try {
+                                objectMapper.readTree(templateDefinition);
+                        } catch (JsonProcessingException exception) {
+                                throw new IllegalStateException(
+                                                "Template server không phải JSON hợp lệ: "
+                                                                + resolvedTemplate.templateFileName(),
+                                                exception);
+                        }
+
+                        session.setTemplateDefinitionJson(templateDefinition);
+                        chatSessionRepository.save(session);
+
+                        return new AiTemplateContent(
+                                        route.topicCode(),
+                                        route.templateCode(),
+                                        resolvedTemplate.templateFileName(),
+                                        aiResourceService.loadCommonPrompt(),
+                                        aiResourceService.loadAssistPrompt(),
+                                        aiResourceService.loadTopicPrompt(
+                                                        route.topicCode()),
+                                        templateDefinition,
+                                        resolvedTemplate.groupPrompt());
+                }
+
+                return new AiTemplateContent(
+                                topicCode,
+                                "USER_UPLOAD",
+                                "USER_UPLOAD",
+                                aiResourceService.loadCommonPrompt(),
+                                aiResourceService.loadAssistPrompt(),
+                                aiResourceService.loadTopicPrompt(topicCode),
+                                templateDefinition,
+                                "");
+        }
+
+        public AiTemplateContent resolve(
+                        String topicCode,
+                        String documentTitle) {
+                throw new IllegalStateException(
+                                "Render flow phải cung cấp ChatSession "
+                                                + "để resolve template");
+        }
 }

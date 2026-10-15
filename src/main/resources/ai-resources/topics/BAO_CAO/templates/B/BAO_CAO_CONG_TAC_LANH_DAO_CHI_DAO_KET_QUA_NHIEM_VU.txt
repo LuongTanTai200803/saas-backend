@@ -1,0 +1,90 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_CONG_TAC_LANH_DAO_CHI_DAO_KET_QUA_NHIEM_VU",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Công tác lãnh đạo, chỉ đạo và kết quả thực hiện nhiệm vụ [kỳ báo cáo]; phương hướng, nhiệm vụ trọng tâm [kỳ tiếp theo]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo kết quả thực hiện nhiệm vụ [kỳ báo cáo]; phương hướng, nhiệm vụ [kỳ tiếp theo], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là báo cáo công tác lãnh đạo, chỉ đạo và kết quả thực hiện nhiệm vụ [kỳ báo cáo]; phương hướng, nhiệm vụ trọng tâm [kỳ tiếp theo]. Tỉnh ủy/Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [Quy định/Hướng dẫn về chế độ báo cáo],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO CỦA THƯỜNG TRỰC TỈNH ỦY, BAN THƯỜNG VỤ TỈNH ỦY",
+      "noiDungChiTiet": "[Trình bày số cuộc họp, hội nghị, văn bản ban hành, nhiệm vụ lãnh đạo trọng tâm, việc thực hiện quy chế làm việc, nguyên tắc tập trung dân chủ.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ ĐẠT ĐƯỢC",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Lĩnh vực xây dựng Đảng và hệ thống chính trị",
+          "noiDungChiTiet": "1.1. Công tác tuyên giáo, dân vận\n1.2. Công tác tổ chức, cán bộ\n1.3. Công tác kiểm tra, giám sát, kỷ luật Đảng\n1.4. Công tác nội chính, phòng chống tham nhũng, tiêu cực\n1.5. Công tác dân vận, Mặt trận Tổ quốc và các tổ chức chính trị - xã hội"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Lĩnh vực phát triển kinh tế - xã hội",
+          "noiDungChiTiet": "[Trình bày theo lĩnh vực kinh tế, xã hội, đầu tư, tài chính, an sinh.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Quốc phòng, an ninh, đối ngoại",
+          "noiDungChiTiet": "[Nếu có.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả nổi bật",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, khó khăn",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM [KỲ TIẾP THEO]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tiếp tục lãnh đạo, chỉ đạo quán triệt, triển khai các chủ trương, nghị quyết, kết luận.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tập trung thực hiện các nhiệm vụ trọng tâm về xây dựng Đảng, hệ thống chính trị.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tập trung phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tăng cường kiểm tra, giám sát, đôn đốc, tháo gỡ khó khăn.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_DON_TIEP_DOAN_CONG_TAC_DOI_NGOAI",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "đón, tiếp, làm việc với [tên đoàn] / tổ chức Đoàn đại biểu [tên cơ quan] tham dự [tên sự kiện]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch, cụ thể như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [chương trình công tác/văn bản chỉ đạo];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "THÀNH PHẦN ĐOÀN",
+      "noiDungChiTiet": "1. Đoàn khách/đoàn đi công tác\n- Trưởng đoàn: [Thông tin trưởng đoàn.]\n- Thành viên: [Danh sách hoặc thành phần thành viên.]\n\n2. Thành phần phía tỉnh\n- Lãnh đạo tỉnh: [Thành phần lãnh đạo tỉnh.]\n- Cơ quan tham dự: [Danh sách cơ quan tham dự.]\n- Đơn vị phục vụ: [Các đơn vị phục vụ đoàn.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đoàn khách/đoàn đi công tác",
+          "noiDungChiTiet": "Xác định thành phần đoàn khách đến làm việc hoặc đoàn đại biểu đi công tác, bao gồm trưởng đoàn và các thành viên."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thành phần phía tỉnh",
+          "noiDungChiTiet": "Xác định thành phần tham gia phía tỉnh, bao gồm lãnh đạo tỉnh, các cơ quan tham dự và đơn vị phục vụ."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG LÀM VIỆC",
+      "noiDungChiTiet": "- [Nội dung 1]\n- [Nội dung 2]\n- [Nội dung 3]\n- [Ký kết/tham quan/dâng hương/hội đàm nếu có]",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "THỜI GIAN, ĐỊA ĐIỂM, CHƯƠNG TRÌNH",
+      "noiDungChiTiet": "1. Thời gian\n[Thời gian tổ chức.]\n\n2. Địa điểm\n[Địa điểm tổ chức.]\n\n3. Chương trình chi tiết\n- [Giờ] [Nội dung] [Thành phần] [Đơn vị chuẩn bị]\n- [Giờ] [Nội dung] [Thành phần] [Đơn vị chuẩn bị]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "Nêu thời gian tổ chức đón tiếp, làm việc hoặc thực hiện chuyến công tác."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": "Xác định địa điểm tổ chức các hoạt động trong kế hoạch."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Chương trình chi tiết",
+          "noiDungChiTiet": "Trình bày lịch trình theo từng khung giờ, nêu rõ nội dung hoạt động, thành phần tham gia và đơn vị chịu trách nhiệm chuẩn bị."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "1. Văn phòng Tỉnh ủy\n[Chủ trì tham mưu chương trình, tài liệu, lễ tân, hậu cần.]\n\n2. Công an tỉnh\n[Bảo đảm an ninh, dẫn lộ, trật tự.]\n\n3. Cơ quan chuyên môn\n[Chuẩn bị báo cáo, nội dung trao đổi, dự thảo biên bản.]\n\n4. Địa phương, đơn vị liên quan\n[Chuẩn bị địa điểm, đón tiếp, phục vụ.]\n\n5. Cơ quan báo chí\n[Cử phóng viên dự, đưa tin nếu được giao.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Văn phòng Tỉnh ủy",
+          "noiDungChiTiet": "Xác định nhiệm vụ chủ trì tham mưu chương trình, chuẩn bị tài liệu, tổ chức lễ tân và bảo đảm hậu cần."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Công an tỉnh",
+          "noiDungChiTiet": "Xác định nhiệm vụ bảo đảm an ninh, trật tự và tổ chức dẫn lộ khi cần thiết."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Cơ quan chuyên môn",
+          "noiDungChiTiet": "Phân công chuẩn bị báo cáo, nội dung trao đổi và dự thảo biên bản phục vụ chương trình làm việc."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Địa phương, đơn vị liên quan",
+          "noiDungChiTiet": "Phân công chuẩn bị địa điểm, tổ chức đón tiếp và bảo đảm các điều kiện phục vụ đoàn."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Cơ quan báo chí",
+          "noiDungChiTiet": "Xác định nhiệm vụ cử phóng viên tham dự và đưa tin theo phân công hoặc yêu cầu của kế hoạch."
+        }
+      ]
+    }
+  ]
+}

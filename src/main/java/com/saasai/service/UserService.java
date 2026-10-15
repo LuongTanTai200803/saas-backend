@@ -53,6 +53,76 @@ public class UserService {
         private CreditTransactionRepository creditTransactionRepository;
 
 
+        @Transactional(readOnly = true)
+        public UserCreditSummaryDTO getUserCreditSummaryByUserId(String userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        long aiCallCount =
+                creditTransactionRepository.countByUser_UserIdAndType(
+                        user.getUserId(),
+                        CreditTransaction.TransactionType.DEDUCT
+                );
+
+        List<CreditAccount> accounts =
+                creditAccountRepository.findByUser(user);
+
+        CreditAccount account;
+
+        if (accounts.isEmpty()) {
+                account = CreditAccount.builder()
+                        .user(user)
+                        .userId(user.getUserId())
+                        .monthlyQuotaAllocated(0.0)
+                        .monthlyQuotaRemaining(0.0)
+                        .purchasedCreditBalance(0.0)
+                        .build();
+
+                account = creditAccountRepository.save(account);
+        } else {
+                account = accounts.get(0);
+        }
+
+        return UserCreditSummaryDTO.builder()
+                .userId(user.getUserId())
+                .packageType(user.getAdminPackageConfig() != null
+                        ? user.getAdminPackageConfig().getPackageType()
+                        : null)
+                .subscriptionExpireDate(user.getExpireDate())
+                .monthly(UserCreditSummaryDTO.MonthlyCreditDTO.builder()
+                        .allocated(account.getMonthlyQuotaAllocated() != null
+                                ? account.getMonthlyQuotaAllocated()
+                                : 0.0)
+                        .remaining(account.getMonthlyQuotaRemaining() != null
+                                ? account.getMonthlyQuotaRemaining()
+                                : 0.0)
+                        .cycleStart(account.getMonthlyQuotaCycleStart())
+                        .cycleEnd(account.getMonthlyQuotaCycleEnd())
+                        .build())
+                .purchased(UserCreditSummaryDTO.PurchasedCreditDTO.builder()
+                        .balance(account.getPurchasedCreditBalance() != null
+                                ? account.getPurchasedCreditBalance()
+                                : 0.0)
+                        .purchasedAt(account.getPurchasedCreditPurchasedAt())
+                        .expireAt(account.getPurchasedCreditExpireAt())
+                        .build())
+                .aiCallCount(aiCallCount)
+                .recentInvoices(billingInvoiceRepository.findByUser(user).stream()
+                        .map(invoice -> new UserCreditSummaryDTO.InvoiceDTO(
+                                invoice.getInvoiceId(),
+                                invoice.getStatus() != null
+                                        ? invoice.getStatus().name()
+                                        : null,
+                                invoice.getFinalAmount(),
+                                invoice.getCreatedAt(),
+                                invoice.getInvoiceType() != null
+                                        ? invoice.getInvoiceType().name()
+                                        : null
+                        ))
+                        .collect(Collectors.toList()))
+                .build();
+        }
+
         public UserProfileDTO getUserProfileByEmail(String email) {
                 User user = userRepository.findByEmail(email)
                                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -163,49 +233,7 @@ public class UserService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        long aiCallCount = creditTransactionRepository.countByUser_UserIdAndType(
-                user.getUserId(), CreditTransaction.TransactionType.DEDUCT);
-
-        List<CreditAccount> accounts = creditAccountRepository.findByUser(user);
-        CreditAccount account;
-        if (accounts.isEmpty()) {
-                account = CreditAccount.builder()
-                        .user(user)
-                        .userId(user.getUserId())
-                        .monthlyQuotaAllocated(0.0)
-                        .monthlyQuotaRemaining(0.0)
-                        .purchasedCreditBalance(0.0)
-                        .build();
-                account = creditAccountRepository.save(account);
-        } else {
-                account = accounts.get(0);
-        }
-
-        return UserCreditSummaryDTO.builder()
-                .userId(user.getUserId())
-                .packageType(user.getAdminPackageConfig() != null
-                        ? user.getAdminPackageConfig().getPackageType()
-                        : null)
-                .subscriptionExpireDate(user.getExpireDate())
-                .monthly(UserCreditSummaryDTO.MonthlyCreditDTO.builder()
-                        .allocated(account.getMonthlyQuotaAllocated() != null
-                                ? account.getMonthlyQuotaAllocated()
-                                : 0.0)
-                        .remaining(account.getMonthlyQuotaRemaining() != null
-                                ? account.getMonthlyQuotaRemaining()
-                                : 0.0)
-                        .cycleStart(account.getMonthlyQuotaCycleStart())
-                        .cycleEnd(account.getMonthlyQuotaCycleEnd())
-                        .build())
-                .purchased(UserCreditSummaryDTO.PurchasedCreditDTO.builder()
-                        .balance(account.getPurchasedCreditBalance() != null
-                                ? account.getPurchasedCreditBalance()
-                                : 0.0)
-                        .purchasedAt(account.getPurchasedCreditPurchasedAt())
-                        .expireAt(account.getPurchasedCreditExpireAt())
-                        .build())
-                .aiCallCount(aiCallCount)
-                .build();
+        return getUserCreditSummaryByUserId(user.getUserId());
         }
 
         // helper mapper

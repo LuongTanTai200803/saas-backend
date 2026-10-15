@@ -1,0 +1,123 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_KHUNG_MAU_CHUNG_HOAN_CHINH",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Trích yếu nội dung kế hoạch]",
+  "cauDanChuyenTiep": "[Chủ thể ban hành] xây dựng/ban hành Kế hoạch [tên kế hoạch] như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch [tên kế hoạch]. Đề nghị/Yêu cầu các cơ quan, đơn vị, tổ chức có liên quan nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "Căn cứ [văn bản 1];\nCăn cứ/Thực hiện [văn bản 2];\nCăn cứ tình hình thực tế/nhu cầu [nếu có];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Nêu lý do, ý nghĩa, yêu cầu cụ thể hóa chủ trương/văn bản cấp trên.\n- Nêu mục tiêu chuyển biến về nhận thức, hành động, kết quả quản lý/lãnh đạo."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Bám sát chủ trương, quy định, hướng dẫn cấp trên.\n- Phù hợp thực tiễn địa phương/cơ quan/đơn vị.\n- Bảo đảm cụ thể, thiết thực, hiệu quả; tránh hình thức.\n- Phân công rõ trách nhiệm; tăng cường kiểm tra, đôn đốc, báo cáo."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "ĐỐI TƯỢNG/PHẠM VI/MỤC TIÊU/CHỈ TIÊU",
+      "noiDungChiTiet": "Chọn mục phù hợp với loại văn bản:",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Phạm vi thực hiện",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đối tượng thực hiện/tác động",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Mục tiêu chung",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Mục tiêu cụ thể/chỉ tiêu định lượng",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NỘI DUNG/NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác lãnh đạo, chỉ đạo, quán triệt, tuyên truyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nội dung nhiệm vụ trọng tâm theo từng lĩnh vực",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Xây dựng mô hình, hoạt động, chương trình cụ thể",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Công tác phối hợp, kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "THỜI GIAN, HÌNH THỨC, ĐỊA ĐIỂM, KINH PHÍ",
+      "noiDungChiTiet": "Chỉ đưa mục này khi văn bản có hoạt động cụ thể như lớp học, hội nghị, đối thoại, kiểm tra.",
+      "tieuMuc": []
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cơ quan/chủ thể 1]",
+          "noiDungChiTiet": "nhiệm vụ …"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Cơ quan/chủ thể 2]",
+          "noiDungChiTiet": "nhiệm vụ …"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Cơ quan/chủ thể 3]",
+          "noiDungChiTiet": "nhiệm vụ …"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Các chi bộ/cơ quan/đơn vị",
+          "noiDungChiTiet": "căn cứ kế hoạch để triển khai thực hiện."
+        }
+      ]
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "CHẾ ĐỘ THÔNG TIN, BÁO CÁO",
+      "noiDungChiTiet": "Nêu thời hạn, đầu mối nhận báo cáo, báo cáo định kỳ/đột xuất, sơ kết/tổng kết.",
+      "tieuMuc": []
+    }
+  ]
+}

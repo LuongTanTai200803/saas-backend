@@ -1,0 +1,104 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_CHUYEN_DE_BTV_DANG_UY_XA_PHUONG",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ ĐẢNG ỦY",
+  "trichYeu": "về lãnh đạo [nội dung], giai đoạn [năm - năm]",
+  "cauDanChuyenTiep": "Để tiếp tục nâng cao hiệu lực, hiệu quả công tác [nội dung], Ban Thường vụ Đảng ủy xác định các nhiệm vụ, giải pháp trọng tâm như sau:",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến đến chi bộ và các cơ quan, đơn vị liên quan để thực hiện.",
+  "doanCanCu": "Trong thời gian qua, dưới sự lãnh đạo của cấp ủy, sự quản lý, điều hành của chính quyền [đơn vị], công tác [nội dung] đã đạt được một số kết quả tích cực...\nTuy nhiên, bên cạnh kết quả đạt được còn một số tồn tại, hạn chế...\nNguyên nhân của những hạn chế nêu trên chủ yếu là...",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "QUAN ĐIỂM CHỈ ĐẠO VÀ MỤC TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Quan điểm chỉ đạo",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu",
+          "noiDungChiTiet": "2.1. Mục tiêu chung: [...]\n2.2. Mục tiêu cụ thể: [Chỉ tiêu theo năm, mốc tiến độ, tỷ lệ hoàn thành.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NHIỆM VỤ VÀ GIẢI PHÁP TRỌNG TÂM",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tăng cường lãnh đạo, chỉ đạo; xác định rõ trách nhiệm người đứng đầu.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Rà soát, phân loại, xử lý hồ sơ/vụ việc/nội dung tồn đọng.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Công khai, minh bạch quy trình, điều kiện, thời hạn giải quyết.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tăng cường phối hợp với cơ quan chuyên môn cấp trên.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Ứng dụng công nghệ thông tin, chuyển đổi số, xây dựng cơ sở dữ liệu.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Kiểm tra, giám sát, xử lý nghiêm vi phạm.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        },
+        {
+          "code": "7",
+          "tieuDeMuc": "Tuyên truyền, vận động Nhân dân, tổ chức, cá nhân thực hiện đúng quy định.",
+          "noiDungChiTiet": "[NỘI_DUNG_TRIỂN_KHAI]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "UBND [xã/phường]",
+          "noiDungChiTiet": "Xây dựng kế hoạch cụ thể hóa."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Các cơ quan chuyên môn",
+          "noiDungChiTiet": "Chịu trách nhiệm theo lĩnh vực."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "UBKT Đảng ủy",
+          "noiDungChiTiet": "Kiểm tra, giám sát."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "MTTQ và các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": "Tuyên truyền, vận động, giám sát."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Các chi bộ, tổ dân phố",
+          "noiDungChiTiet": "Triển khai đến đảng viên và Nhân dân."
+        }
+      ]
+    }
+  ]
+}

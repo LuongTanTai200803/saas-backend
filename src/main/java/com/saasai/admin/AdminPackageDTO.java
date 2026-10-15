@@ -8,5 +8,10 @@ public record AdminPackageDTO(
     Double creditLimit,
     Integer duration,
     String description,
-    Long storageQuotaMb
+    Long storageQuotaMb,
+    Integer maxFilesPerCall,
+    Long maxFileSizeMb,
+    Long maxTotalFileSizeMbPerCall,
+    Long maxTextPerCall,
+    String allowedFileTypes
 ) {}

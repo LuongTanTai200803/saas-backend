@@ -1,0 +1,116 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_LANH_DAO_CHI_DAO_NHIEM_VU_CHINH_TRI_CO_SO",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Công tác lãnh đạo, chỉ đạo và kết quả thực hiện nhiệm vụ [tháng/quý/năm …]; phương hướng, nhiệm vụ trọng tâm [kỳ tiếp theo]",
+  "cauDanChuyenTiep": "Thường trực/Ban Thường vụ Đảng ủy … báo cáo như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [Quy chế làm việc/Công văn chế độ báo cáo];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO GIẢI QUYẾT CÔNG VIỆC",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Hoạt động của Thường trực, Ban Thường vụ",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Số cuộc họp, hội nghị, văn bản ban hành",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Công tác chỉ đạo nhiệm vụ trọng tâm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Công tác kiểm tra, khảo sát cơ sở",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN NHIỆM VỤ",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Xây dựng Đảng, hệ thống chính trị",
+          "noiDungChiTiet": "- Chính trị, tư tưởng\n- Tổ chức, cán bộ\n- Kiểm tra, giám sát\n- Dân vận, MTTQ, đoàn thể"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Phát triển kinh tế - xã hội",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Văn hóa, giáo dục, y tế, an sinh xã hội",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Quốc phòng, an ninh, đối ngoại",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Cải cách hành chính, chuyển đổi số",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả nổi bật",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tồn tại, hạn chế",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ TRỌNG TÂM",
+      "noiDungChiTiet": "[Phụ lục chỉ tiêu nếu có]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "…",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

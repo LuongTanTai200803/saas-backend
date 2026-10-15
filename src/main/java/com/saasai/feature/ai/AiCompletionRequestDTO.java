@@ -1,5 +1,7 @@
 package com.saasai.feature.ai;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -34,5 +36,9 @@ public class AiCompletionRequestDTO {
     @JsonProperty("userText")
     @JsonAlias({"usertext"})
     private String userText;
+
+    @JsonProperty("fileId")
+    @JsonAlias({"fileid", "fileID"})
+    private List<String> fileId;
 
 }

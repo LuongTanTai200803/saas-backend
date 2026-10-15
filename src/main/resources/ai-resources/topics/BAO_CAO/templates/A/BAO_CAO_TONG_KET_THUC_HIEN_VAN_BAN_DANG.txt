@@ -1,0 +1,156 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_TONG_KET_THUC_HIEN_VAN_BAN_DANG",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "tổng kết [số] năm thực hiện [tên, số, ngày, cơ quan ban hành văn bản] về [nội dung văn bản]",
+  "cauDanChuyenTiep": "Ban Thường vụ [cơ quan] báo cáo tổng kết thực hiện [tên văn bản] như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ [cơ quan] trân trọng báo cáo.",
+  "doanCanCu": "Thực hiện [Công văn/Kế hoạch số..., ngày... của... về việc...],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "TÌNH HÌNH CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Khái quát đặc điểm tình hình",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thuận lợi",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Khó khăn",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CÔNG TÁC LÃNH ĐẠO, CHỈ ĐẠO, QUÁN TRIỆT, TUYÊN TRUYỀN, TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác quán triệt, tuyên truyền",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Việc cụ thể hóa, ban hành văn bản",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Phân công trách nhiệm, cơ chế phối hợp",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ nhất",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ hai",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Kết quả theo nhóm nhiệm vụ thứ ba",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Kết quả nổi bật, mô hình hay, cách làm hiệu quả",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ưu điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tồn tại, hạn chế",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "3.1. Nguyên nhân khách quan\n3.2. Nguyên nhân chủ quan"
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "BÀI HỌC KINH NGHIỆM",
+      "noiDungChiTiet": "Một là, ...\nHai là, ...\nBa là, ...",
+      "tieuMuc": []
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "PHƯƠNG HƯỚNG, NHIỆM VỤ, GIẢI PHÁP THỜI GIAN TỚI",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Phương hướng",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nhiệm vụ, giải pháp chủ yếu",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Tổ chức thực hiện",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "VII",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Đề nghị ...",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đề nghị ...",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

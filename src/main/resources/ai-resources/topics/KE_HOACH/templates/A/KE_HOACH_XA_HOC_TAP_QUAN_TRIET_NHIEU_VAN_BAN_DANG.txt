@@ -1,0 +1,94 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_HOC_TAP_QUAN_TRIET_NHIEU_VAN_BAN_DANG",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Học tập, phổ biến, quán triệt, tuyên truyền, triển khai thực hiện các văn bản của Đảng",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [xã/phường] ban hành kế hoạch tổ chức học tập, quán triệt, tuyên truyền và triển khai thực hiện các văn bản của Đảng, cụ thể như sau:",
+  "cauKetHanhChinh": "Căn cứ nội dung Kế hoạch, đề nghị các chi bộ, cơ quan, đơn vị nghiêm túc tổ chức triển khai thực hiện hiệu quả.",
+  "doanCanCu": "Thực hiện [Công văn/Kế hoạch số..., ngày..., của...],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Kịp thời phổ biến, quán triệt, tuyên truyền và triển khai thực hiện các văn bản của Trung ương, Tỉnh ủy/Thành ủy đến cán bộ, đảng viên và Nhân dân.\n- Tạo sự thống nhất cao về tư tưởng và hành động trong toàn Đảng bộ, chính quyền, Nhân dân, trước hết là đội ngũ cán bộ, đảng viên, người đứng đầu."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Tổ chức học tập đúng, đủ thành phần, nội dung, mục đích.\n- Bảo đảm trang trọng, tiết kiệm, thiết thực, hiệu quả.\n- Có trọng tâm, trọng điểm, tạo sức lan tỏa trong Đảng và xã hội."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG, HÌNH THỨC, ĐỐI TƯỢNG, THỜI GIAN, BÁO CÁO VIÊN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "Hoàn thành trước ngày..."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hình thức tổ chức, thành phần tham dự",
+          "noiDungChiTiet": "- Hình thức: Lồng ghép tại hội nghị, sinh hoạt chi bộ thường kỳ hoặc hội nghị chuyên đề.\n- Thành phần: Toàn thể cán bộ, đảng viên; tùy điều kiện mở rộng đến đoàn viên, hội viên, Nhân dân."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Báo cáo viên",
+          "noiDungChiTiet": "Đồng chí Bí thư chi bộ/Bí thư Đảng ủy/Thường trực Đảng ủy trực tiếp quán triệt."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tài liệu học tập, quán triệt",
+          "noiDungChiTiet": "4.1. Nhóm văn bản của Trung ương\n(1) [Tên văn bản 1].\n(2) [Tên văn bản 2].\n...\n\n4.2. Nhóm văn bản của Tỉnh ủy/Thành ủy\n(1) [Tên văn bản 1].\n(2) [Tên văn bản 2].\n..."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Các đồng chí Ủy viên Ban Chấp hành Đảng bộ",
+          "noiDungChiTiet": "Chỉ đạo các chi bộ được phân công phụ trách tổ chức quán triệt."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Ủy ban Kiểm tra Đảng ủy",
+          "noiDungChiTiet": "Chủ trì/phối hợp kiểm tra, giám sát việc triển khai kế hoạch."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Ủy ban MTTQ và các tổ chức chính trị - xã hội",
+          "noiDungChiTiet": "Vận động đoàn viên, hội viên, Nhân dân tham gia học tập, quán triệt."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Văn phòng Đảng ủy",
+          "noiDungChiTiet": "Gửi tài liệu, chuẩn bị điều kiện phục vụ học tập."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "[Bộ phận tuyên truyền/trung tâm dịch vụ công]",
+          "noiDungChiTiet": "Tuyên truyền trên các kênh phù hợp, phản ánh kịp thời kết quả học tập."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "Các chi bộ",
+          "noiDungChiTiet": "Tổ chức học tập đến toàn thể đảng viên; tuyên truyền rộng rãi đến Nhân dân; báo cáo kết quả về Ban Thường vụ Đảng ủy trước ngày..."
+        }
+      ]
+    }
+  ]
+}

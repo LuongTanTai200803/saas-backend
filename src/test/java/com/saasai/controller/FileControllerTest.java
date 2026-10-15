@@ -70,7 +70,7 @@ class FileControllerTest {
                 .uploadedBy("Nguyễn Văn A")
                 .build();
 
-            when(fileService.uploadFile(any(), eq("LEGAL")))
+            when(fileService.uploadFile(any(), eq("LEGAL"), eq("SESSION"), ""))
                 .thenReturn(response);
 
         mockMvc.perform(multipart("/api/v1/files/upload")

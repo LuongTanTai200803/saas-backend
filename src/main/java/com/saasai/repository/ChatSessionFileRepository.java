@@ -3,6 +3,7 @@ package com.saasai.repository;
 import com.saasai.entity.ChatSession;
 import com.saasai.entity.ChatSessionFile;
 import com.saasai.entity.ChatSessionFile.PromptFieldCode;
+import com.saasai.entity.FileMetadata;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -37,4 +38,29 @@ public interface ChatSessionFileRepository
             @Param("session") ChatSession session,
             @Param("fieldCode") ChatSessionFile.PromptFieldCode fieldCode
     );
+
+    boolean existsByChatSessionAndFileAndFieldCode(
+                ChatSession chatSession,
+                FileMetadata file,
+                ChatSessionFile.PromptFieldCode fieldCode
+        );
+
+        @Query("""
+        SELECT file
+        FROM ChatSessionFile sessionFile
+        JOIN sessionFile.file file
+        WHERE sessionFile.chatSession.sessionId = :sessionId
+        AND file.user.userId = :userId
+        AND file.contentHash = :contentHash
+        """)
+        Optional<FileMetadata> findBySessionAndUserAndContentHash(
+                @Param("sessionId") Integer sessionId,
+                @Param("userId") String userId,
+                @Param("contentHash") String contentHash
+        );
+
+        boolean existsByChatSessionAndFile(
+                ChatSession chatSession,
+                FileMetadata file
+        );
 }

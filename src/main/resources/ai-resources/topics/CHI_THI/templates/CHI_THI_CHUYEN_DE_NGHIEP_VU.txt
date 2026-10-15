@@ -1,0 +1,137 @@
+{
+
+"source": "USER_UPLOAD",
+
+"templateCode": "CHI_THI_CHUYEN_DE_NGHIEP_VU",
+
+"topicCode": "CHI_THI",
+
+"tenLoaiVanBan": "CHỈ THỊ",
+
+"coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",
+
+"trichYeu": "về [nội dung chuyên đề nghiệp vụ cần tăng cường lãnh đạo, chỉ đạo]",
+
+"cauDanChuyenTiep": "Để [mục tiêu], Ban Thường vụ Tỉnh ủy yêu cầu [đối tượng thực hiện] tập trung thực hiện một số nhiệm vụ trọng tâm sau:",
+
+"cauKetHanhChinh": "",
+
+"doanCanCu": "Thời gian qua, [các cơ quan, tổ chức, địa phương] đã [kết quả đạt được trong lĩnh vực].\nCông tác [lĩnh vực] từng bước được [nền nếp/chặt chẽ/hiệu quả], góp phần [tác dụng].\nTuy nhiên, bên cạnh kết quả đạt được, công tác [lĩnh vực] còn một số tồn tại, hạn chế:\n(1) [hạn chế về nhận thức/trách nhiệm];\n(2) [hạn chế về quy trình, hồ sơ, nghiệp vụ];\n(3) [hạn chế về nhân lực, cơ sở vật chất, công nghệ].\nNhững tồn tại này ảnh hưởng đến [hậu quả/rủi ro].",
+
+"cacMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "Quán triệt, nâng cao nhận thức và trách nhiệm",
+
+"noiDungChiTiet": "Triển khai quy định, văn bản cấp trên; xác định trách nhiệm người đứng đầu; yêu cầu không để xảy ra vi phạm.",
+
+"tieuMuc": []
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "Tập trung xử lý các tồn tại, hồ sơ, nhiệm vụ còn tồn đọng",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "2.1",
+
+"tieuDeMuc": "Đối với [nhóm việc/đối tượng/thời kỳ]",
+
+"noiDungChiTiet": "- [Nhiệm vụ 1]\n- [Nhiệm vụ 2]\n- [Thời hạn hoàn thành]"
+
+},
+
+{
+
+"code": "2.2",
+
+"tieuDeMuc": "Đối với [nhóm việc khác]",
+
+"noiDungChiTiet": "Giao [cơ quan chủ trì] [nhiệm vụ]."
+
+}
+
+]
+
+},
+
+{
+
+"code": "3",
+
+"tieuDeMuc": "Thiết lập nền nếp thực hiện thường xuyên",
+
+"noiDungChiTiet": "Quy định trách nhiệm lập hồ sơ, báo cáo, cập nhật dữ liệu, chuyển đổi số, kiểm tra.",
+
+"tieuMuc": []
+
+},
+
+{
+
+"code": "4",
+
+"tieuDeMuc": "Tổ chức thực hiện",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "4.1",
+
+"tieuDeMuc": "",
+
+"noiDungChiTiet": "[Cơ quan/đơn vị] căn cứ chức năng, nhiệm vụ tổ chức quán triệt, cụ thể hóa thực hiện."
+
+},
+
+{
+
+"code": "4.2",
+
+"tieuDeMuc": "",
+
+"noiDungChiTiet": "[Người đứng đầu] chịu trách nhiệm trước Ban Thường vụ Tỉnh ủy."
+
+},
+
+{
+
+"code": "4.3",
+
+"tieuDeMuc": "",
+
+"noiDungChiTiet": "[Cơ quan tài chính/UBND] bảo đảm kinh phí, nguồn lực."
+
+},
+
+{
+
+"code": "4.4",
+
+"tieuDeMuc": "",
+
+"noiDungChiTiet": "Giao [Văn phòng/Ban chuyên môn] theo dõi, đôn đốc, tổng hợp, báo cáo."
+
+}
+
+]
+
+}
+
+]
+
+}

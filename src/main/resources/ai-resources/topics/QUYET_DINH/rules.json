@@ -1,0 +1,143 @@
+[
+  {
+    "templateCode": "QUYET_DINH_PHE_DUYET_KET_QUA",
+    "priority": 100,
+    "titleKeywords": ["phê duyệt kết quả", "kiểm tra", "sát hạch", "trúng tuyển", "xét chọn", "đánh giá"],
+    "doiTuongApDung": "Áp dụng cho Ban Thường vụ Tỉnh ủy khi cần phê duyệt kết quả kỳ kiểm tra, sát hạch, xét tuyển, đánh giá hoặc kết quả thực hiện một quy trình.",
+    "loaiVanBanApDung": [
+      "Quyết định phê duyệt kết quả kiểm tra, sát hạch",
+      "Quyết định phê duyệt danh sách trúng tuyển/không trúng tuyển",
+      "Quyết định phê duyệt kết quả xét chọn, đánh giá, rà soát"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_PHE_DUYET_CHI_TIEU",
+    "priority": 100,
+    "titleKeywords": ["phê duyệt chỉ tiêu", "tiếp nhận", "tuyển dụng", "phân bổ", "biên chế"],
+    "doiTuongApDung": "Áp dụng cho cơ quan có thẩm quyền khi xác định số lượng chỉ tiêu tiếp nhận, tuyển dụng, phân bổ hoặc giao kế hoạch.",
+    "loaiVanBanApDung": [
+      "Phê duyệt chỉ tiêu tiếp nhận công chức",
+      "Phê duyệt chỉ tiêu tuyển dụng, phân bổ biên chế, phân bổ số lượng",
+      "Phê duyệt chỉ tiêu theo đợt/năm"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_BAN_HANH_QUY_CHE_KE_HOACH",
+    "priority": 100,
+    "titleKeywords": ["ban hành", "nội quy", "quy chế", "kế hoạch", "hướng dẫn"],
+    "doiTuongApDung": "Áp dụng khi Ban Thường vụ Tỉnh ủy ban hành một văn bản phụ thuộc như nội quy, quy chế, kế hoạch, quy định.",
+    "loaiVanBanApDung": [
+      "Quyết định ban hành Nội quy",
+      "Quyết định ban hành Quy chế",
+      "Quyết định ban hành Kế hoạch",
+      "Quyết định ban hành tài liệu hướng dẫn kèm theo"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_THANH_LAP_KIEN_TOAN",
+    "priority": 100,
+    "titleKeywords": ["thành lập", "kiện toàn", "ban chỉ đạo", "tổ biên tập", "đoàn kiểm tra"],
+    "doiTuongApDung": "Áp dụng cho việc thành lập hoặc kiện toàn các ban chỉ đạo, ban tổ chức, tổ biên tập, đoàn kiểm tra, ban biên tập, đội ngũ cộng tác viên.",
+    "loaiVanBanApDung": [
+      "Quyết định thành lập Ban Chỉ đạo",
+      "Quyết định thành lập Ban Tổ chức",
+      "Quyết định thành lập Tổ biên tập",
+      "Quyết định thành lập Đoàn kiểm tra, giám sát",
+      "Quyết định kiện toàn Ban Biên tập",
+      "Quyết định thành lập đội ngũ cộng tác viên"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_KHEN_THUONG",
+    "priority": 100,
+    "titleKeywords": ["khen thưởng", "tặng bằng khen", "thành tích"],
+    "doiTuongApDung": "Áp dụng khi khen thưởng tổ chức đảng, chi bộ, đảng viên hoặc tập thể/cá nhân có thành tích.",
+    "loaiVanBanApDung": [
+      "Quyết định tặng Bằng khen",
+      "Quyết định khen thưởng tổ chức đảng, đảng viên",
+      "Quyết định khen thưởng theo năm, theo chuyên đề, theo đợt"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_HUY_HIEU_DANG",
+    "priority": 100,
+    "titleKeywords": ["huy hiệu đảng", "tặng huy hiệu đảng", "truy tặng huy hiệu đảng"],
+    "doiTuongApDung": "Áp dụng cho việc tặng hoặc truy tặng Huy hiệu Đảng theo đợt.",
+    "loaiVanBanApDung": [
+      "Quyết định tặng Huy hiệu Đảng",
+      "Quyết định truy tặng Huy hiệu Đảng",
+      "Quyết định tặng và truy tặng trong cùng một đợt"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_CHUAN_Y_NHAN_SU",
+    "priority": 100,
+    "titleKeywords": ["chuẩn y", "nhân sự", "bầu bổ sung", "ủy ban kiểm tra"],
+    "doiTuongApDung": "Áp dụng khi Ban Thường vụ Tỉnh ủy chuẩn y kết quả bầu bổ sung nhân sự của cấp dưới, nhất là nhân sự Ủy ban Kiểm tra Đảng ủy cấp xã.",
+    "loaiVanBanApDung": [
+      "Chuẩn y Ủy viên UBKT Đảng ủy",
+      "Chuẩn y Phó Chủ nhiệm UBKT Đảng ủy",
+      "Chuẩn y chức danh sau bầu bổ sung"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_THANH_LAP_KIEN_TOAN_CAP_XA",
+    "priority": 90,
+    "titleKeywords": ["thành lập ban chỉ đạo xã", "kiện toàn ban chỉ đạo xã", "tổ công tác", "đội ngũ cộng tác viên"],
+    "doiTuongApDung": "Đảng ủy, Ban Thường vụ Đảng ủy cấp xã/phường hoặc Đảng ủy cơ quan muốn thành lập, kiện toàn tổ chức giúp việc, ban chỉ đạo, ban tổ chức, tổ công tác, đội ngũ cộng tác viên.",
+    "loaiVanBanApDung": [
+      "Quyết định thành lập Ban Chỉ đạo, Ban Tổ chức hội thi",
+      "Quyết định thành lập Ban Chỉ đạo phong trào, chuyển đổi số",
+      "Quyết định thành lập đội ngũ cộng tác viên dư luận xã hội"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_PHAN_CONG_NHIEM_VU_CAP_XA",
+    "priority": 90,
+    "titleKeywords": ["phân công", "phụ trách chi bộ", "phụ trách thôn", "phụ trách địa bàn"],
+    "doiTuongApDung": "Cấp ủy muốn phân công chi bộ, cán bộ, ủy viên BTV/BCH phụ trách địa bàn, thôn, trường học, chi bộ hoặc lĩnh vực công tác.",
+    "loaiVanBanApDung": [
+      "Quyết định phân công chi bộ cơ sở phụ trách, hỗ trợ thôn",
+      "Quyết định phân công Ủy viên BTV, BCH phụ trách chi bộ, trường học, thôn bản"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_BAN_HANH_QUY_CHE_CAP_XA",
+    "priority": 90,
+    "titleKeywords": ["ban hành quy chế xã", "phê chuẩn quy chế", "quy chế phối hợp", "tiêu chí đánh giá"],
+    "doiTuongApDung": "Đảng ủy, Ban Thường vụ Đảng ủy cần ban hành văn bản quy phạm nội bộ để điều chỉnh nguyên tắc phối hợp, trách nhiệm, tiêu chí đánh giá, cơ chế dân vận, tuyên vận.",
+    "loaiVanBanApDung": [
+      "Quyết định ban hành Quy chế công tác dân vận",
+      "Quy chế phối hợp",
+      "Quy định tiêu chí đánh giá cán bộ, công chức, viên chức, người lao động"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_CHUC_NANG_NHIEM_VU_TO_CHUC_BO_MAY",
+    "priority": 90,
+    "titleKeywords": ["chức năng nhiệm vụ", "tổ chức bộ máy", "quan hệ công tác", "ban xây dựng đảng"],
+    "doiTuongApDung": "Cấp ủy cần xác định chức năng, nhiệm vụ, tổ chức bộ máy, quan hệ công tác của cơ quan tham mưu giúp việc.",
+    "loaiVanBanApDung": [
+      "Quyết định về chức năng, nhiệm vụ, tổ chức bộ máy của Ban Xây dựng Đảng hoặc cơ quan tham mưu tương đương"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_GIAO_CHI_TIEU_NHIEM_VU_CAP_XA",
+    "priority": 90,
+    "titleKeywords": ["giao chỉ tiêu", "nhiệm vụ công tác năm", "chỉ tiêu phát triển đảng viên"],
+    "doiTuongApDung": "Đảng ủy giao chỉ tiêu năm cho tổ chức đảng trực thuộc hoặc cơ quan, đơn vị trong hệ thống chính trị.",
+    "loaiVanBanApDung": [
+      "Quyết định giao chỉ tiêu, nhiệm vụ công tác xây dựng Đảng, công tác dân vận, tuyên giáo, phát triển đảng viên, kiểm tra giám sát"
+    ]
+  },
+  {
+    "templateCode": "QUYET_DINH_MO_LOP_BOI_DUONG",
+    "priority": 90,
+    "titleKeywords": ["mở lớp bồi dưỡng", "công nhận hoàn thành", "cấp giấy chứng nhận", "lý luận chính trị", "đảng viên mới"],
+    "doiTuongApDung": "Đảng ủy hoặc Ban Thường vụ Đảng ủy tổ chức lớp bồi dưỡng lý luận chính trị, nhận thức về Đảng, bồi dưỡng đảng viên mới hoặc công nhận kết quả học tập.",
+    "loaiVanBanApDung": [
+      "Quyết định mở lớp bồi dưỡng",
+      "Quyết định công nhận và cấp giấy chứng nhận hoàn thành chương trình bồi dưỡng"
+    ]
+  }
+]

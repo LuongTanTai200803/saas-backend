@@ -74,7 +74,7 @@ class FileServiceQuotaTest {
     void uploadFile_shouldRejectWhenStorageQuotaExceeded() throws IOException {
         MockMultipartFile file = new MockMultipartFile("file", "document.pdf", "application/pdf", new byte[300 * 1024]);
 
-        assertThatThrownBy(() -> fileService.uploadFile(file, "INPUT_DIRECTIVE"))
+        assertThatThrownBy(() -> fileService.uploadFile(file, "INPUT_DIRECTIVE", "SESSION", ""))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("Vượt quá hạn mức lưu trữ");
     }
@@ -96,6 +96,6 @@ class FileServiceQuotaTest {
 
         MockMultipartFile file = new MockMultipartFile("file", "document.pdf", "application/pdf", new byte[300 * 1024]);
 
-        assertThatNoException().isThrownBy(() -> fileService.uploadFile(file, "INPUT_DIRECTIVE"));
+        assertThatNoException().isThrownBy(() -> fileService.uploadFile(file, "INPUT_DIRECTIVE", "SESSION", ""));
     }
 }

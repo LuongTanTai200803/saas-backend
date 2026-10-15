@@ -1,0 +1,132 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_TO_CHUC_SU_KIEN_GAP_MAT_LE_HOI_NGHI",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[tên sự kiện, hội nghị, lễ, gặp mặt]",
+  "cauDanChuyenTiep": "[cơ quan ban hành] ban hành Kế hoạch [tên sự kiện], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch [tên sự kiện]. Yêu cầu các cơ quan, đơn vị liên quan phối hợp triển khai thực hiện.",
+  "doanCanCu": "Thực hiện [văn bản/chương trình/căn cứ tổ chức];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- [Nêu ý nghĩa chính trị, chuyên môn, tuyên truyền, tri ân, lan tỏa, nâng cao nhận thức].\n- [Nêu kết quả mong muốn]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Tổ chức bảo đảm trang trọng, thiết thực, tiết kiệm, hiệu quả, đúng quy định.\n- Chuẩn bị chu đáo nội dung, chương trình, lễ tân, hậu cần, kỹ thuật, an ninh, tuyên truyền.\n- Phân công rõ trách nhiệm, bảo đảm phối hợp đồng bộ."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG, THỜI GIAN, ĐỊA ĐIỂM, THÀNH PHẦN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung",
+          "noiDungChiTiet": "- [Nội dung 1]\n- [Nội dung 2]\n- [Nội dung 3]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "- [Thời gian cụ thể]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": "- [Địa điểm tổ chức]"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Hình thức tổ chức",
+          "noiDungChiTiet": "- [Trực tiếp/trực tuyến/kết hợp/livestream nếu có]"
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Thành phần",
+          "noiDungChiTiet": "- [Lãnh đạo cấp trên]\n- [Lãnh đạo tỉnh]\n- [Cơ quan, đơn vị]\n- [Đại biểu khách mời]\n- [Báo chí, kỹ thuật, phục vụ nếu cần]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "CHƯƠNG TRÌNH DỰ KIẾN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "1",
+          "noiDungChiTiet": "Ổn định tổ chức, tuyên bố lý do, giới thiệu đại biểu."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "2",
+          "noiDungChiTiet": "[Phát biểu khai mạc/chào mừng/quán triệt]."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "3",
+          "noiDungChiTiet": "[Báo cáo/trình chiếu/phóng sự/tham luận]."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "4",
+          "noiDungChiTiet": "[Trao quyết định/khen thưởng/tặng quà/ký kết]."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "5",
+          "noiDungChiTiet": "[Phát biểu chỉ đạo/kết luận]."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "6",
+          "noiDungChiTiet": "Kết thúc chương trình."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cơ quan chủ trì]",
+          "noiDungChiTiet": "- Chủ trì, phối hợp chuẩn bị nội dung, chương trình, tài liệu, kịch bản, điều kiện tổ chức."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Văn phòng/đơn vị hậu cần]",
+          "noiDungChiTiet": "- Chuẩn bị hội trường, lễ tân, ăn nghỉ, phương tiện, kinh phí, maket, âm thanh, ánh sáng."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Cơ quan tuyên truyền]",
+          "noiDungChiTiet": "- Cử phóng viên dự, đưa tin; chuẩn bị phóng sự, livestream nếu có."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[Cơ quan an ninh, y tế, kỹ thuật]",
+          "noiDungChiTiet": "- Bảo đảm an ninh, trật tự, y tế, đường truyền, thiết bị kỹ thuật."
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KINH PHÍ",
+      "noiDungChiTiet": "[Kinh phí thực hiện từ nguồn nào; giao đơn vị nào lập dự toán, thanh quyết toán theo quy định.]",
+      "tieuMuc": []
+    }
+  ]
+}

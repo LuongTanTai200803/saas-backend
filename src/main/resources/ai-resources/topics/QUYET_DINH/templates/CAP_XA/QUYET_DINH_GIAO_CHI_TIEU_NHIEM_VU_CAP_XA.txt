@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_GIAO_CHI_TIEU_NHIEM_VU_CAP_XA",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "giao chỉ tiêu, nhiệm vụ [lĩnh vực] năm [năm]",
+
+"cauDanChuyenTiep": "ĐẢNG ỦY/BAN THƯỜNG VỤ ĐẢNG ỦY [tên đảng ủy] QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký.",
+
+"doanCanCu": "Căn cứ [quy chế làm việc];\nCăn cứ [nghị quyết phương hướng, nhiệm vụ năm];\nXét đề nghị của [cơ quan tham mưu],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Giao chỉ tiêu, nhiệm vụ",
+
+"noiDungChiTiet": "Giao chỉ tiêu, nhiệm vụ [lĩnh vực] năm [năm] đối với [đối tượng] theo danh mục kèm theo."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Triển khai thực hiện",
+
+"noiDungChiTiet": "[Đối tượng được giao] căn cứ chỉ tiêu, nhiệm vụ được giao để triển khai thực hiện; kết quả thực hiện là căn cứ nhận xét, đánh giá, phân loại [tổ chức/cá nhân] năm [năm]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Chỉ đạo, kiểm tra đôn đốc",
+
+"noiDungChiTiet": "[Cơ quan tham mưu, BTV, BCH, người phụ trách lĩnh vực] có trách nhiệm chỉ đạo, theo dõi, kiểm tra, đôn đốc việc thực hiện.\nQuyết định này có hiệu lực kể từ ngày ký."
+
+}
+
+]
+
+}

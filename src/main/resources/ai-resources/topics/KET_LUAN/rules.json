@@ -1,0 +1,184 @@
+[
+  {
+    "templateCode": "KET_LUAN_BCH_TINH_UY_CHUONG_TRINH_NGAN_SACH",
+    "priority": 100,
+    "titleKeywords": [
+      "chương trình hành động",
+      "chương trình đại hội",
+      "báo cáo chính trị",
+      "dự toán ngân sách",
+      "thẩm quyền ban chấp hành"
+    ],
+    "doiTuongApDung": "Ban Chấp hành Đảng bộ tỉnh, Tỉnh ủy, cơ quan tham mưu cấp tỉnh.",
+    "loaiVanBanApDung": [
+      "Kết luận về chương trình hành động",
+      "Kết luận điều chỉnh chương trình Đại hội",
+      "Kết luận về báo cáo chính trị",
+      "Kết luận về dự toán ngân sách Đảng",
+      "Kết luận vấn đề lớn thuộc thẩm quyền Ban Chấp hành"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_BTV_TINH_UY_MOT_NOI_DUNG_XIN_CHU_TRUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "xin chủ trương",
+      "dự án",
+      "chính sách",
+      "nghị quyết HĐND",
+      "chương trình",
+      "kế hoạch",
+      "cử đoàn công tác",
+      "ký kết hợp tác"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, các đảng ủy trực thuộc, Đảng ủy UBND tỉnh, Đảng ủy HĐND tỉnh, sở/ngành trình xin chủ trương.",
+    "loaiVanBanApDung": [
+      "Kết luận xin chủ trương về dự án",
+      "Kết luận xin chủ trương về chính sách",
+      "Kết luận xin chủ trương về nghị quyết HĐND",
+      "Kết luận xin chủ trương về chương trình, kế hoạch",
+      "Kết luận cử đoàn công tác",
+      "Kết luận ký kết hợp tác"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_BTV_TINH_UY_NHIEU_NOI_DUNG_XIN_CHU_TRUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "trực tiếp bằng văn bản",
+      "nhiều nội dung trình",
+      "hội nghị chuyên đề nhiều cơ quan trình",
+      "tổng hợp chủ trương"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy khi xử lý nhiều tờ trình, báo cáo, công văn trong một văn bản.",
+    "loaiVanBanApDung": [
+      "Kết luận đối với các nội dung trình trực tiếp bằng văn bản",
+      "Kết luận hội nghị chuyên đề có nhiều cơ quan trình",
+      "Kết luận văn bản tổng hợp nhiều chủ trương"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_BTV_TINH_UY_PHIEN_HOP_THUONG_KY_CHUYEN_DE",
+    "priority": 100,
+    "titleKeywords": [
+      "hội nghị thường kỳ",
+      "phiên họp thường kỳ",
+      "hội nghị chuyên đề",
+      "phiên họp nhiều nội dung"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, Văn phòng Tỉnh ủy, các cơ quan trình nội dung tại phiên họp.",
+    "loaiVanBanApDung": [
+      "Kết luận hội nghị thường kỳ tháng",
+      "Kết luận hội nghị chuyên đề",
+      "Kết luận phiên họp có nhiều nội dung theo thẩm quyền"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_THUONG_TRUC_TINH_UY_GIAO_BAN",
+    "priority": 100,
+    "titleKeywords": [
+      "giao ban tuần",
+      "cuộc họp Thường trực",
+      "công việc thường xuyên",
+      "chuẩn bị trình Ban Thường vụ"
+    ],
+    "doiTuongApDung": "Thường trực Tỉnh ủy, Văn phòng Tỉnh ủy, các ban Đảng, đảng ủy trực thuộc.",
+    "loaiVanBanApDung": [
+      "Kết luận giao ban tuần",
+      "Kết luận cuộc họp Thường trực xử lý công việc thường xuyên",
+      "Kết luận nội dung chuẩn bị trình Ban Thường vụ"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_BTV_TINH_UY_TO_CHUC_CAN_BO",
+    "priority": 100,
+    "titleKeywords": [
+      "công tác tổ chức",
+      "cán bộ",
+      "tiêu chuẩn chính trị",
+      "đánh giá xếp loại cán bộ",
+      "kiện toàn tổ chức",
+      "phân công cán bộ",
+      "cơ cấu đại biểu"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Tỉnh ủy, Ban Tổ chức Tỉnh ủy, các cơ quan tham mưu về cán bộ.",
+    "loaiVanBanApDung": [
+      "Kết luận về tiêu chuẩn chính trị cán bộ",
+      "Kết luận đánh giá, xếp loại cán bộ",
+      "Kết luận kiện toàn tổ chức",
+      "Kết luận phân công cán bộ",
+      "Kết luận cơ cấu đại biểu"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_HOI_NGHI_BCH_DANG_BO_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Hội nghị Ban Chấp hành Đảng bộ xã",
+      "Hội nghị Ban Chấp hành Đảng bộ phường",
+      "kết luận quý",
+      "kết luận 6 tháng",
+      "kết luận 9 tháng",
+      "kết luận năm"
+    ],
+    "doiTuongApDung": "Đảng ủy xã/phường khi ban hành kết luận sau Hội nghị Ban Chấp hành Đảng bộ định kỳ hoặc mở rộng.",
+    "loaiVanBanApDung": [
+      "Kết luận Hội nghị BCH lần thứ nhất, thứ hai, thứ ba...",
+      "Kết luận quý, 6 tháng, 9 tháng, năm xã/phường",
+      "Kết luận hội nghị mở rộng xã/phường"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_BTV_DANG_UY_XA_PHUONG_THUONG_KY",
+    "priority": 100,
+    "titleKeywords": [
+      "Ban Thường vụ Đảng ủy xã",
+      "Ban Thường vụ Đảng ủy phường",
+      "phiên họp thường kỳ tháng",
+      "kỳ họp BTV"
+    ],
+    "doiTuongApDung": "Ban Thường vụ Đảng ủy xã/phường sau phiên họp thường kỳ tháng, quý hoặc kỳ họp chuyên đề.",
+    "loaiVanBanApDung": [
+      "Kết luận BTV tháng xã/phường",
+      "Kết luận phiên họp thường kỳ xã/phường",
+      "Kết luận kỳ họp BTV xã/phường",
+      "Kết luận các nội dung trình xin chủ trương xã/phường"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_THUONG_TRUC_DANG_UY_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "Thường trực Đảng ủy xã",
+      "Thường trực Đảng ủy phường",
+      "tờ trình xin chủ trương",
+      "chuẩn bị hội nghị",
+      "kinh phí",
+      "mua sắm",
+      "chương trình công tác"
+    ],
+    "doiTuongApDung": "Thường trực Đảng ủy xã/phường khi họp giải quyết nội dung cụ thể, ngắn, cần xin chủ trương hoặc giao nhiệm vụ ngay.",
+    "loaiVanBanApDung": [
+      "Kết luận họp Thường trực Đảng ủy xã/phường",
+      "Kết luận về tờ trình xin chủ trương xã/phường",
+      "Kết luận chuẩn bị hội nghị xã/phường",
+      "Kết luận kinh phí, mua sắm, chương trình công tác xã/phường"
+    ]
+  },
+  {
+    "templateCode": "KET_LUAN_HOI_NGHI_TONG_KET_NAM_THI_DUA_XA_PHUONG",
+    "priority": 100,
+    "titleKeywords": [
+      "hội nghị tổng kết năm",
+      "giao chỉ tiêu kế hoạch",
+      "phát động phong trào thi đua",
+      "xây dựng Đảng chính quyền"
+    ],
+    "doiTuongApDung": "Đảng ủy xã/phường khi tổ chức hội nghị tổng kết công tác xây dựng Đảng, chính quyền, phát triển kinh tế - xã hội, giao chỉ tiêu và phát động thi đua năm sau.",
+    "loaiVanBanApDung": [
+      "Kết luận hội nghị tổng kết năm xã/phường",
+      "Kết luận giao chỉ tiêu kế hoạch kinh tế - xã hội xã/phường",
+      "Kết luận phát động phong trào thi đua yêu nước xã/phường"
+    ]
+  }
+]

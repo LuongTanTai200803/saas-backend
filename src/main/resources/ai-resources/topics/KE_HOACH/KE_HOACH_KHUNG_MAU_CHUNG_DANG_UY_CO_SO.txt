@@ -1,0 +1,75 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_KHUNG_MAU_CHUNG_DANG_UY_CO_SO",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[động từ chính: thực hiện / tổ chức tuyên truyền, quán triệt và học tập / học tập, phổ biến, quán triệt / tổng kết...] [tên văn bản hoặc nội dung, số, ngày, cơ quan ban hành, chủ đề]",
+  "cauDanChuyenTiep": "Ban Thường vụ Đảng ủy [xã/phường] ban hành/xây dựng Kế hoạch, cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch [nội dung]. Đề nghị/Yêu cầu [các chủ thể liên quan] nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "[Thực hiện/Căn cứ] [văn bản cấp trên số..., ngày..., của..., về...] (sau đây viết tắt là [tên viết tắt nếu cần]),",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "[Nêu mục tiêu nhận thức, chính trị, quản lý, tổ chức thực hiện.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "[Nêu yêu cầu nghiêm túc, thiết thực, hiệu quả, đúng đối tượng, đúng tiến độ, phù hợp thực tiễn, rõ trách nhiệm, có kiểm tra/giám sát/báo cáo.]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "[MỤC TIÊU hoặc NỘI DUNG]",
+      "noiDungChiTiet": "[Tùy loại văn bản:\n- Nếu kế hoạch thực hiện: ghi Mục tiêu tổng quát, mục tiêu cụ thể.\n- Nếu kế hoạch học tập: ghi nội dung tuyên truyền, tài liệu học tập.\n- Nếu kế hoạch tổng kết: ghi nội dung tổng kết, hình thức, thời gian.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "[NHIỆM VỤ, GIẢI PHÁP hoặc HÌNH THỨC TỔ CHỨC]",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Nội dung/nhiệm vụ 1]",
+          "noiDungChiTiet": "[Nội dung chi tiết.]\nCơ quan chủ trì/thực hiện: ...\nCơ quan phối hợp: ...\nThời gian thực hiện: ..."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Nội dung/nhiệm vụ 2]",
+          "noiDungChiTiet": "..."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Ban Xây dựng Đảng/Văn phòng Đảng ủy/UBND/HĐND/MTTQ/Ủy ban Kiểm tra]",
+          "noiDungChiTiet": "[Nhiệm vụ cụ thể.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Các chi bộ, đảng bộ trực thuộc/cơ quan, đơn vị]",
+          "noiDungChiTiet": "[Nhiệm vụ cụ thể.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Chế độ báo cáo",
+          "noiDungChiTiet": "[Cơ quan gửi báo cáo, nơi nhận báo cáo, thời hạn.]"
+        }
+      ]
+    }
+  ]
+}qs

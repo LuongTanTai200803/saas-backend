@@ -1,0 +1,43 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_BAN_HANH_QUY_CHE_KE_HOACH",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc ban hành [tên văn bản/nội quy/quy chế/kế hoạch]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký.",
+
+"doanCanCu": "Căn cứ [căn cứ 1];\nCăn cứ [căn cứ 2];\nCăn cứ Quy chế/Quy định số [số quy chế/quy định];\nXét đề nghị của [cơ quan đề nghị],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Ban hành văn bản kèm theo",
+
+"noiDungChiTiet": "Ban hành kèm theo Quyết định này [tên văn bản kèm theo] về [nội dung văn bản kèm theo]."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Hiệu lực và trách nhiệm thi hành",
+
+"noiDungChiTiet": "Quyết định này có hiệu lực kể từ ngày ký. Các cơ quan, đơn vị, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Quyết định này."
+
+}
+
+]
+
+}

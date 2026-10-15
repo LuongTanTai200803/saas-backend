@@ -1,0 +1,112 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_TINH_CONG_TAC_CAN_BO_QUY_HOACH_NHAN_SU",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "triển khai thực hiện quy trình [công tác cán bộ/quy hoạch/giới thiệu nhân sự]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch [nội dung], cụ thể như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ [quy định của Trung ương];\nCăn cứ [hướng dẫn của Ban Tổ chức Trung ương];\nCăn cứ [nghị quyết/kết luận của Ban Thường vụ Tỉnh ủy];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU, NGUYÊN TẮC",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "- Chủ động chuẩn bị, bổ sung, kiện toàn đội ngũ cán bộ lãnh đạo, quản lý.\n- Bảo đảm chất lượng, cơ cấu, số lượng, tiêu chuẩn, điều kiện theo quy định."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "- Thực hiện dân chủ, khách quan, công khai, minh bạch, chặt chẽ.\n- Đúng quy trình, đúng thẩm quyền, đúng tiêu chuẩn, điều kiện.\n- Hồ sơ, tài liệu, phiếu biểu quyết phải bảo đảm đầy đủ, chính xác."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên tắc",
+          "noiDungChiTiet": "- Bảo đảm sự lãnh đạo của cấp ủy.\n- Bảo đảm tiêu chuẩn chính trị, phẩm chất, năng lực, uy tín.\n- Bảo đảm cơ cấu, số lượng, quy trình hội nghị, tỷ lệ tham dự theo quy định."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG, THỜI GIAN, ĐỊA ĐIỂM",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung thực hiện",
+          "noiDungChiTiet": "- [Nội dung rà soát/đưa ra khỏi quy hoạch/bổ sung quy hoạch/giới thiệu nhân sự].\n- [Nội dung trình cấp có thẩm quyền]."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "[Thời gian cụ thể.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": "[Địa điểm.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "CÁC BƯỚC QUY TRÌNH",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Bước 1: [Tên hội nghị]",
+          "noiDungChiTiet": "- Thành phần:\n- Nội dung:\n- Sản phẩm:"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Bước 2: [Tên hội nghị]",
+          "noiDungChiTiet": "- Thành phần:\n- Nội dung:\n- Sản phẩm:"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Bước 3: [Tên hội nghị]",
+          "noiDungChiTiet": "- Thành phần:\n- Nội dung:\n- Sản phẩm:"
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Bước 4: [Tên hội nghị]",
+          "noiDungChiTiet": "- Thành phần:\n- Nội dung:\n- Sản phẩm:"
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "HỒ SƠ, TÀI LIỆU",
+      "noiDungChiTiet": "- Tờ trình.\n- Danh sách nhân sự.\n- Hồ sơ cán bộ.\n- Phiếu giới thiệu/phiếu biểu quyết.\n- Biên bản hội nghị.\n- Các tài liệu liên quan.",
+      "tieuMuc": []
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Ban Tổ chức Tỉnh ủy",
+          "noiDungChiTiet": "[Tham mưu nội dung, hồ sơ, quy trình.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Văn phòng Tỉnh ủy",
+          "noiDungChiTiet": "[Bố trí hội nghị, tài liệu, điều kiện phục vụ.]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Các cơ quan liên quan",
+          "noiDungChiTiet": "[Phối hợp xác minh, cung cấp hồ sơ, tham dự hội nghị.]"
+        }
+      ]
+    }
+  ]
+}

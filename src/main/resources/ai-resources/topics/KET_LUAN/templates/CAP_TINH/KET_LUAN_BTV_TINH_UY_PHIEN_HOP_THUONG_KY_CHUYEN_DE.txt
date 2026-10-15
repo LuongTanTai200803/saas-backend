@@ -1,0 +1,27 @@
+{
+  "source": "SERVER",
+  "templateCode": "KET_LUAN_BTV_TINH_UY_PHIEN_HOP_THUONG_KY_CHUYEN_DE",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "trichYeu": "tại hội nghị/phiên họp [tên hội nghị/phiên họp]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy xem xét, thảo luận và thống nhất kết luận từng nội dung như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy kết luận để thực hiện.",
+  "doanCanCu": "Ngày [ngày]/[tháng]/[năm], Ban Thường vụ Tỉnh ủy họp [thường kỳ/chuyên đề]; sau khi nghe các tờ trình, báo cáo của các cấp ủy, cơ quan, đơn vị,",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "CÁC NỘI DUNG BAN THƯỜNG VỤ TỈNH ỦY XEM XÉT, QUYẾT ĐỊNH THEO THẨM QUYỀN",
+      "noiDungChiTiet": "1. [Cơ quan trình] trình:\n1.1. [Tên báo cáo/tờ trình]\nBan Thường vụ Tỉnh ủy [cơ bản nhất trí/thống nhất chủ trương/đồng ý].\nĐồng thời yêu cầu:\n- [Yêu cầu 1]\n- [Yêu cầu 2]\n1.2. [Tên nội dung tiếp theo]\nGiao [cơ quan] chủ trì, phối hợp với [cơ quan] rà soát, hoàn thiện, bảo đảm rõ người, rõ việc, rõ thời gian, rõ trách nhiệm, rõ thẩm quyền, rõ kết quả."
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "CÁC NỘI DUNG TRÌNH BAN CHẤP HÀNH ĐẢNG BỘ TỈNH / CẤP CÓ THẨM QUYỀN",
+      "noiDungChiTiet": "1. [Nội dung]\nBan Thường vụ Tỉnh ủy thống nhất trình [cơ quan có thẩm quyền] xem xét, quyết định.\nGiao [cơ quan] hoàn thiện hồ sơ, tài liệu theo quy định."
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "CÁC NỘI DUNG KHÁC / CÓ KẾT LUẬN RIÊNG",
+      "noiDungChiTiet": "[ghi nếu có]"
+    }
+  ]
+}

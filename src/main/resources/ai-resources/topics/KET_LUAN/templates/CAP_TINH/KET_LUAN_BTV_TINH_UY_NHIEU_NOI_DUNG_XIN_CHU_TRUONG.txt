@@ -1,0 +1,53 @@
+{
+
+"source": "SERVER",
+
+  "templateCode": "KET_LUAN_BTV_TINH_UY_NHIEU_NOI_DUNG_XIN_CHU_TRUONG",
+
+  "topicCode": "KET_LUAN",
+
+"tenLoaiVanBan": "KẾT LUẬN",
+
+"trichYeu": "đối với các nội dung trình xin chủ trương trực tiếp bằng văn bản",
+
+"cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy thống nhất kết luận đối với từng nội dung, cụ thể như sau:",
+
+"cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy kết luận để thực hiện.",
+
+"doanCanCu": "Căn cứ Quy chế làm việc của Ban Chấp hành Đảng bộ tỉnh khóa …;\nXét đề nghị của [Văn phòng Tỉnh ủy/cơ quan tổng hợp] tại Báo cáo số …, ngày … về tổng hợp ý kiến tham gia của các đồng chí Ủy viên Ban Thường vụ Tỉnh ủy đối với các tờ trình của các tổ chức đảng, cơ quan, đơn vị;",
+
+"cacMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "[Cơ quan A] trình: [Tờ trình/Báo cáo] số …, ngày … về …",
+
+"noiDungChiTiet": "[Ban Thường vụ Tỉnh ủy thống nhất chủ trương/đồng ý/chưa cho chủ trương…]\nGiao [cơ quan A] ……………………………………………………………"
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "[Cơ quan B] trình: [Tờ trình/Báo cáo] số …, ngày … về …",
+
+"noiDungChiTiet": "[Ý kiến kết luận]\nGiao [cơ quan B] ……………………………………………………………"
+
+},
+
+{
+
+"code": "3",
+
+"tieuDeMuc": "[Cơ quan C] trình:",
+
+"noiDungChiTiet": "(1) Tờ trình số … về …\n(2) Tờ trình số … về …\nBan Thường vụ Tỉnh ủy thống nhất chủ trương đối với các nội dung trên.\nGiao [cơ quan C] rà soát, kiểm tra, hoàn thiện, bảo đảm đúng quy định."
+
+}
+
+]
+
+}

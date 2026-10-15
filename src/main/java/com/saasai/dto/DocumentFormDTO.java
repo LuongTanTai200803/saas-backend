@@ -8,6 +8,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -39,7 +42,7 @@ public class DocumentFormDTO {
      * File thực tế không gửi trực tiếp trong JSON.
      * Frontend upload trước rồi gửi fileIds.
      */
-    private List<String> taiLieuMinhChungFileIds;
+    private String taiLieuMinhChung;
 
     // Menu 4
     private String mauVanBan;
@@ -56,6 +59,11 @@ public class DocumentFormDTO {
     private String phongCach;
     private String doDai;
     private String mucDoHoanChinh;
+
+    // FileIds của các file đã được upload, để backend lấy nội dung của các file này.
+    @JsonProperty("fileID")
+    @JsonAlias({"fileIds", "file_id"})
+    private List<String> fileIds;
 
     /**
      * Có thể giữ để hiển thị phía frontend,

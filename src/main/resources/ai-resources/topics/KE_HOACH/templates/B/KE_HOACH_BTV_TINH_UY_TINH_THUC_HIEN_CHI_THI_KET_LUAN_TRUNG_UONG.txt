@@ -1,0 +1,89 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_BTV_TINH_UY_TINH_THUC_HIEN_CHI_THI_KET_LUAN_TRUNG_UONG",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "thực hiện [tên văn bản cấp trên] về [nội dung]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy ban hành Kế hoạch thực hiện như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Thực hiện [tên văn bản cấp trên]; để bảo đảm thống nhất, đồng bộ trong triển khai thực hiện [nội dung],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Nêu nhận thức, mục tiêu chuyển biến, yêu cầu cụ thể hóa văn bản cấp trên, mục tiêu chính trị/xã hội cần đạt."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Nêu nguyên tắc thực hiện: nghiêm túc, đồng bộ, thiết thực, hiệu quả, có trọng tâm, trọng điểm, phù hợp tình hình địa phương; tăng cường phối hợp, kiểm tra, giám sát, báo cáo."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Tuyên truyền, quán triệt, nâng cao nhận thức",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Rà soát, cụ thể hóa cơ chế, chính sách/văn bản liên quan",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Đổi mới nội dung, phương thức thực hiện",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Tăng cường kiểm tra, giám sát, sơ kết, tổng kết",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Bố trí nguồn lực, điều kiện bảo đảm thực hiện nếu có",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "Có thể kèm biểu phân công nhiệm vụ: STT, nội dung nhiệm vụ, cơ quan chủ trì, cơ quan phối hợp, thời gian hoàn thành.",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Các cấp ủy, tổ chức đảng, chính quyền, MTTQ, tổ chức chính trị xã hội tổ chức quán triệt và xây dựng kế hoạch thực hiện.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Giao từng cơ quan chủ trì theo chức năng.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Giao cơ quan tham mưu theo dõi, đôn đốc, tổng hợp báo cáo.",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Quy định chế độ báo cáo, sơ kết, tổng kết.",
+          "noiDungChiTiet": ""
+        }
+      ]
+    }
+  ]
+}

@@ -16,4 +16,7 @@ public class FileMetadataResponseDTO {
     private String category;
     private LocalDateTime uploadedAt;
     private String uploadedBy;
+    private String extractionStatus;
+    private String extractionError;
+    private String rawText;
 }

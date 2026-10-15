@@ -1,0 +1,81 @@
+{
+
+"source": "USER_UPLOAD",
+
+"templateCode": "KET_LUAN_THUONG_TRUC_DANG_UY_XA_PHUONG",
+
+"topicCode": "KET_LUAN",
+
+"tenLoaiVanBan": "KẾT LUẬN",
+
+"coQuanBanHanh": "CỦA THƯỜNG TRỰC ĐẢNG ỦY",
+
+"trichYeu": "",
+
+"cauDanChuyenTiep": "Ngày …/…/…, Thường trực Đảng ủy xã/phường … tổ chức họp, có mặt …/… đồng chí. Đồng chí …, Bí thư Đảng ủy - Chủ trì.\nMời dự: [thành phần mời dự].\nSau khi nghe các nội dung đề xuất tại phiên họp, Thường trực Đảng ủy đã thảo luận và thống nhất kết luận chỉ đạo như sau:",
+
+"cauKetHanhChinh": "Trên đây là Kết luận của Thường trực Đảng ủy tại phiên họp ngày …/…/… . Giao Văn phòng Đảng ủy, các cấp ủy, tổ chức đảng, cơ quan, đơn vị liên quan triển khai tổ chức thực hiện.",
+
+"doanCanCu": "",
+
+"cacMuc": [
+
+{
+
+"code": "1",
+
+"tieuDeMuc": "[Tên tờ trình/nội dung thứ nhất]",
+
+"noiDungChiTiet": "Thường trực Đảng ủy cơ bản nhất trí/nhất trí với nội dung Tờ trình, đồng thời thống nhất kết luận như sau:\n- Về [nội dung 1]: …\n- Về [nội dung 2]: …\n- Về thời gian thực hiện: …\nGiao [cơ quan] tiếp thu ý kiến tham gia, hoàn chỉnh nội dung, chủ trì, phối hợp với các cơ quan, đơn vị liên quan triển khai thực hiện bảo đảm chất lượng, thời gian.",
+
+"tieuMuc": []
+
+},
+
+{
+
+"code": "2",
+
+"tieuDeMuc": "[Tên tờ trình/nội dung thứ hai]",
+
+"noiDungChiTiet": "Thường trực Đảng ủy nhất trí với nội dung. Giao [cơ quan] căn cứ quy định để tổ chức thực hiện.",
+
+"tieuMuc": []
+
+},
+
+{
+
+"code": "3",
+
+"tieuDeMuc": "Triển khai một số nhiệm vụ trọng tâm",
+
+"noiDungChiTiet": "",
+
+"tieuMuc": [
+
+{
+
+"code": "3.1",
+
+"tieuDeMuc": "Giao Ủy ban nhân dân xã/phường:",
+
+"noiDungChiTiet": "- …\n- …"
+
+},
+
+{
+
+"code": "3.2",
+
+"tieuDeMuc": "Giao Văn phòng Đảng ủy:",
+
+"noiDungChiTiet": "- …\n- …"
+
+}
+
+]
+
+}
+
+]

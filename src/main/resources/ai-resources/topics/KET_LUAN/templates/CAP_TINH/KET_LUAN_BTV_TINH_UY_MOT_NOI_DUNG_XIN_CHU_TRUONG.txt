@@ -1,0 +1,17 @@
+{
+  "source": "SERVER",
+  "templateCode": "KET_LUAN_BTV_TINH_UY_MOT_NOI_DUNG_XIN_CHU_TRUONG",
+  "topicCode": "KET_LUAN",
+  "tenLoaiVanBan": "KẾT LUẬN",
+  "trichYeu": "về [Nội dung xin chủ trương]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy thống nhất kết luận như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy kết luận để thực hiện.",
+  "doanCanCu": "Căn cứ Quy chế làm việc của Ban Chấp hành Đảng bộ tỉnh khóa …;\nSau khi xem xét [Tờ trình/Báo cáo/Công văn] số …, ngày … của [cơ quan trình] về …; xét đề nghị của [cơ quan tổng hợp, nếu có] tại [Báo cáo] số …, ngày …,",
+  "cacMuc": [
+    {
+      "code": "",
+      "tieuDeMuc": "",
+      "noiDungChiTiet": "[Đồng ý/Thống nhất/Cơ bản nhất trí/Chưa cho chủ trương] đối với [Nội dung xin chủ trương]\nGiao [cơ quan chủ trì] lãnh đạo, chỉ đạo [cơ quan trực thuộc/cơ quan chuyên môn] rà soát, kiểm tra kỹ lưỡng các nội dung liên quan, hoàn thiện hồ sơ/văn bản, bảo đảm chặt chẽ, đúng quy định của pháp luật và các quy định có liên quan, phù hợp tình hình thực tiễn; trình [cơ quan có thẩm quyền] xem xét, quyết định/tổ chức thực hiện.\nGiao [cơ quan phối hợp, nếu có] phối hợp chặt chẽ trong quá trình thẩm tra, hoàn thiện, triển khai thực hiện."
+    }
+  ]
+}

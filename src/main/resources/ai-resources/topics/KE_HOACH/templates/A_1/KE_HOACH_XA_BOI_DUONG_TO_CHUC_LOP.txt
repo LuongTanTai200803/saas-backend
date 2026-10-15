@@ -1,0 +1,69 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_XA_BOI_DUONG_TO_CHUC_LOP",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "Tổ chức/Bồi dưỡng [tên lớp/chương trình] [thời gian]",
+  "cauDanChuyenTiep": "[Chủ thể] ban hành Kế hoạch như sau:",
+  "cauKetHanhChinh": "",
+  "doanCanCu": "Căn cứ hướng dẫn/chương trình/quy chế …;\nCăn cứ nhu cầu bồi dưỡng …;",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "nâng cao nhận thức, trình độ lý luận, kỹ năng, tạo nguồn/chuẩn hóa cán bộ."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "đúng chương trình, đúng đối tượng, quản lý lớp nghiêm túc, phối hợp chặt chẽ."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG/ĐỐI TƯỢNG/CHỈ TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung học tập hoặc chuyên đề",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Đối tượng học tập",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Thời gian, địa điểm",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Chỉ tiêu theo năm/biểu nếu là kế hoạch toàn khóa",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "KINH PHÍ",
+      "noiDungChiTiet": "Nêu nguồn kinh phí nếu có dữ liệu.",
+      "tieuMuc": []
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "Giao Ban Tổ chức, Ban Tuyên giáo và Dân vận, Văn phòng, Trung tâm chính trị, đơn vị bố trí cơ sở vật chất, chi/đảng bộ cử học viên.\n\nPHỤ BIỂU nếu là kế hoạch nhiều năm.",
+      "tieuMuc": []
+    }
+  ]
+}

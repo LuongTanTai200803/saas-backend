@@ -1,0 +1,105 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_CHUNG_CAP_XA",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "[CỦA CHỦ THỂ BAN HÀNH]",
+  "trichYeu": "về [nội dung nghị quyết], [thời gian/giai đoạn nếu có]",
+  "cauDanChuyenTiep": "[chủ thể ban hành] ban hành Nghị quyết về [nội dung], cụ thể như sau:",
+  "cauKetHanhChinh": "Nghị quyết này được phổ biến/quán triệt đến [chi bộ/cán bộ, đảng viên/Nhân dân] để tổ chức thực hiện.",
+  "doanCanCu": "Thực hiện [nghị quyết/căn cứ/chủ trương liên quan],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "ĐÁNH GIÁ TÌNH HÌNH / THỰC TRẠNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Tồn tại, hạn chế",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": "[...]"
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "QUAN ĐIỂM, MỤC TIÊU, CHỈ TIÊU",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Quan điểm chỉ đạo",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Mục tiêu tổng quát",
+          "noiDungChiTiet": "[...]"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Mục tiêu cụ thể / chỉ tiêu chủ yếu",
+          "noiDungChiTiet": "[...]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "NHIỆM VỤ VÀ GIẢI PHÁP CHỦ YẾU",
+      "noiDungChiTiet": "1. [Nhóm giải pháp về lãnh đạo, chỉ đạo, tuyên truyền]: [NỘI_DUNG]\n2. [Nhóm giải pháp về cơ chế, kế hoạch, quy hoạch]: [NỘI_DUNG]\n3. [Nhóm giải pháp về nguồn lực]: [NỘI_DUNG]\n4. [Nhóm giải pháp chuyên môn theo lĩnh vực]: [NỘI_DUNG]\n5. [Nhóm giải pháp về kiểm tra, giám sát]: [NỘI_DUNG]\n6. [Nhóm giải pháp về phát huy vai trò Nhân dân, MTTQ, đoàn thể]: [NỘI_DUNG]",
+      "tieuMuc": []
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[UBND/Đảng ủy UBND/cơ quan chủ trì]",
+          "noiDungChiTiet": "Cụ thể hóa Nghị quyết bằng kế hoạch, chương trình, đề án."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Ban Xây dựng Đảng/Ban Tuyên giáo và Dân vận]",
+          "noiDungChiTiet": "Tổ chức quán triệt, tuyên truyền."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Ủy ban Kiểm tra Đảng ủy]",
+          "noiDungChiTiet": "Kiểm tra, giám sát việc triển khai thực hiện."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "[Văn phòng Đảng ủy]",
+          "noiDungChiTiet": "Theo dõi, đôn đốc, tổng hợp báo cáo."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "[MTTQ và các tổ chức chính trị - xã hội]",
+          "noiDungChiTiet": "Tuyên truyền, vận động, giám sát, phản biện xã hội."
+        },
+        {
+          "code": "6",
+          "tieuDeMuc": "[Các chi bộ, đảng bộ trực thuộc]",
+          "noiDungChiTiet": "Triển khai thực hiện, đưa vào chương trình công tác."
+        },
+        {
+          "code": "7",
+          "tieuDeMuc": "[Người đứng đầu/các Ủy viên BCH được phân công]",
+          "noiDungChiTiet": "Chịu trách nhiệm về tiến độ, kết quả."
+        }
+      ]
+    }
+  ]
+}

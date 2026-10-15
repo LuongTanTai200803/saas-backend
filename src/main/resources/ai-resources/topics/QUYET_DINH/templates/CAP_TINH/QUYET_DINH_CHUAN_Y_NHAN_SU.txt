@@ -1,0 +1,43 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_CHUAN_Y_NHAN_SU",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc chuẩn y [chức danh/nhân sự], nhiệm kỳ [nhiệm kỳ]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ TỈNH ỦY QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Văn phòng Tỉnh ủy, Ủy ban Kiểm tra Tỉnh ủy, Ban Tổ chức Tỉnh ủy, Đảng ủy [tên đảng ủy], Ủy ban Kiểm tra Đảng ủy [tên đảng ủy] và đồng chí [Họ tên] thi hành Quyết định này.",
+
+"doanCanCu": "Căn cứ Quy định số [số quy định] về công tác kiểm tra, giám sát;\nCăn cứ Quy định số [số quy định] về phân cấp quản lý cán bộ;\nCăn cứ Kết luận số [số kết luận] về công tác tổ chức cán bộ;\nCăn cứ kết quả bầu bổ sung [chức danh];\nXét đề nghị của Ủy ban Kiểm tra Tỉnh ủy,",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Chuẩn y nhân sự",
+
+"noiDungChiTiet": "Chuẩn y đồng chí [Họ tên], chức vụ/đơn vị hiện nay [chức vụ/đơn vị hiện tại], giữ chức [chức vụ mới], nhiệm kỳ [nhiệm kỳ]."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "Văn phòng Tỉnh ủy, Ủy ban Kiểm tra Tỉnh ủy, Ban Tổ chức Tỉnh ủy, Đảng ủy [tên đảng ủy], Ủy ban Kiểm tra Đảng ủy [tên đảng ủy] và đồng chí [Họ tên] thi hành Quyết định này."
+
+}
+
+]
+
+}

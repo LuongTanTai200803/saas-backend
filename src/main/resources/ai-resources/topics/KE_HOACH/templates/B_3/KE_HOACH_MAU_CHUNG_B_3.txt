@@ -1,0 +1,134 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "KE_HOACH_CHUNG",
+  "topicCode": "KE_HOACH",
+  "tenLoaiVanBan": "KẾ HOẠCH",
+  "coQuanBanHanh": "",
+  "trichYeu": "[Tên đầy đủ của kế hoạch]",
+  "cauDanChuyenTiep": "[Cơ quan ban hành] ban hành Kế hoạch [tên kế hoạch], cụ thể như sau:",
+  "cauKetHanhChinh": "Trên đây là Kế hoạch [tên kế hoạch]. Yêu cầu các cơ quan, đơn vị, địa phương liên quan nghiêm túc triển khai thực hiện.",
+  "doanCanCu": "Căn cứ [văn bản 1];\nCăn cứ [văn bản 2];\nThực hiện [chương trình/kế hoạch/chỉ đạo liên quan];",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "MỤC ĐÍCH, YÊU CẦU",
+      "noiDungChiTiet": "1. Mục đích\n[Nêu mục tiêu chính trị, chuyên môn, quản lý, tuyên truyền hoặc tổ chức.]\n\n2. Yêu cầu\n[Nêu yêu cầu về đúng quy định, đúng đối tượng, thiết thực, hiệu quả, phối hợp, tiến độ, an toàn, tiết kiệm.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Mục đích",
+          "noiDungChiTiet": "Nêu mục tiêu chính trị, chuyên môn, quản lý, tuyên truyền hoặc tổ chức mà kế hoạch hướng tới."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Yêu cầu",
+          "noiDungChiTiet": "Xác định các yêu cầu về tuân thủ quy định, đối tượng thực hiện, tính thiết thực, hiệu quả, phối hợp, tiến độ, an toàn và tiết kiệm phù hợp với nội dung kế hoạch."
+        }
+      ]
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "NỘI DUNG TRỌNG TÂM",
+      "noiDungChiTiet": "1. Nội dung 1\n[Nội dung chi tiết.]\n\n2. Nội dung 2\n[Nội dung chi tiết.]\n\n3. Nội dung 3\n[Nội dung chi tiết.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Nội dung 1",
+          "noiDungChiTiet": "Trình bày nội dung trọng tâm thứ nhất, bao gồm nhiệm vụ, hoạt động hoặc vấn đề cần triển khai theo mục tiêu của kế hoạch."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Nội dung 2",
+          "noiDungChiTiet": "Trình bày nội dung trọng tâm thứ hai và các yêu cầu triển khai tương ứng."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nội dung 3",
+          "noiDungChiTiet": "Trình bày nội dung trọng tâm thứ ba và các yêu cầu triển khai tương ứng."
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "THỜI GIAN, ĐỊA ĐIỂM, ĐỐI TƯỢNG, THÀNH PHẦN",
+      "noiDungChiTiet": "[Chỉ sử dụng mục này khi văn bản có hội nghị, sự kiện, đoàn công tác hoặc tập huấn.]\n\n1. Thời gian:\n[Thời gian thực hiện.]\n\n2. Địa điểm:\n[Địa điểm tổ chức.]\n\n3. Hình thức:\n[Hình thức tổ chức.]\n\n4. Thành phần:\n[Đối tượng, thành phần tham gia.]\n\n5. Chương trình dự kiến:\n[Nội dung và trình tự chương trình.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Thời gian",
+          "noiDungChiTiet": "Xác định thời gian tổ chức hoặc thời gian thực hiện các hoạt động theo kế hoạch."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Địa điểm",
+          "noiDungChiTiet": "Xác định địa điểm tổ chức hoặc địa bàn triển khai hoạt động."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Hình thức",
+          "noiDungChiTiet": "Nêu hình thức tổ chức hoặc phương thức triển khai phù hợp với kế hoạch."
+        },
+        {
+          "code": "4",
+          "tieuDeMuc": "Thành phần",
+          "noiDungChiTiet": "Xác định đối tượng, thành phần tham gia, cơ quan đại diện hoặc lực lượng thực hiện."
+        },
+        {
+          "code": "5",
+          "tieuDeMuc": "Chương trình dự kiến",
+          "noiDungChiTiet": "Trình bày trình tự các hoạt động dự kiến, nội dung chính và các thông tin tổ chức liên quan nếu có."
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "NHIỆM VỤ, GIẢI PHÁP / CÁC BƯỚC QUY TRÌNH",
+      "noiDungChiTiet": "[Lựa chọn tên mục phù hợp với loại kế hoạch.]\n\n1. [Nhiệm vụ/quy trình bước 1]\n[Nội dung chi tiết.]\n\n2. [Nhiệm vụ/quy trình bước 2]\n[Nội dung chi tiết.]\n\n3. [Nhiệm vụ/quy trình bước 3]\n[Nội dung chi tiết.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Nhiệm vụ/quy trình bước 1]",
+          "noiDungChiTiet": "Mô tả nhiệm vụ, giải pháp hoặc bước quy trình thứ nhất, bao gồm nội dung thực hiện và yêu cầu liên quan nếu có."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Nhiệm vụ/quy trình bước 2]",
+          "noiDungChiTiet": "Mô tả nhiệm vụ, giải pháp hoặc bước quy trình thứ hai, bảo đảm phù hợp với mục tiêu và trình tự triển khai."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Nhiệm vụ/quy trình bước 3]",
+          "noiDungChiTiet": "Mô tả nhiệm vụ, giải pháp hoặc bước quy trình thứ ba và các yêu cầu thực hiện tương ứng."
+        }
+      ]
+    },
+    {
+      "code": "V",
+      "tieuDeMuc": "KINH PHÍ THỰC HIỆN",
+      "noiDungChiTiet": "[Chỉ sử dụng khi kế hoạch có nội dung kinh phí.]\n\n- Nguồn kinh phí: [Nguồn kinh phí thực hiện.]\n- Đơn vị lập dự toán: [Đơn vị chịu trách nhiệm lập dự toán.]\n- Nguyên tắc thanh quyết toán: [Quy định hoặc yêu cầu thanh quyết toán.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "VI",
+      "tieuDeMuc": "TỔ CHỨC THỰC HIỆN",
+      "noiDungChiTiet": "1. [Cơ quan chủ trì]\n[Trách nhiệm cụ thể.]\n\n2. [Cơ quan phối hợp]\n[Trách nhiệm cụ thể.]\n\n3. [Các cơ quan, đơn vị, địa phương]\n[Trách nhiệm cụ thể.]",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "[Cơ quan chủ trì]",
+          "noiDungChiTiet": "Xác định cơ quan chủ trì và trách nhiệm tổ chức, điều phối, theo dõi việc triển khai kế hoạch."
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "[Cơ quan phối hợp]",
+          "noiDungChiTiet": "Xác định cơ quan phối hợp và trách nhiệm phối hợp thực hiện các nhiệm vụ được phân công."
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "[Các cơ quan, đơn vị, địa phương]",
+          "noiDungChiTiet": "Nêu trách nhiệm của các cơ quan, đơn vị, địa phương liên quan trong việc triển khai, thực hiện và phối hợp theo yêu cầu của kế hoạch."
+        }
+      ]
+    }
+  ]
+}

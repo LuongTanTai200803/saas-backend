@@ -1,0 +1,31 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "NGHI_QUYET_CONG_TAC_TO_CHUC_CAN_BO_SU_TINH",
+  "topicCode": "NGHI_QUYET",
+  "tenLoaiVanBan": "NGHỊ QUYẾT",
+  "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ …",
+  "trichYeu": "về …",
+  "cauDanChuyenTiep": "Ban Thường vụ … thống nhất nghị quyết như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ … nghị quyết để thực hiện.",
+  "doanCanCu": "Ngày …, Ban Thường vụ … đã họp. Sau khi xem xét Tờ trình số … ngày … của [cơ quan tham mưu] về …,",
+  "cacMuc": [
+    {
+      "code": "1",
+      "tieuDeMuc": "Về [nội dung thứ nhất]",
+      "noiDungChiTiet": "[Nhất trí/Quyết định/Phê duyệt] …\n(Có danh sách/biểu số … kèm theo)",
+      "tieuMuc": []
+    },
+    {
+      "code": "2",
+      "tieuDeMuc": "Về [nội dung thứ hai]",
+      "noiDungChiTiet": "[Nhất trí/Quyết định/Phê duyệt] …\n(Có danh sách/biểu số … kèm theo)",
+      "tieuMuc": []
+    },
+    {
+      "code": "3",
+      "tieuDeMuc": "Giao nhiệm vụ",
+      "noiDungChiTiet": "Giao [cơ quan chủ trì] chủ trì, phối hợp với [cơ quan liên quan] tham mưu/hoàn thiện/ban hành/thông báo/tổ chức thực hiện …\nGiao [cơ quan/đơn vị] báo cáo kết quả thực hiện về [cơ quan nhận báo cáo] theo quy định.",
+      "tieuMuc": []
+    }
+  ]
+}

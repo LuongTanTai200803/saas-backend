@@ -1,0 +1,43 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_MO_LOP_BOI_DUONG",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "[tổ chức lớp/công nhận và cấp giấy chứng nhận] [tên chương trình]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ ĐẢNG ỦY [tên đảng ủy] QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Ban Tổ chức lớp học/cơ quan tham mưu/cấp ủy cơ sở/học viên chịu trách nhiệm thi hành Quyết định này.",
+
+"doanCanCu": "Căn cứ [hướng dẫn của Trung ương/cấp trên];\nCăn cứ [kế hoạch/quyết định tổ chức lớp];\n[Căn cứ kết quả học tập của học viên ... nếu là công nhận hoàn thành];\nXét đề nghị của [Ban Tổ chức lớp học/Ban Tổ chức Đảng ủy],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Tổ chức lớp/Công nhận hoàn thành",
+
+"noiDungChiTiet": "[Mở lớp/Công nhận và cấp giấy chứng nhận cho] [số lượng] học viên [nội dung chương trình].\n(Có danh sách kèm theo)"
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Trách nhiệm thi hành",
+
+"noiDungChiTiet": "[Ban Tổ chức lớp học/cơ quan tham mưu/cấp ủy cơ sở/học viên] chịu trách nhiệm thi hành Quyết định này."
+
+}
+
+]
+
+}

@@ -1,0 +1,53 @@
+{
+
+"source": "USER_UPLOAD",
+
+  "templateCode": "QUYET_DINH_PHAN_CONG_NHIEM_VU_CAP_XA",
+
+  "topicCode": "QUYET_DINH",
+
+"tenLoaiVanBan": "QUYẾT ĐỊNH",
+
+"trichYeu": "về việc phân công [chi bộ/cán bộ/ủy viên BTV, BCH] phụ trách [địa bàn/đơn vị/lĩnh vực]",
+
+"cauDanChuyenTiep": "BAN THƯỜNG VỤ ĐẢNG ỦY [tên đảng ủy] QUYẾT ĐỊNH",
+
+"cauKetHanhChinh": "Quyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có].",
+
+"doanCanCu": "Căn cứ Điều lệ Đảng Cộng sản Việt Nam;\nCăn cứ [quy định thi hành Điều lệ Đảng];\nCăn cứ [quy chế làm việc của cấp ủy];\nCăn cứ/Thực hiện [kết luận, nghị quyết, công văn chỉ đạo nếu có];\nXét đề nghị của [cơ quan tham mưu],",
+
+"cacMuc": [
+
+{
+
+"code": "Điều 1",
+
+"tieuDeMuc": "Phân công phụ trách",
+
+"noiDungChiTiet": "Phân công [số lượng/đối tượng] phụ trách, hỗ trợ [số lượng/địa bàn/đơn vị] theo danh sách kèm theo."
+
+},
+
+{
+
+"code": "Điều 2",
+
+"tieuDeMuc": "Nhiệm vụ được phân công",
+
+"noiDungChiTiet": "[Đối tượng được phân công] có nhiệm vụ:\n- Xây dựng kế hoạch thực hiện nhiệm vụ được phân công.\n- Lãnh đạo, chỉ đạo, theo dõi, hỗ trợ, kiểm tra, giám sát [địa bàn/đơn vị].\n- Phối hợp với các cơ quan, đơn vị liên quan trong quá trình thực hiện.\n- Thực hiện chế độ thông tin, báo cáo [tháng/quý/6 tháng/năm] về [cơ quan tiếp nhận]."
+
+},
+
+{
+
+"code": "Điều 3",
+
+"tieuDeMuc": "Trách nhiệm thi hành và hiệu lực",
+
+"noiDungChiTiet": "[Văn phòng Đảng ủy, Ban Xây dựng Đảng, tổ chức đảng, cá nhân liên quan] căn cứ Quyết định thi hành.\nQuyết định này có hiệu lực kể từ ngày ký [và thay thế Quyết định số ... nếu có]."
+
+}
+
+]
+
+}

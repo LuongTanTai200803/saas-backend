@@ -1,0 +1,69 @@
+{
+  "source": "USER_UPLOAD",
+  "templateCode": "BAO_CAO_THUC_HIEN_QUY_DINH_QUY_TRINH_CAN_BO",
+  "topicCode": "BAO_CAO",
+  "tenLoaiVanBan": "BÁO CÁO",
+  "coQuanBanHanh": "",
+  "trichYeu": "Kết quả thực hiện [quy định/quyết định/quy trình]",
+  "cauDanChuyenTiep": "Ban Thường vụ Tỉnh ủy [địa phương] báo cáo kết quả thực hiện, cụ thể như sau:",
+  "cauKetHanhChinh": "Ban Thường vụ Tỉnh ủy [địa phương] trân trọng báo cáo.",
+  "doanCanCu": "Căn cứ [Quy định/Quyết định/Hướng dẫn của Trung ương];\nCăn cứ [kết quả triển khai tại địa phương],",
+  "cacMuc": [
+    {
+      "code": "I",
+      "tieuDeMuc": "ĐẶC ĐIỂM TÌNH HÌNH / CÔNG TÁC CHỈ ĐẠO, ĐIỀU HÀNH",
+      "noiDungChiTiet": "[Khái quát tổ chức, bộ máy, đối tượng áp dụng hoặc quá trình chỉ đạo triển khai.]",
+      "tieuMuc": []
+    },
+    {
+      "code": "II",
+      "tieuDeMuc": "KẾT QUẢ THỰC HIỆN",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Công tác lãnh đạo, chỉ đạo",
+          "noiDungChiTiet": "[Nêu văn bản đã ban hành, phân công trách nhiệm, quy trình thực hiện.]"
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Kết quả thực hiện từng nội dung",
+          "noiDungChiTiet": "2.1. Về chức năng, nhiệm vụ\n2.2. Về tổ chức bộ máy\n2.3. Về mối quan hệ công tác\n2.4. Về quy chế làm việc\n2.5. Về quy hoạch, bổ sung quy hoạch hoặc nội dung chuyên môn khác"
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Hồ sơ, biểu mẫu, danh sách kèm theo",
+          "noiDungChiTiet": "[Nếu có.]"
+        }
+      ]
+    },
+    {
+      "code": "III",
+      "tieuDeMuc": "ĐÁNH GIÁ CHUNG",
+      "noiDungChiTiet": "",
+      "tieuMuc": [
+        {
+          "code": "1",
+          "tieuDeMuc": "Kết quả đạt được",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "2",
+          "tieuDeMuc": "Hạn chế, khó khăn",
+          "noiDungChiTiet": ""
+        },
+        {
+          "code": "3",
+          "tieuDeMuc": "Nguyên nhân",
+          "noiDungChiTiet": ""
+        }
+      ]
+    },
+    {
+      "code": "IV",
+      "tieuDeMuc": "KIẾN NGHỊ, ĐỀ XUẤT",
+      "noiDungChiTiet": "[Kiến nghị cơ quan Trung ương hướng dẫn, sửa đổi, bổ sung, tháo gỡ.]",
+      "tieuMuc": []
+    }
+  ]
+}
