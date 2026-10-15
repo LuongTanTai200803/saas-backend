@@ -80,6 +80,8 @@ public class FileService {
 
         private final TemplateProcessingService templateProcessingService;
 
+        private final ScanAiProcessingService scanAiProcessingService;
+
         @Value("${storage.base-url:http://localhost:8080/uploads/}")
         private String storageBaseUrl;
 
@@ -100,7 +102,8 @@ public class FileService {
                         ScanAiTempStorage scanAiTempStorage,
                         AiVisionService aiVisionService,
                         AiCompletionService aiCompletionService,
-                        TemplateProcessingService templateProcessingService) {
+                        TemplateProcessingService templateProcessingService,
+                        ScanAiProcessingService scanAiProcessingService) {
                 this.fileUploadRepository = fileUploadRepository;
                 this.userRepository = userRepository;
                 this.adminService = adminService;
@@ -116,6 +119,7 @@ public class FileService {
                 this.fileOcrPageRepository = fileOcrPageRepository;
                 this.scanAiTempStorage = scanAiTempStorage;
                 this.aiVisionService = aiVisionService;
+                this.scanAiProcessingService = scanAiProcessingService;
                 this.aiCompletionService = aiCompletionService;
                 this.templateProcessingService = templateProcessingService;
         }
@@ -971,17 +975,23 @@ public class FileService {
                 }
 
                 // Lưu các ảnh OCR tạm thời vào bộ nhớ tạm thời để xử lý sau
-                for (int index = 0; index < images.size(); index++) {
-                        MultipartFile image = images.get(index);
-                        Integer pageIndex = pageIndexes.get(index);
+                try {
+                        for (int index = 0; index < images.size(); index++) {
+                                MultipartFile image = images.get(index);
+                                Integer pageIndex = pageIndexes.get(index);
 
-                        validateOcrImage(image);
-                        validatePageIndex(pageIndex);
+                                validateOcrImage(image);
+                                validatePageIndex(pageIndex);
 
-                        scanAiTempStorage.save(
-                                        fileId,
-                                        pageIndex,
-                                        image);
+                                scanAiTempStorage.save(fileId, pageIndex, image);
+                        }
+                } catch (IOException | RuntimeException exception) {
+                        file.setExtractionStatus(ExtractionStatus.FAILED);
+                        file.setExtractionError(
+                                        "Không thể lưu ảnh scan: " + exception.getMessage());
+                        fileUploadRepository.save(file);
+
+                        throw exception;
                 }
 
                 if (!isLastBatch) {
@@ -997,104 +1007,24 @@ public class FileService {
                                                         ExtractionStatus.PROCESSING.name())
                                         .build();
                 }
+                // Nếu đây là batch cuối cùng, cập nhật trạng thái xử lý và gửi tác vụ xử lý AI
+                file.setExtractionStatus(ExtractionStatus.PROCESSING);
+                file.setExtractionError(null);
+                fileUploadRepository.save(file);
 
-                try {
-                        List<Path> allImagePaths = scanAiTempStorage.listImagesOrderByPageIndex(
-                                        fileId);
+                // Gửi tác vụ xử lý AI cho batch cuối cùng
+                scanAiProcessingService.submit(
+                                fileId,
+                                session.getSessionId(),
+                                currentUser.getUserId());
 
-                        log.info(
-                                        "AI bắt đầu sau khi nhận đủ batch: fileId={}, totalImages={}",
-                                        fileId,
-                                        allImagePaths.size());
-
-                        String accumulatedText = "";
-
-                        for (int start = 0; start < allImagePaths.size(); start += 2) {
-
-                                int end = Math.min(
-                                                start + 2,
-                                                allImagePaths.size());
-
-                                List<Path> aiImagePaths = allImagePaths.subList(start, end);
-
-                                log.info(
-                                                "AI xử lý nhóm ảnh: fileId={}, imageCount={}, paths={}",
-                                                fileId,
-                                                aiImagePaths.size(),
-                                                aiImagePaths);
-
-                                String chunkText = aiVisionService.extractText(aiImagePaths);
-
-                                if (chunkText == null || chunkText.isBlank()) {
-                                        throw new IllegalStateException(
-                                                        "AI không trả về nội dung cho nhóm ảnh");
-                                }
-
-                                accumulatedText = accumulatedText.isBlank()
-                                                ? chunkText
-                                                : accumulatedText
-                                                                + "\n\n"
-                                                                + chunkText;
-
-                                String normalizedText = textNormalizer.normalize(accumulatedText);
-
-                                file.setRawText(accumulatedText);
-                                file.setNormalizedText(normalizedText);
-                                file.setCharacterCount(normalizedText.length());
-                                file.setWordCount(countWords(normalizedText));
-                                file.setExtractionStatus(
-                                                ExtractionStatus.PROCESSING);
-                                file.setExtractionError(null);
-
-                                fileUploadRepository.save(file);
-
-                                try {
-                                        fileTextRedisRepository.save(
-                                                        file.getFileId(),
-                                                        accumulatedText);
-                                } catch (RuntimeException redisException) {
-                                        log.warn(
-                                                        "Redis lỗi nhưng DB đã lưu. fileId={}",
-                                                        fileId,
-                                                        redisException);
-                                }
-                        }
-
-                        // Nếu đây là batch cuối cùng, tiến hành xử lý template nếu cần thiết
-                        if (isLastBatch) {
-                                file.setExtractionStatus(
-                                                ExtractionStatus.EXTRACTED);
-                                fileUploadRepository.save(file);
-
-                                templateProcessingService.submit(
-                                                file.getFileId(),
-                                                session.getSessionId(),
-                                                currentUser.getUserId());
-                        }
-
-                        return ScanAiTextResponseDTO.builder()
-                                        .fileId(fileId)
-                                        .completed(isLastBatch)
-                                        .fullText(file.getRawText())
-                                        .extractionStatus(
-                                                        file.getExtractionStatus().name())
-                                        .build();
-
-                } catch (Exception exception) {
-                        file.setExtractionStatus(
-                                        ExtractionStatus.FAILED);
-                        file.setExtractionError(
-                                        "AI xử lý batch thất bại: "
-                                                        + exception.getMessage());
-
-                        fileUploadRepository.save(file);
-
-                        throw new IOException(
-                                        "AI xử lý ảnh thất bại",
-                                        exception);
-                } finally {
-                        scanAiTempStorage.delete(fileId);
-                }
+                return ScanAiTextResponseDTO.builder()
+                                .fileId(fileId)
+                                .completed(false)
+                                .fullText(null)
+                                .extractionStatus(
+                                                ExtractionStatus.PROCESSING.name())
+                                .build();
 
         }
 
@@ -1161,8 +1091,15 @@ public class FileService {
                                 templateJson.length());
 
                 // Luôn ghi đè template hiện tại.
-                session.setTemplateDefinitionJson(templateJson);
-                chatSessionRepository.save(session);
+                int updatedRows = chatSessionRepository.updateTemplateDefinition(
+                                session.getSessionId(),
+                                templateJson);
+
+                if (updatedRows == 0) {
+                        throw new IllegalStateException(
+                                        "Không cập nhật được template cho session: "
+                                                        + session.getSessionId());
+                }
         }
 
         // Nếu file là file template thì hiển thị nội dung thô
@@ -1257,4 +1194,24 @@ public class FileService {
                                 : fileUrl;
         }
 
+        // Lấy trạng thái quét AI của một file dựa trên fileId và userId
+        public ScanAiTextResponseDTO getScanStatus(
+                        String fileId,
+                        String userId) {
+
+                FileMetadata file = fileUploadRepository
+                                .findByFileIdAndUser_UserId(fileId, userId)
+                                .orElseThrow(() -> new NoSuchElementException(
+                                                "File không tồn tại"));
+
+                boolean completed = file.getExtractionStatus() == ExtractionStatus.EXTRACTED
+                                || file.getExtractionStatus() == ExtractionStatus.FAILED;
+
+                return ScanAiTextResponseDTO.builder()
+                                .fileId(file.getFileId())
+                                .completed(completed)
+                                .fullText(file.getRawText())
+                                .extractionStatus(file.getExtractionStatus().name())
+                                .build();
+        }
 }
