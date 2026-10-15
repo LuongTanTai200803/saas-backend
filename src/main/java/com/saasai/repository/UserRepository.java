@@ -12,6 +12,8 @@ import com.saasai.entity.User;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.EntityGraph;
+
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {
     Optional<User> findByEmail(String email);
@@ -21,10 +23,14 @@ public interface UserRepository extends JpaRepository<User, String> {
     Optional<User> findById(String userId);
 
     @Query("""
-    SELECT COUNT(u)
-    FROM User u
-    WHERE u.lastLoginAt >= :since
-    """)
+            SELECT COUNT(u)
+            FROM User u
+            WHERE u.lastLoginAt >= :since
+            """)
     long countActiveUsersSince(@Param("since") LocalDateTime since);
 
+    @EntityGraph(attributePaths = "adminPackageConfig")
+    @Query("SELECT u FROM User u WHERE u.userId = :userId")
+    Optional<User> findByIdWithAdminPackageConfig(
+            @Param("userId") String userId);
 }
