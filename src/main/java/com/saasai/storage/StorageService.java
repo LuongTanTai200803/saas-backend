@@ -6,7 +6,12 @@ import java.nio.file.Path;
 
 public interface StorageService {
     String storeFile(MultipartFile file, String fileName) throws IOException;
+
     byte[] loadFile(String fileName) throws IOException;
+
     boolean exists(String fileName) throws IOException;
+
     Path getFilePath(String storedFileName);
+
+    void deleteFile(String fileName) throws IOException;
 }

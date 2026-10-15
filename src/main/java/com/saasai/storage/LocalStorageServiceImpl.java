@@ -16,7 +16,8 @@ import java.nio.file.Paths;
 public class LocalStorageServiceImpl implements StorageService {
     private final Path basePath;
 
-    // 🎯 SỬA LẠI TẠI ĐÂY: Gài @Value để Spring bốc cấu hình chính chủ từ file .properties ra
+    // 🎯 SỬA LẠI TẠI ĐÂY: Gài @Value để Spring bốc cấu hình chính chủ từ file
+    // .properties ra
     public LocalStorageServiceImpl(@Value("${storage.local.base-path:uploads/}") String basePath) {
         this.basePath = Paths.get(StringUtils.hasText(basePath) ? basePath : "uploads/");
     }
@@ -40,9 +41,14 @@ public class LocalStorageServiceImpl implements StorageService {
     public boolean exists(String fileName) throws IOException {
         return Files.exists(basePath.resolve(fileName));
     }
-    
+
     @Override
     public Path getFilePath(String storedFileName) {
         return basePath.resolve(storedFileName);
+    }
+
+    @Override
+    public void deleteFile(String fileName) throws IOException {
+        Files.deleteIfExists(basePath.resolve(fileName));
     }
 }

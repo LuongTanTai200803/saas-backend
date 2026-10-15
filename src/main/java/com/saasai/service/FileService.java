@@ -78,6 +78,8 @@ public class FileService {
         private final AiVisionService aiVisionService;
         private final AiCompletionService aiCompletionService;
 
+        private final TemplateProcessingService templateProcessingService;
+
         @Value("${storage.base-url:http://localhost:8080/uploads/}")
         private String storageBaseUrl;
 
@@ -97,7 +99,8 @@ public class FileService {
                         FileOcrPageRepository fileOcrPageRepository,
                         ScanAiTempStorage scanAiTempStorage,
                         AiVisionService aiVisionService,
-                        AiCompletionService aiCompletionService) {
+                        AiCompletionService aiCompletionService,
+                        TemplateProcessingService templateProcessingService) {
                 this.fileUploadRepository = fileUploadRepository;
                 this.userRepository = userRepository;
                 this.adminService = adminService;
@@ -114,6 +117,7 @@ public class FileService {
                 this.scanAiTempStorage = scanAiTempStorage;
                 this.aiVisionService = aiVisionService;
                 this.aiCompletionService = aiCompletionService;
+                this.templateProcessingService = templateProcessingService;
         }
 
         // Hash the content of a file using SHA-256
@@ -182,86 +186,126 @@ public class FileService {
 
                 FileMetadata.FileCategory fileCategory = normalizeCategory(category);
 
-                // Check if a file with the same content hash already exists for this session
-                // and user.
+                // Tìm file đã tồn tại theo session, user và nội dung file.
                 Optional<FileMetadata> existingFile = chatSessionFileRepository
                                 .findBySessionAndUserAndContentHash(
                                                 sessionId,
                                                 currentUser.getUserId(),
                                                 contentHash);
 
+                FileMetadata retryingFile = null;
+                String oldStoredFileName = null;
+
+                // File chỉ được upload lại khi lần xử lý trước bị FAILED.
                 if (existingFile.isPresent()) {
                         FileMetadata existing = existingFile.get();
 
-                        boolean categoryChanged = existing.getCategory() != fileCategory;
+                        if (existing.getExtractionStatus() != ExtractionStatus.FAILED) {
+                                processTemplateIfRequired(
+                                                currentUser,
+                                                session,
+                                                existing);
 
-                        if (categoryChanged) {
-                                existing.setCategory(fileCategory);
-                                existing = fileUploadRepository.save(existing);
+                                return toResponse(
+                                                existing,
+                                                currentUser,
+                                                fieldCode);
                         }
 
-                        chatSessionFileService.attachFileToSession(
-                                        sessionId,
-                                        currentUser.getUserId(),
-                                        existing.getFileId(),
-                                        fieldCode);
+                        // Lưu tên file vật lý cũ để xóa sau khi file mới được lưu thành công.
+                        oldStoredFileName = extractStoredFileName(
+                                        existing.getFileUrl());
 
-                        processTemplateIfRequired(
-                                        currentUser,
-                                        session,
-                                        existing);
+                        // Giữ nguyên fileId và quan hệ với session.
+                        // Xóa dữ liệu xử lý cũ để ghi kết quả mới.
+                        existing.setExtractionStatus(
+                                        ExtractionStatus.PROCESSING);
+                        existing.setExtractionError(null);
+                        existing.setRawText(null);
+                        existing.setNormalizedText(null);
+                        existing.setWordCount(0);
+                        existing.setCharacterCount(0);
+                        existing.setCategory(fileCategory);
+                        existing.setFileName(file.getOriginalFilename());
+                        existing.setFileSize(file.getSize());
+                        existing.setMimeType(file.getContentType());
+                        existing.setContentHash(contentHash);
 
-                        return toResponse(
-                                        existing,
-                                        currentUser,
-                                        fieldCode);
+                        retryingFile = existing;
                 }
 
-                // Enforce the storage quota before proceeding with the file upload.
-                enforceStorageQuota(
-                                currentUser,
-                                packageConfig,
-                                file.getSize());
+                // File retry đã được tính trong quota rồi, không cộng thêm lần nữa.
+                if (retryingFile == null) {
+                        enforceStorageQuota(
+                                        currentUser,
+                                        packageConfig,
+                                        file.getSize());
+                }
 
                 String originalFileName = file.getOriginalFilename();
-                String storedFileName = buildStoredFileName(originalFileName);
+                String storedFileName = buildStoredFileName(
+                                originalFileName);
 
-                /*
-                 * Bước 1: lưu file vật lý.
-                 */
-                storageService.storeFile(file, storedFileName);
+                // Lưu file vật lý mới trước.
+                storageService.storeFile(
+                                file,
+                                storedFileName);
 
                 boolean isPdf = "pdf".equals(
                                 getExtension(originalFileName));
 
-                /*
-                 * Bước 2: tạo metadata với trạng thái UPLOADED.
-                 */
-                FileMetadata saved = fileUploadRepository.save(
-                                FileMetadata.builder()
-                                                .user(currentUser)
-                                                .fileName(originalFileName)
-                                                .fileUrl(storageBaseUrl + storedFileName)
-                                                .fileSize(file.getSize())
-                                                .category(fileCategory)
-                                                .mimeType(file.getContentType())
-                                                .contentHash(contentHash)
-                                                .rawText(null)
-                                                .normalizedText(null)
-                                                .wordCount(0)
-                                                .characterCount(0)
-                                                .extractionStatus(
-                                                                ExtractionStatus.UPLOADED)
-                                                .extractionError(null)
-                                                .rawText(null)
-                                                .build());
+                FileMetadata saved;
 
-                // Attach ngay sau khi metadata được tạo.
-                chatSessionFileService.attachFileToSession(
-                                sessionId,
-                                currentUser.getUserId(),
-                                saved.getFileId(),
-                                fieldCode);
+                if (retryingFile != null) {
+                        // Retry: cập nhật record cũ và giữ nguyên fileId.
+                        retryingFile.setFileName(originalFileName);
+                        retryingFile.setFileSize(file.getSize());
+                        retryingFile.setMimeType(file.getContentType());
+                        retryingFile.setCategory(fileCategory);
+                        retryingFile.setFileUrl(
+                                        storageBaseUrl + storedFileName);
+
+                        saved = fileUploadRepository.save(retryingFile);
+
+                        // Xóa file vật lý cũ sau khi file mới đã được lưu thành công.
+                        if (oldStoredFileName != null) {
+                                try {
+                                        storageService.deleteFile(
+                                                        oldStoredFileName);
+                                } catch (IOException exception) {
+                                        log.warn(
+                                                        "Không thể xóa file vật lý cũ: {}",
+                                                        oldStoredFileName,
+                                                        exception);
+                                }
+                        }
+                } else {
+                        // Upload mới: tạo fileId mới.
+                        saved = fileUploadRepository.save(
+                                        FileMetadata.builder()
+                                                        .user(currentUser)
+                                                        .fileName(originalFileName)
+                                                        .fileUrl(storageBaseUrl + storedFileName)
+                                                        .fileSize(file.getSize())
+                                                        .category(fileCategory)
+                                                        .mimeType(file.getContentType())
+                                                        .contentHash(contentHash)
+                                                        .rawText(null)
+                                                        .normalizedText(null)
+                                                        .wordCount(0)
+                                                        .characterCount(0)
+                                                        .extractionStatus(
+                                                                        ExtractionStatus.UPLOADED)
+                                                        .extractionError(null)
+                                                        .build());
+
+                        // Chỉ upload mới mới cần attach vào session.
+                        chatSessionFileService.attachFileToSession(
+                                        sessionId,
+                                        currentUser.getUserId(),
+                                        saved.getFileId(),
+                                        fieldCode);
+                }
 
                 // PDF scan sẽ được xử lý ở endpoint OCR riêng.
                 if (isPdf) {
@@ -310,8 +354,7 @@ public class FileService {
                 /*
                  * Bước 3: chuyển sang PROCESSING.
                  */
-                saved.setExtractionStatus(
-                                ExtractionStatus.PROCESSING);
+                saved.setExtractionStatus(ExtractionStatus.PROCESSING);
 
                 saved = fileUploadRepository.save(saved);
 
@@ -810,23 +853,17 @@ public class FileService {
                 }
 
                 fileUploadRepository.save(file);
-
+                // Nếu là patch cuối cùng và không có trang OCR thất bại, tiến hành xử lý
+                // template
                 if (isLastBatch
                                 && failedPageIndexes.isEmpty()
                                 && !fullText.isBlank()) {
 
-                        try {
-                                processTemplateIfRequired(
-                                                currentUser,
-                                                session,
-                                                file);
-                        } catch (Exception exception) {
-                                log.error(
-                                                "Phân tích template thất bại, "
-                                                                + "nhưng raw_text đã được lưu. fileId={}",
-                                                fileId,
-                                                exception);
-                        }
+                        // Gọi dịch vụ xử lý template bất đồng bộ
+                        templateProcessingService.submit(
+                                        file.getFileId(),
+                                        session.getSessionId(),
+                                        currentUser.getUserId());
                 }
 
                 if (file.getRawText() != null) {
@@ -1029,18 +1066,10 @@ public class FileService {
                                                 ExtractionStatus.EXTRACTED);
                                 fileUploadRepository.save(file);
 
-                                try {
-                                        processTemplateIfRequired(
-                                                        currentUser,
-                                                        session,
-                                                        file);
-                                } catch (Exception exception) {
-                                        log.error(
-                                                        "Phân tích template thất bại, "
-                                                                        + "nhưng raw_text đã được lưu. fileId={}",
-                                                        fileId,
-                                                        exception);
-                                }
+                                templateProcessingService.submit(
+                                                file.getFileId(),
+                                                session.getSessionId(),
+                                                currentUser.getUserId());
                         }
 
                         return ScanAiTextResponseDTO.builder()
@@ -1214,4 +1243,18 @@ public class FileService {
                                 .remainingStorage(remainingStorage)
                                 .build();
         }
+
+        // Lấy tên file từ URL lưu trữ
+        private String extractStoredFileName(String fileUrl) {
+                if (fileUrl == null || fileUrl.isBlank()) {
+                        return null;
+                }
+
+                int lastSlashIndex = fileUrl.lastIndexOf('/');
+
+                return lastSlashIndex >= 0
+                                ? fileUrl.substring(lastSlashIndex + 1)
+                                : fileUrl;
+        }
+
 }
