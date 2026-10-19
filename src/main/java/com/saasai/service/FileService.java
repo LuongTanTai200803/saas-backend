@@ -76,7 +76,6 @@ public class FileService {
 
         private final ScanAiTempStorage scanAiTempStorage;
         private final AiVisionService aiVisionService;
-        private final AiCompletionService aiCompletionService;
 
         private final TemplateProcessingService templateProcessingService;
 
@@ -101,7 +100,6 @@ public class FileService {
                         FileOcrPageRepository fileOcrPageRepository,
                         ScanAiTempStorage scanAiTempStorage,
                         AiVisionService aiVisionService,
-                        AiCompletionService aiCompletionService,
                         TemplateProcessingService templateProcessingService,
                         ScanAiProcessingService scanAiProcessingService) {
                 this.fileUploadRepository = fileUploadRepository;
@@ -120,7 +118,6 @@ public class FileService {
                 this.scanAiTempStorage = scanAiTempStorage;
                 this.aiVisionService = aiVisionService;
                 this.scanAiProcessingService = scanAiProcessingService;
-                this.aiCompletionService = aiCompletionService;
                 this.templateProcessingService = templateProcessingService;
         }
 
@@ -205,10 +202,10 @@ public class FileService {
                         FileMetadata existing = existingFile.get();
 
                         if (existing.getExtractionStatus() != ExtractionStatus.FAILED) {
-                                processTemplateIfRequired(
-                                                currentUser,
-                                                session,
-                                                existing);
+                                templateProcessingService.submit(
+                                                existing.getFileId(),
+                                                session.getSessionId(),
+                                                currentUser.getUserId());
 
                                 return toResponse(
                                                 existing,
@@ -317,6 +314,11 @@ public class FileService {
                                         ExtractionStatus.PROCESSING);
                         saved = fileUploadRepository.save(saved);
 
+                        log.info(
+                                        "File text extraction started: fileName={}, storedFileName={}",
+                                        originalFileName,
+                                        storedFileName);
+
                         ExtractResult result = extractContent(
                                         storedFileName,
                                         originalFileName);
@@ -339,10 +341,10 @@ public class FileService {
                                                 saved.getFileId(),
                                                 rawText);
 
-                                processTemplateIfRequired(
-                                                currentUser,
-                                                session,
-                                                saved);
+                                templateProcessingService.submit(
+                                                saved.getFileId(),
+                                                session.getSessionId(),
+                                                currentUser.getUserId());
 
                                 return toResponse(saved, currentUser, fieldCode);
                         }
@@ -395,10 +397,10 @@ public class FileService {
 
                         saved = fileUploadRepository.save(saved);
 
-                        processTemplateIfRequired(
-                                        currentUser,
-                                        session,
-                                        saved);
+                        templateProcessingService.submit(
+                                        saved.getFileId(),
+                                        session.getSessionId(),
+                                        currentUser.getUserId());
 
                         /*
                          * Redis chỉ là cache.
@@ -1055,51 +1057,6 @@ public class FileService {
                                                                                 ? file.getRawText()
                                                                                 : null)
                                 .build();
-        }
-
-        // Xử lý template nếu file là file template
-        private void processTemplateIfRequired(
-                        User user,
-                        ChatSession session,
-                        FileMetadata file) {
-                if (file.getCategory() != FileMetadata.FileCategory.TEMPLATE) {
-                        return;
-                }
-
-                String normalizedText = file.getNormalizedText();
-
-                if (normalizedText == null
-                                || normalizedText.isBlank()) {
-                        return;
-                }
-
-                String templateJson = aiCompletionService.extractTemplateFromRawText(
-                                user,
-                                normalizedText);
-
-                if (templateJson == null
-                                || templateJson.isBlank()) {
-                        throw new IllegalStateException(
-                                        "Không tạo được template definition từ file upload");
-                }
-
-                log.info(
-                                "Saving template definition: sessionId={}, sessionUuid={}, fileId={}, templateLength={}",
-                                session.getSessionId(),
-                                session.getSessionUuid(),
-                                file.getFileId(),
-                                templateJson.length());
-
-                // Luôn ghi đè template hiện tại.
-                int updatedRows = chatSessionRepository.updateTemplateDefinition(
-                                session.getSessionId(),
-                                templateJson);
-
-                if (updatedRows == 0) {
-                        throw new IllegalStateException(
-                                        "Không cập nhật được template cho session: "
-                                                        + session.getSessionId());
-                }
         }
 
         // Nếu file là file template thì hiển thị nội dung thô
