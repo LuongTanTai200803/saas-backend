@@ -11,34 +11,28 @@ import java.util.List;
 @Service
 public class OpenRouterSmokeTestService {
 
+        private final OpenRouterClient openRouterClient;
 
-    private final OpenRouterClient openRouterClient;
+        public OpenRouterSmokeTestService(
+                        OpenRouterClient openRouterClient) {
+                this.openRouterClient = openRouterClient;
+        }
 
-    public OpenRouterSmokeTestService(
-            OpenRouterClient openRouterClient
-    ) {
-        this.openRouterClient = openRouterClient;
-    }
-
-    public AiProviderResultDTO test(String model) {
-        OpenRouterRequestDTO request =
-                new OpenRouterRequestDTO(
+        public AiProviderResultDTO test(String model) {
+                OpenRouterRequestDTO request = new OpenRouterRequestDTO(
                                 model,
                                 List.of(
-                                new OpenRouterMessageDTO(
-                                        "system",
-                                        "Bạn là trợ lý. Trả lời ngắn gọn."
-                                ),
-                                new OpenRouterMessageDTO(
-                                        "user",
-                                        "Hãy trả lời đúng một từ: OK"
-                                )
-                ),
-                        0.0,
-                        20,
-                        false
-                );
+                                                new OpenRouterMessageDTO(
+                                                                "system",
+                                                                "Bạn là trợ lý. Trả lời ngắn gọn."),
+                                                new OpenRouterMessageDTO(
+                                                                "user",
+                                                                "Hãy trả lời đúng một từ: OK")),
+                                0.0,
+                                20,
+                                false,
+                                null);
 
-        return openRouterClient.complete(request);
-    }
+                return openRouterClient.complete(request);
+        }
 }

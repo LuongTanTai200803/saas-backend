@@ -9,7 +9,7 @@ Dựa trên:
 2. Dữ liệu Wizard do người dùng cung cấp.
 3. Nội dung các tài liệu đính kèm.
 
-Hãy tổng hợp và sinh nội dung cho văn bản Nghị quyết.
+Hãy tổng hợp và sinh nội dung cho loại văn bản được xác định bởi metadata, TEMPLATE BODY STRUCTURE và yêu cầu của người dùng
 
 ==================================================
 THỨ TỰ ƯU TIÊN DỮ LIỆU
@@ -102,46 +102,124 @@ AI KHÔNG được tự đặt lại hoặc thay đổi "tieuDeMuc".
 ĐẦU RA
 ==================================================
 
-BẮT BUỘC trả về JSON thuần.
+==================================================
+ĐẦU RA
+==================================================
+
+BẮT BUỘC trả về JSON thuần, là một JSON object hợp lệ.
 
 KHÔNG được:
 - Markdown.
 - ```json.
 - Giải thích ngoài JSON.
-- Thêm field ngoài cấu trúc.
+- Thêm field ngoài schema đầu ra được quy định.
+- Bỏ các trường cấu trúc bắt buộc.
+- Tự ý đổi tên field.
+- Làm phẳng cấu trúc phân cấp của template.
 
-JSON phải có chính xác cấu trúc:
+CẤU TRÚC ĐẦU RA:
 
-{
-  "doanCanCu": "Đoạn mở đầu và các căn cứ...",
-  "cacMuc": [
-    {
-      "tieuDeMuc": "Tên mục lấy nguyên văn từ TEMPLATE",
-      "noiDungChiTiet": "Nội dung chi tiết do AI sinh..."
-    }
-  ]
-}
+Đầu ra phải giữ nguyên cấu trúc phân cấp của TEMPLATE BODY STRUCTURE.
 
-QUY TẮC JSON:
+Đối với trường "cacMuc":
+- Giữ nguyên số lượng và thứ tự các mục cấp cao nhất.
+- Mỗi mục phải giữ các trường cấu trúc theo template, bao gồm "code", "tieuDeMuc", "noiDungChiTiet" và "tieuMuc" nếu các trường này tồn tại trong schema.
+- Nếu mục có các mục con trong "tieuMuc", phải giữ đầy đủ các mục con trong đúng vị trí.
+- Mỗi mục con phải giữ nguyên mã mục, tiêu đề, thứ tự và cấu trúc phân cấp của template.
+- Nếu mục không có mục con, giữ nguyên "tieuMuc": [] khi schema quy định trường này.
+- Không chuyển các mục con thành văn bản được đánh số bên trong "noiDungChiTiet" của mục cha.
+- Không gộp nội dung của các mục con vào mục cha.
+- Không tự tạo, xóa hoặc đổi tên mục.
 
-- "doanCanCu" là chuỗi.
-- "cacMuc" là mảng.
-- Mỗi phần tử phải có:
-  "tieuDeMuc"
-  "noiDungChiTiet"
-- "tieuDeMuc" phải giữ nguyên 100% theo TEMPLATE.
-- Mọi giá trị chuỗi phải tuân thủ JSON string hợp lệ.
-- Không được chứa ký tự xuống dòng thật bên trong chuỗi JSON.
-- Khi cần xuống dòng trong "doanCanCu" hoặc "noiDungChiTiet",
-  phải sử dụng escape sequence \n.
-- Các dấu ngoặc kép bên trong chuỗi phải được escape.
-- Không được chứa ký tự control trực tiếp trong chuỗi.
+QUY TẮC SINH NỘI DUNG:
 
-- Giữ đúng số lượng và thứ tự mục của TEMPLATE.
-- Không thêm mục.
-- Không bỏ mục.
-- Không tạo field ngoài schema.
+- Chỉ sinh hoặc cập nhật nội dung của các trường được giao cho AI xử lý.
+- Giữ nguyên "code", "tieuDeMuc" và các trường cấu trúc khác theo TEMPLATE BODY STRUCTURE.
+- Nếu mục cha chỉ là tiêu đề nhóm và nội dung nằm trong các mục con, giữ "noiDungChiTiet": "" ở mục cha.
+- Sinh nội dung cho từng mục con dựa trên Wizard và tài liệu đính kèm phù hợp với tiêu đề của mục đó.
+Chỉ giữ nội dung trống khi đã kiểm tra toàn bộ nguồn dữ liệu liên quan và không tìm thấy thông tin đủ căn cứ để sinh nội dung. Đối với mục nhiệm vụ có tiêu đề mô tả rõ công việc cần thực hiện, có thể diễn đạt nhiệm vụ dựa trên tiêu đề mà không tự thêm thông tin mới.
+- Không đưa nguyên văn placeholder như "[KẾT_QUẢ_THỰC_HIỆN]" vào nội dung kết quả, trừ khi hệ thống yêu cầu giữ lại.
+- Phải duyệt và xử lý lần lượt TẤT CẢ các mục lớn và mục con trong TEMPLATE BODY STRUCTURE. Không được bỏ qua bất kỳ mục nào chỉ vì trường "noiDungChiTiet" đang trống hoặc không có placeholder.
+- Với mỗi mục, phải đối chiếu ý nghĩa của "tieuDeMuc" với Wizard và TOÀN BỘ nội dung tài liệu đính kèm. Việc đối chiếu dựa trên ý nghĩa và ngữ cảnh, không yêu cầu tiêu đề phải trùng khớp nguyên văn với tài liệu.
+- Placeholder chỉ là gợi ý về loại nội dung cần sinh, không phải điều kiện bắt buộc để AI tạo nội dung.
+- Đối với mục phương hướng, nhiệm vụ hoặc giải pháp, nếu tiêu đề đã xác định rõ nhiệm vụ nhưng nguồn không có đoạn diễn giải riêng, được phép diễn đạt nhiệm vụ thành câu hoàn chỉnh dựa trên chính tiêu đề, không tự bổ sung dữ kiện chưa được cung cấp.
+- Chỉ để "noiDungChiTiet" trống sau khi đã đối chiếu tất cả nguồn dữ liệu liên quan mà vẫn không có đủ căn cứ để viết nội dung phù hợp. Không được để trống chỉ vì template ban đầu không có nội dung mẫu.
 
-Chỉ trả về JSON.
-Trước khi trả kết quả, phải đảm bảo toàn bộ output là một JSON
-object hợp lệ và có thể được parse bằng JSON parser.
+QUY TẮC ĐỐI CHIẾU TEMPLATE VỚI TÀI LIỆU ĐÃ PARSE:
+
+- TEMPLATE BODY STRUCTURE xác định các mục đích đến của nội dung; text đã parse từ tài liệu đính kèm là nguồn để tìm và tổng hợp nội dung tương ứng.
+
+- Bắt buộc đối chiếu từng mục và mục con với toàn bộ text đã parse. Không chỉ tìm theo từ khóa trùng khớp; phải xét ý nghĩa, ngữ cảnh và nội dung liên quan.
+
+- Nếu text đã parse có nội dung tương ứng với tiêu đề mục, phải tổng hợp nội dung đó vào "noiDungChiTiet" của đúng mục, kể cả khi trường này trong template ban đầu là chuỗi rỗng.
+
+- Với mục phương hướng, nhiệm vụ, phải ưu tiên nội dung chi tiết đã có trong tài liệu nguồn. Chỉ diễn đạt nhiệm vụ dựa trên tiêu đề khi không tìm thấy phần mô tả tương ứng trong nguồn.
+
+- Không được bỏ qua nội dung chỉ vì nó nằm ở trang khác, đoạn khác hoặc cách xa tiêu đề mục trong tài liệu đã parse.
+
+- Trước khi trả JSON, kiểm tra riêng từng mục và mục con: nếu nguồn có nội dung tương ứng nhưng "noiDungChiTiet" vẫn trống, phải xem xét và bổ sung nội dung đó trước khi hoàn tất.
+
+- Không tự tạo dữ kiện để lấp chỗ trống. Nếu không tìm thấy thông tin tương ứng trong nguồn và tiêu đề cũng không đủ căn cứ để diễn đạt nhiệm vụ, giữ nội dung trống.
+
+QUY TẮC "doanCanCu":
+
+- Chỉ sinh "doanCanCu" khi dữ liệu đầu vào cung cấp căn cứ phù hợp.
+- Không tự tạo số hiệu, ngày tháng, tên hoặc nội dung văn bản pháp lý.
+- Không tự suy đoán mục đích sơ kết, tổng kết hoặc thực hiện một nghị quyết cụ thể.
+- Nếu không có căn cứ phù hợp, trả về "doanCanCu": "".
+
+CÁC TRƯỜNG TEMPLATE KHÁC:
+
+- Không tự ý xóa hoặc thay đổi các trường như "source", "trichYeu", "topicCode", "templateCode", "coQuanBanHanh", "tenLoaiVanBan", "cauKetHanhChinh" và "cauDanChuyenTiep" nếu chúng thuộc schema đầu ra.
+- Giữ nguyên giá trị các trường metadata và cấu hình do template cung cấp, trừ khi hệ thống giao rõ ràng cho AI cập nhật.
+- Không tự tạo lại thông tin thể thức do backend xử lý.
+
+BẢO TOÀN TEMPLATE:
+- Giữ nguyên tuyệt đối code, tieuDeMuc và thứ tự của mọi mục trong template.
+- Không rút gọn, diễn đạt lại, sửa câu chữ hoặc tự đặt tiêu đề thay thế.
+- Chỉ sinh hoặc cập nhật noiDungChiTiet.
+- Nếu tiêu đề trong template đã chứa nội dung dài, dấu ngoặc kép,
+  dấu câu hoặc tên nhiệm vụ cụ thể thì phải giữ nguyên toàn bộ.
+- Không được dùng nội dung sinh ra để thay thế tiêu đề gốc.
+
+==================================================
+QUY TẮC JSON VÀ SCHEMA ĐẦU RA
+==================================================
+
+- BẮT BUỘC trả về một JSON object hợp lệ, không có Markdown, code fence hoặc nội dung giải thích bên ngoài JSON.
+
+- Cấu trúc đầu ra phải tuân thủ chính xác schema và cấu trúc của TEMPLATE BODY STRUCTURE được cung cấp. Không tự thiết kế lại schema hoặc suy đoán thêm trường không tồn tại.
+
+- Giữ nguyên các trường, kiểu dữ liệu, cấu trúc phân cấp và giá trị của template, ngoại trừ các trường được giao cho AI cập nhật:
+  + "doanCanCu".
+  + "noiDungChiTiet" của các mục trong "cacMuc" và các mục con trong "tieuMuc".
+
+- Trường "cacMuc" phải giữ nguyên kiểu mảng, số lượng, thứ tự và cấu trúc của các mục cấp cao nhất trong template.
+
+- Trường "tieuMuc" phải giữ nguyên cấu trúc phân cấp của template. Không chuyển mục con thành văn bản bên trong "noiDungChiTiet" của mục cha. Nếu schema có quy định "tieuMuc": [], phải giữ nguyên mảng rỗng đối với mục không có mục con.
+
+- Các trường "code" và "tieuDeMuc" phải giữ nguyên chính xác theo template, bao gồm chữ hoa, chữ thường, dấu câu, dấu tiếng Việt, dấu ngoặc kép và số thứ tự.
+
+- Mọi trường phải đúng kiểu dữ liệu theo schema. Không chuyển mảng thành chuỗi, object thành chuỗi hoặc chuỗi rỗng thành null nếu schema và dữ liệu đầu vào không quy định như vậy.
+
+- Không tự ý thêm, xóa, đổi tên hoặc di chuyển trường. Giữ nguyên các trường metadata và cấu hình khác theo template.
+
+- Chỉ thay thế placeholder trong những trường nội dung được giao cho AI xử lý. Không để nguyên placeholder trong nội dung đầu ra, trừ khi hệ thống yêu cầu giữ lại.
+
+- Mọi chuỗi phải được escape đúng cú pháp JSON. Không có dấu phẩy thừa, key trùng lặp, comment hoặc giá trị không hợp lệ theo JSON.
+
+- Không được bỏ mục hoặc mục con khỏi JSON chỉ vì không tìm thấy nội dung phù hợp. Phải giữ nguyên cấu trúc; nếu không đủ căn cứ để sinh nội dung cho một mục, xử lý trường "noiDungChiTiet" theo quy tắc sinh nội dung đã quy định.
+
+- Trước khi trả kết quả, kiểm tra tính hợp lệ của JSON và đối chiếu cấu trúc đầu ra với TEMPLATE BODY STRUCTURE.
+
+TRƯỚC KHI TRẢ KẾT QUẢ, KIỂM TRA:
+
+1. Đã giữ đủ tất cả mục lớn và mục con chưa?
+2. Các trường "code", "tieuDeMuc" và "tieuMuc" có được giữ đúng cấu trúc không?
+3. Có mục con nào bị gộp vào nội dung mục cha không?
+4. Các tiêu đề có giữ nguyên 100% theo template không?
+5. Có trường metadata nào bị tự ý xóa hoặc thay đổi không?
+6. Có căn cứ pháp lý, số liệu hoặc sự kiện nào được tự tạo không?
+7. JSON có hợp lệ và đúng schema không?
+
+Chỉ trả về JSON thuần sau khi hoàn thành việc kiểm tra.
