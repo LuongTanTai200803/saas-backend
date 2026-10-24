@@ -1091,7 +1091,12 @@ public class FileService {
                 AdminPackageConfig packageConfig = currentUser.getAdminPackageConfig() != null
                                 ? currentUser.getAdminPackageConfig()
                                 : adminService.getPackageConfig("FREE");
-
+                log.info(
+                                "Upload config package: userId={}, packageId={}, packageType={}, modelPackageLevel={}",
+                                currentUser.getUserId(),
+                                packageConfig.getId(),
+                                packageConfig.getPackageType(),
+                                packageConfig.getModelPackageLevel());
                 if (packageConfig == null) {
                         throw new IllegalStateException(
                                         "Không tìm thấy cấu hình package");

@@ -7,15 +7,15 @@ import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public record OpenRouterRequestDTO(
-        String model,
+                String model,
 
-        List<OpenRouterMessageDTO> messages,
+                List<OpenRouterMessageDTO> messages,
 
-        Double temperature,
+                Double temperature,
 
-        @JsonProperty("max_tokens")
-        Integer maxTokens,
+                @JsonProperty("max_tokens") Integer maxTokens,
 
-        Boolean stream
-) {
+                Boolean stream,
+
+                @JsonProperty("response_format") OpenRouterResponseFormatDTO responseFormat) {
 }

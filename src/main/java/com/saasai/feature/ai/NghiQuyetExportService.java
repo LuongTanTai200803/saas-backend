@@ -27,120 +27,105 @@ public class NghiQuyetExportService {
         }
 
         public byte[] renderNghiQuyetDocx(
-                DocumentFormDTO form,
-                String topicCode,
-                String templateCode,
-                String templateContent,
-                TemplateDocument.Body body
-        ) throws Exception {
+                        DocumentFormDTO form,
+                        String topicCode,
+                        String templateCode,
+                        String templateContent,
+                        TemplateDocument.Body body) throws Exception {
 
-        TemplateDocument.TemplateMeta meta =
-                templateSpecParser.parseMeta(templateContent);
+                TemplateDocument.TemplateMeta meta = templateSpecParser.parseMeta(templateContent);
 
-        List<TemplateDocument.SectionSpec> specs =
-                templateSpecParser.parseSectionSpecs(templateContent);
+                List<TemplateDocument.SectionSpec> specs = templateSpecParser.parseSectionSpecs(templateContent);
 
-        System.out.println("=== TEMPLATE SPEC PARSE ===");
-        System.out.println("topicCode = " + topicCode);
-        System.out.println("templateCode = " + templateCode);
-        System.out.println("tenLoaiVanBan = " + meta.getTenLoaiVanBan());
-        System.out.println("cauDanChuyenTiep = " + meta.getCauDanChuyenTiep());
-        System.out.println("cauKetHanhChinh = " + meta.getCauKetHanhChinh());
-        System.out.println("specs size = " + specs.size());
+                System.out.println("=== TEMPLATE SPEC PARSE ===");
+                System.out.println("topicCode = " + topicCode);
+                System.out.println("templateCode = " + templateCode);
+                System.out.println("tenLoaiVanBan = " + meta.getTenLoaiVanBan());
+                System.out.println("cauDanChuyenTiep = " + meta.getCauDanChuyenTiep());
+                System.out.println("cauKetHanhChinh = " + meta.getCauKetHanhChinh());
+                System.out.println("specs size = " + specs.size());
 
-        for (int i = 0; i < specs.size(); i++) {
-                System.out.println(
-                        "spec[" + i + "].title = "
-                                + specs.get(i).getTieuDeMacDinh()
-                );
-        }
-
-        System.out.println("==========================");
-
-        TemplateDocument.Body alignedBody =
-                alignBodyToSpec(body, specs);
-
-        Map<String, Object> data = new HashMap<>();
-
-        data.putAll(buildFixedDocxFields(form, meta));
-
-        data.put(
-                "doan_can_cu",
-                nullToEmpty(alignedBody.getDoanCanCu())
-        );
-
-        // =========================
-        // CAC MUC
-        // =========================
-
-        List<Map<String, Object>> cacMucRender = new ArrayList<>();
-
-        for (TemplateDocument.BodySection section : alignedBody.getCacMuc()) {
-
-                Map<String, Object> item = new HashMap<>();
-
-                // Tiêu đề vẫn là String bình thường
-                item.put(
-                        "tieuDeMuc",
-                        nullToEmpty(section.getTieuDeMuc())
-                );
-
-                // Nội dung GIỮ NGUYÊN String.
-                // Không split ở đây.
-                String content = section.getNoiDungChiTiet();
-
-                if (content == null || content.isBlank()) {
-                content = "Thiếu dữ liệu để hoàn thiện mục này.";
+                for (int i = 0; i < specs.size(); i++) {
+                        System.out.println(
+                                        "spec[" + i + "].title = "
+                                                        + specs.get(i).getTieuDeMacDinh());
                 }
 
-                item.put("noiDungChiTiet", 
-                        new TextRenderData(content));
+                System.out.println("==========================");
 
-                cacMucRender.add(item);
-        }
+                TemplateDocument.Body alignedBody = alignBodyToSpec(body, specs);
 
-        data.put("cac_muc", cacMucRender);
+                Map<String, Object> data = new HashMap<>();
 
-        // =========================
-        // TEMPLATE
-        // =========================
+                data.putAll(buildFixedDocxFields(form, meta));
 
-        String templateFile =
-                resolveTemplateFile(topicCode, templateCode);
+                data.put(
+                                "doan_can_cu",
+                                nullToEmpty(alignedBody.getDoanCanCu()));
 
-        try (
-                InputStream is =
-                        new ClassPathResource(templateFile).getInputStream();
+                // =========================
+                // CAC MUC
+                // =========================
 
-                ByteArrayOutputStream out =
-                        new ByteArrayOutputStream()
-        ) {
+                List<Map<String, Object>> cacMucRender = new ArrayList<>();
 
-                // Đăng ký custom policy cho noiDungChiTiet
-                Configure config = Configure.builder()
-                        .bind(
-                                "noiDungChiTiet",
-                                new MultiLineTextRenderPolicy()
-                        )
-                        .build();
+                for (TemplateDocument.BodySection section : alignedBody.getCacMuc()) {
 
-                XWPFTemplate template =
-                        XWPFTemplate.compile(is, config)
-                                .render(data);
+                        Map<String, Object> item = new HashMap<>();
 
-                template.write(out);
-                template.close();
+                        // Tiêu đề vẫn là String bình thường
+                        item.put(
+                                        "tieuDeMuc",
+                                        nullToEmpty(section.getTieuDeMuc()));
 
-                return out.toByteArray();
+                        // Nội dung GIỮ NGUYÊN String.
+                        // Không split ở đây.
+                        String content = section.getNoiDungChiTiet();
+
+                        if (content == null || content.isBlank()) {
+                                content = "Thiếu dữ liệu để hoàn thiện mục này.";
+                        }
+
+                        item.put("noiDungChiTiet",
+                                        new TextRenderData(content));
+
+                        cacMucRender.add(item);
+                }
+
+                data.put("cac_muc", cacMucRender);
+
+                // =========================
+                // TEMPLATE
+                // =========================
+
+                String templateFile = resolveTemplateFile(topicCode, templateCode);
+
+                try (
+                                InputStream is = new ClassPathResource(templateFile).getInputStream();
+
+                                ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+
+                        // Đăng ký custom policy cho noiDungChiTiet
+                        Configure config = Configure.builder()
+                                        .bind(
+                                                        "noiDungChiTiet",
+                                                        new MultiLineTextRenderPolicy())
+                                        .build();
+
+                        XWPFTemplate template = XWPFTemplate.compile(is, config)
+                                        .render(data);
+
+                        template.write(out);
+                        template.close();
+
+                        return out.toByteArray();
                 }
         }
 
-        
         // Đưa dữ liệu form vào template các field cố định
         private Map<String, Object> buildFixedDocxFields(
-                DocumentFormDTO form,
-                TemplateDocument.TemplateMeta meta
-        ) {
+                        DocumentFormDTO form,
+                        TemplateDocument.TemplateMeta meta) {
                 Map<String, Object> data = new HashMap<>();
 
                 data.put("co_quan_chu_quan", upper(form.getCoQuanChuQuan()));
@@ -153,12 +138,12 @@ public class NghiQuyetExportService {
 
                 String rawNguoiKy = form.getNguoiKy();
                 if (rawNguoiKy != null && rawNguoiKy.contains("-")) {
-                String[] parts = rawNguoiKy.split("-", 2);
-                data.put("nguoi_ky", upper(parts[0].trim()));
-                data.put("chuc_danh_ky", "T/M ĐẠI HỘI\n" + upper(parts[1].trim()));
+                        String[] parts = rawNguoiKy.split("-", 2);
+                        data.put("nguoi_ky", upper(parts[0].trim()));
+                        data.put("chuc_danh_ky", "T/M ĐẠI HỘI\n" + upper(parts[1].trim()));
                 } else {
-                data.put("nguoi_ky", upper(rawNguoiKy));
-                data.put("chuc_danh_ky", "T/M ĐẠI HỘI\nBÍ THƯ");
+                        data.put("nguoi_ky", upper(rawNguoiKy));
+                        data.put("chuc_danh_ky", "T/M ĐẠI HỘI\nBÍ THƯ");
                 }
 
                 data.put("ten_loai_van_ban", safe(meta.getTenLoaiVanBan()));
@@ -168,12 +153,10 @@ public class NghiQuyetExportService {
                 return data;
         }
 
-
         // Tạo body theo cấu trúc template nếu chưa có AI
         private TemplateDocument.Body buildBodyFromWizardBySpec(
-                DocumentFormDTO form,
-                List<TemplateDocument.SectionSpec> specs
-        ) {
+                        DocumentFormDTO form,
+                        List<TemplateDocument.SectionSpec> specs) {
                 TemplateDocument.Body body = new TemplateDocument.Body();
                 body.setDoanCanCu(buildDoanCanCu(form));
 
@@ -186,40 +169,39 @@ public class NghiQuyetExportService {
                 }
 
                 // if (sections.isEmpty()) {
-                //         return buildBodyFromWizard(form);
+                // return buildBodyFromWizard(form);
                 // }
                 if (sections.isEmpty()) {
-                        throw new IllegalStateException("Template TXT không có cấu trúc cacMuc hợp lệ. Không dùng deCuongDanY làm schema.");
+                        throw new IllegalStateException(
+                                        "Template TXT không có cấu trúc cacMuc hợp lệ. Không dùng deCuongDanY làm schema.");
                 }
 
                 body.setCacMuc(sections);
 
                 System.out.println("=== WIZARD -> BODY ===");
                 System.out.println("doanCanCu length = " +
-                        (body.getDoanCanCu() == null ? 0 : body.getDoanCanCu().length()));
+                                (body.getDoanCanCu() == null ? 0 : body.getDoanCanCu().length()));
                 System.out.println("cacMuc size = " +
-                        (body.getCacMuc() == null ? 0 : body.getCacMuc().size()));
+                                (body.getCacMuc() == null ? 0 : body.getCacMuc().size()));
                 for (int i = 0; i < body.getCacMuc().size(); i++) {
-                TemplateDocument.BodySection s = body.getCacMuc().get(i);
-                System.out.println("body[" + i + "].title = " + s.getTieuDeMuc());
+                        TemplateDocument.BodySection s = body.getCacMuc().get(i);
+                        System.out.println("body[" + i + "].title = " + s.getTieuDeMuc());
                 }
                 System.out.println("======================");
 
                 return body;
         }
 
-
-        // Giải ra specs từ templateContent 
+        // Giải ra specs từ templateContent
         public TemplateDocument.Body buildBodyFromWizardBySpec(
-                DocumentFormDTO form,
-                String templateContent
-        ) {
-        List<TemplateDocument.SectionSpec> specs =
-                templateSpecParser.parseSectionSpecs(templateContent);
-        return buildBodyFromWizardBySpec(form, specs);
+                        DocumentFormDTO form,
+                        String templateContent) {
+                List<TemplateDocument.SectionSpec> specs = templateSpecParser.parseSectionSpecs(templateContent);
+                return buildBodyFromWizardBySpec(form, specs);
         }
 
-        // Parse JSON string từ AI về object TemplateDocument.Body >> chuyển json ai thành dto
+        // Parse JSON string từ AI về object TemplateDocument.Body >> chuyển json ai
+        // thành dto
         public TemplateDocument.Body parseBodyFromAi(String aiJsonResponse) {
                 if (aiJsonResponse == null || aiJsonResponse.isBlank()) {
                         return null;
@@ -233,93 +215,82 @@ public class NghiQuyetExportService {
 
         // Sửa body AI cho đúng tiêu đề và đúng số mục của template
         private TemplateDocument.Body alignBodyToSpec(
-                TemplateDocument.Body aiBody,
-                List<TemplateDocument.SectionSpec> specs
-        ) {
-        if (specs == null || specs.isEmpty()) {
-                throw new IllegalStateException(
-                        "Template TXT không có cấu trúc cacMuc hợp lệ."
-                );
-        }
+                        TemplateDocument.Body aiBody,
+                        List<TemplateDocument.SectionSpec> specs) {
+                if (specs == null || specs.isEmpty()) {
+                        throw new IllegalStateException(
+                                        "template_definition_json không có cấu trúc cacMuc hợp lệ");
+                }
 
-        if (aiBody == null) {
-                throw new IllegalStateException(
-                        "AI response không hợp lệ: body null."
-                );
-        }
+                if (aiBody == null) {
+                        throw new IllegalStateException(
+                                        "AI response không hợp lệ: body null.");
+                }
 
-        List<TemplateDocument.BodySection> aiSections = aiBody.getCacMuc();
+                List<TemplateDocument.BodySection> aiSections = aiBody.getCacMuc();
 
-        if (aiSections == null) {
-                throw new IllegalStateException(
-                        "AI response không hợp lệ: cacMuc null."
-                );
-        }
+                if (aiSections == null) {
+                        throw new IllegalStateException(
+                                        "AI response không hợp lệ: cacMuc null.");
+                }
 
-        if (aiSections.size() < specs.size()) {
-                throw new IllegalStateException(
-                        "AI response thiếu mục: AI có "
-                                + aiSections.size()
-                                + " mục, template yêu cầu "
-                                + specs.size()
-                                + " mục."
-                );
-        }
+                if (aiSections.size() < specs.size()) {
+                        throw new IllegalStateException(
+                                        "AI response thiếu mục: AI có "
+                                                        + aiSections.size()
+                                                        + " mục, template yêu cầu "
+                                                        + specs.size()
+                                                        + " mục.");
+                }
 
-        TemplateDocument.Body aligned = new TemplateDocument.Body();
+                TemplateDocument.Body aligned = new TemplateDocument.Body();
 
-        // Đoạn căn cứ lấy từ AI
-        aligned.setDoanCanCu(
-                safe(aiBody.getDoanCanCu())
-        );
+                // Đoạn căn cứ lấy từ AI
+                aligned.setDoanCanCu(
+                                safe(aiBody.getDoanCanCu()));
 
-        List<TemplateDocument.BodySection> result = new ArrayList<>();
+                List<TemplateDocument.BodySection> result = new ArrayList<>();
 
-        for (int i = 0; i < specs.size(); i++) {
+                for (int i = 0; i < specs.size(); i++) {
 
-                TemplateDocument.SectionSpec spec = specs.get(i);
-                TemplateDocument.BodySection aiSection = aiSections.get(i);
+                        TemplateDocument.SectionSpec spec = specs.get(i);
+                        TemplateDocument.BodySection aiSection = aiSections.get(i);
 
-                TemplateDocument.BodySection out =
-                        new TemplateDocument.BodySection();
+                        TemplateDocument.BodySection out = new TemplateDocument.BodySection();
 
-                // TIÊU ĐỀ: luôn lấy từ TXT template
-                out.setTieuDeMuc(
-                        safe(spec.getTieuDeMacDinh())
-                );
+                        // TIÊU ĐỀ: luôn lấy từ TXT template
+                        out.setTieuDeMuc(
+                                        safe(spec.getTieuDeMacDinh()));
 
-                // NỘI DUNG: lấy từ AI, vẫn giữ nguyên String và \n
-                out.setNoiDungChiTiet(
-                        safe(aiSection.getNoiDungChiTiet())
-                );
+                        // NỘI DUNG: lấy từ AI, vẫn giữ nguyên String và \n
+                        out.setNoiDungChiTiet(
+                                        safe(aiSection.getNoiDungChiTiet()));
 
-                result.add(out);
-        }
+                        result.add(out);
+                }
 
-        aligned.setCacMuc(result);
+                aligned.setCacMuc(result);
 
-        System.out.println("=== ALIGN BODY TO SPEC ===");
-        System.out.println("spec size = " + specs.size());
-        System.out.println("ai cacMuc size = " + aiSections.size());
-        System.out.println("aligned cacMuc size = " + result.size());
+                System.out.println("=== ALIGN BODY TO SPEC ===");
+                System.out.println("spec size = " + specs.size());
+                System.out.println("ai cacMuc size = " + aiSections.size());
+                System.out.println("aligned cacMuc size = " + result.size());
 
-        for (int i = 0; i < result.size(); i++) {
-                TemplateDocument.BodySection section = result.get(i);
+                for (int i = 0; i < result.size(); i++) {
+                        TemplateDocument.BodySection section = result.get(i);
 
-                System.out.println(
-                        "aligned[" + i + "].title = "
-                                + section.getTieuDeMuc()
-                );
+                        System.out.println(
+                                        "aligned[" + i + "].title = "
+                                                        + section.getTieuDeMuc());
 
-                System.out.println(
-                        "aligned[" + i + "].content = "
-                                + section.getNoiDungChiTiet()
-                );
-        }
+                        System.out.println(
+                                        "aligned[" + i + "].content = "
+                                                        + section.getNoiDungChiTiet());
+                }
 
-        System.out.println("==========================");
+                System.out.println("==========================");
 
-        return aligned;
+                return aligned;
         }
 
         // Tạo đoạn căn cứ pháp lý
@@ -331,8 +302,7 @@ public class NghiQuyetExportService {
 
         // Tìm template DOCX theo thứ tự
         private String resolveTemplateFile(String topicCode, String templateCode) {
-                String primary =
-                        "ai-resources/topics/" + topicCode + "/templates/" + templateCode + ".docx";
+                String primary = "ai-resources/topics/" + topicCode + "/templates/" + templateCode + ".docx";
 
                 boolean primaryExists = new ClassPathResource(primary).exists();
                 System.out.println("template docx primary = " + primary + " | exists = " + primaryExists);
@@ -341,41 +311,37 @@ public class NghiQuyetExportService {
                         return primary;
                 }
 
-                String sharedInTemplates =
-                        "ai-resources/topics/" + topicCode + "/templates/" + topicCode + ".docx";
+                String sharedInTemplates = "ai-resources/topics/" + topicCode + "/templates/" + topicCode + ".docx";
 
-                boolean sharedInTemplatesExists =
-                        new ClassPathResource(sharedInTemplates).exists();
+                boolean sharedInTemplatesExists = new ClassPathResource(sharedInTemplates).exists();
                 System.out.println("template docx sharedInTemplates = " + sharedInTemplates
-                        + " | exists = " + sharedInTemplatesExists);
+                                + " | exists = " + sharedInTemplatesExists);
 
                 if (sharedInTemplatesExists) {
                         return sharedInTemplates;
                 }
 
-                String sharedAtTopicRoot =
-                        "ai-resources/topics/" + topicCode + "/" + topicCode + ".docx";
+                String sharedAtTopicRoot = "ai-resources/topics/" + topicCode + "/" + topicCode + ".docx";
 
-                boolean sharedAtTopicRootExists =
-                        new ClassPathResource(sharedAtTopicRoot).exists();
+                boolean sharedAtTopicRootExists = new ClassPathResource(sharedAtTopicRoot).exists();
                 System.out.println("template docx sharedAtTopicRoot = " + sharedAtTopicRoot
-                        + " | exists = " + sharedAtTopicRootExists);
+                                + " | exists = " + sharedAtTopicRootExists);
 
                 if (sharedAtTopicRootExists) {
                         return sharedAtTopicRoot;
                 }
 
                 throw new IllegalStateException("Không tìm thấy DOCX template cho topic " + topicCode);
-                }
-        
+        }
+
         // tạo phần nơi nhận
         private String buildNoiNhan(DocumentFormDTO form) {
                 StringBuilder b = new StringBuilder();
                 if (form.getKinhGui() != null && !form.getKinhGui().isBlank()) {
-                b.append("- ").append(form.getKinhGui().trim()).append("\n");
+                        b.append("- ").append(form.getKinhGui().trim()).append("\n");
                 }
                 if (form.getNoiNhanBaoCao() != null && !form.getNoiNhanBaoCao().isBlank()) {
-                b.append("- ").append(form.getNoiNhanBaoCao().trim()).append("\n");
+                        b.append("- ").append(form.getNoiNhanBaoCao().trim()).append("\n");
                 }
                 b.append("- Lưu: Văn phòng Đảng ủy.");
                 return b.toString();
@@ -383,41 +349,47 @@ public class NghiQuyetExportService {
 
         // định dạng ngày theo kiểu văn bản hành chính
         private String formatNgayHanhChinh(String dateStr) {
-                if (dateStr == null || dateStr.isBlank()) return "ngày … tháng … năm …";
+                if (dateStr == null || dateStr.isBlank())
+                        return "ngày … tháng … năm …";
                 try {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                LocalDate date = LocalDate.parse(dateStr, formatter);
-                return String.format("ngày %02d tháng %02d năm %d", date.getDayOfMonth(), date.getMonthValue(), date.getYear());
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                        LocalDate date = LocalDate.parse(dateStr, formatter);
+                        return String.format("ngày %02d tháng %02d năm %d", date.getDayOfMonth(), date.getMonthValue(),
+                                        date.getYear());
                 } catch (Exception e) {
-                return dateStr;
+                        return dateStr;
                 }
         }
 
         // chọn giá trị đầu tiên không rỗng trong danh sách
         private String firstNotBlank(String... values) {
                 for (String v : values) {
-                if (v != null && !v.isBlank()) return v.trim();
+                        if (v != null && !v.isBlank())
+                                return v.trim();
                 }
                 return "";
         }
 
         // lấy nội dung cho từng mục
         private String buildSectionDetail(
-                DocumentFormDTO form,
-                TemplateDocument.SectionSpec spec
-        ) {
-        return firstNotBlank(
-                form.getNoiDungChinh(),
-                form.getBangBieuSoLieu(),
-                spec.getGoiYNoiDung(),
-                "Bổ sung nội dung chi tiết cho mục này."
-        );
+                        DocumentFormDTO form,
+                        TemplateDocument.SectionSpec spec) {
+                return firstNotBlank(
+                                form.getNoiDungChinh(),
+                                form.getBangBieuSoLieu(),
+                                spec.getGoiYNoiDung(),
+                                "Bổ sung nội dung chi tiết cho mục này.");
         }
 
         private String safe(String value) {
-        return value == null ? "" : value.trim();
+                return value == null ? "" : value.trim();
         }
 
-        private String upper(String v) { return v == null ? "" : v.trim().toUpperCase(); }
-        private String nullToEmpty(String v) { return v == null ? "" : v.trim(); }
+        private String upper(String v) {
+                return v == null ? "" : v.trim().toUpperCase();
+        }
+
+        private String nullToEmpty(String v) {
+                return v == null ? "" : v.trim();
+        }
 }

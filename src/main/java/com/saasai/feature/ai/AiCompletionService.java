@@ -17,11 +17,15 @@ import com.saasai.entity.ChatSession.SessionStatus;
 import com.saasai.entity.CreditTransaction;
 import com.saasai.entity.FileMetadata;
 import com.saasai.entity.User;
+
 import com.saasai.feature.ai.client.OpenRouterClient;
 import com.saasai.feature.ai.openrouter.OpenRouterMessageDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterRequestDTO;
+import com.saasai.feature.ai.openrouter.OpenRouterResponseFormatDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterVisionMessageDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterVisionRequestDTO;
+import com.saasai.feature.ai.openrouter.OpenRouterResponseFormatDTO;
+
 import com.saasai.feature.payment.CreditAccountRepository;
 import com.saasai.repository.ChatSessionRepository;
 import com.saasai.repository.UserRepository;
@@ -632,7 +636,8 @@ public class AiCompletionService {
                                 messages,
                                 modelRoute.temperature(),
                                 modelRoute.maxTokens(),
-                                false);
+                                false,
+                                null);
 
                 try {
                         String requestJson = objectMapper.writerWithDefaultPrettyPrinter()
@@ -969,7 +974,8 @@ public class AiCompletionService {
                                                                 userContent)),
                                 route.temperature(),
                                 route.maxTokens(),
-                                false);
+                                false,
+                                new OpenRouterResponseFormatDTO("json_object"));
 
                 AiProviderResultDTO result = openRouterClient.complete(request);
 
