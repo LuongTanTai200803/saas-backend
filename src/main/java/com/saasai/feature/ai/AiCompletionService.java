@@ -530,15 +530,20 @@ public class AiCompletionService {
                                         : "UNKNOWN";
 
                         textBuilder
-                                        .append("[UPLOADED_FILE]\n")
-                                        .append("fileName: ")
+                                        .append("\n===== BEGIN FILE =====\n")
+                                        .append("FILE NAME: ")
                                         .append(selectedFile.getFileName())
                                         .append("\n")
-                                        .append("category: ")
+                                        .append("FILE ID: ")
+                                        .append(selectedFile.getFileId())
+                                        .append("\n")
+                                        .append("FILE CATEGORY: ")
                                         .append(category)
-                                        .append("\n\n")
+                                        .append("\n")
+                                        .append("FILE CONTENT:\n")
                                         .append(text.trim())
-                                        .append("\n\n");
+                                        .append("\n")
+                                        .append("===== END FILE =====\n");
                 }
 
                 return textBuilder.toString().trim();
