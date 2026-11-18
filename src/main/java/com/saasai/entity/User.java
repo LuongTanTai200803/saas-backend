@@ -45,7 +45,7 @@ public class User {
     private AdminPackageConfig adminPackageConfig;
 
     // public AdminPackageConfig getAdminPackageConfig() {
-    //     return adminPackageConfig;
+    // return adminPackageConfig;
     // }
     private LocalDateTime expireDate;
 
@@ -64,7 +64,7 @@ public class User {
     private LocalDateTime lastLoginAt;
 
     @Column(name = "provider", nullable = false, length = 20)
-    private String provider = "LOCAL";           // LOCAL, GOOGLE, FACEBOOK
+    private String provider = "LOCAL"; // LOCAL, GOOGLE, FACEBOOK
 
     @Column(name = "provider_id")
     private String providerId;
@@ -93,12 +93,7 @@ public class User {
         ROLE_USER, ROLE_ADMIN
     }
 
-    @OneToOne(
-        mappedBy = "user",
-        cascade = CascadeType.ALL,
-        fetch = FetchType.LAZY,
-        optional = true
-    )
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
     private CreditAccount creditAccount;
 
     public CreditAccount getCreditAccount() {
