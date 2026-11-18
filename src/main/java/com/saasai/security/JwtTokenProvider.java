@@ -26,23 +26,10 @@ public class JwtTokenProvider {
     @Value("${jwt.access-expiration:90000000}") // Default to 25 hours if not set
     private long jwtAccessExpirationMs;
 
-    @Value("${spring.security.oauth2.client.registration.google.client-id}")
-    private String googleClientId;
-
     private final GoogleIdTokenVerifier verifier;
 
-    @PostConstruct
-    public void init() {
-        System.out.println("=== Google Client ID: " + googleClientId);
-        if (googleClientId == null || googleClientId.isEmpty()) {
-            System.err.println("WARNING: Google Client ID is empty!");
-        }
-    }
-
     public JwtTokenProvider(GoogleIdTokenVerifier verifier) {
-        this.verifier = new GoogleIdTokenVerifier.Builder(verifier.getTransport(), verifier.getJsonFactory())
-                .setAudience(java.util.Collections.singletonList(googleClientId))
-                .build();
+        this.verifier = verifier;
     }
 
     @PostConstruct
@@ -103,60 +90,62 @@ public class JwtTokenProvider {
     }
 
     public enum TokenError {
-    MISSING,
-    EXPIRED,
-    INVALID
+        MISSING,
+        EXPIRED,
+        INVALID
     }
 
-        public TokenError getTokenError(String token) {
-            if (token == null || token.isBlank()) {
-                return TokenError.MISSING;
-            }
-            try {
-                Jwts.parser().verifyWith(getSigningKey()).build().parseSignedClaims(token);
-                return null;
-            } catch (ExpiredJwtException ex) {
-                return TokenError.EXPIRED;
-            } catch (JwtException | IllegalArgumentException ex) {
-                return TokenError.INVALID;
-            }
+    public TokenError getTokenError(String token) {
+        if (token == null || token.isBlank()) {
+            return TokenError.MISSING;
         }
-
-        public boolean validateToken(String authToken) {
-            return getTokenError(authToken) == null;
+        try {
+            Jwts.parser().verifyWith(getSigningKey()).build().parseSignedClaims(token);
+            return null;
+        } catch (ExpiredJwtException ex) {
+            return TokenError.EXPIRED;
+        } catch (JwtException | IllegalArgumentException ex) {
+            return TokenError.INVALID;
         }
+    }
 
-        public Map<String, String> verifyGoogleIdToken(String googleIdToken) {
-            try {
-                if (googleIdToken == null || googleIdToken.trim().isEmpty()) {
-                    throw new RuntimeException("Google ID Token không được để trống");
-                }
+    public boolean validateToken(String authToken) {
+        return getTokenError(authToken) == null;
+    }
 
-                GoogleIdToken idToken = verifier.verify(googleIdToken);
-
-                if (idToken == null) {
-                    throw new RuntimeException("Token Google không hợp lệ");
-                }
-
-                GoogleIdToken.Payload payload = idToken.getPayload();
-
-                Map<String, String> userInfo = new HashMap<>();
-                userInfo.put("email", payload.getEmail());
-                userInfo.put("name", (String) payload.get("name"));
-                userInfo.put("picture", (String) payload.get("picture"));
-                userInfo.put("sub", payload.getSubject()); // Google user ID
-
-                System.out.println("[TokenProvider] Verify Google token thành công cho email: " + payload.getEmail());
-
-                return userInfo;
-
-            } catch (Exception e) {
-                System.err.println("[TokenProvider] Lỗi verify Google token: " + e.getMessage());
-                if (e.getMessage().contains("expired") || e.getMessage().contains("Invalid")) {
-                    throw new RuntimeException("Token Google đã hết hạn hoặc không hợp lệ. Vui lòng đăng nhập lại.");
-                }
-                throw new RuntimeException("Xác thực Google thất bại: " + e.getMessage());
+    public Map<String, String> verifyGoogleIdToken(String googleIdToken) {
+        try {
+            if (googleIdToken == null || googleIdToken.trim().isEmpty()) {
+                throw new RuntimeException("Google ID Token không được để trống");
             }
+
+            GoogleIdToken idToken = verifier.verify(googleIdToken);
+
+            if (idToken == null) {
+                throw new RuntimeException("Token Google không hợp lệ");
+            }
+
+            GoogleIdToken.Payload payload = idToken.getPayload();
+
+            Map<String, String> userInfo = new HashMap<>();
+            userInfo.put("email", payload.getEmail());
+            userInfo.put("name", (String) payload.get("name"));
+            userInfo.put("picture", (String) payload.get("picture"));
+            userInfo.put("sub", payload.getSubject()); // Google user ID
+            userInfo.put("email_verified",
+                    String.valueOf(Boolean.TRUE.equals(payload.getEmailVerified())));
+
+            System.out.println("[TokenProvider] Verify Google token thành công cho email: " + payload.getEmail());
+
+            return userInfo;
+
+        } catch (Exception e) {
+            System.err.println("[TokenProvider] Lỗi verify Google token: " + e.getMessage());
+            if (e.getMessage().contains("expired") || e.getMessage().contains("Invalid")) {
+                throw new RuntimeException("Token Google đã hết hạn hoặc không hợp lệ. Vui lòng đăng nhập lại.");
+            }
+            throw new RuntimeException("Xác thực Google thất bại: " + e.getMessage());
         }
+    }
 
 }

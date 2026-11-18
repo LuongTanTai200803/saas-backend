@@ -22,7 +22,7 @@ public class GoogleConfig {
         }
 
         return new GoogleIdTokenVerifier.Builder(
-                new NetHttpTransport(), 
+                new NetHttpTransport(),
                 GsonFactory.getDefaultInstance())
                 .setAudience(Collections.singletonList(googleClientId))
                 .build();

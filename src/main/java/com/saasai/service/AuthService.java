@@ -43,7 +43,7 @@ public class AuthService {
 
     @Autowired
     private JwtTokenProvider tokenProvider;
-    
+
     @Autowired
     private AdminPackageConfigRepository adminPackageConfigRepository;
 
@@ -59,10 +59,9 @@ public class AuthService {
             throw new AuthException("Email này đã được đăng ký trong hệ thống!");
         }
         AdminPackageConfig freePackage = adminPackageConfigRepository.findByPackageType("FREE")
-                    .orElseThrow(() -> new RuntimeException("Gói FREE chưa được khởi tạo dưới DB!"));
-        
-        String encodedPassword =
-        passwordEncoder.encode(request.getPassword());
+                .orElseThrow(() -> new RuntimeException("Gói FREE chưa được khởi tạo dưới DB!"));
+
+        String encodedPassword = passwordEncoder.encode(request.getPassword());
 
         User user = User.builder()
                 .email(request.getEmail())
@@ -72,6 +71,7 @@ public class AuthService {
                 .role(User.UserRole.ROLE_USER)
                 .adminPackageConfig(freePackage) // Gán gói FREE mặc định
                 .expireDate(null) // Không đặt ngày hết hạn cho gói FREE
+                .provider("LOCAL")
                 .build();
 
         user = userRepository.save(user);
@@ -80,16 +80,14 @@ public class AuthService {
                 "[REGISTER] User created successfully: userId="
                         + user.getUserId()
                         + ", email="
-                        + user.getEmail()
-        );
+                        + user.getEmail());
 
         if (user.getUserId() == null) {
             throw new IllegalStateException(
-                    "User chưa được sinh userId sau khi save"
-            );
+                    "User chưa được sinh userId sau khi save");
         }
 
-            monthlyQuotaPolicy.allocateSubscriptionCredits(user, freePackage);
+        monthlyQuotaPolicy.allocateSubscriptionCredits(user, freePackage);
         ;
     }
 
@@ -97,21 +95,22 @@ public class AuthService {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new AuthException("Email hoặc mật khẩu không chính xác", HttpStatus.UNAUTHORIZED));
 
-        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+        // Kiểm tra mật khẩu
+        if (user.getPassword() == null
+                || !passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new AuthException(
-                "Email hoặc mật khẩu không chính xác", 
-                HttpStatus.UNAUTHORIZED);
+                    "Email hoặc mật khẩu không chính xác",
+                    HttpStatus.UNAUTHORIZED);
         }
+
         // Cập nhật thời gian đăng nhập cuối cùng
         user.setLastLoginAt(LocalDateTime.now());
         userRepository.save(user);
-
 
         String role = user.getRole() != null ? user.getRole().toString() : "ROLE_USER";
         String accessToken = tokenProvider.generateAccessToken(user.getUserId(), user.getEmail(), role);
         String refreshToken = refreshTokenService.createRefreshToken(user.getEmail());
 
-        
         return AuthResponseDTO.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
@@ -129,84 +128,132 @@ public class AuthService {
         String userRoleElement = user.getRole() != null ? user.getRole().toString() : UserRole.ROLE_USER.toString();
         return tokenProvider.generateAccessToken(user.getUserId(), user.getEmail(), userRoleElement);
     }
-    
+
     // Thêm logic verify Google ID token và cấp JWT nội bộ
     @Transactional
     public AuthResponseDTO loginWithGoogle(String googleIdToken) {
-    if (googleIdToken == null || googleIdToken.trim().isEmpty()) {
-        throw new RuntimeException("Google ID Token không được để trống");
-    }
+        if (googleIdToken == null || googleIdToken.isBlank()) {
+            throw new AuthException("Google ID Token không được để trống", HttpStatus.BAD_REQUEST);
+        }
 
-        try {
-            // Verify Google ID token
-            Map<String, String> googleUserInfo = tokenProvider.verifyGoogleIdToken(googleIdToken);
-            
-            String email = googleUserInfo.get("email");
-            String fullName = googleUserInfo.get("name");
-            String avatarUrl = googleUserInfo.get("picture");
-            String providerId = googleUserInfo.get("sub");
+        Map<String, String> googleUserInfo = tokenProvider.verifyGoogleIdToken(googleIdToken);
 
-            if (email == null || email.isBlank()) {
-                throw new RuntimeException("Không thể lấy email từ Google token");
+        String email = googleUserInfo.get("email");
+        String providerId = googleUserInfo.get("sub");
+        String emailVerified = googleUserInfo.get("email_verified");
+
+        if (email == null || email.isBlank() || providerId == null || providerId.isBlank()) {
+            throw new AuthException("Google token thiếu thông tin tài khoản", HttpStatus.UNAUTHORIZED);
+        }
+
+        if (!"true".equalsIgnoreCase(emailVerified)) {
+            throw new AuthException("Email Google chưa được xác minh", HttpStatus.UNAUTHORIZED);
+        }
+
+        email = email.trim().toLowerCase(java.util.Locale.ROOT);
+
+        User user = userRepository
+                .findByProviderAndProviderId("GOOGLE", providerId)
+                .orElse(null);
+
+        if (user == null) {
+            if (userRepository.findByEmail(email).isPresent()) {
+                throw new AuthException(
+                        "Email này đã có tài khoản. Hãy đăng nhập tài khoản hiện tại trước khi liên kết Google.",
+                        HttpStatus.CONFLICT);
             }
 
-            // Tìm user cũ
-            Optional<User> existingUserOpt = userRepository.findByEmail(email);
-            User user;
+            AdminPackageConfig freePackage = adminPackageConfigRepository
+                    .findByPackageType("FREE")
+                    .orElseThrow(() -> new IllegalStateException("Gói FREE chưa được khởi tạo trong DB"));
 
-            if (existingUserOpt.isPresent()) {
-                user = existingUserOpt.get();
-                // Cập nhật thông tin mới nhất từ Google
-                user.setFullName(fullName);
-                user.setAvatarUrl(avatarUrl);
-                user.setProvider("GOOGLE");
-                user.setProviderId(providerId);
-                System.out.println("[AuthService] User Google tồn tại, cập nhật: " + email);
-            } else {
-                // Tạo user mới
-                AdminPackageConfig freePackage = adminPackageConfigRepository.findByPackageType("FREE")
-                        .orElseThrow(() -> new RuntimeException("Gói FREE chưa được khởi tạo trong DB!"));
-
-                user = User.builder()
-                        .email(email)
-                        .password(passwordEncoder.encode("GOOGLE_" + UUID.randomUUID())) // random password an toàn
-                        .fullName(fullName != null ? fullName : email)
-                        .agency("")
-                        .role(User.UserRole.ROLE_USER)
-                        .adminPackageConfig(freePackage)
-                        .expireDate(null)
-                        .avatarUrl(avatarUrl)
-                        .provider("GOOGLE")
-                        .providerId(providerId)
-                        .build();
-
-                user = userRepository.save(user);
-                monthlyQuotaPolicy.allocateSubscriptionCredits(user, freePackage);
-                System.out.println("[AuthService] Tạo user mới từ Google: " + email);
-            }
-
-            // Tạo token
-            String role = user.getRole() != null ? user.getRole().toString() : "ROLE_USER";
-            // Cập nhật thời gian đăng nhập cuối cùng
-            user.setLastLoginAt(LocalDateTime.now());
-            userRepository.save(user);
-
-            String accessToken = tokenProvider.generateAccessToken(user.getUserId(), user.getEmail(), role);
-            String refreshToken = refreshTokenService.createRefreshToken(user.getEmail());
-
-            return AuthResponseDTO.builder()
-                    .accessToken(accessToken)
-                    .refreshToken(refreshToken)
-                    .role(role)
+            user = User.builder()
+                    .email(email)
+                    .password(passwordEncoder.encode("GOOGLE_" + UUID.randomUUID()))
+                    .fullName(googleUserInfo.getOrDefault("name", email))
+                    .agency("")
+                    .role(UserRole.ROLE_USER)
+                    .adminPackageConfig(freePackage)
+                    .expireDate(null)
+                    .avatarUrl(googleUserInfo.get("picture"))
+                    .provider("GOOGLE")
+                    .providerId(providerId)
                     .build();
 
-        } catch (Exception e) {
-            System.err.println("[AuthService] Lỗi loginWithGoogle: " + e.getMessage());
-            if (e.getMessage().toLowerCase().contains("expired") || e.getMessage().toLowerCase().contains("invalid")) {
-                throw new RuntimeException("Token Google đã hết hạn hoặc không hợp lệ. Vui lòng thử lại.");
-            }
-            throw new RuntimeException("Đăng nhập Google thất bại: " + e.getMessage());
+            user = userRepository.save(user);
+            monthlyQuotaPolicy.allocateSubscriptionCredits(user, freePackage);
         }
+
+        user.setLastLoginAt(LocalDateTime.now());
+        userRepository.save(user);
+
+        String role = user.getRole() != null
+                ? user.getRole().toString()
+                : UserRole.ROLE_USER.toString();
+
+        return AuthResponseDTO.builder()
+                .accessToken(tokenProvider.generateAccessToken(
+                        user.getUserId(), user.getEmail(), role))
+                .refreshToken(refreshTokenService.createRefreshToken(user.getEmail()))
+                .role(role)
+                .build();
     }
 
+    @Transactional
+    public void linkGoogleAccount(String currentEmail, String googleIdToken) {
+        if (googleIdToken == null || googleIdToken.isBlank()) {
+            throw new AuthException("Google ID Token không được để trống", HttpStatus.BAD_REQUEST);
+        }
+
+        Map<String, String> googleUserInfo = tokenProvider.verifyGoogleIdToken(googleIdToken);
+
+        String googleEmail = googleUserInfo.get("email");
+        String providerId = googleUserInfo.get("sub");
+        String emailVerified = googleUserInfo.get("email_verified");
+
+        if (googleEmail == null || googleEmail.isBlank()
+                || providerId == null || providerId.isBlank()) {
+            throw new AuthException("Google token thiếu thông tin tài khoản", HttpStatus.UNAUTHORIZED);
+        }
+
+        if (!"true".equalsIgnoreCase(emailVerified)) {
+            throw new AuthException("Email Google chưa được xác minh", HttpStatus.UNAUTHORIZED);
+        }
+
+        String normalizedGoogleEmail = googleEmail.trim().toLowerCase(java.util.Locale.ROOT);
+        String normalizedCurrentEmail = currentEmail.trim().toLowerCase(java.util.Locale.ROOT);
+
+        if (!normalizedGoogleEmail.equals(normalizedCurrentEmail)) {
+            throw new AuthException(
+                    "Email Google phải trùng với email của tài khoản đang đăng nhập.",
+                    HttpStatus.CONFLICT);
+        }
+
+        User user = userRepository.findByEmail(currentEmail)
+                .orElseThrow(() -> new AuthException(
+                        "Không tìm thấy tài khoản đang đăng nhập",
+                        HttpStatus.UNAUTHORIZED));
+
+        Optional<User> googleOwner = userRepository.findByProviderAndProviderId("GOOGLE", providerId);
+
+        if (googleOwner.isPresent()
+                && !googleOwner.get().getUserId().equals(user.getUserId())) {
+            throw new AuthException(
+                    "Tài khoản Google này đã được liên kết với tài khoản khác.",
+                    HttpStatus.CONFLICT);
+        }
+
+        if ("GOOGLE".equals(user.getProvider())
+                && user.getProviderId() != null
+                && !user.getProviderId().equals(providerId)) {
+            throw new AuthException(
+                    "Tài khoản này đã liên kết với một tài khoản Google khác.",
+                    HttpStatus.CONFLICT);
+        }
+
+        user.setProvider("GOOGLE");
+        user.setProviderId(providerId);
+        user.setAvatarUrl(googleUserInfo.get("picture"));
+        userRepository.save(user);
+    }
 }

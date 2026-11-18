@@ -2,6 +2,7 @@ package com.saasai.controller;
 
 import com.saasai.feature.ai.ApiResponseDTO;
 import com.saasai.dto.AuthResponseDTO;
+import com.saasai.dto.LinkGoogleRequestDTO;
 import com.saasai.dto.LoginRequestDTO;
 import com.saasai.dto.RefreshTokenRequestDTO;
 import com.saasai.dto.RegisterRequestDTO;
@@ -46,7 +47,7 @@ public class AuthController {
     public ResponseEntity<ApiResponseDTO<AuthResponseDTO>> login(@Valid @RequestBody LoginRequestDTO request) {
         logger.info("LOGIN REQUEST email={}", request.getEmail());
         AuthResponseDTO loginResponse = authService.loginUser(request);
-        
+
         logger.info("User logged in successfully: {}", request.getEmail());
         return ResponseEntity.ok(ApiResponseDTO.<AuthResponseDTO>builder()
                 .success(true)
@@ -57,7 +58,8 @@ public class AuthController {
     }
 
     @PostMapping("/refresh")
-    public ResponseEntity<ApiResponseDTO<Map<String, String>>> refresh(@Valid @RequestBody RefreshTokenRequestDTO request) {
+    public ResponseEntity<ApiResponseDTO<Map<String, String>>> refresh(
+            @Valid @RequestBody RefreshTokenRequestDTO request) {
         String accessToken = authService.refreshAccessToken(request.getRefreshToken());
         return ResponseEntity.ok(ApiResponseDTO.<Map<String, String>>builder()
                 .success(true)
@@ -97,7 +99,8 @@ public class AuthController {
                 .build());
     }
 
-    public AuthController(AuthService authService, TokenBlacklistService tokenBlacklistService, RefreshTokenService refreshTokenService) {
+    public AuthController(AuthService authService, TokenBlacklistService tokenBlacklistService,
+            RefreshTokenService refreshTokenService) {
         this.authService = authService;
         this.tokenBlacklistService = tokenBlacklistService;
         this.refreshTokenService = refreshTokenService;
@@ -114,4 +117,26 @@ public class AuthController {
                 .build());
 
     }
+
+    @PostMapping("/link-google")
+    public ResponseEntity<ApiResponseDTO<Object>> linkGoogle(
+            @Valid @RequestBody LinkGoogleRequestDTO request) {
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication == null
+                || !(authentication.getDetails() instanceof String currentEmail)
+                || currentEmail.isBlank()) {
+            throw new AuthException("Unauthorized", HttpStatus.UNAUTHORIZED);
+        }
+
+        authService.linkGoogleAccount(currentEmail, request.getGoogleIdToken());
+
+        return ResponseEntity.ok(ApiResponseDTO.builder()
+                .success(true)
+                .message("Liên kết tài khoản Google thành công")
+                .statusCode(200)
+                .build());
+    }
+
 }
