@@ -6,7 +6,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Bước 2: Chạy ứng dụng bằng JRE gọn nhẹ
-FROM eclipse-temurin:17.0.21_1-jre-alpine
+FROM eclipse-temurin:17.0.21-1-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
