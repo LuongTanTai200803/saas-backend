@@ -1,5 +1,5 @@
 {
-  "source": "SERVER",
+  "source": "SYSTEM",
   "templateCode": "KET_LUAN_BTV_TINH_UY_MOT_NOI_DUNG_XIN_CHU_TRUONG",
   "topicCode": "KET_LUAN",
   "tenLoaiVanBan": "KẾT LUẬN",

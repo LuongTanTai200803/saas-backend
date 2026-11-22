@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "KE_HOACH_XA_BOI_DUONG_TO_CHUC_LOP",
   "topicCode": "KE_HOACH",
   "tenLoaiVanBan": "KẾ HOẠCH",

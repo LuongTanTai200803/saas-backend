@@ -1,6 +1,6 @@
 {
-  "source": "USER_UPLOAD",
-  "templateCode": "KE_HOACH_TRIEN_KHAI_NGHI_QUYET_CHUYEN_DE_GIAI_DOAN",
+  "source": "SYSTEM",
+  "templateCode": "KE_HOACH_XA_TRIEN_KHAI_NGHI_QUYET_CHUYEN_DE_GIAI_DOAN",
   "topicCode": "KE_HOACH",
   "tenLoaiVanBan": "KẾ HOẠCH",
   "coQuanBanHanh": "",

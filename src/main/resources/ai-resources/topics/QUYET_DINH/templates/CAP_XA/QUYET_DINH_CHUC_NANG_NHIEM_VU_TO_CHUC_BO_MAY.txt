@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "QUYET_DINH_CHUC_NANG_NHIEM_VU_TO_CHUC_BO_MAY",
   "topicCode": "QUYET_DINH",
   "tenLoaiVanBan": "QUYẾT ĐỊNH",

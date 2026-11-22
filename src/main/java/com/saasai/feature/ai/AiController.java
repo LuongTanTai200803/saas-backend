@@ -12,13 +12,15 @@ import org.springframework.web.multipart.MultipartFile;
 import com.saasai.feature.ai.AiCompletionRequestDTO;
 import com.saasai.feature.ai.AiProviderResultDTO;
 import com.saasai.feature.ai.ApiResponseDTO;
-
 import com.saasai.dto.ExportRequestDTO;
 import com.saasai.entity.User;
 import com.saasai.service.UserService;
 
+import jakarta.validation.Valid;
+
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
@@ -26,90 +28,120 @@ import java.util.concurrent.CompletableFuture;
 @CrossOrigin
 public class AiController {
 
-    @Autowired
-    private AiService aiService;
+        @Autowired
+        private AiService aiService;
 
-    @Autowired
-    private UserService userService;
+        @Autowired
+        private UserService userService;
 
-    private AiCompletionService aiCompletionService;
+        @Autowired
+        private AiResourceService aiResourceService;
 
-    public AiController(AiCompletionService aiCompletionService) {
-        this.aiCompletionService = aiCompletionService;
-    }
+        @Autowired
+        private AiTemplateService aiTemplateService;
 
-    @PostMapping("/completions")
-    public ResponseEntity<ApiResponseDTO<AiProviderResultDTO>> complete(
-            @RequestBody AiCompletionRequestDTO request
-    ) {
+        private AiCompletionService aiCompletionService;
 
-        String userId = (String) SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
-
-        User user = userService.getUserById(userId);
-
-        AiProviderResultDTO result =
-                aiCompletionService.complete(user, request);
-
-        return ResponseEntity.ok(
-                ApiResponseDTO.success(result)
-        );
-    }
-    
-    @PostMapping("/workspace/refine")
-        public ResponseEntity<ApiResponseDTO<AiProviderResultDTO>> refineWorkspace(
-                @RequestBody AiCompletionRequestDTO request
-        ) {
-        String userId = (String) SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
-
-        User user = userService.getUserById(userId);
-
-        AiProviderResultDTO result =
-                aiCompletionService.refineWorkspace(user, request);
-
-        return ResponseEntity.ok(ApiResponseDTO.success(result));
+        public AiController(AiCompletionService aiCompletionService) {
+                this.aiCompletionService = aiCompletionService;
         }
 
-        
-        @PostMapping(
-                value = "/scanned-pdf/template",
-                consumes = MediaType.MULTIPART_FORM_DATA_VALUE
-        )
-        public ResponseEntity<ApiResponseDTO<ScanTemplateResponseDTO>>
-        processScannedPdf(
-                @RequestParam("sessionUuid")
-                String sessionUuid,
+        @PostMapping("/completions")
+        public ResponseEntity<ApiResponseDTO<AiProviderResultDTO>> complete(
+                        @RequestBody AiCompletionRequestDTO request) {
 
-                @RequestParam("images")
-                List<MultipartFile> images,
+                String userId = (String) SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
 
-                @RequestParam("isLastBatch")
-                boolean isLastBatch
-        ) throws IOException {
+                User user = userService.getUserById(userId);
 
-        String userId =
-                (String) SecurityContextHolder
-                        .getContext()
-                        .getAuthentication()
-                        .getPrincipal();
+                AiProviderResultDTO result = aiCompletionService.complete(user, request);
 
-        User user = userService.getUserById(userId);
+                return ResponseEntity.ok(
+                                ApiResponseDTO.success(result));
+        }
 
-        ScanTemplateResponseDTO result =
-                aiCompletionService.processScannedPdf(
-                        user,
-                        sessionUuid,
-                        images,
-                        isLastBatch
-                );
+        @PostMapping("/workspace/refine")
+        public ResponseEntity<ApiResponseDTO<AiProviderResultDTO>> refineWorkspace(
+                        @RequestBody AiCompletionRequestDTO request) {
+                String userId = (String) SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
 
-        return ResponseEntity.ok(
-                ApiResponseDTO.success(result)
-        );
+                User user = userService.getUserById(userId);
+
+                AiProviderResultDTO result = aiCompletionService.refineWorkspace(user, request);
+
+                return ResponseEntity.ok(ApiResponseDTO.success(result));
+        }
+
+        @PostMapping(value = "/scanned-pdf/template", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+        public ResponseEntity<ApiResponseDTO<ScanTemplateResponseDTO>> processScannedPdf(
+                        @RequestParam("sessionUuid") String sessionUuid,
+
+                        @RequestParam("images") List<MultipartFile> images,
+
+                        @RequestParam("isLastBatch") boolean isLastBatch) throws IOException {
+
+                String userId = (String) SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
+
+                User user = userService.getUserById(userId);
+
+                ScanTemplateResponseDTO result = aiCompletionService.processScannedPdf(
+                                user,
+                                sessionUuid,
+                                images,
+                                isLastBatch);
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.success(result));
+        }
+
+        @PostMapping("/proofread")
+        public ResponseEntity<ApiResponseDTO<ProofreadResponseDTO>> proofread(
+                        @Valid @RequestBody ProofreadRequestDTO request) {
+
+                String userId = (String) SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
+
+                User user = userService.getUserById(userId);
+                ProofreadResponseDTO result = aiCompletionService.proofread(user, request);
+
+                return ResponseEntity.ok(ApiResponseDTO.success(result));
+        }
+
+        @GetMapping("/templates")
+        public ResponseEntity<ApiResponseDTO<AiResourceService.TemplateCatalog>> getTemplates(
+                        @RequestParam String topicCode) {
+
+                return ResponseEntity.ok(
+                                ApiResponseDTO.success(
+                                                aiResourceService.listTemplatePreviews(topicCode)));
+        }
+
+        @PostMapping("/templates/select")
+        public ResponseEntity<ApiResponseDTO<Map<String, String>>> selectSystemTemplate(
+                        @Valid @RequestBody SelectSystemTemplateRequestDTO request) {
+
+                String userId = (String) SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
+
+                Map<String, String> result = aiTemplateService.selectSystemTemplate(
+                                userId,
+                                request.sessionUuid(),
+                                request.topicCode(),
+                                request.templateCode());
+
+                return ResponseEntity.ok(ApiResponseDTO.success(result));
         }
 }

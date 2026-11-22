@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
   "templateCode": "QUYET_DINH_PHAN_CONG_NHIEM_VU_CAP_XA",
 

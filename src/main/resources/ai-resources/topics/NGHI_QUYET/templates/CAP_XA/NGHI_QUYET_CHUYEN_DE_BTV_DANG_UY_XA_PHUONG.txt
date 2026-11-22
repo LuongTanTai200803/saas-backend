@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "NGHI_QUYET_CHUYEN_DE_BTV_DANG_UY_XA_PHUONG",
   "topicCode": "NGHI_QUYET",
   "tenLoaiVanBan": "NGHỊ QUYẾT",

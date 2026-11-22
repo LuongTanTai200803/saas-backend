@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
   "templateCode": "QUYET_DINH_CHUAN_Y_NHAN_SU",
 

@@ -1,6 +1,6 @@
 {
-  "source": "USER_UPLOAD",
-  "templateCode": "BAO_CAO_CHUNG",
+  "source": "SYSTEM",
+  "templateCode": "BAO_CAO_MAU_CHUNG_A",
   "topicCode": "BAO_CAO",
   "tenLoaiVanBan": "BÁO CÁO",
   "coQuanBanHanh": "",

@@ -1,8 +1,8 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
-"templateCode": "COMMON",
+"templateCode": "KET_LUAN_CHUNG_CAP_XA",
 
 "topicCode": "",
 

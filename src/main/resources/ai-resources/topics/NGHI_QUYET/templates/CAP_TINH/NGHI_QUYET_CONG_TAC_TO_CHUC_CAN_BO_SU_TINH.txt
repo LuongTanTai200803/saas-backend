@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "NGHI_QUYET_CONG_TAC_TO_CHUC_CAN_BO_SU_TINH",
   "topicCode": "NGHI_QUYET",
   "tenLoaiVanBan": "NGHỊ QUYẾT",

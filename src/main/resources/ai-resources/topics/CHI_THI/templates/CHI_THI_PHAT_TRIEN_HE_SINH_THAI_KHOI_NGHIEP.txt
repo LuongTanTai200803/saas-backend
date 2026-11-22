@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "CHI_THI_PHAT_TRIEN_HE_SINH_THAI_KHOI_NGHIEP",
   "topicCode": "CHI_THI",
   "tenLoaiVanBan": "CHỈ THỊ",

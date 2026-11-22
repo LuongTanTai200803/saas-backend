@@ -1,5 +1,5 @@
 {
-  "source": "SERVER",
+  "source": "SYSTEM",
   "templateCode": "KET_LUAN_BTV_TINH_UY_TO_CHUC_CAN_BO",
   "topicCode": "KET_LUAN",
   "tenLoaiVanBan": "KẾT LUẬN",

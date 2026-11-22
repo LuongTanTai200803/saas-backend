@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
 "templateCode": "CHI_THI_CHUYEN_DE_NGHIEP_VU",
 

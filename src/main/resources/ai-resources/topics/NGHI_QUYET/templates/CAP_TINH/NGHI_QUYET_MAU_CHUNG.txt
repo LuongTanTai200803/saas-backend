@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "NGHI_QUYET_MAU_CHUNG",
   "topicCode": "NGHI_QUYET",
   "tenLoaiVanBan": "NGHỊ QUYẾT",

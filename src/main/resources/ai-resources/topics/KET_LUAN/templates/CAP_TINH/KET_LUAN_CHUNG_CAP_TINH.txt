@@ -1,6 +1,6 @@
 {
-  "source": "SERVER",
-  "templateCode": "KET_LUAN_CHUNG",
+  "source": "SYSTEM",
+  "templateCode": "KET_LUAN_CHUNG_CAP_TINH",
   "topicCode": null,
   "tenLoaiVanBan": "KẾT LUẬN",
   "trichYeu": "về/tại [Nội dung hoặc sự kiện kết luận]",

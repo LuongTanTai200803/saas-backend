@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
 "templateCode": "KET_LUAN_HOI_NGHI_TONG_KET_NAM_THI_DUA_XA_PHUONG",
 

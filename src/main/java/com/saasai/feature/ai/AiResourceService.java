@@ -8,6 +8,13 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -18,6 +25,75 @@ public class AiResourceService {
 
         private static final String COMMON_PROMPT_FILE = "Prompt_common.txt";
         private static final String ASSIST_PROMPT_FILE = "PROMPT_ASSIST.txt";
+
+        private final ObjectMapper objectMapper;
+
+        public AiResourceService(ObjectMapper objectMapper) {
+                this.objectMapper = objectMapper;
+        }
+
+        public record TemplateCatalog(
+                        String topicCode,
+                        List<JsonNode> templates,
+                        List<String> invalidTemplates) {
+        }
+
+        // Liệt kê các template theo topicCode. Trả về danh sách hợp lệ và không hợp lệ.
+        public TemplateCatalog listTemplatePreviews(String topicCode) {
+                String safeTopicCode = validateCode(topicCode);
+                String pattern = "classpath*:ai-resources/topics/"
+                                + safeTopicCode
+                                + "/templates/**/*.txt";
+
+                PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+
+                List<JsonNode> templates = new ArrayList<>();
+                List<String> invalidTemplates = new ArrayList<>();
+
+                try {
+                        Resource[] resources = resolver.getResources(pattern);
+
+                        for (Resource resource : resources) {
+                                String filename = resource.getFilename();
+
+                                // Bỏ prompt nhóm; chỉ đọc file mẫu văn bản.
+                                if (filename == null
+                                                || !filename.endsWith(".txt")
+                                                || filename.startsWith("PROMPT_")) {
+                                        continue;
+                                }
+
+                                try (var inputStream = resource.getInputStream()) {
+                                        JsonNode root = objectMapper.readTree(inputStream);
+
+                                        if (root == null || !root.isObject()) {
+                                                invalidTemplates.add(filename);
+                                                continue;
+                                        }
+
+                                        ObjectNode preview = ((ObjectNode) root).deepCopy();
+                                        preview.remove("source");
+                                        preview.remove("topicCode");
+                                        templates.add(preview);
+                                } catch (Exception exception) {
+                                        log.warn("Bỏ qua template JSON không hợp lệ: {}", filename, exception);
+                                        invalidTemplates.add(filename);
+                                }
+                        }
+
+                        templates.sort(Comparator.comparing(
+                                        node -> node.path("templateCode").asText("")));
+
+                        return new TemplateCatalog(
+                                        safeTopicCode,
+                                        List.copyOf(templates),
+                                        List.copyOf(invalidTemplates));
+                } catch (IOException exception) {
+                        throw new IllegalStateException(
+                                        "Không thể đọc danh sách template của topic " + safeTopicCode,
+                                        exception);
+                }
+        }
 
         // Tải prompt cho một chủ đề cụ thể
         public String loadTopicPrompt(String topicCode) {
