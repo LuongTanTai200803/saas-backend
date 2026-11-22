@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "BAO_CAO_KIEM_TRA_GIAM_SAT_KY_LUAT_DANG",
   "topicCode": "BAO_CAO",
   "tenLoaiVanBan": "BÁO CÁO",

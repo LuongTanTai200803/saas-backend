@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "QUYET_DINH_MAU_CHUNG_CAP_TINH",
   "topicCode": "QUYET_DINH",
   "tenLoaiVanBan": "QUYẾT ĐỊNH",

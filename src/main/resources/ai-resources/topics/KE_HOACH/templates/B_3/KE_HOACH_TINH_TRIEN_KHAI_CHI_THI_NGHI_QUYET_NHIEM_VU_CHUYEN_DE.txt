@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "KE_HOACH_TINH_TRIEN_KHAI_CHI_THI_NGHI_QUYET_NHIEM_VU_CHUYEN_DE",
   "topicCode": "KE_HOACH",
   "tenLoaiVanBan": "KẾ HOẠCH",

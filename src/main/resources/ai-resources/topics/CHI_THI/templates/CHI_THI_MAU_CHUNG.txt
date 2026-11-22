@@ -1,6 +1,6 @@
 {
-  "source": "USER_UPLOAD",
-  "templateCode": null,
+  "source": "SYSTEM",
+  "templateCode": "CHI_THI_MAU_CHUNG",
   "topicCode": "CHI_THI_CHUNG",
   "tenLoaiVanBan": "CHỈ THỊ",
   "coQuanBanHanh": "CỦA BAN THƯỜNG VỤ TỈNH ỦY",

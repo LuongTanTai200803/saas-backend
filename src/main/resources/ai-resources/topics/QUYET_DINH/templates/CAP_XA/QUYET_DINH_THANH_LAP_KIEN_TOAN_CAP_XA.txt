@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
   "templateCode": "QUYET_DINH_THANH_LAP_KIEN_TOAN_CAP_XA",
 

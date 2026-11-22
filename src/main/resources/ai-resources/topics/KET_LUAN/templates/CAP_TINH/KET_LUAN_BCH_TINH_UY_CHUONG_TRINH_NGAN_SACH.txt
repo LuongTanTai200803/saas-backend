@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "KET_LUAN_BCH_TINH_UY_CHUONG_TRINH_NGAN_SACH",
   "topicCode": "KET_LUAN",
   "tenLoaiVanBan": "KẾT LUẬN",

@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
   "templateCode": "QUYET_DINH_BAN_HANH_QUY_CHE_CAP_XA",
 

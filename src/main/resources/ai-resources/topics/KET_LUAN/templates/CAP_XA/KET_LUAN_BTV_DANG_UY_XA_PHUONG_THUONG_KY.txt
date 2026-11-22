@@ -1,6 +1,6 @@
 {
 
-"source": "USER_UPLOAD",
+"source": "SYSTEM",
 
 "templateCode": "KET_LUAN_BTV_DANG_UY_XA_PHUONG_THUONG_KY",
 

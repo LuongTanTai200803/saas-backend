@@ -1,6 +1,6 @@
 BAO_CAO_NAM_CONG_TAC_DAN_TOC_TON_GIAO{
-  "source": "USER_UPLOAD",
-  "templateCode": "BAO_CAO_NAM_CONG_TAC_DAN_TOC_TON_GIAO",
+  "source": "SYSTEM",
+  "templateCode": "BAO_CAO_MAU_CHUNG_D",
   "topicCode": "BAO_CAO",
   "tenLoaiVanBan": "BÁO CÁO",
   "coQuanBanHanh": "",

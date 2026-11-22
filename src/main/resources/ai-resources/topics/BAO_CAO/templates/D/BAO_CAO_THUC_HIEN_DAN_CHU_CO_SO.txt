@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "BAO_CAO_THUC_HIEN_DAN_CHU_CO_SO",
   "topicCode": "BAO_CAO",
   "tenLoaiVanBan": "BÁO CÁO",

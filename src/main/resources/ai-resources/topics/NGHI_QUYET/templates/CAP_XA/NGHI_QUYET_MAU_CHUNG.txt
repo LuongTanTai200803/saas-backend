@@ -1,6 +1,6 @@
 {
-  "source": "USER_UPLOAD",
-  "templateCode": "NGHI_QUYET_CHUNG_CAP_XA",
+  "source": "SYSTEM",
+  "templateCode": "NGHI_QUYET_MAU_CHUNG",
   "topicCode": "NGHI_QUYET",
   "tenLoaiVanBan": "NGHỊ QUYẾT",
   "coQuanBanHanh": "[CỦA CHỦ THỂ BAN HÀNH]",

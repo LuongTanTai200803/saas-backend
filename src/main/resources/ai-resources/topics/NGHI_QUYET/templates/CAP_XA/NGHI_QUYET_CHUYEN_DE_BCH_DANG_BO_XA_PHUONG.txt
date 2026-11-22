@@ -1,5 +1,5 @@
 {
-  "source": "USER_UPLOAD",
+  "source": "SYSTEM",
   "templateCode": "NGHI_QUYET_CHUYEN_DE_BCH_DANG_BO_XA_PHUONG",
   "topicCode": "NGHI_QUYET",
   "tenLoaiVanBan": "NGHỊ QUYẾT",

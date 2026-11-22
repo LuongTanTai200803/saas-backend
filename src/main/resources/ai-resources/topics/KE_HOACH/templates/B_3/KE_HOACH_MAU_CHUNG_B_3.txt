@@ -1,6 +1,6 @@
 {
-  "source": "USER_UPLOAD",
-  "templateCode": "KE_HOACH_CHUNG",
+  "source": "SYSTEM",
+  "templateCode": "KE_HOACH_MAU_CHUNG_B_3",
   "topicCode": "KE_HOACH",
   "tenLoaiVanBan": "KẾ HOẠCH",
   "coQuanBanHanh": "",

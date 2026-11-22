@@ -24,6 +24,7 @@ import com.saasai.feature.ai.openrouter.OpenRouterRequestDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterResponseFormatDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterVisionMessageDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterVisionRequestDTO;
+import com.saasai.feature.ai.ProofreadResponseDTO;
 import com.saasai.feature.ai.openrouter.OpenRouterResponseFormatDTO;
 
 import com.saasai.feature.payment.CreditAccountRepository;
@@ -449,6 +450,104 @@ public class AiCompletionService {
                                 """.formatted(
                                 editorText.trim(),
                                 userText.trim());
+        }
+
+        // =====================================================
+        // Hàm sửa chính tả
+        public ProofreadResponseDTO proofread(User user, ProofreadRequestDTO input) {
+                if (input == null || input.text() == null || input.text().isBlank()) {
+                        throw new IllegalArgumentException("Text không được để trống");
+                }
+
+                ChatSession session = chatSessionRepository
+                                .findBySessionUuidAndUser_UserId(input.sessionUuid(), user.getUserId())
+                                .orElseThrow(() -> new IllegalArgumentException(
+                                                "Session không tồn tại hoặc không thuộc user"));
+
+                if (session.getStatus() == SessionStatus.CLOSED) {
+                        throw new IllegalArgumentException("Session đã đóng");
+                }
+
+                ModelRoute route = packageRoutingService.resolveRoute(user, null);
+                double creditRate = route.creditRate() != null ? route.creditRate() : 1.0;
+                double outputWeight = creditPricingService.getOutputWeightDefault();
+                double holdAmount = creditPricingService.calculateHoldFromBaseHold(
+                                creditPricingService.getBaseHoldDefault(),
+                                creditRate);
+
+                CreditSettleRequestDTO holdRequest = new CreditSettleRequestDTO();
+                holdRequest.setModel(route.primaryModel());
+                holdRequest.setModelPackageId(route.modelPackageId());
+                holdRequest.setCreditRate(creditRate);
+                holdRequest.setOutputWeight(outputWeight);
+                holdRequest.setEstimatedHold(holdAmount);
+                holdRequest.setInputCredit(0.0);
+                holdRequest.setOutputCredit(0.0);
+                holdRequest.setSessionUuid(session.getSessionUuid());
+                holdRequest.setDescription("AI PROOFREAD - session " + session.getSessionUuid());
+
+                CreditTransaction hold = creditService.recordHoldTransactionWithSnapshot(
+                                user.getUserId(),
+                                session.getSessionId(),
+                                holdRequest);
+
+                List<OpenRouterMessageDTO> messages = List.of(
+                                new OpenRouterMessageDTO(
+                                                "system",
+                                                """
+                                                                Bạn là công cụ sửa chính tả tiếng Việt.
+                                                                Chỉ sửa lỗi chính tả và lỗi gõ rõ ràng.
+                                                                Giữ nguyên ý nghĩa, cách diễn đạt, cấu trúc và xuống dòng.
+                                                                Không viết lại, không thêm nội dung, không giải thích.
+                                                                Chỉ trả về đoạn văn đã sửa.
+                                                                """),
+                                new OpenRouterMessageDTO("user", input.text()));
+
+                OpenRouterRequestDTO request = new OpenRouterRequestDTO(
+                                route.primaryModel(),
+                                messages,
+                                route.temperature(),
+                                route.maxTokens(),
+                                false,
+                                null);
+
+                AiProviderResultDTO result;
+                try {
+                        result = openRouterClient.complete(request);
+
+                        if (result == null || result.content() == null || result.content().isBlank()) {
+                                throw new IllegalStateException("AI không trả về nội dung đã sửa");
+                        }
+                } catch (RuntimeException ex) {
+                        try {
+                                creditService.refundHold(hold.getTransactionId());
+                        } catch (RuntimeException refundError) {
+                                ex.addSuppressed(refundError);
+                        }
+                        throw ex;
+                }
+
+                double baseCredit = creditPricingService.calculateBaseCredit(
+                                result.promptTokens(),
+                                result.completionTokens(),
+                                outputWeight);
+                double actualCredit = creditPricingService.calculateActualCredit(baseCredit, creditRate);
+
+                creditService.settleTransaction(
+                                hold.getTransactionId(),
+                                result.promptTokens(),
+                                result.completionTokens(),
+                                result.totalTokens(),
+                                actualCredit,
+                                result.model());
+
+                return new ProofreadResponseDTO(
+                                result.content(),
+                                result.model(),
+                                result.promptTokens(),
+                                result.completionTokens(),
+                                result.totalTokens(),
+                                actualCredit);
         }
 
         // =========================================================
